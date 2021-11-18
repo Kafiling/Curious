@@ -1,16 +1,3 @@
-/* *TODO - List*
-    In Var Score
-    1.Change TotalQuestionNum 
-    2.Add ScoreQuestionX = useRef(0) to every question we have.
-    In function sumScore() 
-    3. Change "Coruse_Name": CompletionScore.current 
-    In function correct(QuestionPage) & function incorrect(QuestionPage)
-    4. Add switch case
-    function checkAnswer(QuestionNumber)
-    5. Add
-
-
-*/
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
@@ -547,7 +534,6 @@ function Page5 (){
 
 if (page === 1) {return (
 <div><Page1/></div>)}
-
 
 else if (page === 2) {return(
 <div><Page2/></div>)}
