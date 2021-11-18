@@ -1,0 +1,65 @@
+//Import React 
+import react, { Component , useState , useEffect } from 'react';
+import {Route , Switch, Link } from 'react-router-dom'
+
+//Import Firebase-React Hook
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+
+//Import Firebase SDK
+import { AuthProvider, firebaseApp } from 'Firebase';
+
+//Import Component
+import Homepage from './components/Homepage';
+import Courses from './components/Courses'
+import Playgrounds from './components/Playgrounds';
+import AboutUs from './components/AboutUs';
+import Header from './components/Header'
+
+//Import Courses Component
+import Work1 from './components/Courses/Work&Energy/Work1'
+
+//Import CSS
+import './components/Header.css'
+import './components/Courses.css'
+import './components/CoursesPage.css'
+
+function App() {
+  const [user, setUser] = useState(null);
+  useEffect(() =>{
+    firebaseApp.auth().onAuthStateChanged(user=> {
+setUser(user)
+    })}, []);
+  const [page, setPage] = useState(1);
+  
+    return (
+      <AuthProvider>
+      <div className = "Container">
+        <div className = "Header">
+        <Header/>
+        </div>
+  
+        <div className = "Page">
+          <Switch>
+          {/* Main Page*/}
+          <Route exact path="/"  ><Homepage/></Route>
+          <Route exact path="/courses"  ><Courses/></Route>
+          <Route exact path="/playgrounds"  ><Playgrounds/></Route>
+          <Route exact path="/about_us"  ><AboutUs/></Route>
+          
+          {/* Courses*/}
+          <Route exact path="/courses/work_energy/work1"  ><Work1/></Route>
+          {/* Playgrounds*/}
+  
+          {/* About Us*/}
+  
+          <Route path = "/:id"  ><h1>Error 404 Webpage not found</h1></Route>
+          </Switch>
+        </div>
+        
+      </div>
+      </AuthProvider>
+    )
+  }
+  
+  export default App;

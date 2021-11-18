@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+
+
+a {
+text-decoration: none;
+color: white ;
+}
+
+
+.split {
+    height: 100%;
+   
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+.Index {
+    float: left;
+    width: 55%;
+    height: calc(100%-60px);
+    left: 5%;
+    top: 60px;
+    overflow-y: scroll;
+   }
+.Index::-webkit-scrollbar {
+    display: none;
+  }
+
+.LabName {
+  font-size: 30px;
+  font-family: 'Sarabun', sans-serif;
+}
+
+.LabInfo {
+  position: relative;
+  top: 20px;
+  font-size: 22px;
+  font-family: 'Sarabun', sans-serif;
+}
+
+.LabImg{
+  position: relative;
+  top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: auto;
+}
+.Slider{
+  position: absolute;
+  top: 80%;
+}
+.form-range{
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+
+}
+/* Mouse-over effects */
+.form-range:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.form-range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.FooterSpace{
+  position: relative;
+  top: 20px;
+  height: 100px;
+}
+.Footer{
+  position: relative;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer > a { 
+  color: #473BF0;
+}
+.IndexWarp{
+text-decoration: none;
+color: #ff8400 ;
+}
+
+.QuestionAnswer {
+    float: right;
+    width: 25%;
+    right: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    top: 60px;
+
+    background: #242323;
+   }
+.LabNumber{
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  
+  text-align: center;
+  color: #fff;
+}
+.ProgessBar{
+  position: relative;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 4px;
+
+}
+progress[value]::-webkit-progress-value {
+ background-color: #473BF0;
+
+}
+.Question{
+  position: relative;
+  top: 20px;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 20px;
+  
+  text-align: center;
+  color: #fff;
+}
+.AnswerList{
+  position: relative;
+  top: 40px;
+  
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Sarabun', sans-serif;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a background */
+.container input:checked ~ .checkmark {
+  background-color: #ff8400;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.AnswerList > button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #44cf6c; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.ButtonContainer{
+  position: relative;
+  top: 60px;
+  width: 100%;
+  height: 32px;
+  top: 60px;
+
+  display: inline;
+  align-content:center ;
+  
+}
+.PreviousPage {
+  position: relative;
+  background-color: #ff8400; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+.NextPage {
+  position: relative;
+  left: 32%;
+  background-color: #44cf6c; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.FinishContainer{
+position: relative;
+padding: 30px;
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.FinishImg{
+  width: 15%;
+  height: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.FinishInfo{
+  position: relative;
+  font-size: 22px;
+  font-family: 'Sarabun', sans-serif;
+}
+
+.ReportButton {
+  position: relative;
+  left: 5%;
+  background-color: #ff8400; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+.UpvoteButton {
+  position: relative;
+  right: 5%;
+  background-color: #44cf6c; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .split {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding-top: 20px;
+  }
+  .Index{
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    top: 60px;
+  }
+
+  .QuestionAnswer {
+    position: relative;
+    float: none;
+    width: 100%;
+    left: 0%;
+    overflow-x: hidden;
+    background: #242323;
+   }
+  }
