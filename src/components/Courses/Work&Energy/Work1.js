@@ -1,3 +1,16 @@
+/* *TODO - List*
+    In Var Score
+    1.Change TotalQuestionNum 
+    2.Add ScoreQuestionX = useRef(0) to every question we have.
+    In function sumScore() 
+    3. Change "Coruse_Name": CompletionScore.current 
+    In function correct(QuestionPage) & function incorrect(QuestionPage)
+    4. Add switch case
+    function checkAnswer(QuestionNumber)
+    5. Add
+
+
+*/
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
@@ -15,7 +28,7 @@ var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
 //Var Score
 const TotalQuestionNum = useRef(3)
-const TotalScore = useRef(3)
+const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
 const ScoreQuestion3 = useRef(0)
@@ -89,30 +102,33 @@ function retry(){
       Answer4.checked === false ){retry()}
   
   else{ 
-    if(QuestionNumber === 3){
-    if(Answer1.checked === true && 
+    switch(QuestionNumber){
+    case 3 : if(Answer1.checked === true && 
       Answer2.checked === false && 
       Answer3.checked === false && 
       Answer4.checked === false ) {correct(3)}
   else{incorrect(3)}
-}
-  
-  else if(QuestionNumber === 4){
-  if(Answer1.checked === false&& 
-    Answer2.checked ===  false&& 
-    Answer3.checked === false && 
-    Answer4.checked === true ){correct(4)}
-else{incorrect(4)}
-}
-
-else if(QuestionNumber === 5){
+  break;
+  case 4 :
+    if(Answer1.checked === false&& 
+      Answer2.checked ===  false&& 
+      Answer3.checked === false && 
+      Answer4.checked === true ){correct(4)}
+  else{incorrect(4)}
+  break;
+case 5 :
   if(Answer1.checked === true&& 
     Answer2.checked ===  true&& 
     Answer3.checked === true && 
     Answer4.checked === true ){correct(5)}
 else{incorrect(5)}
+break;
+default :
+    alert("Checking Error")
+    break;
 }
 }}
+
   
   
   function Page1 (){
@@ -565,6 +581,4 @@ else   {return(<div>
   <h1>Error 404 Webpage not fonud</h1>
   <p>Course page not found, Please try again shortly</p></div>
 )}
-   
 }
-
