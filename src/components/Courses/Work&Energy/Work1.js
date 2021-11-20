@@ -145,8 +145,8 @@ return(
   <div className="AnswerList">
   
 </div>
-<div className="ButtonContainer"><button className = "PreviousPage" style={{visibility: "hidden"}} >Previous page</button>
-<button className = "NextPage" onClick ={() => setPage(2)}>Next page</button></div>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" style={{visibility: "hidden"}} >Previous page</button>
+<button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(2)}>Next page</button></div>
 </div>
 </div>)
 }
@@ -172,8 +172,8 @@ return(
   <div className="AnswerList">
   
 </div>
-<div className="ButtonContainer"><button className = "PreviousPage" onClick ={() => setPage(1)}>Previous page</button>
-<button className = "NextPage" onClick ={() => setPage(3)}>Next page</button></div>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+<button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
 
 </div>
 </div>)
@@ -223,11 +223,11 @@ return(
       <span className="checkmark"></span>
     </label>
 
-    <button onClick={() =>checkAnswer(3)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
   
 </div>
-<div className="ButtonContainer"><button className = "PreviousPage" onClick ={() => setPage(2)}>Previous page</button>
-<button className = "NextPage" style={{visibility: "hidden"}}>Next page</button></div>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+<button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 
 </div>
 </div>)
@@ -262,7 +262,7 @@ function Page3Answered (){
     <div className="AnswerList">
     <label className="container">100 J
         <input type="checkbox" id="Answer1" checked disabled  />
-        <span className="checkmark" style={{backgroundColor : "#44cf6c"}}></span>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
       <label className="container">200 J
         <input type="checkbox" id="Answer2" disabled/>
@@ -277,11 +277,11 @@ function Page3Answered (){
         <span className="checkmark"></span>
       </label>
   
-      <button style={{backgroundColor : "#242323"}} >Answer Sent !</button>
+      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "PreviousPage" onClick ={() => setPage(2)}>Previous page</button>
-  <button className = "NextPage" onClick ={() => setPage(4)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
   
   </div>
   </div>)
@@ -331,11 +331,11 @@ function Page3Answered (){
           <span className="checkmark" ></span>
         </label>
     
-        <button onClick={() =>checkAnswer(4)}>Send Answer</button>
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
       
     </div>
-    <div className="ButtonContainer"><button className = "PreviousPage" onClick ={() => setPage(3)}>Previous page</button>
-    <button className = "NextPage" style={{visibility: "hidden"}}>Next page</button></div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
     
     </div>
     </div>)
@@ -386,14 +386,14 @@ function Page3Answered (){
           </label>
           <label className="container">400 J
             <input type="checkbox" id="Answer4" disabled checked/>
-            <span className="checkmark" style={{backgroundColor : "#44cf6c"}}></span>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
       
-          <button style={{backgroundColor : "#242323"}} >Answer Sent !</button>
+          <button className = "btn btn-glow btn-primary" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
         
       </div>
-      <div className="ButtonContainer"><button className = "PreviousPage" onClick ={() => setPage(3)}>Previous page</button>
-      <button className = "NextPage" onClick ={() => setPage(5)}>Next page</button></div>
+      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
       
       </div>
       </div>)
@@ -442,11 +442,11 @@ function Page5 (){
               <span className="checkmark" ></span>
             </label>
         
-            <button onClick={() =>checkAnswer(5)}>Send Answer</button>
+            <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
           
         </div>
-        <div className="ButtonContainer"><button className = "PreviousPage" onClick ={() => setPage(4)}>Previous page</button>
-        <button className = "NextPage" style={{visibility: "hidden"}}>Next page</button></div>
+        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+        <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
         
         </div>
         </div>)
@@ -485,26 +485,26 @@ function Page5 (){
             <div className="AnswerList">
             <label className="container">งานมีสูตรว่า W = F ⋅ S
                 <input type="checkbox" id="Answer1" disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "#44cf6c"}}></span>
+                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
               <label className="container">ก่อนจะคิดงานต้องทำให้ทิศทางของการกระจัดกับแรงขนานกันก่อน
                 <input type="checkbox" id="Answer2"disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "#44cf6c"}}></span>
+                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
               <label className="container">ยกของหนัก 10 N ขึ้น 1.5 m เกิดงาน 15 J
                 <input type="checkbox" id="Answer3"disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "#44cf6c"}}></span>
+                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
               <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
                 <input type="checkbox" id="Answer4" disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "#44cf6c"}}></span>
+                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
           
-              <button style={{backgroundColor : "#242323"}} >Answer Sent !</button>
+              <button className = "btn btn-glow btn-primary" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
             
           </div>
-          <div className="ButtonContainer"><button className = "PreviousPage" onClick ={() => setPage(4)}>Previous page</button>
-          <button className = "NextPage" onClick ={() => setPage(6)}>Next page</button></div>
+          <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
           </div>
           </div>)
   }

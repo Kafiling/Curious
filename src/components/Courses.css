@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 
+:root {
+  /*#5B43F0*/--theme-color: 91, 69, 240;
+  /*#25E46B*/--primary-color: 37, 228, 107;
+  /*#FF7A33*/--secondary-color: 255, 122, 51;
+  /*#FF345C*/--tertiary-color: 255, 52, 92;
+  /*#11021E*/--bg-color: 17, 2, 30;
+  
+  
+  /*#FFFFFF*/--text-color: 256, 256, 256;
+}
 
 a {
 text-decoration: none;
-color: white ;
+color: rgb(var(--text-color)) ;
 }
 
 
@@ -58,7 +68,7 @@ color: white ;
   appearance: none;
   width: 100%; /* Full-width */
   height: 25px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
+  background: rgb(var(--text-color)); /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
@@ -76,7 +86,7 @@ color: white ;
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
+  background: rgb(var(--primary-color)); /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
@@ -94,11 +104,11 @@ color: white ;
 }
 
 .Footer > a { 
-  color: #473BF0;
+  color: rgb(var(--theme-color));
 }
 .IndexWarp{
 text-decoration: none;
-color: #ff8400 ;
+color: rgb(var(--theme-color)) ;
 }
 
 .QuestionAnswer {
@@ -109,7 +119,7 @@ color: #ff8400 ;
     padding-right: 5%;
     top: 60px;
 
-    background: #242323;
+    background: rgb(var(--bg-color));
    }
 .LabNumber{
   position: relative;
@@ -117,7 +127,7 @@ color: #ff8400 ;
   font-size: 20px;
   
   text-align: center;
-  color: #fff;
+  color: rgb(var(--text-color));
 }
 .ProgessBar{
   position: relative;
@@ -134,12 +144,12 @@ progress[value] {
   height: 20px;
 }
 progress[value]::-webkit-progress-bar {
-  background-color: white;
+  background-color: rgb(var(--text-color));
   border-radius: 4px;
 
 }
 progress[value]::-webkit-progress-value {
- background-color: #473BF0;
+ background-color: rgb(var(--theme-color));
 
 }
 .Question{
@@ -149,7 +159,7 @@ progress[value]::-webkit-progress-value {
   font-size: 20px;
   
   text-align: center;
-  color: #fff;
+  color: rgb(var(--text-color));
 }
 .AnswerList{
   position: relative;
@@ -170,7 +180,7 @@ progress[value]::-webkit-progress-value {
   -ms-user-select: none;
   user-select: none;
   
-  color: #fff;
+  color: rgb(var(--text-color));
   font-size: 20px;
   font-family: 'Sarabun', sans-serif;
 }
@@ -201,7 +211,7 @@ progress[value]::-webkit-progress-value {
 
 /* When the checkbox is checked, add a background */
 .container input:checked ~ .checkmark {
-  background-color: #ff8400;
+  background-color: rgb(var(--theme-color));
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -222,7 +232,7 @@ progress[value]::-webkit-progress-value {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid rgb(var(--text-color));
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -232,10 +242,6 @@ progress[value]::-webkit-progress-value {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #44cf6c; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -252,29 +258,82 @@ progress[value]::-webkit-progress-value {
   align-content:center ;
   
 }
-.PreviousPage {
-  position: relative;
-  background-color: #ff8400; 
-  border: none;
-  color: white;
+.btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
   padding: 15px 32px;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: rgb(var(--primary-color));
+  border: 1px solid rgb(var(--primary-color));
+  color: rgb(var(--text-color));
+}
+.btn-secondary{
+  background-color: rgb(var(--secondary-color));
+  border: 1px solid rgb(var(--secondary-color));
+  color: rgb(var(--text-color));
+}
+
+/* https://thegraph.com/en/ */
+.btn-semi-transparent {
+  background-color: rgba(var(--primary-color), 0.15);
+  border: 1px solid rgba(var(--primary-color), 0.25);
+  color: rgba(var(--text-color), 0.8);
+}
+
+.btn-semi-transparent:hover {
+  background-color: rgba(var(--primary-color), 0.35);
+  border: 1px solid rgba(var(--primary-color), 0.5);
+  color: rgba(var(--text-color), 0.9);
+}
+
+.btn-glow:hover {
+  box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+}
+
+/* https://sushi.com/ */
+.btn-gradient {
+  background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+  border: 0;
+  color: rgba(var(--text-color));
+}
+
+/* https://sushi.com/ */
+.btn-gradient-border {
+  color: rgba(var(--text-color));
+  border: 2px double transparent;
+      background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.btn-previousPage {
+  position: relative;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   
 }
-.NextPage {
+.btn-nextPage {
   position: relative;
-  left: 32%;
-  background-color: #44cf6c; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  left: 18%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+.btn-answerSent{
+  border: 0px;
 }
 
 .FinishContainer{
@@ -302,9 +361,9 @@ justify-content: center;
 .ReportButton {
   position: relative;
   left: 5%;
-  background-color: #ff8400; 
+  background-color: rgb(var(--tertiary-color)); 
   border: none;
-  color: white;
+  color: rgb(var(--text-color));
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -315,9 +374,9 @@ justify-content: center;
 .UpvoteButton {
   position: relative;
   right: 5%;
-  background-color: #44cf6c; 
+  background-color: rgb(var(--primary-color)); 
   border: none;
-  color: white;
+  color: rgb(var(--text-color));
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -348,6 +407,6 @@ justify-content: center;
     width: 100%;
     left: 0%;
     overflow-x: hidden;
-    background: #242323;
+    background: rgb(var(--bg-color));
    }
   }
