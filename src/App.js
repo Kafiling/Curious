@@ -12,7 +12,7 @@ import { AuthProvider, firebaseApp } from 'Firebase';
 //Import Component
 import Homepage from './components/Homepage';
 import Courses from './components/Courses'
-import Playgrounds from './components/Playgrounds';
+import Dashboard from './components/Dashboard';
 import AboutUs from './components/AboutUs';
 import Header from './components/Header'
 
@@ -43,8 +43,8 @@ setUser(user)
           <Switch>
           {/* Main Page*/}
           <Route exact path="/"  ><Homepage/></Route>
+          <Route exact path="/dashboard"  ><Dashboard/></Route>
           <Route exact path="/courses"  ><Courses/></Route>
-          <Route exact path="/playgrounds"  ><Playgrounds/></Route>
           <Route exact path="/about_us"  ><AboutUs/></Route>
           
           {/* Courses*/}

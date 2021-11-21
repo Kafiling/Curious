@@ -48,8 +48,8 @@ export default function Header(){
       <li className = "Curious">Curious</li>
       <li></li>
       <li><Link to = "/">Home</Link></li>
+      <li><Link to = "/dashboard">Dashboard</Link></li>
       <li><Link to = "/courses">Courses</Link></li>
-      <li><Link to = "/playgrounds">Playgrounds</Link></li>
       <li><Link to = "/about_us">About Us</Link></li>
       <li></li>
       <li onClick = {() => auth.signOut()} >Sign Out</li>

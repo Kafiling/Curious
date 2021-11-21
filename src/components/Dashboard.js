@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Playgrounds() {
+export default function Dashboard() {
     
     return (
         <div>
-            <h1>Playgrounds</h1>
+            <h1>Dashboard</h1>
         </div>
     )
 }
