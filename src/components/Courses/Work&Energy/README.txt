@@ -17,5 +17,5 @@
     7. Add  if (page === x) {return (<div><Pagex/></div>)}
             else if (page === x && Answer3 === false) {return(<div><Pagex/></div>)}
             else if (page === x && Answer3 === true) {return(<div><PagexAnswered/></div>)}
-hi bro
+
 */
