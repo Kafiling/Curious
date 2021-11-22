@@ -9,6 +9,8 @@ export default function Course() {
             <li ><Link to = "/" className = "Course">Work2</Link></li>
             <li ><Link to = "/" className = "Course">Work3</Link></li>
             <li ><Link to = "/" className = "Course">Work4</Link></li>
+            <li ><Link to = "/" className = "Course">Activties : Work</Link></li>
+            <li ><Link to = "/courses/work_energy/exam_work" className = "Course">Exam : Work</Link></li>
         </div>
     )
 }

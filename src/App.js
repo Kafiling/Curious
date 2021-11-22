@@ -18,6 +18,7 @@ import Header from './components/Header'
 
 //Import Courses Component
 import Work1 from './components/Courses/Work&Energy/Work1'
+import ExamWork from './components/Courses/Work&Energy/ExamWork'
 
 //Import CSS
 import './components/Header.css'
@@ -49,6 +50,7 @@ setUser(user)
           
           {/* Courses*/}
           <Route exact path="/courses/work_energy/work1"  ><Work1/></Route>
+          <Route exact path="/courses/work_energy/exam_work"  ><ExamWork/></Route>
           {/* Playgrounds*/}
   
           {/* About Us*/}
