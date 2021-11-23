@@ -6,10 +6,11 @@ import {Link } from 'react-router-dom'
 import {AuthContext, db} from 'Firebase'
 
 
-export default function Work1() {
+export default function Work2() {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
+var [Answer2, setAnswer2] = useState(false);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
@@ -43,6 +44,9 @@ function correct(QuestionPage){
   //เช็คถูก
   alert("ถูกต้องคร้าบบ")
   switch(QuestionPage){
+    case 2 :setAnswer2(true)
+    ScoreQuestion3.current = 1
+      break;
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
       break;
@@ -61,6 +65,8 @@ function correct(QuestionPage){
 function incorrect(QuestionPage){
   alert("ผิดจ้า ลองทบทวนอีกทีนะ")
   switch(QuestionPage){
+    case 2 :setAnswer2(true)
+      break;
     case 3 :setAnswer3(true)
       break;
     case 4 :setAnswer4(true)
@@ -90,6 +96,13 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
+      case 2 :
+    if(Answer1.checked === false&& 
+      Answer2.checked ===  false&& 
+      Answer3.checked === false && 
+      Answer4.checked === true ){correct(2)}
+  else{incorrect(2)}
+  break;
     case 3 : if(Answer1.checked === true && 
       Answer2.checked === false && 
       Answer3.checked === false && 
@@ -128,7 +141,7 @@ return(
  <div div className="LabInfo">สำหรับแรงที่ทำมุมกับการกระจัด เราจะทำการแตกแรงให้ขนานกัน แล้วจึงคิดคำนวณ<br/>
     โดยจะได้สมการใหม่ของงานดังนี้
  <MathJaxContext>
-  <MathJax>\[W = F \cdot S \cdot Theta\]</MathJax>
+  <MathJax>\[W = F \cdot S \cdot cos Theta\]</MathJax>
   </MathJaxContext>
   โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
   F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
@@ -161,9 +174,9 @@ return(
 <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="" />
 <MathJaxContext>
-  <MathJax>\[W = F \cdot S \cdot Theta\]</MathJax>
+  <MathJax>\[W = F \cdot S \cdot cos180degree = F \cdot S \cdot (-1)\]</MathJax>
   </MathJaxContext>
- <div div className="LabInfo">ก
+ <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -172,17 +185,82 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
-  <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+  <div className="Question">งานในข้อใดมีค่าติดลบ</div>
   <div className="AnswerList">
+  <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
+      <input type="checkbox" id="Answer1" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">งานจากการเตะฟุตบอล
+      <input type="checkbox" id="Answer2"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">งานจากการโยนของขึ้นชั้นบน
+      <input type="checkbox" id="Answer3"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">งานจากแรงเสียดทานxที่กำลังเคลื่อนที่ไปข้างหน้า
+      <input type="checkbox" id="Answer4"/>
+      <span className="checkmark"></span>
+    </label>
+
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
   
 </div>
 <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-<button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
-
+<button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 </div>
 </div>)
 }
+function Page2Answered (){
+  return(
+    <div>
+    <div className="split Index">
+  <div className="LabName">งานทางฟิสิกส์</div>
+  <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
+  <img className='LabImg' id='img' alt ="LabImg"src="" />
+  <MathJaxContext>
+    <MathJax>\[W = F \cdot S \cdot cos180degree = F \cdot S \cdot (-1)\]</MathJax>
+    </MathJaxContext>
+   <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
+    </div> 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
+  
+  <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="Question">งานในข้อใดมีค่าติดลบ</div>
+    <div className="AnswerList">
+    <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
+        <input type="checkbox" id="Answer1" />
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">งานจากการเตะฟุตบอล
+        <input type="checkbox" id="Answer2"/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">งานจากการโยนของขึ้นชั้นบน
+        <input type="checkbox" id="Answer3"/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">งานจากแรงเสียดทานxที่กำลังเคลื่อนที่ไปข้างหน้า
+        <input type="checkbox" id="Answer4"/>
+        <span className="checkmark"></span>
+      </label>
+  
+      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+    
+  </div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+  
+  </div>
+  </div>)
+  }
 
 function Page3 (){
 return(
@@ -228,7 +306,7 @@ return(
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(1)}>Send Answer</button>
   
 </div>
 <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
@@ -540,8 +618,13 @@ function Page5 (){
 if (page === 1) {return (
 <div><Page1/></div>)}
 
-else if (page === 2) {return(
-<div><Page2/></div>)}
+else if (page === 2 && Answer2 === false) {
+  return(<div><Page2/></div>)
+  }
+  else if (page === 2 && Answer2 === true) {
+    return(<div><Page2Answered/></div>)
+  }
+  
 
 else if (page === 3 && Answer3 === false) {
 return(<div><Page3/></div>)
