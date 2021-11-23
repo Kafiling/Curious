@@ -126,7 +126,7 @@ return(
 <div div className="LabInfo">จะสังเกตได้ว่า จากข้อที่ผ่านๆมา แรงจะมีทิศทางไปทางเดียวกับการกระจัด จะเป็นอย่างไรหากแรงกับการกระจัดมีทิศทางต่างๆกันออกไป</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="" />
  <div div className="LabInfo">สำหรับแรงที่ทำมุมกับการกระจัด เราจะทำการแตกแรงให้ขนานกัน แล้วจึงคิดคำนวณ<br/>
-  &nbsp โดยจะได้สมการใหม่ของงานดังนี้
+    โดยจะได้สมการใหม่ของงานดังนี้
  <MathJaxContext>
   <MathJax>\[W = F \cdot S \cdot Theta\]</MathJax>
   </MathJaxContext>
