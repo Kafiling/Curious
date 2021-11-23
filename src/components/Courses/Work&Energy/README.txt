@@ -1,4 +1,8 @@
-/* *TODO - List*
+/* *TODO - List when create new CorusePage
+    *copy template and rename it
+      > App.js add <Route exact path="/courses/work_energy/CorusePage"  ><CorusePage/></Route>
+      > Courses.js add <li ><Link to = "/courses/work_energy/CorusePage" className = "Course">CorusePage</Link></li>
+   
     In Var Score
     1.Change TotalQuestionNum 
     2.Add ScoreQuestionX = useRef(0) to every question we have.

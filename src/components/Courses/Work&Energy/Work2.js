@@ -200,7 +200,7 @@ return(
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">งานจากแรงเสียดทานxที่กำลังเคลื่อนที่ไปข้างหน้า
+    <label className="container">งานจากแรงเสียดทานของวัตถุที่กำลังเคลื่อนที่ไปข้างหน้า
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
