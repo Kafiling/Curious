@@ -125,14 +125,15 @@ return(
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จะสังเกตได้ว่า จากข้อที่ผ่านๆมา แรงจะมีทิศทางไปทางเดียวกับการกระจัด จะเป็นอย่างไรหากแรงกับการกระจัดมีทิศทางต่างๆกันออกไป</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="" />
- <div div className="LabInfo">เขียนเป็นสมการได้ดังนี้
+ <div div className="LabInfo">สำหรับแรงที่ทำมุมกับการกระจัด เราจะทำการแตกแรงให้ขนานกัน แล้วจึงคิดคำนวณ โดยค่าฟังก์ชันตรีโกณมิติที่ควรทราบมีดังนี้
+   เขียนเป็นสมการได้ดังนี้
  <MathJaxContext>
   <MathJax>\[W = F \cdot S \cdot Theta\]</MathJax>
   </MathJaxContext>
   โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
   F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
   S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
-  และ Theta แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (ํ)
+  และ Theta แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา ()
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -157,7 +158,7 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">เพื่อให้เข้าใจง่าย เราลองมาดูสถานการณ์สมมุติกัน มีคนสองคน คนนึงกำลังลากท่อนซุงกับอีกคนที่กำลังลากกระสอบข้าวสารคุณคิดว่าใครจะเหนื่อยกว่ากัน?</div> 
+<div div className="LabInfo">จากรูปจะเห</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-2.png?alt=media&token=835c6f5d-3289-47aa-b58d-8d17ae591d43" />
  <div div className="LabInfo">แน่นอนว่าคนส่วนใหญ่ก็ต้องคิดว่าคนที่ลากท่อนซุงต้องเหนื่อยกว่าแน่นอน เพราะต้องลากท่องซุงจึงต้องออกแรงมากกว่า แต่ถ้าเราเพิ่มข้อมูลตัวแปรการกระจัดเข้าไปบ้างจะเกิดอะไรขึ้น?
   </div> 
