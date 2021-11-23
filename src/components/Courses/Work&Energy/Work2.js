@@ -158,8 +158,11 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกันจะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
+<div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="" />
+<MathJaxContext>
+  <MathJax>\[W = F \cdot S \cdot Theta\]</MathJax>
+  </MathJaxContext>
  <div div className="LabInfo">ก
   </div> 
  <div div className="FooterSpace"></div>
