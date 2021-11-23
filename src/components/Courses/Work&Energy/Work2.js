@@ -131,7 +131,8 @@ return(
   </MathJaxContext>
   โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
   F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-  S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+  S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
+  และ Theta แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (ํ)
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
