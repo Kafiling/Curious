@@ -6,7 +6,7 @@ export default function Course() {
         <div>
             <h1>Course</h1>
             <li ><Link to = "/courses/work_energy/work1" className = "Course">Work1</Link></li>
-            <li ><Link to = "/" className = "Course">Work2</Link></li>
+            <li ><Link to = "/courses/work_energy/work2" className = "Course">Work2</Link></li>
             <li ><Link to = "/" className = "Course">Work3</Link></li>
             <li ><Link to = "/" className = "Course">Work4</Link></li>
             <li ><Link to = "/" className = "Course">Activties : Work</Link></li>
