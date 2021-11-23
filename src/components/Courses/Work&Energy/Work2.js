@@ -125,8 +125,8 @@ return(
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จะสังเกตได้ว่า จากข้อที่ผ่านๆมา แรงจะมีทิศทางไปทางเดียวกับการกระจัด จะเป็นอย่างไรหากแรงกับการกระจัดมีทิศทางต่างๆกันออกไป</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="" />
- <div div className="LabInfo">สำหรับแรงที่ทำมุมกับการกระจัด เราจะทำการแตกแรงให้ขนานกัน แล้วจึงคิดคำนวณ โดยค่าฟังก์ชันตรีโกณมิติที่ควรทราบมีดังนี้
-   เขียนเป็นสมการได้ดังนี้
+ <div div className="LabInfo">สำหรับแรงที่ทำมุมกับการกระจัด เราจะทำการแตกแรงให้ขนานกัน แล้วจึงคิดคำนวณ<br/>
+   โดยจะได้สมการใหม่ของงานดังนี้
  <MathJaxContext>
   <MathJax>\[W = F \cdot S \cdot Theta\]</MathJax>
   </MathJaxContext>
