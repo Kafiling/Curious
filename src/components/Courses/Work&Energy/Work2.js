@@ -124,10 +124,10 @@ return(
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จะสังเกตได้ว่า จากข้อที่ผ่านๆมา แรงจะมีทิศทางไปทางเดียวกับการกระจัด จะเป็นอย่างไรหากแรงกับการกระจัดมีทิศทางต่างๆกันออกไป</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
+<img className='LabImg' id='img' alt ="LabImg"src="" />
  <div div className="LabInfo">เขียนเป็นสมการได้ดังนี้
  <MathJaxContext>
-  <MathJax>\[W = F \cdot S\]</MathJax>
+  <MathJax>\[W = F \cdot S \cdot Theta\]</MathJax>
   </MathJaxContext>
   โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
   F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
