@@ -268,17 +268,18 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
-ผู้ชายที่ลากซุงสร้างงาน 1000*(0.1) = 100 J ในขณะที่ผู้หญิงลากกระสอบข้าวสารสร้างงาน 40*(50) = 200 J<br/>
-จะเห็นได้ว่างานจะเป็นบริมาณที่บ่งบอก = <mark className="Yellow">การส่งผ่านพลังงานผ่านแรงจนทำให้วัตถุเกิดการเคลื่อนที่</mark></div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-3.png?alt=media&token=93239986-5d6a-4a6c-afc2-78c61e0bb8cb" />
+<div className="LabInfo">เช่นเดียวกับงานที่มีหลายแรงกระทำกับวัตถุ ให้ทำการรวมแรงแล้วค่อยคิดคำนวณ<br/>
+โดยแรงที่สามารถรวมกันได้จะต้องแตกแรงให้อยู่ในทิศทางเดียวกันก่อน<br/>
+</div> 
+<img className='LabImg' id='img' alt ="LabImg"src="" />
  <div div className="LabInfo">เราลองเอาหลักการงานนี้ไปปรับใช้ทำโจทย์ด้านขวามือกันครับ<br/>
  <br/>ทบทวน : <MathJaxContext>
-  <MathJax>\[W = F \cdot S\]</MathJax>
+  <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
   </MathJaxContext>
-  โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
+    โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
   F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-  S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+  S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
+  และ Θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -288,26 +289,28 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-  <div className="Question">ออกแรง 20 นิวตัน ในแนวขนานกับพื้นราบไปได้ไกล 5 เมตร จงหางานที่เกิดจากแรงที่กระทำ</div>
+  <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
+  : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
+  </div>
   <div className="AnswerList">
-  <label className="container">100 J
+  <label className="container">1 J
       <input type="checkbox" id="Answer1" />
       <span className="checkmark"></span>
     </label>
-    <label className="container">200 J
+    <label className="container">1 J
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">400 J
+    <label className="container">1 J
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">1000 J
+    <label className="container">1 J
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(1)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
   
 </div>
 <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
@@ -322,17 +325,18 @@ function Page3Answered (){
     <div>
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
-  <div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
-  ผู้ชายที่ลากซุงสร้างงาน 1000*(0.1) = 100 J ในขณะที่ผู้หญิงลากกระสอบข้าวสารสร้างงาน 40*(50) = 200 J<br/>
-  จะเห็นได้ว่างานจะเป็นบริมาณที่บ่งบอก = <mark className="Yellow">การส่งผ่านพลังงานผ่านแรงจนทำให้วัตถุเกิดการเคลื่อนที่</mark></div> 
-  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-3.png?alt=media&token=93239986-5d6a-4a6c-afc2-78c61e0bb8cb" />
+  <div className="LabInfo">เช่นเดียวกับงานที่มีหลายแรงกระทำกับวัตถุ ให้ทำการรวมแรงแล้วค่อยคิดคำนวณ<br/>
+  โดยแรงที่สามารถรวมกันได้จะต้องแตกแรงให้อยู่ในทิศทางเดียวกันก่อน<br/>
+  </div> 
+  <img className='LabImg' id='img' alt ="LabImg"src="" />
    <div div className="LabInfo">เราลองเอาหลักการงานนี้ไปปรับใช้ทำโจทย์ด้านขวามือกันครับ<br/>
    <br/>ทบทวน : <MathJaxContext>
-    <MathJax>\[W = F \cdot S\]</MathJax>
+    <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
     </MathJaxContext>
-    โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
+      โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
     F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-    S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+    S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
+    และ Θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
     </div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
@@ -342,22 +346,24 @@ function Page3Answered (){
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
     <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-    <div className="Question">ออกแรง 20 นิวตัน ในแนวขนานกับพื้นราบไปได้ไกล 5 เมตร จงหางานที่เกิดจากแรงที่กระทำ</div>
+    <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
+    : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
+    </div>
     <div className="AnswerList">
-    <label className="container">100 J
-        <input type="checkbox" id="Answer1" checked disabled  />
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-      </label>
-      <label className="container">200 J
-        <input type="checkbox" id="Answer2" disabled/>
+    <label className="container">1 J
+        <input type="checkbox" id="Answer1" disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">400 J
-        <input type="checkbox" id="Answer3" disabled/>
+      <label className="container">1 J
+        <input type="checkbox" id="Answer2"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">1000 J
-        <input type="checkbox" id="Answer4" disabled/>
+      <label className="container">1 J
+        <input type="checkbox" id="Answer3"disabled/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">1 J
+        <input type="checkbox" id="Answer4"disabled/>
         <span className="checkmark"></span>
       </label>
   
