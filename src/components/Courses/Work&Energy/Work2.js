@@ -174,7 +174,7 @@ return(
 <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="" />
 <MathJaxContext>
-  <MathJax>\[W = F \cdot S \cdot cos180   = F \cdot S \cdot (-1)\]</MathJax>
+  <MathJax>\[W = F \cdot S \cdot cos180°   = F \cdot S \cdot (-1)\]</MathJax>
   </MathJaxContext>
  <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
   </div> 
@@ -221,7 +221,7 @@ function Page2Answered (){
   <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
   <img className='LabImg' id='img' alt ="LabImg"src="" />
   <MathJaxContext>
-    <MathJax>\[W = F \cdot S \cdot cos180degree = F \cdot S \cdot (-1)\]</MathJax>
+    <MathJax>\[W = F \cdot S \cdot cos180° = F \cdot S \cdot (-1)\]</MathJax>
     </MathJaxContext>
    <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
     </div> 
