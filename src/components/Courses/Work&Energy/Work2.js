@@ -141,12 +141,12 @@ return(
  <div div className="LabInfo">สำหรับแรงที่ทำมุมกับการกระจัด เราจะทำการแตกแรงให้ขนานกัน แล้วจึงคิดคำนวณ<br/>
     โดยจะได้สมการใหม่ของงานดังนี้
  <MathJaxContext>
-  <MathJax>\[W = F \cdot S \cdot cos \theta \]
+  <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
+  </MathJaxContext>
     โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
   F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
   S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
-  และ \[\theta\]  แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา ()</MathJax>
-  </MathJaxContext>
+  และ Θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
