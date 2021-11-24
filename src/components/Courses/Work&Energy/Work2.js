@@ -15,10 +15,11 @@ var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
 //Var Score
-const TotalQuestionNum = useRef(3)
+const TotalQuestionNum = useRef(2)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
+const ScoreQuestion2 = useRef(0)
 const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
@@ -28,12 +29,12 @@ const {currentUser} = useContext(AuthContext)
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current
+  TotalScore.current = ScoreQuestion2.current + ScoreQuestion3.current 
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
   db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-    Work1: CompletionScore.current
+    Work2: CompletionScore.current
 }, { merge: true });
   
 
@@ -45,7 +46,7 @@ function correct(QuestionPage){
   alert("ถูกต้องคร้าบบ")
   switch(QuestionPage){
     case 2 :setAnswer2(true)
-    ScoreQuestion3.current = 1
+    ScoreQuestion2.current = 1
       break;
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
@@ -371,13 +372,13 @@ function Page3Answered (){
     
   </div>
   <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
   
   </div>
   </div>)
   }
 
-  function Page4 (){
+ /* function Page4 (){
     return(
       <div>
       <div className="split Index">
@@ -597,7 +598,7 @@ function Page5 (){
           <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
           </div>
           </div>)
-  }
+  }*/
 
   function FinishPage (){
     sumScore()
@@ -640,7 +641,7 @@ else if (page === 3 && Answer3 === true) {
   return(<div><Page3Answered/></div>)
 }
 
-else if (page === 4 && Answer4 === false) {
+/*else if (page === 4 && Answer4 === false) {
   return(<div><Page4/></div>)
   }
   else if (page === 4 && Answer4 === true) {
@@ -652,7 +653,7 @@ else if (page === 5 && Answer5 === false) {
   else if (page === 5 && Answer5 === true) {
       return(<div><Page5Answered/></div>)
   }
-  
+  */
 else if (page === 6) {return(
     <div><FinishPage/></div>)}
     
