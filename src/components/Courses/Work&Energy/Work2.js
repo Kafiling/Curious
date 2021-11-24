@@ -141,12 +141,12 @@ return(
  <div div className="LabInfo">สำหรับแรงที่ทำมุมกับการกระจัด เราจะทำการแตกแรงให้ขนานกัน แล้วจึงคิดคำนวณ<br/>
     โดยจะได้สมการใหม่ของงานดังนี้
  <MathJaxContext>
-  <MathJax>\[W = F \cdot S \cdot cos Theta\]</MathJax>
-  </MathJaxContext>
-  โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
+  <MathJax>\[W = F \cdot S \cdot cos \theta \]
+    โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
   F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
   S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
-  และ Theta แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา ()
+  และ \[\theta\]  แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา ()</MathJax>
+  </MathJaxContext>
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -236,20 +236,21 @@ function Page2Answered (){
     <div className="Question">งานในข้อใดมีค่าติดลบ</div>
     <div className="AnswerList">
     <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
-        <input type="checkbox" id="Answer1" />
+        <input type="checkbox" id="Answer1"disabled/>
         <span className="checkmark"></span>
       </label>
       <label className="container">งานจากการเตะฟุตบอล
-        <input type="checkbox" id="Answer2"/>
+        <input type="checkbox" id="Answer2"disabled/>
         <span className="checkmark"></span>
       </label>
       <label className="container">งานจากการโยนของขึ้นชั้นบน
-        <input type="checkbox" id="Answer3"/>
+        <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">งานจากแรงเสียดทานxที่กำลังเคลื่อนที่ไปข้างหน้า
-        <input type="checkbox" id="Answer4"/>
-        <span className="checkmark"></span>
+      <label className="container">งานจากแรงเสียดทานที่กำลังเคลื่อนที่ไปข้างหน้า
+        <input type="checkbox" id="Answer4"checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+        
       </label>
   
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
