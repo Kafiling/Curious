@@ -522,7 +522,7 @@ function Page5 (){
       Bayes's Score = {BayesScore.current}</div>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" style = {{right : "0%"}} ><Link to = "/courses" >Back to Courses</Link></button>
+      <button className = "UpvoteButton" style = {{right : "0%" , backgroundColor: "rgb(var(--secondary-color))" }}  ><Link to = "/courses" >Back to Courses</Link></button>
     </div>
     < div className = 'FinishContainer'>
       <button className = "UpvoteButton" >Upvote!</button>
