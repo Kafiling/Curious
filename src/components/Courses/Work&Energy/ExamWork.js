@@ -118,38 +118,53 @@ default :
 
   
   
-  function Page1 (){
-return(
-  <div>
-  <div className="split Index">
-<div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดยงานจะขึ้นอยู่กับแรงและการกระจัด</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
- <div div className="LabInfo">เขียนเป็นสมการได้ดังนี้
- <MathJaxContext>
-  <MathJax>\[W = F \cdot S\]</MathJax>
-  </MathJaxContext>
-  โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-  F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-  S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-  </div> 
- <div div className="FooterSpace"></div>
- <div className="Footer">Curious Project</div>
- <div div className="FooterSpace"></div>
-</div>
-
-<div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="0" max="100"></progress></div>
-  <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
-  <div className="AnswerList">
+function Page1 (){
+  return(
+    <div>
+    <div className="split Index">
+  <div className="LabName">งานทางฟิสิกส์</div>
+  <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
+  <img className='LabImg' id='img' alt ="LabImg"src="" />
+  <MathJaxContext>
+    <MathJax>\[W = F \cdot S \cdot cos180°   = F \cdot S \cdot (-1)\]</MathJax>
+    </MathJaxContext>
+   <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
+    </div> 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
   
-</div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" style={{visibility: "hidden"}} >Previous page</button>
-<button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(2)}>Next page</button></div>
-</div>
-</div>)
-}
+  <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="Question">งานในข้อใดมีค่าติดลบ</div>
+    <div className="AnswerList">
+    <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
+        <input type="checkbox" id="Answer1" />
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">งานจากการเตะฟุตบอล
+        <input type="checkbox" id="Answer2"/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">งานจากการโยนของขึ้นชั้นบน
+        <input type="checkbox" id="Answer3"/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">งานจากแรงเสียดทานของวัตถุที่กำลังเคลื่อนที่ไปข้างหน้า
+        <input type="checkbox" id="Answer4"/>
+        <span className="checkmark"></span>
+      </label>
+  
+      <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
+    
+  </div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+  </div>
+  </div>)
+  }
 
   function FinishPage (){
     sumScore()
