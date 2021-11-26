@@ -123,13 +123,8 @@ function Page1 (){
     <div>
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
-  <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
+  <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
   <img className='LabImg' id='img' alt ="LabImg"src="" />
-  <MathJaxContext>
-    <MathJax>\[W = F \cdot S \cdot cos180°   = F \cdot S \cdot (-1)\]</MathJax>
-    </MathJaxContext>
-   <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
-    </div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
    <div div className="FooterSpace"></div>
