@@ -21,7 +21,7 @@ var [Answer8, setAnswer8] = useState(false);
 var [Answer9, setAnswer9] = useState(false);
 var [Answer10, setAnswer10] = useState(false);
 //Var Score
-const TotalQuestionNum = useRef(3)
+const TotalQuestionNum = useRef(10)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
@@ -46,7 +46,7 @@ function sumScore(){
   BayesScore.current = "Not Implemented"
 
   db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-    Work1: CompletionScore.current
+    ExamWork: CompletionScore.current
 }, { merge: true });
   
 
@@ -296,15 +296,15 @@ function Page1 (){
           <span className="checkmark"></span>
         </label>
     
-        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(1)}>Send Answer</button>
+        <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
       
     </div>
     <div className="ButtonContainer">
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(2)}>Next page</button></div>
+    <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(2)}>Next page</button></div>
     </div>
     </div>)
     }
-    function Page2 (){
+  function Page2 (){
       return(
         <div>
         <div className="split Index">
@@ -317,9 +317,9 @@ function Page1 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Exam Work</div>
-        <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-        <div className="Question">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
+        <div className="LabNumber">Choice</div>
+        <div className="ProgessBar"><progress value="40" max="100"></progress></div>ื
+        <div className="Question">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
     </div>
         <div className="AnswerList">
         <label className="container">0 J
@@ -347,7 +347,7 @@ function Page1 (){
       </div>
       </div>)
       }
-      function Page2Answered (){
+     function Page2Answered (){
         return(
           <div>
           <div className="split Index">
@@ -390,7 +390,49 @@ function Page1 (){
         </div>
         </div>)
         }
-    
+  function Page3 (){
+          return(
+            <div>
+            <div className="split Index">
+          <div className="LabName">งานทางฟิสิกส์</div>
+          <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+          <img className='LabImg' id='img' alt ="LabImg"src="" />
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Curious Project</div>
+           <div div className="FooterSpace"></div>
+          </div>
+          
+          <div className="split QuestionAnswer"> 
+            <div className="LabNumber">Choice</div>
+            <div className="ProgessBar"><progress value="40" max="100"></progress></div>ื
+            <div className="Question">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
+        </div>
+            <div className="AnswerList">
+            <label className="container">0 J
+                <input type="checkbox" id="Answer1" />
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">150 J
+                <input type="checkbox" id="Answer2"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">500 J
+                <input type="checkbox" id="Answer3"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">3000 J
+                <input type="checkbox" id="Answer4"/>
+                <span className="checkmark"></span>
+              </label>
+          
+              <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(1)}>Send Answer</button>
+            
+          </div>
+          <div className="ButtonContainer">
+          <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+          </div>
+          </div>)
+          }
   function FinishPage (){
     sumScore()
     return(
@@ -414,13 +456,28 @@ function Page1 (){
      </div> )
     }
 
-
-if (page === 1 && Answer1 === false) {
-  return(<div><Page1/></div>)
+      
+     if (page === 1 && Answer1 === false) {
+        return(<div><Page1/></div>)
+        }
+        else if (page === 1 && Answer1 === true) {
+          return(<div><Page1Answered/></div>)
+        }
+        
+else if (page === 2 && Answer2 === false) {
+  return(<div><Page2/></div>)
   }
-  else if (page === 1 && Answer1 === true) {
-    return(<div><Page1Answered/></div>)
+  else if (page === 2 && Answer2 === true) {
+    return(<div><Page2Answered/></div>)
   }
+  
+/*else if (page === 3 && Answer3 === false) {
+  return(<div><Page3/></div>)
+  }
+  else if (page === 3 && Answer3 === true) {
+    return(<div><Page3Answered/></div>)
+  }*/
+  
 
 else if (page === 6) {return(
     <div><FinishPage/></div>)}
