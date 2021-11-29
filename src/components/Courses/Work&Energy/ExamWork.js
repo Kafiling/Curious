@@ -922,7 +922,213 @@ function Page5 (){
         </div>
         </div>)
         }
+function Page9 (){
+      return(
+        <div>
+        <div className="split Index">
+      <div className="LabName">งานทางฟิสิกส์</div>
+      <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+      <img className='LabImg' id='img' alt ="LabImg"src="" />
+      <div className="LabInfo">กรณีในข้อใดต่อไปนี้ไม่เกิดงานในความหมายทางฟิสิกส์
 
+    </div>
+       <div div className="FooterSpace"></div>
+       <div className="Footer">Curious Project</div>
+       <div div className="FooterSpace"></div>
+      </div>
+      
+      <div className="split QuestionAnswer"> 
+        <div className="LabNumber">Choice</div>
+        <div className="ProgessBar"><progress value="80" max="100"></progress></div>ื
+        <div className="AnswerList">
+        <label className="container">ยกของจากพื้นขึ้นไปไว้บนโต๊ะ
+            <input type="checkbox" id="Answer1" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">เดินจากชั้นล่างขึ้นบน
+            <input type="checkbox" id="Answer2"/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">เข็นรถให้เคลื่อนที่
+
+            <input type="checkbox" id="Answer3"/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">กรรมกรเดินแบกกระสอบข้าวสารไปตามถนนราบ 
+            <input type="checkbox" id="Answer4"/>
+            <span className="checkmark"></span>
+          </label>
+      
+          <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(9)}>Send Answer</button>
+        
+      </div>
+      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(8)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+      </div>
+      </div>)
+      }
+  function Page9Answered (){
+        return(
+          <div>
+          <div className="split Index">
+        <div className="LabName">งานทางฟิสิกส์</div>
+        <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+        <img className='LabImg' id='img' alt ="LabImg"src="" />
+        <div className="LabInfo">กรณีในข้อใดต่อไปนี้ไม่เกิดงานในความหมายทางฟิสิกส์
+
+    </div>
+         <div div className="FooterSpace"></div>
+         <div className="Footer">Curious Project</div>
+         <div div className="FooterSpace"></div>
+        </div>
+        
+        <div className="split QuestionAnswer"> 
+          <div className="LabNumber">Choice</div>
+          <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+          <div className="AnswerList">
+          <label className="container">ยกของจากพื้นขึ้นไปไว้บนโต๊ะ
+              <input type="checkbox" id="Answer1" disabled />
+              <span className="checkmark"></span>
+            </label>
+            <label className="container">เดินจากชั้นล่างขึ้นบน
+              <input type="checkbox" id="Answer2"disabled/>
+              <span className="checkmark"></span>
+            </label>
+            <label className="container">เข็นรถให้เคลื่อนที่
+              <input type="checkbox" id="Answer3"disabled/>
+              <span className="checkmark"></span>
+            </label>
+            <label className="container">กรรมกรเดินแบกกระสอบข้าวสารไปตามถนนราบ
+              <input type="checkbox" id="Answer4"disabled checked/>
+              <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+            </label>
+        
+            <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+          
+        </div>
+        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(8)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(10)}>Next page</button></div>
+        </div>
+        </div>)
+        }
+function Page10 (){
+          return(
+            <div>
+            <div className="split Index">
+          <div className="LabName">งานทางฟิสิกส์</div>
+          <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+          <img className='LabImg' id='img' alt ="LabImg"src="" />
+          <div className="Labinfo">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง
+        </div>
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Curious Project</div>
+           <div div className="FooterSpace"></div>
+          </div>
+          
+          <div className="split QuestionAnswer"> 
+            <div className="LabNumber">Choice</div>
+            <div className="ProgessBar"><progress value="90" max="100"></progress></div>ื
+            
+            <div className="AnswerList">
+            <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
+                <input type="checkbox" id="Answer1" />
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">เมื่อมีหลายแรงกระทำ ให้ทำการรวมแรงแล้วค่อยคำนวณ
+                <input type="checkbox" id="Answer2"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">เมื่อแรงทำมุมกับการกระจัดให้แตกแรงแล้วคำนวณ
+                <input type="checkbox" id="Answer3"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">งานมีสูตรว่า W=F (dot product) S
+                <input type="checkbox" id="Answer4"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">การที่แรงตั้งฉากกับการกระจัดจะทำให้เกิดงาน
+                <input type="checkbox" id="Answer5" />
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
+                <input type="checkbox" id="Answer6"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S สามารถใช้หางานของแรง F ได้
+                <input type="checkbox" id="Answer7"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S หา งานได้จากความชันของกราฟ
+                <input type="checkbox" id="Answer8"/>
+                <span className="checkmark"></span>
+              </label>
+              <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(10)}>Send Answer</button>
+            
+          </div>
+          <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(9)}>Previous page</button>
+          <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+          </div>
+          </div>)
+          }
+  function Page10Answered (){
+            return(
+              <div>
+              <div className="split Index">
+            <div className="LabName">งานทางฟิสิกส์</div>
+            <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+            <img className='LabImg' id='img' alt ="LabImg"src="" />
+            <div className="Labinfo">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง
+        </div>
+             <div div className="FooterSpace"></div>
+             <div className="Footer">Curious Project</div>
+             <div div className="FooterSpace"></div>
+            </div>
+            
+            <div className="split QuestionAnswer"> 
+              <div className="LabNumber">Choice</div>
+              <div className="ProgessBar"><progress value="90" max="100"></progress></div>
+              <div className="AnswerList">
+              <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
+                <input type="checkbox" id="Answer1" disabled checked/>
+                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              </label>
+              <label className="container">เมื่อมีหลายแรงกระทำ ให้ทำการรวมแรงแล้วค่อยคำนวณ
+                <input type="checkbox" id="Answer2"disabled checked/>
+                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              </label>
+              <label className="container">เมื่อแรงทำมุมกับการกระจัดให้แตกแรงแล้วคำนวณ
+                <input type="checkbox" id="Answer3"disabled checked/>
+                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              </label>
+              <label className="container">งานมีสูตรว่า W=F (dot product) S
+                <input type="checkbox" id="Answer4"disabled checked/>
+                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              </label>
+              <label className="container">การที่แรงตั้งฉากกับการกระจัดจะทำให้เกิดงาน
+                <input type="checkbox" id="Answer5"disabled />
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
+                <input type="checkbox" id="Answer6"disabled checked/>
+                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              </label>
+              <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S สามารถใช้หางานของแรง F ได้
+                <input type="checkbox" id="Answer7"disabled checked/>
+                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              </label>
+              <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S หา งานได้จากความชันของกราฟ
+                <input type="checkbox" id="Answer8"disabled/>
+                <span className="checkmark"></span>
+              </label>
+            
+                <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+              
+            </div>
+            <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(9)}>Previous page</button>
+          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(11)}>Next page</button></div>
+            </div>
+            </div>)
+            }
   function FinishPage (){
     sumScore()
     return(
@@ -936,11 +1142,11 @@ function Page5 (){
       Bayes's Score = {BayesScore.current}</div>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" style = {{right : "0%"}} onClick ={() => setPage(4)}><Link to = "/courses" >Back to Courses</Link></button>
+      <button className = "UpvoteButton" style = {{right : "0%"}} onClick ={() => setPage(1)}><Link to = "/courses" >Back to Courses</Link></button>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" onClick ={() => setPage(4)}>Upvote!</button>
-      <button className = "ReportButton" onClick ={() => setPage(6)}>Report</button>
+      <button className = "UpvoteButton" onClick ={() => setPage(1)}>Upvote!</button>
+      <button className = "ReportButton" >Report</button>
     </div>
     
      </div> )
@@ -997,6 +1203,18 @@ else if (page === 8 && Answer8 === false) {
     }
   else if (page === 8 && Answer8 === true) {
       return(<div><Page8Answered/></div>)
+    }
+else if (page === 9 && Answer9 === false) {
+  return(<div><Page9/></div>)
+  }
+  else if (page === 9 && Answer9 === true) {
+    return(<div><Page9Answered/></div>)
+  }
+else if (page === 10 && Answer10 === false) {
+    return(<div><Page10/></div>)
+    }
+  else if (page === 10 && Answer10 === true) {
+      return(<div><Page10Answered/></div>)
     }
 else if (page === 11) {return(
     <div><FinishPage/></div>)}
