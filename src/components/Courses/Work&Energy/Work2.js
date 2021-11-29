@@ -186,7 +186,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="30" max="100"></progress></div>
   <div className="Question">งานในข้อใดมีค่าติดลบ</div>
   <div className="AnswerList">
   <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
@@ -233,7 +233,7 @@ function Page2Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="30" max="100"></progress></div>
     <div className="Question">งานในข้อใดมีค่าติดลบ</div>
     <div className="AnswerList">
     <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
@@ -289,7 +289,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="65" max="100"></progress></div>
   <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
   : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
   </div>
@@ -346,7 +346,7 @@ function Page3Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="65" max="100"></progress></div>
     <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
     : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
     </div>

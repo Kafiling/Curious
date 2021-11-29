@@ -225,16 +225,17 @@ function Page1 (){
   <div className="LabName">งานทางฟิสิกส์</div>
   <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
   <img className='LabImg' id='img' alt ="LabImg"src="" />
+  <div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
+</div>
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
    <div div className="FooterSpace"></div>
   </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Exam Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-    <div className="Question">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
-</div>
+    <div className="LabNumber">Choice</div>
+    <div className="ProgessBar"><progress value="0" max="100"></progress></div>
+    
     <div className="AnswerList">
     <label className="container">0 J
         <input type="checkbox" id="Answer1" />
@@ -268,16 +269,17 @@ function Page1 (){
     <div className="LabName">งานทางฟิสิกส์</div>
     <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
     <img className='LabImg' id='img' alt ="LabImg"src="" />
+    <div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
+  </div>
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Exam Work</div>
+      <div className="LabNumber">Choice</div>
       <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-      <div className="Question">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
-  </div>
+      
       <div className="AnswerList">
       <label className="container">0 J
           <input type="checkbox" id="Answer1" disabled checked />
@@ -311,6 +313,8 @@ function Page1 (){
       <div className="LabName">งานทางฟิสิกส์</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
       <img className='LabImg' id='img' alt ="LabImg"src="" />
+      <div className="LabInfo">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
+    </div>
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
        <div div className="FooterSpace"></div>
@@ -318,75 +322,73 @@ function Page1 (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Choice</div>
-        <div className="ProgessBar"><progress value="40" max="100"></progress></div>ื
-        <div className="Question">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
-    </div>
+        <div className="ProgessBar"><progress value="10" max="100"></progress></div>ื
         <div className="AnswerList">
         <label className="container">0 J
             <input type="checkbox" id="Answer1" />
             <span className="checkmark"></span>
           </label>
-          <label className="container">150 J
+          <label className="container">10 J
             <input type="checkbox" id="Answer2"/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">500 J
+          <label className="container">50 J
             <input type="checkbox" id="Answer3"/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">3000 J
+          <label className="container">100 J
             <input type="checkbox" id="Answer4"/>
             <span className="checkmark"></span>
           </label>
       
-          <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(1)}>Send Answer</button>
+          <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
         
       </div>
-      <div className="ButtonContainer">
+      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
       <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
       </div>
       </div>)
       }
-     function Page2Answered (){
+  function Page2Answered (){
         return(
           <div>
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
         <img className='LabImg' id='img' alt ="LabImg"src="" />
+        <div className="LabInfo">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
+    </div>
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Exam Work</div>
-          <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-          <div className="Question">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
-      </div>
+          <div className="LabNumber">Choice</div>
+          <div className="ProgessBar"><progress value="10" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">0 J
-              <input type="checkbox" id="Answer1" disabled checked />
-              <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              <input type="checkbox" id="Answer1" disabled />
+              <span className="checkmark"></span>
             </label>
-            <label className="container">150 J
+            <label className="container">10 J
               <input type="checkbox" id="Answer2"disabled/>
               <span className="checkmark"></span>
             </label>
-            <label className="container">500 J
+            <label className="container">50 J
               <input type="checkbox" id="Answer3"disabled/>
               <span className="checkmark"></span>
             </label>
-            <label className="container">3000 J
-              <input type="checkbox" id="Answer4"disabled/>
-              <span className="checkmark"></span>
+            <label className="container">100 J
+              <input type="checkbox" id="Answer4"disabled checked/>
+              <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
             </label>
         
-            <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(1)}>Send Answer</button>
+            <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
           
         </div>
-        <div className="ButtonContainer">
-      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(2)}>Next page</button></div>
+        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
         </div>
         </div>)
         }
@@ -397,6 +399,10 @@ function Page1 (){
           <div className="LabName">งานทางฟิสิกส์</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
           <img className='LabImg' id='img' alt ="LabImg"src="" />
+          <div className="Labinfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
+          ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม 
+          จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
+        </div>
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
            <div div className="FooterSpace"></div>
@@ -404,35 +410,342 @@ function Page1 (){
           
           <div className="split QuestionAnswer"> 
             <div className="LabNumber">Choice</div>
-            <div className="ProgessBar"><progress value="40" max="100"></progress></div>ื
-            <div className="Question">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
-        </div>
+            <div className="ProgessBar"><progress value="20" max="100"></progress></div>ื
+            
             <div className="AnswerList">
-            <label className="container">0 J
+            <label className="container">20.8 kJ
                 <input type="checkbox" id="Answer1" />
                 <span className="checkmark"></span>
               </label>
-              <label className="container">150 J
+              <label className="container">104 kJ
                 <input type="checkbox" id="Answer2"/>
                 <span className="checkmark"></span>
               </label>
-              <label className="container">500 J
+              <label className="container">2080 kJ
                 <input type="checkbox" id="Answer3"/>
                 <span className="checkmark"></span>
               </label>
-              <label className="container">3000 J
+              <label className="container">10400 kJ
                 <input type="checkbox" id="Answer4"/>
                 <span className="checkmark"></span>
               </label>
           
-              <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(1)}>Send Answer</button>
+              <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
             
           </div>
-          <div className="ButtonContainer">
+          <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
           <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
           </div>
           </div>)
           }
+  function Page3Answered (){
+            return(
+              <div>
+              <div className="split Index">
+            <div className="LabName">งานทางฟิสิกส์</div>
+            <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+            <img className='LabImg' id='img' alt ="LabImg"src="" />
+            <div className="Labinfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
+        </div>
+             <div div className="FooterSpace"></div>
+             <div className="Footer">Curious Project</div>
+             <div div className="FooterSpace"></div>
+            </div>
+            
+            <div className="split QuestionAnswer"> 
+              <div className="LabNumber">Choice</div>
+              <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+              <div className="AnswerList">
+              <label className="container">20.8 kJ
+                  <input type="checkbox" id="Answer1" disabled />
+                  <span className="checkmark"></span>
+                </label>
+                <label className="container">104 kJ
+                  <input type="checkbox" id="Answer2"disabled checked/>
+                  <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                </label>
+                <label className="container">2080 kJ
+                  <input type="checkbox" id="Answer3"disabled/>
+                  <span className="checkmark"></span>
+                </label>
+                <label className="container">10400 kJ
+                  <input type="checkbox" id="Answer4"disabled/>
+                  <span className="checkmark"></span>
+                </label>
+            
+                <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+              
+            </div>
+            <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+            </div>
+            </div>)
+            }
+    function Page4 (){
+              return(
+                <div>
+                <div className="split Index">
+              <div className="LabName">งานทางฟิสิกส์</div>
+              <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+              <img className='LabImg' id='img' alt ="LabImg"src="" />
+              <div className="Labinfo">วัตถุหนัก 20 นิวตัน วางอยู่บนพื้นที่จุด A จุด B อยู่เหนือจุด A และสูงจาก A เท่ากับ 4 เมตร  จุด C อยู่ในแนวระดับเดียวกันกับจุด B และห่างจาก B เป็นระยะ 3 เมตร จงหางานที่ทำในการยกวัตถุจาก A ไป B แล้วไป C
+
+            </div>
+               <div div className="FooterSpace"></div>
+               <div className="Footer">Curious Project</div>
+               <div div className="FooterSpace"></div>
+              </div>
+              
+              <div className="split QuestionAnswer"> 
+                <div className="LabNumber">Choice</div>
+                <div className="ProgessBar"><progress value="30" max="100"></progress></div>ื
+                
+                <div className="AnswerList">
+                <label className="container">0 J
+                    <input type="checkbox" id="Answer1" />
+                    <span className="checkmark"></span>
+                  </label>
+                  <label className="container">50√2 J
+                    <input type="checkbox" id="Answer2"/>
+                    <span className="checkmark"></span>
+                  </label>
+                  <label className="container">80 J
+                    <input type="checkbox" id="Answer3"/>
+                    <span className="checkmark"></span>
+                  </label>
+                  <label className="container">140 J
+                    <input type="checkbox" id="Answer4"/>
+                    <span className="checkmark"></span>
+                  </label>
+              
+                  <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
+                
+              </div>
+              <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+              <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+              </div>
+              </div>)
+              }
+      function Page4Answered (){
+                return(
+                  <div>
+                  <div className="split Index">
+                <div className="LabName">งานทางฟิสิกส์</div>
+                <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+                <img className='LabImg' id='img' alt ="LabImg"src="" />
+                <div className="Labinfo">วัตถุหนัก 20 นิวตัน วางอยู่บนพื้นที่จุด A จุด B อยู่เหนือจุด A และสูงจาก A เท่ากับ 4 เมตร  จุด C อยู่ในแนวระดับเดียวกันกับจุด B และห่างจาก B เป็นระยะ 3 เมตร จงหางานที่ทำในการยกวัตถุจาก A ไป B แล้วไป C
+            </div>
+                 <div div className="FooterSpace"></div>
+                 <div className="Footer">Curious Project</div>
+                 <div div className="FooterSpace"></div>
+                </div>
+                
+                <div className="split QuestionAnswer"> 
+                  <div className="LabNumber">Choice</div>
+                  <div className="ProgessBar"><progress value="30" max="100"></progress></div>
+                  <div className="AnswerList">
+                  <label className="container">0 J
+                      <input type="checkbox" id="Answer1" disabled />
+                      <span className="checkmark"></span>
+                    </label>
+                    <label className="container">50√2 J
+                      <input type="checkbox" id="Answer2"disabled/>
+                      <span className="checkmark"></span>
+                    </label>
+                    <label className="container">80 J
+                      <input type="checkbox" id="Answer3"disabled checked/>
+                      <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                    </label>
+                    <label className="container">140 J
+                      <input type="checkbox" id="Answer4"disabled/>
+                      <span className="checkmark"></span>
+                    </label>
+                
+                    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
+                  
+                </div>
+                <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+              <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
+                </div>
+                </div>)
+                }
+function Page5 (){
+      return(
+        <div>
+        <div className="split Index">
+      <div className="LabName">งานทางฟิสิกส์</div>
+      <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+      <img className='LabImg' id='img' alt ="LabImg"src="" />
+      <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะกระจัด 20 เมตร
+
+    </div>
+       <div div className="FooterSpace"></div>
+       <div className="Footer">Curious Project</div>
+       <div div className="FooterSpace"></div>
+      </div>
+      
+      <div className="split QuestionAnswer"> 
+        <div className="LabNumber">Choice</div>
+        <div className="ProgessBar"><progress value="40" max="100"></progress></div>ื
+        <div className="AnswerList">
+        <label className="container">200 J
+            <input type="checkbox" id="Answer1" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">350 J
+            <input type="checkbox" id="Answer2"/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">400 J 
+            <input type="checkbox" id="Answer3"/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">450 J 
+            <input type="checkbox" id="Answer4"/>
+            <span className="checkmark"></span>
+          </label>
+      
+          <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
+        
+      </div>
+      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+      </div>
+      </div>)
+      }
+  function Page5Answered (){
+        return(
+          <div>
+          <div className="split Index">
+        <div className="LabName">งานทางฟิสิกส์</div>
+        <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+        <img className='LabImg' id='img' alt ="LabImg"src="" />
+        <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะกระจัด 20 เมตร
+
+    </div>
+         <div div className="FooterSpace"></div>
+         <div className="Footer">Curious Project</div>
+         <div div className="FooterSpace"></div>
+        </div>
+        
+        <div className="split QuestionAnswer"> 
+          <div className="LabNumber">Choice</div>
+          <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+          <div className="AnswerList">
+          <label className="container">200 J
+              <input type="checkbox" id="Answer1" disabled />
+              <span className="checkmark"></span>
+            </label>
+            <label className="container">350 J
+              <input type="checkbox" id="Answer2"disabled/>
+              <span className="checkmark"></span>
+            </label>
+            <label className="container">400 J 
+              <input type="checkbox" id="Answer3"disabled checked/>
+              <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+            </label>
+            <label className="container">450 J 
+              <input type="checkbox" id="Answer4"disabled/>
+              <span className="checkmark"></span>
+            </label>
+        
+            <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
+          
+        </div>
+        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
+        </div>
+        </div>)
+        }
+        function Page6 (){
+          return(
+            <div>
+            <div className="split Index">
+          <div className="LabName">งานทางฟิสิกส์</div>
+          <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+          <img className='LabImg' id='img' alt ="LabImg"src="" />
+          <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุหนึ่ง นำค่าแรงในแนวขนานกับการกระจัดมาเขียนความสัมพันธ์ได้ดังกราฟ จงหางานลัพธ์ ที่ทำให้วัตถุเคลื่อนได้ระยะทาง 30 เมตร (เปลี่ยน x ในกราฟเป็น 20 m)
+
+        </div>
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Curious Project</div>
+           <div div className="FooterSpace"></div>
+          </div>
+          
+          <div className="split QuestionAnswer"> 
+            <div className="LabNumber">Choice</div>
+            <div className="ProgessBar"><progress value="50" max="100"></progress></div>ื
+            <div className="AnswerList">
+            <label className="container">300 J
+                <input type="checkbox" id="Answer1" />
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">400 J
+                <input type="checkbox" id="Answer2"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">600 J
+                <input type="checkbox" id="Answer3"/>
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">800 J
+                <input type="checkbox" id="Answer4"/>
+                <span className="checkmark"></span>
+              </label>
+          
+              <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(6)}>Send Answer</button>
+            
+          </div>
+          <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+          <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+          </div>
+          </div>)
+          }
+      function Page6Answered (){
+            return(
+              <div>
+              <div className="split Index">
+            <div className="LabName">งานทางฟิสิกส์</div>
+            <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+            <img className='LabImg' id='img' alt ="LabImg"src="" />
+            <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุหนึ่ง นำค่าแรงในแนวขนานกับการกระจัดมาเขียนความสัมพันธ์ได้ดังกราฟ จงหางานลัพธ์ ที่ทำให้วัตถุเคลื่อนได้ระยะทาง 30 เมตร (เปลี่ยน x ในกราฟเป็น 20 m)
+
+        </div>
+             <div div className="FooterSpace"></div>
+             <div className="Footer">Curious Project</div>
+             <div div className="FooterSpace"></div>
+            </div>
+            
+            <div className="split QuestionAnswer"> 
+              <div className="LabNumber">Choice</div>
+              <div className="ProgessBar"><progress value="50" max="100"></progress></div>
+              <div className="AnswerList">
+              <label className="container">300 J
+                  <input type="checkbox" id="Answer1" disabled checked />
+                  <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                </label>
+                <label className="container">400 J
+                  <input type="checkbox" id="Answer2"disabled/>
+                  <span className="checkmark"></span>
+                </label>
+                <label className="container">600 J
+                  <input type="checkbox" id="Answer3"disabled/>
+                  <span className="checkmark"></span>
+                </label>
+                <label className="container">800 J
+                  <input type="checkbox" id="Answer4"disabled/>
+                  <span className="checkmark"></span>
+                </label>
+            
+                <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(6)}>Send Answer</button>
+              
+            </div>
+            <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(7)}>Next page</button></div>
+            </div>
+            </div>)
+            }
+
   function FinishPage (){
     sumScore()
     return(
@@ -471,15 +784,32 @@ else if (page === 2 && Answer2 === false) {
     return(<div><Page2Answered/></div>)
   }
   
-/*else if (page === 3 && Answer3 === false) {
+else if (page === 3 && Answer3 === false) {
   return(<div><Page3/></div>)
   }
   else if (page === 3 && Answer3 === true) {
     return(<div><Page3Answered/></div>)
-  }*/
-  
+  }
 
-else if (page === 6) {return(
+else if (page === 4 && Answer4 === false) {
+    return(<div><Page4/></div>)
+    }
+  else if (page === 4 && Answer4 === true) {
+      return(<div><Page4Answered/></div>)
+    }
+else if (page === 5 && Answer5 === false) {
+      return(<div><Page5/></div>)
+      }
+ else if (page === 5 && Answer5 === true) {
+        return(<div><Page5Answered/></div>)
+      }
+else if (page === 6 && Answer6 === false) {
+        return(<div><Page6/></div>)
+        }
+      else if (page === 6 && Answer6 === true) {
+          return(<div><Page6Answered/></div>)
+        }
+else if (page === 11) {return(
     <div><FinishPage/></div>)}
     
 else   {return(<div>
