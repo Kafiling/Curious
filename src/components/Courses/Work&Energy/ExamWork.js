@@ -199,24 +199,59 @@ case 9 :
     Answer4.checked === true ){correct(9)}
 else{incorrect(9)}
 break;
-case 10 :
-  if(Answer1.checked === true&& 
-    Answer2.checked ===  true&& 
-    Answer3.checked === true&& 
-    Answer4.checked === true&&
-    Answer5.checked ===  false&& 
-    Answer6.checked === true&&
-    Answer7.checked ===  true&& 
-    Answer8.checked === false){correct(10)}
-else{incorrect(10)}
-break;
 default :
     alert("Checking Error")
     break;
 }
 }}
-
+function checkAnswer8Choice(QuestionNumber){
+  let Answer1 = document.getElementById("Answer1")
+  let Answer2 = document.getElementById("Answer2")
+  let Answer3 = document.getElementById("Answer3")
+  let Answer4 = document.getElementById("Answer4")
+  let Answer5 = document.getElementById("Answer5")
+  let Answer6 = document.getElementById("Answer6")
+  let Answer7 = document.getElementById("Answer7")
+  let Answer8 = document.getElementById("Answer8")
+  if(Answer1.checked === false && 
+    Answer2.checked === false && 
+    Answer3.checked === false && 
+    Answer4.checked === false && 
+    Answer5.checked === false && 
+    Answer6.checked === false && 
+    Answer7.checked === false && 
+    Answer8.checked === false ){retry()}
   
+  else{switch(QuestionNumber){
+    case 10 :
+      if(Answer1.checked === true&& 
+        Answer2.checked ===  true&& 
+        Answer3.checked === true&& 
+        Answer4.checked === true&&
+        Answer5.checked ===  false&& 
+        Answer6.checked === true&&
+        Answer7.checked ===  true&& 
+        Answer8.checked === false){correct(10)}
+else{incorrect(10)}
+break;
+default :
+    alert("Checking Error")
+    break;
+}}}
+
+function allAnswerSummitCheck(){
+  let arr = [Answer1,Answer2,Answer3,Answer4,Answer5,Answer6,Answer7,Answer8,Answer9,Answer10]
+  let filtered = arr.filter(Boolean);
+
+  if(Answer1 && Answer2 && Answer3 && Answer4 && Answer5 && Answer6 && Answer7 && Answer8 && Answer9 && Answer10){
+    setPage(11)
+  }
+  else {
+    alert("ตอบไม่ครบ")
+    console.log(filtered);
+  }
+  
+}
   
 function Page1 (){
   return(
@@ -1062,7 +1097,7 @@ function Page10 (){
                 <input type="checkbox" id="Answer8"/>
                 <span className="checkmark"></span>
               </label>
-              <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(10)}>Send Answer</button>
+              <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer8Choice(10)}>Send Answer</button>
             
           </div>
           <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(9)}>Previous page</button>
@@ -1125,7 +1160,7 @@ function Page10 (){
               
             </div>
             <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(9)}>Previous page</button>
-          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(11)}>Next page</button></div>
+          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => allAnswerSummitCheck()}>Next page</button></div>
             </div>
             </div>)
             }
