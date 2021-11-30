@@ -99,9 +99,9 @@ function retry(){
     switch(QuestionNumber){
       case 2 :
     if(Answer1.checked === false&& 
-      Answer2.checked ===  false&& 
+      Answer2.checked ===  true&& 
       Answer3.checked === false && 
-      Answer4.checked === true ){correct(2)}
+      Answer4.checked ===  false){correct(2)}
   else{incorrect(2)}
   break;
     case 3 : if(Answer1.checked === false && 
@@ -182,30 +182,108 @@ function Page2 (){
     F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
     S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
     และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
+
+    <br/><br/>ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
     </div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
    <div div className="FooterSpace"></div>
   </div>
   
-  <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="0" max="100"></progress></div>
-    <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
-    <div className="AnswerList">
-    
+
+    <div className="split QuestionAnswer"> 
+  <div className="LabNumber">Introducing Work</div>
+  <div className="ProgessBar"><progress value="25" max="100"></progress></div>
+  <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
+  <div className="AnswerList">
+  <label className="container">1200 J
+      <input type="checkbox" id="Answer1" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">1600 J
+      <input type="checkbox" id="Answer2"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">1800 J
+      <input type="checkbox" id="Answer3"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">2000 J
+      <input type="checkbox" id="Answer4"/>
+      <span className="checkmark"></span>
+    </label>
+
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
+  
   </div>
   <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+  <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
   </div>
   </div>)
   }
+  function Page2Answered (){
+    return(
+      <div>
+      <div className="split Index">
+    <div className="LabName">งานทางฟิสิกส์</div>
+    <div div className="LabInfo">ในการแตกองค์ประกองของแรง จะยึดด้านที่อยู่ “ใกล้มุม” หรือ ด้านที่ติดกับมุมเป็น Fcosθ และด้านที่อยู่ “ไกลมุม” เป็น Fsinθ
+  </div> 
+  
+     <div div className="LabInfo">
+     <img className='LabImg' id='img' alt ="LabImg"src="" />
+     <br/><br/>ดังนั้น งานจากแรง F ในภาพนี้ จะมีค่าเท่ากับ<br/>
+     <MathJaxContext>
+      <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
+      </MathJaxContext>
+        โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
+      F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
+      S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
+      และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
+  
+      <br/><br/>ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
+      </div> 
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
+    
+  
+      <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="25" max="100"></progress></div>
+    <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
+    <div className="AnswerList">
+    <label className="container">1200 J
+        <input type="checkbox" id="Answer1"disabled />
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">1600 J
+        <input type="checkbox" id="Answer2"disabled checked/>
+        <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      </label>
+      <label className="container">1800 J
+        <input type="checkbox" id="Answer3"disabled/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">2000 J
+        <input type="checkbox" id="Answer4"disabled/>
+        <span className="checkmark"></span>
+      </label>
+  
+      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+    
+    </div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+    </div>
+    </div>)
+    }
 function Page3 (){
 return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
+<div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา จากสมการจะได้</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="" />
 <MathJaxContext>
   <MathJax>\[W = F \cdot S \cdot cos180°   = F \cdot S \cdot (-1)\]</MathJax>
@@ -219,7 +297,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="30" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="50" max="100"></progress></div>
   <div className="Question">งานในข้อใดมีค่าติดลบ</div>
   <div className="AnswerList">
   <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
@@ -239,10 +317,10 @@ return(
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
   
 </div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
 <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 </div>
 </div>)
@@ -266,7 +344,7 @@ function Page3Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="30" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="50" max="100"></progress></div>
     <div className="Question">งานในข้อใดมีค่าติดลบ</div>
     <div className="AnswerList">
     <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
@@ -290,8 +368,8 @@ function Page3Answered (){
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
   
   </div>
   </div>)
@@ -322,7 +400,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="65" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="75" max="100"></progress></div>
   <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
   : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
   </div>
@@ -344,10 +422,10 @@ return(
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
   
 </div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
 <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 
 </div>
@@ -379,7 +457,7 @@ function Page4Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="65" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="75" max="100"></progress></div>
     <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
     : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
     </div>
@@ -404,7 +482,7 @@ function Page4Answered (){
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
   <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
   
   </div>
@@ -659,8 +737,11 @@ function Page5 (){
 if (page === 1) {return (
 <div><Page1/></div>)}
 
-else if (page === 2 ) {
+else if (page === 2 && Answer2 === false) {
   return(<div><Page2/></div>)
+  }
+  else if (page === 2 && Answer2 === true) {
+    return(<div><Page2Answered/></div>)
   }
  
   
@@ -672,13 +753,13 @@ else if (page === 3 && Answer3 === true) {
   return(<div><Page3Answered/></div>)
 }
 
-/*else if (page === 4 && Answer4 === false) {
+else if (page === 4 && Answer4 === false) {
   return(<div><Page4/></div>)
   }
   else if (page === 4 && Answer4 === true) {
     return(<div><Page4Answered/></div>)
   }
-else if (page === 5 && Answer5 === false) {
+/*else if (page === 5 && Answer5 === false) {
     return(<div><Page5/></div>)
   }
   else if (page === 5 && Answer5 === true) {
