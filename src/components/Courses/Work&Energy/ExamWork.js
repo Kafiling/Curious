@@ -233,7 +233,7 @@ function Page1 (){
   </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Choice</div>
+    <div className="LabNumber">Exam : Work (1/10)</div>
     <div className="ProgessBar"><progress value="0" max="100"></progress></div>
     
     <div className="AnswerList">
@@ -277,7 +277,7 @@ function Page1 (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Choice</div>
+      <div className="LabNumber">Exam : Work (1/10)</div>
       <div className="ProgessBar"><progress value="0" max="100"></progress></div>
       
       <div className="AnswerList">
@@ -321,7 +321,7 @@ function Page1 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Choice</div>
+        <div className="LabNumber">Exam : Work (2/10)</div>
         <div className="ProgessBar"><progress value="10" max="100"></progress></div>ื
         <div className="AnswerList">
         <label className="container">0 J
@@ -364,7 +364,7 @@ function Page1 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Choice</div>
+          <div className="LabNumber">Exam : Work (2/10)</div>
           <div className="ProgessBar"><progress value="10" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">0 J
@@ -409,7 +409,7 @@ function Page1 (){
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Choice</div>
+            <div className="LabNumber">Exam : Work (3/10)</div>
             <div className="ProgessBar"><progress value="20" max="100"></progress></div>ื
             
             <div className="AnswerList">
@@ -453,7 +453,7 @@ function Page1 (){
             </div>
             
             <div className="split QuestionAnswer"> 
-              <div className="LabNumber">Choice</div>
+              <div className="LabNumber">Exam : Work (3/10)</div>
               <div className="ProgessBar"><progress value="20" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">20.8 kJ
@@ -497,7 +497,7 @@ function Page1 (){
               </div>
               
               <div className="split QuestionAnswer"> 
-                <div className="LabNumber">Choice</div>
+                <div className="LabNumber">Exam : Work (4/10)</div>
                 <div className="ProgessBar"><progress value="30" max="100"></progress></div>ื
                 
                 <div className="AnswerList">
@@ -541,7 +541,7 @@ function Page1 (){
                 </div>
                 
                 <div className="split QuestionAnswer"> 
-                  <div className="LabNumber">Choice</div>
+                  <div className="LabNumber">Exam : Work (4/10)</div>
                   <div className="ProgessBar"><progress value="30" max="100"></progress></div>
                   <div className="AnswerList">
                   <label className="container">0 J
@@ -585,7 +585,7 @@ function Page5 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Choice</div>
+        <div className="LabNumber">Exam : Work (5/10)</div>
         <div className="ProgessBar"><progress value="40" max="100"></progress></div>ื
         <div className="AnswerList">
         <label className="container">200 J
@@ -629,7 +629,7 @@ function Page5 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Choice</div>
+          <div className="LabNumber">Exam : Work (5/10)</div>
           <div className="ProgessBar"><progress value="40" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">200 J
@@ -673,7 +673,7 @@ function Page5 (){
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Choice</div>
+            <div className="LabNumber">Exam : Work (6/10)</div>
             <div className="ProgessBar"><progress value="50" max="100"></progress></div>ื
             <div className="AnswerList">
             <label className="container">300 J
@@ -717,7 +717,7 @@ function Page5 (){
             </div>
             
             <div className="split QuestionAnswer"> 
-              <div className="LabNumber">Choice</div>
+              <div className="LabNumber">Exam : Work (6/10)</div>
               <div className="ProgessBar"><progress value="50" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">300 J
@@ -761,7 +761,7 @@ function Page5 (){
               </div>
               
               <div className="split QuestionAnswer"> 
-                <div className="LabNumber">Choice</div>
+                <div className="LabNumber">Exam : Work (7/10)</div>
                 <div className="ProgessBar"><progress value="60" max="100"></progress></div>ื
                 <div className="AnswerList">
                 <label className="container">100 J , 50 J , 50 J
@@ -804,7 +804,7 @@ function Page5 (){
                 </div>
                 
                 <div className="split QuestionAnswer"> 
-                  <div className="LabNumber">Choice</div>
+                  <div className="LabNumber">Exam : Work (7/10)</div>
                   <div className="ProgessBar"><progress value="60" max="100"></progress></div>
                   <div className="AnswerList">
                   <label className="container">100 J , 50 J , 50 J
@@ -849,7 +849,7 @@ function Page5 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Choice</div>
+        <div className="LabNumber">Exam : Work (8/10)</div>
         <div className="ProgessBar"><progress value="70" max="100"></progress></div>ื
         <div className="AnswerList">
         <label className="container">400 J
@@ -894,7 +894,7 @@ function Page5 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Choice</div>
+          <div className="LabNumber">Exam : Work (8/10)</div>
           <div className="ProgessBar"><progress value="70" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">400 J
@@ -938,7 +938,7 @@ function Page9 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Choice</div>
+        <div className="LabNumber">Exam : Work (9/10)</div>
         <div className="ProgessBar"><progress value="80" max="100"></progress></div>ื
         <div className="AnswerList">
         <label className="container">ยกของจากพื้นขึ้นไปไว้บนโต๊ะ
@@ -983,7 +983,7 @@ function Page9 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Choice</div>
+          <div className="LabNumber">Exam : Work (9/10)</div>
           <div className="ProgessBar"><progress value="80" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">ยกของจากพื้นขึ้นไปไว้บนโต๊ะ
@@ -1026,7 +1026,7 @@ function Page10 (){
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง</div>
+            <div className="LabNumber">Exam : Work (10/10)</div>
             <div className="ProgessBar"><progress value="90" max="100"></progress></div>ื
             
             <div className="AnswerList">
@@ -1085,7 +1085,7 @@ function Page10 (){
             </div>
             
             <div className="split QuestionAnswer"> 
-              <div className="LabNumber">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง</div>
+              <div className="LabNumber">Exam : Work (10/10)</div>
               <div className="ProgessBar"><progress value="90" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
