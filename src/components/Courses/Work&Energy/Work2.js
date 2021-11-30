@@ -104,10 +104,10 @@ function retry(){
       Answer4.checked === true ){correct(2)}
   else{incorrect(2)}
   break;
-    case 3 : if(Answer1.checked === true && 
+    case 3 : if(Answer1.checked === false && 
       Answer2.checked === false && 
       Answer3.checked === false && 
-      Answer4.checked === false ) {correct(3)}
+      Answer4.checked === true ) {correct(3)}
   else{incorrect(3)}
   break;
   case 4 :
@@ -138,16 +138,14 @@ return(
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จะสังเกตได้ว่า จากข้อที่ผ่านๆมา แรงจะมีทิศทางไปทางเดียวกับการกระจัด จะเป็นอย่างไรหากแรงกับการกระจัดมีทิศทางต่างๆกันออกไป</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="" />
- <div div className="LabInfo">สำหรับแรงที่ทำมุมกับการกระจัด เราจะทำการแตกแรงให้ขนานกัน แล้วจึงคิดคำนวณ<br/>
-    โดยจะได้สมการใหม่ของงานดังนี้
- <MathJaxContext>
-  <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
-  </MathJaxContext>
-    โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-  F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-  S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
-  และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
+<br/><br/>
+ <div div className="LabInfo">ในกรณีที่แรงไม่ได้มีทิศทางเดียวกับการกระจัด เราจะทำการแยกองค์ประกอบแรง (เรียกง่ายๆว่า “แตกแรง”) 2 แรงที่ตั้งฉากกัน (แตกออกเป็นแกน x และ y) โดยให้แรงหนึ่งแนวขนานกับการกระจัด
+ <img className='LabImg' id='img' alt ="LabImg"src="" />
+ <br/><br/>ในภาพนี้ Fx เป็นแรงองค์ประกอบของ F ในแนวระดับ 
+
+ส่วน Fy เป็นแรงองค์ประกอบของ F ในแนวตั้งฉากกับการกระจัด ซึ่งอยู่ในแนวดิ่ง ไม่ส่งผลต่อการเคลื่อนที่แนวระดับ จึงไม่มีผลกับการเกิดงาน (อธิบายอย่างระเอียดใน Work 3) 
+
+ 
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -166,8 +164,43 @@ return(
 </div>
 </div>)
 }
-
 function Page2 (){
+  return(
+    <div>
+    <div className="split Index">
+  <div className="LabName">งานทางฟิสิกส์</div>
+  <div div className="LabInfo">ในการแตกองค์ประกองของแรง จะยึดด้านที่อยู่ “ใกล้มุม” หรือ ด้านที่ติดกับมุมเป็น Fcosθ และด้านที่อยู่ “ไกลมุม” เป็น Fsinθ
+</div> 
+
+   <div div className="LabInfo">
+   <img className='LabImg' id='img' alt ="LabImg"src="" />
+   <br/><br/>ดังนั้น งานจากแรง F ในภาพนี้ จะมีค่าเท่ากับ<br/>
+   <MathJaxContext>
+    <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
+    </MathJaxContext>
+      โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
+    F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
+    S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
+    และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
+    </div> 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
+  
+  <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="0" max="100"></progress></div>
+    <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
+    <div className="AnswerList">
+    
+  </div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+  </div>
+  </div>)
+  }
+function Page3 (){
 return(
   <div>
   <div className="split Index">
@@ -177,7 +210,7 @@ return(
 <MathJaxContext>
   <MathJax>\[W = F \cdot S \cdot cos180°   = F \cdot S \cdot (-1)\]</MathJax>
   </MathJaxContext>
- <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
+ <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง แต่เครื่องหมายบวกหรือลบของงานไม่ได้เป็นสิ่งที่แสดงทิศทางของงาน เพราะงานเป็นปริมาณสเกลาร์จึงไม่มีทิศทาง <br/> <br/> ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -214,7 +247,7 @@ return(
 </div>
 </div>)
 }
-function Page2Answered (){
+function Page3Answered (){
   return(
     <div>
     <div className="split Index">
@@ -224,7 +257,7 @@ function Page2Answered (){
   <MathJaxContext>
     <MathJax>\[W = F \cdot S \cdot cos180° = F \cdot S \cdot (-1)\]</MathJax>
     </MathJaxContext>
-   <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
+   <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง แต่เครื่องหมายบวกหรือลบของงานไม่ได้เป็นสิ่งที่แสดงทิศทางของงาน เพราะงานเป็นปริมาณสเกลาร์จึงไม่มีทิศทาง<br/> <br/> ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
     </div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
@@ -264,7 +297,7 @@ function Page2Answered (){
   </div>)
   }
 
-function Page3 (){
+function Page4 (){
 return(
   <div>
   <div className="split Index">
@@ -321,7 +354,7 @@ return(
 </div>)
 }
 
-function Page3Answered (){
+function Page4Answered (){
   return(
     <div>
     <div className="split Index">
@@ -626,12 +659,10 @@ function Page5 (){
 if (page === 1) {return (
 <div><Page1/></div>)}
 
-else if (page === 2 && Answer2 === false) {
+else if (page === 2 ) {
   return(<div><Page2/></div>)
   }
-  else if (page === 2 && Answer2 === true) {
-    return(<div><Page2Answered/></div>)
-  }
+ 
   
 
 else if (page === 3 && Answer3 === false) {
