@@ -15,7 +15,7 @@ var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
 //Var Score
-const TotalQuestionNum = useRef(2)
+const TotalQuestionNum = useRef(3)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
