@@ -29,7 +29,7 @@ const {currentUser} = useContext(AuthContext)
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion2.current + ScoreQuestion3.current 
+  TotalScore.current = ScoreQuestion2.current + ScoreQuestion3.current + ScoreQuestion4.current 
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
