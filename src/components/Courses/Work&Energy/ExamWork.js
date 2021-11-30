@@ -142,7 +142,7 @@ function retry(){
   case 1 : if(Answer1.checked === true && 
         Answer2.checked === false && 
         Answer3.checked === false && 
-        Answer4.checked === false ) {correct(1)}
+        Answer4.checked === false ) {correct(1)} 
     else{incorrect(1)}
     break;
   case 2 : if(Answer1.checked === false && 
@@ -258,7 +258,7 @@ function Page1 (){
     
   </div>
   <div className="ButtonContainer">
-  <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(2)} style={{left : "60%"}}>Next page</button></div>
   </div>
   </div>)
   }
@@ -345,7 +345,7 @@ function Page1 (){
         
       </div>
       <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-      <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)} >Next page</button></div>
       </div>
       </div>)
       }
@@ -434,7 +434,7 @@ function Page1 (){
             
           </div>
           <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-          <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)} >Next page</button></div>
           </div>
           </div>)
           }
@@ -522,7 +522,7 @@ function Page1 (){
                 
               </div>
               <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
-              <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+              <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)} >Next page</button></div>
               </div>
               </div>)
               }
@@ -609,7 +609,7 @@ function Page5 (){
         
       </div>
       <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
-      <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)} >Next page</button></div>
       </div>
       </div>)
       }
@@ -697,7 +697,7 @@ function Page5 (){
             
           </div>
           <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
-          <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(7)} >Next page</button></div>
           </div>
           </div>)
           }
@@ -785,7 +785,7 @@ function Page5 (){
                 
               </div>
               <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(6)}>Previous page</button>
-              <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+              <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(8)} >Next page</button></div>
               </div>
               </div>)
               }
@@ -873,7 +873,7 @@ function Page5 (){
         
       </div>
       <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(7)}>Previous page</button>
-      <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(9)} >Next page</button></div>
       </div>
       </div>)
       }
@@ -963,7 +963,7 @@ function Page9 (){
         
       </div>
       <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(8)}>Previous page</button>
-      <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(10)} >Next page</button></div>
       </div>
       </div>)
       }
@@ -1026,7 +1026,7 @@ function Page10 (){
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Choice</div>
+            <div className="LabNumber">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง</div>
             <div className="ProgessBar"><progress value="90" max="100"></progress></div>ื
             
             <div className="AnswerList">
@@ -1042,7 +1042,7 @@ function Page10 (){
                 <input type="checkbox" id="Answer3"/>
                 <span className="checkmark"></span>
               </label>
-              <label className="container">งานมีสูตรว่า W=F (dot product) S
+              <label className="container">งานมีสูตรว่า W = F ⋅ S
                 <input type="checkbox" id="Answer4"/>
                 <span className="checkmark"></span>
               </label>
@@ -1085,7 +1085,7 @@ function Page10 (){
             </div>
             
             <div className="split QuestionAnswer"> 
-              <div className="LabNumber">Choice</div>
+              <div className="LabNumber">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง</div>
               <div className="ProgessBar"><progress value="90" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
@@ -1100,7 +1100,7 @@ function Page10 (){
                 <input type="checkbox" id="Answer3"disabled checked/>
                 <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
-              <label className="container">งานมีสูตรว่า W=F (dot product) S
+              <label className="container">งานมีสูตรว่า W = F ⋅ S
                 <input type="checkbox" id="Answer4"disabled checked/>
                 <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
