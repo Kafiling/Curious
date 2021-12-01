@@ -1,5 +1,5 @@
 import React ,{useState , useRef, useContext}from 'react'
-import Scene from './Ma/Scene';
+import Scene from './Material/Scene';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
