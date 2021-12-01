@@ -23,6 +23,8 @@ import Work3 from './components/Courses/Work&Energy/Work3'
 import Work4 from './components/Courses/Work&Energy/Work4'
 import ExamWork from './components/Courses/Work&Energy/ExamWork'
 
+import PhysicEngTest from './components/Courses/Work&Energy/PhysicEngTest'
+
 //Import CSS
 import './components/Header.css'
 import './components/Courses.css'
@@ -57,6 +59,8 @@ setUser(user)
           <Route exact path="/courses/work_energy/work3"  ><Work3/></Route>
           <Route exact path="/courses/work_energy/work4"  ><Work4/></Route>
           <Route exact path="/courses/work_energy/exam_work"  ><ExamWork/></Route>
+          <Route exact path="/courses/work_energy/physic_eng"  ><PhysicEngTest/></Route>
+
           {/* Playgrounds*/}
   
           {/* About Us*/}
