@@ -10,26 +10,26 @@ export default function Work2() {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
-var [Answer2, setAnswer2] = useState(false);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
+var [Answer6, setAnswer6] = useState(false);
 //Var Score
 const TotalQuestionNum = useRef(3)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
-const ScoreQuestion2 = useRef(0)
 const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
+const ScoreQuestion6 = useRef(0)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
 
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current 
+  TotalScore.current = ScoreQuestion4.current + ScoreQuestion5.current + ScoreQuestion6.current 
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
@@ -45,17 +45,14 @@ function correct(QuestionPage){
   //เช็คถูก
   alert("ถูกต้องคร้าบบ")
   switch(QuestionPage){
-    case 2 :setAnswer2(true)
-    ScoreQuestion2.current = 1
-      break;
-    case 3 :setAnswer3(true)
-    ScoreQuestion3.current = 1
-      break;
     case 4 :setAnswer4(true)
     ScoreQuestion4.current = 1
       break;
     case 5 :setAnswer5(true)
     ScoreQuestion5.current = 1
+      break;
+    case 6 :setAnswer6(true)
+    ScoreQuestion6.current = 1
       break;
     default :
     alert("Scoring Error")
@@ -66,13 +63,11 @@ function correct(QuestionPage){
 function incorrect(QuestionPage){
   alert("ผิดจ้า ลองทบทวนอีกทีนะ")
   switch(QuestionPage){
-    case 2 :setAnswer2(true)
-      break;
-    case 3 :setAnswer3(true)
-      break;
     case 4 :setAnswer4(true)
       break;
     case 5 :setAnswer5(true)
+      break;
+    case 6 :setAnswer6(true)
       break;
     default :
     alert("Scoring Error")
@@ -97,33 +92,27 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
-      case 3 :
+      case 4 :
     if(Answer1.checked === false&& 
       Answer2.checked ===  true&& 
       Answer3.checked === false && 
-      Answer4.checked ===  false){correct(3)}
-  else{incorrect(3)}
-  break;
-    case 4 : if(Answer1.checked === false && 
-      Answer2.checked === false && 
-      Answer3.checked === false && 
-      Answer4.checked === true ) {correct(4)}
+      Answer4.checked ===  false){correct(4)}
   else{incorrect(4)}
   break;
-  case 5 :
+    case 5 : if(Answer1.checked === false && 
+      Answer2.checked === false && 
+      Answer3.checked === false && 
+      Answer4.checked === true ) {correct(5)}
+  else{incorrect(5)}
+  break;
+  case 6 :
     if(Answer1.checked === false&& 
       Answer2.checked ===  false&& 
       Answer3.checked === false && 
-      Answer4.checked === true ){correct(5)}
-  else{incorrect(5)}
+      Answer4.checked === true ){correct(6)}
+  else{incorrect(6)}
   break;
-case 6 :
-  if(Answer1.checked === true&& 
-    Answer2.checked ===  true&& 
-    Answer3.checked === true && 
-    Answer4.checked === true ){correct(6)}
-else{incorrect(6)}
-break;
+
 default :
     alert("Checking Error")
     break;
@@ -182,7 +171,7 @@ function Page2 (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="17" max="100"></progress></div>
     <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
     <div className="AnswerList">
     
@@ -192,64 +181,7 @@ function Page2 (){
   </div>
   </div>)
   }
-function Page3 (){
-  return(
-    <div>
-    <div className="split Index">
-  <div className="LabName">งานทางฟิสิกส์</div>
-  <div div className="LabInfo">ในการแตกองค์ประกองของแรง จะยึดด้านที่อยู่ “ใกล้มุม” หรือ ด้านที่ติดกับมุมเป็น Fcosθ และด้านที่อยู่ “ไกลมุม” เป็น Fsinθ
-</div> 
-
-   <div div className="LabInfo">
-   <img className='LabImg' id='img' alt ="LabImg"src="" />
-   <br/><br/>ดังนั้น งานจากแรง F ในภาพนี้ จะมีค่าเท่ากับ<br/>
-   <MathJaxContext>
-    <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
-    </MathJaxContext>
-      โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-    F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-    S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
-    และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
-
-    <br/><br/>ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
-    </div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
-  
-
-    <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-  <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
-  <div className="AnswerList">
-  <label className="container">1200 J
-      <input type="checkbox" id="Answer1" />
-      <span className="checkmark"></span>
-    </label>
-    <label className="container">1600 J
-      <input type="checkbox" id="Answer2"/>
-      <span className="checkmark"></span>
-    </label>
-    <label className="container">1800 J
-      <input type="checkbox" id="Answer3"/>
-      <span className="checkmark"></span>
-    </label>
-    <label className="container">2000 J
-      <input type="checkbox" id="Answer4"/>
-      <span className="checkmark"></span>
-    </label>
-
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
-  
-  </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
-  </div>
-  </div>)
-  }
-  function Page3Answered (){
+  function Page3 (){
     return(
       <div>
       <div className="split Index">
@@ -278,7 +210,92 @@ function Page3 (){
   
       <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="34" max="100"></progress></div>
+  
+   
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+    </div>
+    </div>)
+    }
+function Page4 (){
+  return(
+    <div>
+    <div className="split Index">
+  <div className="LabName">งานทางฟิสิกส์</div>
+  <div div className="LabInfo">
+</div> 
+
+   <div div className="LabInfo">
+   <img className='LabImg' id='img' alt ="LabImg"src="" />
+  
+    </div> 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
+  
+
+    <div className="split QuestionAnswer"> 
+  <div className="LabNumber">Introducing Work</div>
+  <div className="ProgessBar"><progress value="51" max="100"></progress></div>
+  <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
+  <div className="AnswerList">
+  <label className="container">1200 J
+      <input type="checkbox" id="Answer1" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">1600 J
+      <input type="checkbox" id="Answer2"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">1800 J
+      <input type="checkbox" id="Answer3"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">2000 J
+      <input type="checkbox" id="Answer4"/>
+      <span className="checkmark"></span>
+    </label>
+
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
+  
+  </div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+  </div>
+  </div>)
+  }
+  function Page4Answered (){
+    return(
+      <div>
+      <div className="split Index">
+    <div className="LabName">งานทางฟิสิกส์</div>
+    <div div className="LabInfo">ในการแตกองค์ประกองของแรง จะยึดด้านที่อยู่ “ใกล้มุม” หรือ ด้านที่ติดกับมุมเป็น Fcosθ และด้านที่อยู่ “ไกลมุม” เป็น Fsinθ
+  </div> 
+  
+     <div div className="LabInfo">
+     <img className='LabImg' id='img' alt ="LabImg"src="" />
+     <br/><br/>ดังนั้น งานจากแรง F ในภาพนี้ จะมีค่าเท่ากับ<br/>
+     <MathJaxContext>
+      <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
+      </MathJaxContext>
+        โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
+      F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
+      S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
+      และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
+  
+      <br/><br/>ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
+      </div> 
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
+    
+  
+      <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="51" max="100"></progress></div>
     <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
     <div className="AnswerList">
     <label className="container">1200 J
@@ -301,12 +318,12 @@ function Page3 (){
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
     </div>
-    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-    <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
     </div>
     </div>)
     }
-function Page4 (){
+function Page5 (){
 return(
   <div>
   <div className="split Index">
@@ -325,7 +342,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="68" max="100"></progress></div>
   <div className="Question">งานในข้อใดมีค่าติดลบ</div>
   <div className="AnswerList">
   <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
@@ -345,15 +362,15 @@ return(
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
   
 </div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
 <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 </div>
 </div>)
 }
-function Page4Answered (){
+function Page5Answered (){
   return(
     <div>
     <div className="split Index">
@@ -372,7 +389,7 @@ function Page4Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="68" max="100"></progress></div>
     <div className="Question">งานในข้อใดมีค่าติดลบ</div>
     <div className="AnswerList">
     <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
@@ -396,14 +413,14 @@ function Page4Answered (){
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
   
   </div>
   </div>)
   }
 
-function Page5 (){
+function Page6 (){
 return(
   <div>
   <div className="split Index">
@@ -428,7 +445,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="85" max="100"></progress></div>
   <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
   : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
   </div>
@@ -450,17 +467,17 @@ return(
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(6)}>Send Answer</button>
   
 </div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
 <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 
 </div>
 </div>)
 }
 
-function Page5Answered (){
+function Page6Answered (){
   return(
     <div>
     <div className="split Index">
@@ -485,7 +502,7 @@ function Page5Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="85" max="100"></progress></div>
     <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
     : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
     </div>
@@ -510,8 +527,8 @@ function Page5Answered (){
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(7)}>Next page</button></div>
   
   </div>
   </div>)
@@ -770,12 +787,8 @@ else if (page === 2) {return (
  
   
 
-else if (page === 3 && Answer3 === false) {
-return(<div><Page3/></div>)
-}
-else if (page === 3 && Answer3 === true) {
-  return(<div><Page3Answered/></div>)
-}
+  else if (page === 3) {return (
+    <div><Page3/></div>)}
 
 else if (page === 4 && Answer4 === false) {
   return(<div><Page4/></div>)
@@ -789,8 +802,13 @@ else if (page === 5 && Answer5 === false) {
   else if (page === 5 && Answer5 === true) {
       return(<div><Page5Answered/></div>)
   }
-  
-else if (page === 6) {return(
+  else if (page === 6 && Answer6 === false) {
+    return(<div><Page6/></div>)
+  }
+  else if (page === 6 && Answer6 === true) {
+      return(<div><Page6Answered/></div>)
+  }
+else if (page === 7) {return(
     <div><FinishPage/></div>)}
     
 
