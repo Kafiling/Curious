@@ -97,27 +97,27 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
-      case 2 :
+      case 3 :
     if(Answer1.checked === false&& 
       Answer2.checked ===  true&& 
       Answer3.checked === false && 
       Answer4.checked ===  false){correct(2)}
   else{incorrect(2)}
   break;
-    case 3 : if(Answer1.checked === false && 
+    case 4 : if(Answer1.checked === false && 
       Answer2.checked === false && 
       Answer3.checked === false && 
       Answer4.checked === true ) {correct(3)}
   else{incorrect(3)}
   break;
-  case 4 :
+  case 5 :
     if(Answer1.checked === false&& 
       Answer2.checked ===  false&& 
       Answer3.checked === false && 
       Answer4.checked === true ){correct(4)}
   else{incorrect(4)}
   break;
-case 5 :
+case 6 :
   if(Answer1.checked === true&& 
     Answer2.checked ===  true&& 
     Answer3.checked === true && 
@@ -139,12 +139,8 @@ return(
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จะสังเกตได้ว่า จากข้อที่ผ่านๆมา แรงจะมีทิศทางไปทางเดียวกับการกระจัด จะเป็นอย่างไรหากแรงกับการกระจัดมีทิศทางต่างๆกันออกไป</div> 
 <br/><br/>
- <div div className="LabInfo">ในกรณีที่แรงไม่ได้มีทิศทางเดียวกับการกระจัด เราจะทำการแยกองค์ประกอบแรง (เรียกง่ายๆว่า “แตกแรง”) 2 แรงที่ตั้งฉากกัน (แตกออกเป็นแกน x และ y) โดยให้แรงหนึ่งแนวขนานกับการกระจัด
+ <div div className="LabInfo">
  <img className='LabImg' id='img' alt ="LabImg"src="" />
- <br/><br/>ในภาพนี้ Fx เป็นแรงองค์ประกอบของ F ในแนวระดับ 
-
-ส่วน Fy เป็นแรงองค์ประกอบของ F ในแนวตั้งฉากกับการกระจัด ซึ่งอยู่ในแนวดิ่ง ไม่ส่งผลต่อการเคลื่อนที่แนวระดับ จึงไม่มีผลกับการเกิดงาน (อธิบายอย่างระเอียดใน Work 3) 
-
  
   </div> 
  <div div className="FooterSpace"></div>
@@ -165,6 +161,38 @@ return(
 </div>)
 }
 function Page2 (){
+  return(
+    <div>
+    <div className="split Index">
+  <div className="LabName">งานทางฟิสิกส์</div>
+  <div div className="LabInfo">ในกรณีที่แรงไม่ได้มีทิศทางเดียวกับการกระจัด เราจะทำการแยกองค์ประกอบแรง (เรียกง่ายๆว่า “แตกแรง”) 2 แรงที่ตั้งฉากกัน (แตกออกเป็นแกน x และ y) โดยให้แรงหนึ่งแนวขนานกับการกระจัด</div> 
+  <br/><br/>
+   <div div className="LabInfo">
+   <img className='LabImg' id='img' alt ="LabImg"src="" />
+   <br/><br/>ในภาพนี้ Fx เป็นแรงองค์ประกอบของ F ในแนวระดับ 
+  
+  ส่วน Fy เป็นแรงองค์ประกอบของ F ในแนวตั้งฉากกับการกระจัด ซึ่งอยู่ในแนวดิ่ง ไม่ส่งผลต่อการเคลื่อนที่แนวระดับ จึงไม่มีผลกับการเกิดงาน (อธิบายอย่างระเอียดใน Work 3) 
+  
+   
+    </div> 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
+  
+  <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="0" max="100"></progress></div>
+    <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
+    <div className="AnswerList">
+    
+  </div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+  </div>
+  </div>)
+  }
+function Page3 (){
   return(
     <div>
     <div className="split Index">
@@ -213,15 +241,15 @@ function Page2 (){
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
   
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
   <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
   </div>
   </div>)
   }
-  function Page2Answered (){
+  function Page3Answered (){
     return(
       <div>
       <div className="split Index">
@@ -273,12 +301,12 @@ function Page2 (){
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
     </div>
-    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-    <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
     </div>
     </div>)
     }
-function Page3 (){
+function Page4 (){
 return(
   <div>
   <div className="split Index">
@@ -317,15 +345,15 @@ return(
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
   
 </div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
 <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 </div>
 </div>)
 }
-function Page3Answered (){
+function Page4Answered (){
   return(
     <div>
     <div className="split Index">
@@ -368,14 +396,14 @@ function Page3Answered (){
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
   
   </div>
   </div>)
   }
 
-function Page4 (){
+function Page5 (){
 return(
   <div>
   <div className="split Index">
@@ -422,17 +450,17 @@ return(
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
   
 </div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
 <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 
 </div>
 </div>)
 }
 
-function Page4Answered (){
+function Page5Answered (){
   return(
     <div>
     <div className="split Index">
@@ -482,7 +510,7 @@ function Page4Answered (){
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
   <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
   
   </div>
@@ -737,12 +765,8 @@ function Page5 (){
 if (page === 1) {return (
 <div><Page1/></div>)}
 
-else if (page === 2 && Answer2 === false) {
-  return(<div><Page2/></div>)
-  }
-  else if (page === 2 && Answer2 === true) {
-    return(<div><Page2Answered/></div>)
-  }
+else if (page === 2) {return (
+  <div><Page2/></div>)}
  
   
 
@@ -759,13 +783,13 @@ else if (page === 4 && Answer4 === false) {
   else if (page === 4 && Answer4 === true) {
     return(<div><Page4Answered/></div>)
   }
-/*else if (page === 5 && Answer5 === false) {
+else if (page === 5 && Answer5 === false) {
     return(<div><Page5/></div>)
   }
   else if (page === 5 && Answer5 === true) {
       return(<div><Page5Answered/></div>)
   }
-  */
+  
 else if (page === 6) {return(
     <div><FinishPage/></div>)}
     
