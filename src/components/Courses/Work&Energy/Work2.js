@@ -211,8 +211,9 @@ function Page2 (){
       <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
     <div className="ProgessBar"><progress value="34" max="100"></progress></div>
+    <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
+    <div className="AnswerList"></div>
   
-   
     <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
     <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
     </div>
