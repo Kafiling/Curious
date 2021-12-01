@@ -247,7 +247,6 @@ function allAnswerSummitCheck(){
   }
   else {
     alert("ตอบไม่ยังครบขาดอีก" + NumQuestionNotAnswered + "ข้อ")
-    console.log(filtered);
   }
   
 }
