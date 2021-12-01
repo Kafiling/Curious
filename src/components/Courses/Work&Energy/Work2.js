@@ -29,7 +29,7 @@ const {currentUser} = useContext(AuthContext)
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion2.current + ScoreQuestion3.current + ScoreQuestion4.current 
+  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current 
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
@@ -101,28 +101,28 @@ function retry(){
     if(Answer1.checked === false&& 
       Answer2.checked ===  true&& 
       Answer3.checked === false && 
-      Answer4.checked ===  false){correct(2)}
-  else{incorrect(2)}
+      Answer4.checked ===  false){correct(3)}
+  else{incorrect(3)}
   break;
     case 4 : if(Answer1.checked === false && 
       Answer2.checked === false && 
       Answer3.checked === false && 
-      Answer4.checked === true ) {correct(3)}
-  else{incorrect(3)}
+      Answer4.checked === true ) {correct(4)}
+  else{incorrect(4)}
   break;
   case 5 :
     if(Answer1.checked === false&& 
       Answer2.checked ===  false&& 
       Answer3.checked === false && 
-      Answer4.checked === true ){correct(4)}
-  else{incorrect(4)}
+      Answer4.checked === true ){correct(5)}
+  else{incorrect(5)}
   break;
 case 6 :
   if(Answer1.checked === true&& 
     Answer2.checked ===  true&& 
     Answer3.checked === true && 
-    Answer4.checked === true ){correct(5)}
-else{incorrect(5)}
+    Answer4.checked === true ){correct(6)}
+else{incorrect(6)}
 break;
 default :
     alert("Checking Error")
@@ -182,7 +182,7 @@ function Page2 (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="0" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="20" max="100"></progress></div>
     <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
     <div className="AnswerList">
     
@@ -221,7 +221,7 @@ function Page3 (){
 
     <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="25" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
   <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
   <div className="AnswerList">
   <label className="container">1200 J
@@ -278,7 +278,7 @@ function Page3 (){
   
       <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="25" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
     <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
     <div className="AnswerList">
     <label className="container">1200 J
@@ -325,7 +325,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="50" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="60" max="100"></progress></div>
   <div className="Question">งานในข้อใดมีค่าติดลบ</div>
   <div className="AnswerList">
   <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
@@ -372,7 +372,7 @@ function Page4Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="50" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="60" max="100"></progress></div>
     <div className="Question">งานในข้อใดมีค่าติดลบ</div>
     <div className="AnswerList">
     <label className="container">งานจากแรงขับเครื่องยนต์ที่ขับรถไปข้างหน้า
@@ -428,7 +428,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="75" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="80" max="100"></progress></div>
   <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
   : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
   </div>
@@ -485,7 +485,7 @@ function Page5Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="75" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="80" max="100"></progress></div>
     <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
     : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
     </div>

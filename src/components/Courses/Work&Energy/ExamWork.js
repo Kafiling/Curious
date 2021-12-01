@@ -1188,10 +1188,10 @@ function Page10 (){
     }
 
       
-     if (page === 1 && Answer1 === false) {
+if (page === 1 && Answer1 === false) {
         return(<div><Page1/></div>)
         }
-        else if (page === 1 && Answer1 === true) {
+else if (page === 1 && Answer1 === true) {
           return(<div><Page1Answered/></div>)
         }
         
