@@ -315,8 +315,8 @@ function Page1 (){
       
       <div className="AnswerList">
       <label className="container">0 J
-          <input type="checkbox" id="Answer1" disabled checked />
-          <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          <input type="checkbox" id="Answer1"disabled/>
+          <span className="checkmark"></span>
         </label>
         <label className="container">150 J
           <input type="checkbox" id="Answer2"disabled/>
@@ -413,8 +413,8 @@ function Page1 (){
               <span className="checkmark"></span>
             </label>
             <label className="container">100 J
-              <input type="checkbox" id="Answer4"disabled checked/>
-              <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              <input type="checkbox" id="Answer4"disabled/>
+              <span className="checkmark"></span>
             </label>
         
             <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -494,8 +494,8 @@ function Page1 (){
                   <span className="checkmark"></span>
                 </label>
                 <label className="container">104 kJ
-                  <input type="checkbox" id="Answer2"disabled checked/>
-                  <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                  <input type="checkbox" id="Answer2"disabled/>
+                  <span className="checkmark"></span>
                 </label>
                 <label className="container">2080 kJ
                   <input type="checkbox" id="Answer3"disabled/>
@@ -586,8 +586,8 @@ function Page1 (){
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">80 J
-                      <input type="checkbox" id="Answer3"disabled checked/>
-                      <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                      <input type="checkbox" id="Answer3"disabled/>
+                      <span className="checkmark"></span>
                     </label>
                     <label className="container">140 J
                       <input type="checkbox" id="Answer4"disabled/>
@@ -674,8 +674,8 @@ function Page5 (){
               <span className="checkmark"></span>
             </label>
             <label className="container">400 J 
-              <input type="checkbox" id="Answer3"disabled checked/>
-              <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              <input type="checkbox" id="Answer3"disabled/>
+              <span className="checkmark"></span>
             </label>
             <label className="container">450 J 
               <input type="checkbox" id="Answer4"disabled/>
@@ -754,8 +754,8 @@ function Page5 (){
               <div className="ProgessBar"><progress value="50" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">300 J
-                  <input type="checkbox" id="Answer1" disabled checked />
-                  <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                  <input type="checkbox" id="Answer1" disabled/>
+                  <span className="checkmark"></span>
                 </label>
                 <label className="container">400 J
                   <input type="checkbox" id="Answer2"disabled/>
@@ -849,8 +849,8 @@ function Page5 (){
                       <span className="checkmark"></span>
                     </label>
                     <label className="container">80 J , 40 J , 40 J
-                      <input type="checkbox" id="Answer3"disabled checked/>
-                      <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                      <input type="checkbox" id="Answer3"disabled/>
+                      <span className="checkmark"></span>
                     </label>
                     <label className="container">70 J, 30 J , 40 J
                       <input type="checkbox" id="Answer4"disabled/>
@@ -943,8 +943,8 @@ function Page5 (){
               <span className="checkmark"></span>
             </label>
             <label className="container">2400 J 
-              <input type="checkbox" id="Answer4"disabled checked/>
-              <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              <input type="checkbox" id="Answer4"disabled/>
+              <span className="checkmark"></span>
             </label>
         
             <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -1032,8 +1032,8 @@ function Page9 (){
               <span className="checkmark"></span>
             </label>
             <label className="container">กรรมกรเดินแบกกระสอบข้าวสารไปตามถนนราบ
-              <input type="checkbox" id="Answer4"disabled checked/>
-              <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              <input type="checkbox" id="Answer4"disabled/>
+              <span className="checkmark"></span>
             </label>
         
             <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -1122,32 +1122,32 @@ function Page10 (){
               <div className="ProgessBar"><progress value="90" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
-                <input type="checkbox" id="Answer1" disabled checked/>
-                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                <input type="checkbox" id="Answer1" disabled/>
+                <span className="checkmark"></span>
               </label>
               <label className="container">เมื่อมีหลายแรงกระทำ ให้ทำการรวมแรงแล้วค่อยคำนวณ
-                <input type="checkbox" id="Answer2"disabled checked/>
-                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                <input type="checkbox" id="Answer2"disabled/>
+                <span className="checkmark"></span>
               </label>
               <label className="container">เมื่อแรงทำมุมกับการกระจัดให้แตกแรงแล้วคำนวณ
-                <input type="checkbox" id="Answer3"disabled checked/>
-                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                <input type="checkbox" id="Answer3"disabled/>
+                <span className="checkmark"></span>
               </label>
               <label className="container">งานมีสูตรว่า W = F ⋅ S
-                <input type="checkbox" id="Answer4"disabled checked/>
-                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                <input type="checkbox" id="Answer4"disabled/>
+                <span className="checkmark"></span>
               </label>
               <label className="container">การที่แรงตั้งฉากกับการกระจัดจะทำให้เกิดงาน
                 <input type="checkbox" id="Answer5"disabled />
                 <span className="checkmark"></span>
               </label>
               <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
-                <input type="checkbox" id="Answer6"disabled checked/>
-                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                <input type="checkbox" id="Answer6"disabled/>
+                <span className="checkmark"></span>
               </label>
               <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S สามารถใช้หางานของแรง F ได้
-                <input type="checkbox" id="Answer7"disabled checked/>
-                <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+                <input type="checkbox" id="Answer7"disabled/>
+                <span className="checkmark"></span>
               </label>
               <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S หา งานได้จากความชันของกราฟ
                 <input type="checkbox" id="Answer8"disabled/>

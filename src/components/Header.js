@@ -1,6 +1,7 @@
-import React from 'react'
+import react, { Component , useState , useEffect } from 'react';
 import {Link } from 'react-router-dom'
 //Import Firebase SDK
+import { AuthProvider, firebaseApp } from 'Firebase';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
@@ -21,9 +22,17 @@ export const db = firebase.firestore();
 
 
 export default function Header(){
+  const [user, setUser] = useState(null);
+    useEffect(() =>{
+      firebaseApp.auth().onAuthStateChanged(user=> {
+  setUser(user)
+      })}, []);
+
     const  signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
+
+    
   }
     if (auth.currentUser == null) {
       return(<div className = "Header">

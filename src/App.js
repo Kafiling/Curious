@@ -31,13 +31,6 @@ import './components/Courses.css'
 import './components/CoursesPage.css'
 
 function App() {
-  const [user, setUser] = useState(null);
-  useEffect(() =>{
-    firebaseApp.auth().onAuthStateChanged(user=> {
-setUser(user)
-    })}, []);
-  const [page, setPage] = useState(1);
-  
     return (
       <AuthProvider>
       <div className = "Container">
