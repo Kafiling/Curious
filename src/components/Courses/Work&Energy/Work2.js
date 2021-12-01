@@ -223,7 +223,7 @@ function Page4 (){
     <div>
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
-  <div div className="LabInfo">
+  <div div className="LabInfo">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้
 </div> 
 
    <div div className="LabInfo">
@@ -239,7 +239,7 @@ function Page4 (){
     <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="51" max="100"></progress></div>
-  <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
+  <div className="Question">จงหางานในการฉุดวัตถุนี้</div>
   <div className="AnswerList">
   <label className="container">1200 J
       <input type="checkbox" id="Answer1" />
@@ -269,34 +269,24 @@ function Page4 (){
   function Page4Answered (){
     return(
       <div>
-      <div className="split Index">
-    <div className="LabName">งานทางฟิสิกส์</div>
-    <div div className="LabInfo">ในการแตกองค์ประกองของแรง จะยึดด้านที่อยู่ “ใกล้มุม” หรือ ด้านที่ติดกับมุมเป็น Fcosθ และด้านที่อยู่ “ไกลมุม” เป็น Fsinθ
-  </div> 
+    <div className="split Index">
+  <div className="LabName">งานทางฟิสิกส์</div>
+  <div div className="LabInfo">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้
+</div> 
+
+   <div div className="LabInfo">
+   <img className='LabImg' id='img' alt ="LabImg"src="" />
   
-     <div div className="LabInfo">
-     <img className='LabImg' id='img' alt ="LabImg"src="" />
-     <br/><br/>ดังนั้น งานจากแรง F ในภาพนี้ จะมีค่าเท่ากับ<br/>
-     <MathJaxContext>
-      <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
-      </MathJaxContext>
-        โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-      F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-      S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
-      และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
-  
-      <br/><br/>ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
-      </div> 
-     <div div className="FooterSpace"></div>
-     <div className="Footer">Curious Project</div>
-     <div div className="FooterSpace"></div>
-    </div>
-    
+    </div> 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
   
       <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
     <div className="ProgessBar"><progress value="51" max="100"></progress></div>
-    <div className="Question">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้</div>
+    <div className="Question">จงหางานในการฉุดวัตถุนี้</div>
     <div className="AnswerList">
     <label className="container">1200 J
         <input type="checkbox" id="Answer1"disabled />
