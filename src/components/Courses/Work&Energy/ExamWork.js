@@ -1,5 +1,4 @@
 import React ,{useState , useRef, useContext}from 'react'
-import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
 
 //ประกาศตัวแปรของ Firebase Service
@@ -242,12 +241,12 @@ default :
 function allAnswerSummitCheck(){
   let arr = [Answer1,Answer2,Answer3,Answer4,Answer5,Answer6,Answer7,Answer8,Answer9,Answer10]
   let filtered = arr.filter(Boolean);
-
+  let NumQuestionNotAnswered = 10 - filtered.length 
   if(Answer1 && Answer2 && Answer3 && Answer4 && Answer5 && Answer6 && Answer7 && Answer8 && Answer9 && Answer10){
     setPage(11)
   }
   else {
-    alert("ตอบไม่ครบ")
+    alert("ตอบไม่ยังครบขาดอีก" + NumQuestionNotAnswered + "ข้อ")
     console.log(filtered);
   }
   
