@@ -122,16 +122,21 @@ default :
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดยงานจะขึ้นอยู่กับแรงและการกระจัด</div> 
+<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+<div div className="LabInfo">จากการหางานที่ผ่านมาจะเป็นกรณีแรงคงตัวเท่านั้น แต่ในกรณีที่แรงไม่คงตัวเราจะคำนวณอย่างไร<br/>
+เราลองสมมุติว่ามีแรง F กระทำต่อวัตถุให้เคลื่อนที่ไปตามแนวตรง โดยเคลื่อนที่ทิศทางตามแรง จะพล็อตกราฟ ตำแหน่งของวัตถุ กับ แรงได้ดังนี้
+</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
- <div div className="LabInfo">เขียนเป็นสมการได้ดังนี้
+ <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
  <MathJaxContext>
   <MathJax>\[W = F \cdot S\]</MathJax>
+  <MathJax>\[W = F \cdot (X_{2} - X_{1})\]</MathJax>
+  <MathJax>\[W = 5 N \cdot 10 m\]</MathJax>
+  <MathJax>\[W = 50 \]</MathJax>
+  <MathJax>\[W = พื้นที่ใต้กราฟ \]</MathJax>
   </MathJaxContext>
-  โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-  F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-  S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+  จะได้ว่างานจากแรง F กระทำเป็นระยะกระจัด S มีค่าเท่ากับพื่นที่สี่เหลี่ยมใต้กราฟ F-S ที่เราสนใจนั้นเอง <br/>
+  W = F · S = พื้นที่ใต้กราฟ F-S
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
