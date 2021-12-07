@@ -34,11 +34,13 @@ var render = Render.create({
 
 // create two boxes and a ground
 var boxA = Bodies.rectangle(400, 200, 80, 80);
-var boxB = Bodies.rectangle(450, 50, 80, 80,{fillStyle : '#ffffff'});
+var boxB = Bodies.rectangle(450, 50, 80, 80);
 var ground = Bodies.rectangle(500, 610, 1000, 60, { isStatic: true });
-
+var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
+var wallL = Bodies.rectangle(1010, 300, 60, 600, { isStatic: true });
+var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
 // add all of the bodies to the world
-Composite.add(engine.world, [boxA, boxB, ground]);
+Composite.add(engine.world, [boxA, boxB, ground, wallL ,wallR ,ceiling]);
 
 // add mouse control
     var mouse = Mouse.create(render.canvas),
