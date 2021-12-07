@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Matter from "matter-js";
 
 class Scene extends React.Component {
