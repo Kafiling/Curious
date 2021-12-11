@@ -1,8 +1,9 @@
 import React from "react";
 import Matter from "matter-js";
+import {Line} from 'react-chartjs-2';
+import { Chart as ChartJS } from 'chart.js/auto'
 
-
-class Scene extends React.Component {
+export class Scene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -33,12 +34,12 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var boxA = Bodies.rectangle(400, 200, 80, 80);
+var boxA = Bodies.rectangle(300, 50, 80, 80);
 var boxB = Bodies.rectangle(450, 50, 80, 80);
 var ground = Bodies.rectangle(500, 610, 1000, 60, { isStatic: true });
 var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var wallL = Bodies.rectangle(1010, 300, 60, 600, { isStatic: true });
-var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
+var ceiling = Bodies.rectangle(500, -10, 1000, 350, { isStatic: true });
 // add all of the bodies to the world
 Composite.add(engine.world, [boxA, boxB, ground, wallL ,wallR ,ceiling]);
 
@@ -74,4 +75,41 @@ Runner.run(runner, engine);
   }
 }
 
-export default Scene;
+const state = {
+  labels: ['January', 'February', 'March',
+           'April', 'May'],
+  datasets: [
+    {
+      label: 'Rainfall',
+      fill: false,
+      lineTension: 0.5,
+      backgroundColor: 'rgba(75,192,192,1)',
+      borderColor: 'rgba(255,255,255,1)',
+      borderWidth: 2,
+      data: [65, 59, 80, 81, 56]
+    }
+  ]
+}
+
+export class Chart extends React.Component {
+  render() {
+    return (
+      <div>
+        <Line
+          data={state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+      </div>
+      );
+    }
+  }
