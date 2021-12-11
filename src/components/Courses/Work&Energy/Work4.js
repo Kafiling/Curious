@@ -90,10 +90,10 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
-    case 3 : if(Answer1.checked === true && 
-      Answer2.checked === false && 
-      Answer3.checked === false && 
-      Answer4.checked === false ) {correct(3)}
+    case 3 : if(Answer1.checked === false && 
+      Answer2.checked === true && 
+      Answer3.checked === true && 
+      Answer4.checked === true ) {correct(3)}
   else{incorrect(3)}
   break;
   case 4 :
@@ -146,7 +146,7 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
-  <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
 </div>
@@ -160,10 +160,11 @@ function Page2 (){
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">เพื่อให้เข้าใจง่าย เราลองมาดูสถานการณ์สมมุติกัน มีคนสองคน คนนึงกำลังลากท่อนซุงกับอีกคนที่กำลังลากกระสอบข้าวสารคุณคิดว่าใครจะเหนื่อยกว่ากัน?</div> 
+<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+<div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัว เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-2.png?alt=media&token=835c6f5d-3289-47aa-b58d-8d17ae591d43" />
- <div div className="LabInfo">แน่นอนว่าคนส่วนใหญ่ก็ต้องคิดว่าคนที่ลากท่อนซุงต้องเหนื่อยกว่าแน่นอน เพราะต้องลากท่องซุงจึงต้องออกแรงมากกว่า แต่ถ้าเราเพิ่มข้อมูลตัวแปรการกระจัดเข้าไปบ้างจะเกิดอะไรขึ้น?
+ <div div className="LabInfo">จากกราฟข้างต้น เป็นกราฟ แรง - การกระจัด โดยแสดงค่าแรงที่ใช้ดึงสปริง
+<br/>และคำนวณงานจาก W = F · S = พื้นที่ใต้กราฟ F-S
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -173,7 +174,7 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="20" max="100"></progress></div>
-  <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
 </div>
@@ -188,19 +189,11 @@ function Page3 (){
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานทางฟิสิกส์</div>
-<div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
-ผู้ชายที่ลากซุงสร้างงาน 1000*(0.1) = 100 J ในขณะที่ผู้หญิงลากกระสอบข้าวสารสร้างงาน 40*(50) = 200 J<br/>
-จะเห็นได้ว่างานจะเป็นบริมาณที่บ่งบอก = <mark className="Yellow">การส่งผ่านพลังงานผ่านแรงจนทำให้วัตถุเกิดการเคลื่อนที่</mark></div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-3.png?alt=media&token=93239986-5d6a-4a6c-afc2-78c61e0bb8cb" />
- <div div className="LabInfo">เราลองเอาหลักการงานนี้ไปปรับใช้ทำโจทย์ด้านขวามือกันครับ<br/>
- <br/>ทบทวน : <MathJaxContext>
-  <MathJax>\[W = F \cdot S\]</MathJax>
-  </MathJaxContext>
-  โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-  F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-  S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-  </div> 
+<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+<div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
+</div> 
+
+ 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
@@ -209,21 +202,21 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-  <div className="Question">ออกแรง 20 นิวตัน ในแนวขนานกับพื้นราบไปได้ไกล 5 เมตร จงหางานที่เกิดจากแรงที่กระทำ</div>
+  <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
   <div className="AnswerList">
-  <label className="container">100 J
+  <label className="container">กราฟ 1
       <input type="checkbox" id="Answer1" />
       <span className="checkmark"></span>
     </label>
-    <label className="container">200 J
+    <label className="container">กราฟ 2
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">400 J
+    <label className="container">กราฟ 3
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">1000 J
+    <label className="container">กราฟ 4
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
@@ -242,19 +235,9 @@ function Page3Answered (){
   return(
     <div>
     <div className="split Index">
-  <div className="LabName">งานทางฟิสิกส์</div>
-  <div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
-  ผู้ชายที่ลากซุงสร้างงาน 1000*(0.1) = 100 J ในขณะที่ผู้หญิงลากกระสอบข้าวสารสร้างงาน 40*(50) = 200 J<br/>
-  จะเห็นได้ว่างานจะเป็นบริมาณที่บ่งบอก = <mark className="Yellow">การส่งผ่านพลังงานผ่านแรงจนทำให้วัตถุเกิดการเคลื่อนที่</mark></div> 
-  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-3.png?alt=media&token=93239986-5d6a-4a6c-afc2-78c61e0bb8cb" />
-   <div div className="LabInfo">เราลองเอาหลักการงานนี้ไปปรับใช้ทำโจทย์ด้านขวามือกันครับ<br/>
-   <br/>ทบทวน : <MathJaxContext>
-    <MathJax>\[W = F \cdot S\]</MathJax>
-    </MathJaxContext>
-    โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-    F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-    S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-    </div> 
+<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+<div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
+</div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
    <div div className="FooterSpace"></div>
@@ -263,23 +246,23 @@ function Page3Answered (){
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
     <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-    <div className="Question">ออกแรง 20 นิวตัน ในแนวขนานกับพื้นราบไปได้ไกล 5 เมตร จงหางานที่เกิดจากแรงที่กระทำ</div>
+    <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
     <div className="AnswerList">
-    <label className="container">100 J
-        <input type="checkbox" id="Answer1" checked disabled  />
+    <label className="container">กราฟ 1
+        <input type="checkbox" id="Answer1" disabled  />
+        <span className="checkmark" ></span>
+      </label>
+      <label className="container">กราฟ 2
+        <input type="checkbox" id="Answer2" checked disabled/>
         <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">200 J
-        <input type="checkbox" id="Answer2" disabled/>
-        <span className="checkmark"></span>
+      <label className="container">กราฟ 3
+        <input type="checkbox" id="Answer3" checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">400 J
-        <input type="checkbox" id="Answer3" disabled/>
-        <span className="checkmark"></span>
-      </label>
-      <label className="container">1000 J
-        <input type="checkbox" id="Answer4" disabled/>
-        <span className="checkmark"></span>
+      <label className="container">กราฟ 4
+        <input type="checkbox" id="Answer4" checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
   
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -296,10 +279,8 @@ function Page3Answered (){
     return(
       <div>
       <div className="split Index">
-    <div className="LabName">งานทางฟิสิกส์</div>
-    <div className="LabInfo">เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
-    "ออกแรง 40 นิวตันทิศขนานกับทางลาด ดึงวัตถุขึ้นทางลาดผิวเกลี้ยงทำมุม 53 องศากับแนวระดับ เมื่อเคลื่อนวัตถุไปได้ไกล 8 เมตร <mark className="Yellow">ตามแนวราบ</mark> งานของแรงที่ดึงวัตถุมีขนาดเท่าใด"
-    <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
+    <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+    <div className="LabInfo">ลองเล่นกิจกรรม “งานจากแรงไม่คงที่” ดูครับ
     </div> 
     <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-4.png?alt=media&token=1f05a2fd-c436-4560-8ea5-e3a693b52e3a" />
      <div div className="LabInfo">ทบทวน : <MathJaxContext>
