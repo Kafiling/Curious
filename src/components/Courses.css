@@ -90,6 +90,12 @@ color: rgb(var(--text-color)) ;
   cursor: pointer; /* Cursor on hover */
 }
 
+.SceneContainer{
+  position: relative;
+  top: 20px;
+  width: 100%;
+}
+
 .FooterSpace{
   position: relative;
   top: 20px;

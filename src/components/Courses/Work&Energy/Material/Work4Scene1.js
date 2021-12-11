@@ -1,6 +1,7 @@
 import React from "react";
 import Matter from "matter-js";
 
+
 class Scene extends React.Component {
   constructor(props) {
     super(props);
@@ -72,4 +73,5 @@ Runner.run(runner, engine);
     return <div ref="scene" />;
   }
 }
+
 export default Scene;
