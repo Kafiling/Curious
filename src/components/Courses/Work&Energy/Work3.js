@@ -141,7 +141,7 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
-  <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
 </div>
@@ -168,7 +168,7 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="20" max="100"></progress></div>
-  <div className="Question">กดปุ๋มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
 </div>
