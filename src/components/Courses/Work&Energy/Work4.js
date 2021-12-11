@@ -1,6 +1,7 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
+import Scene from './Material/Work4Scene1';
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -126,7 +127,7 @@ return(
 <div div className="LabInfo">จากการหางานที่ผ่านมาจะเป็นกรณีแรงคงตัวเท่านั้น แต่ในกรณีที่แรงไม่คงตัวเราจะคำนวณอย่างไร<br/>
 เราลองสมมุติว่ามีแรง F กระทำต่อวัตถุให้เคลื่อนที่ไปตามแนวตรง โดยเคลื่อนที่ทิศทางตามแรง จะพล็อตกราฟ ตำแหน่งของวัตถุ กับ แรงได้ดังนี้
 </div> 
-<img className='LabImg' id='img' alt ="LabImg"src="" />
+<div className='SceneContainer'><Scene/></div>
  <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
  <MathJaxContext>
   <MathJax>\[W = F \cdot S\]</MathJax>
