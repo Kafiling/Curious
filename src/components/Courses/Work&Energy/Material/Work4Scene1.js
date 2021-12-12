@@ -13,8 +13,10 @@ export class Scene extends React.Component {
     var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
+    Body = Matter.Body,
     Bodies = Matter.Bodies,
     Mouse = Matter.Mouse,
+    Events = Matter.Events,
     MouseConstraint = Matter.MouseConstraint,
     Composite = Matter.Composite;
 
@@ -34,15 +36,35 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var boxA = Bodies.rectangle(300, 50, 80, 80);
-var boxB = Bodies.rectangle(450, 50, 80, 80);
-var ground = Bodies.rectangle(500, 610, 1000, 60, { isStatic: true });
+var boxA = Bodies.rectangle(60, 200, 80, 80);
+var pusher = Bodies.rectangle(-1000, 610, 850, 160, { isStatic: true }),counter = -1;;
+var ground = Bodies.rectangle(400, 610, 850, 60, { isStatic: true });
 var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var wallL = Bodies.rectangle(1010, 300, 60, 600, { isStatic: true });
 var ceiling = Bodies.rectangle(500, -10, 1000, 350, { isStatic: true });
 // add all of the bodies to the world
-Composite.add(engine.world, [boxA, boxB, ground, wallL ,wallR ,ceiling]);
+Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling]);
+ // body is static so must manually update velocity for friction to work
 
+ Events.on(engine, 'beforeUpdate', function(event) {
+        counter += 0.01;
+
+        if (counter < 0) {
+            return;
+        }
+
+        var px = -425 + 825 * Math.sin(counter);
+
+        // body is static so must manually update velocity for friction to work
+        Body.setVelocity(pusher, { x: 0, y: 0 });
+        Body.setPosition(pusher, { x: px, y: pusher.position.y });
+    });
+
+     Matter.Events.on(boxA, 'droped', function(event){
+      if(Body.position.y(boxA) <= 0){
+        alert("test")
+      }
+    })
 // add mouse control
     var mouse = Mouse.create(render.canvas),
         mouseConstraint = MouseConstraint.create(engine, {
