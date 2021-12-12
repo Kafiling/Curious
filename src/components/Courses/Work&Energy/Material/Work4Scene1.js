@@ -36,7 +36,7 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var boxA = Bodies.rectangle(60, 200, 80, 80);
+var boxA = Bodies.rectangle(70, 200, 80, 80);
 var pusher = Bodies.rectangle(-1000, 610, 850, 160, { isStatic: true }),counter = -1;;
 var ground = Bodies.rectangle(400, 610, 850, 60, { isStatic: true });
 var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
@@ -60,11 +60,15 @@ Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling]);
         Body.setPosition(pusher, { x: px, y: pusher.position.y });
     });
 
-     Matter.Events.on(boxA, 'droped', function(event){
-      if(Body.position.y(boxA) <= 0){
-        alert("test")
+     Matter.Events.on(engine, 'afterUpdate', function(event){
+      if(boxA.position.y >= 650){
+      Body.setVelocity(boxA, { x: 0, y: 0 });
+      Body.setAngle(boxA, 0)
+      Body.setAngularVelocity(boxA, 0)
+      Body.setPosition(boxA, { x: 70, y: 200 })
       }
     })
+
 // add mouse control
     var mouse = Mouse.create(render.canvas),
         mouseConstraint = MouseConstraint.create(engine, {
@@ -93,13 +97,13 @@ Runner.run(runner, engine);
 }
 
   render() {
-    return <div ref="scene" />;
+    return<div ref="scene" /> ;
   }
 }
 
+
 const state = {
-  labels: ['January', 'February', 'March',
-           'April', 'May'],
+  labels: [],
   datasets: [
     {
       label: 'Rainfall',
@@ -112,6 +116,7 @@ const state = {
     }
   ]
 }
+
 
 export class Chart extends React.Component {
   render() {
@@ -135,3 +140,4 @@ export class Chart extends React.Component {
       );
     }
   }
+ 
