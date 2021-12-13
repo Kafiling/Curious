@@ -95,50 +95,17 @@ var runner = Runner.create();
 
 // run the engine
 Runner.run(runner, engine);
+
 }
 
   render() {
-    return<div ref="scene" /> ;
+    return(<div>
+
+      
+      <div ref="scene" />
+      </div> )
   }
+  
 }
 
 
-const state = {
-  labels: [],
-  datasets: [
-    {
-      label: 'Rainfall',
-      fill: false,
-      lineTension: 0.5,
-      backgroundColor: 'rgba(75,192,192,1)',
-      borderColor: 'rgba(255,255,255,1)',
-      borderWidth: 2,
-      data: [65, 59, 80, 81, 56]
-    }
-  ]
-}
-
-
-export class Chart extends React.Component {
-  render() {
-    return (
-      <div>
-        <Line
-          data={state}
-          options={{
-            title:{
-              display:true,
-              text:'Average Rainfall per month',
-              fontSize:20
-            },
-            legend:{
-              display:true,
-              position:'right'
-            }
-          }}
-        />
-      </div>
-      );
-    }
-  }
- 
