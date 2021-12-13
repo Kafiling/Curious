@@ -109,16 +109,7 @@ Runner.run(runner, engine);
       {
         label: 'ความสัมพันธุ์ระหว่างแรงผลัก (F) กับ ตำแหน่งกล่อง (S)',
         backgroundColor: "#5B43F0",
-        data: [{
-            x: -10,
-            y: 0
-        }, {
-            x: 0,
-            y: 10
-        }, {
-            x: 10,
-            y: 5
-        }],
+        data: [],
         
       }],
   }}
