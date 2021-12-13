@@ -68,10 +68,7 @@ Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling]);
       Body.setPosition(boxA, { x: 70, y: 200 })
       }
     })
-    Matter.Events.on(engine, 'afterUpdate', function(event){
-      //(Math.floor(boxA.position.x))
-      }
-    )
+    
 
 // add mouse control
     var mouse = Mouse.create(render.canvas),
