@@ -1,6 +1,6 @@
 import React from "react";
 import Matter from "matter-js";
-import {Scatter} from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto'
 
 export class Scene extends React.Component {
@@ -101,7 +101,7 @@ Runner.run(runner, engine);
   render() {
     return(<div>
       <div class="chart-container" style={{position: "absolute" ,height: "150px", width: "330px", left: "32%" , top: "5px", paddingBottom: "10px", backgroundColor: "white"}}>
-        <Scatter
+        <Line
   datasetIdKey='id'
   data = {{
     label: 'ความสัมพันธุ์ระหว่างแรงผลัก (F) กับ ตำแหน่งกล่อง (S)',
