@@ -21,6 +21,7 @@ import Work1 from './components/Courses/Work&Energy/Work1'
 import Work2 from './components/Courses/Work&Energy/Work2'
 import Work3 from './components/Courses/Work&Energy/Work3'
 import Work4 from './components/Courses/Work&Energy/Work4'
+import Power1 from './components/Courses/Work&Energy/Power1'
 import ExamWork from './components/Courses/Work&Energy/ExamWork'
 
 import PhysicEngTest from './components/Courses/Work&Energy/PhysicEngTest'
@@ -51,6 +52,7 @@ function App() {
           <Route exact path="/courses/work_energy/work2"  ><Work2/></Route>
           <Route exact path="/courses/work_energy/work3"  ><Work3/></Route>
           <Route exact path="/courses/work_energy/work4"  ><Work4/></Route>
+          <Route exact path="/courses/work_energy/power1"  ><Power1/></Route>
           <Route exact path="/courses/work_energy/exam_work"  ><ExamWork/></Route>
           <Route exact path="/courses/work_energy/physic_eng"  ><PhysicEngTest/></Route>
 
