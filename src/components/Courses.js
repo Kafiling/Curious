@@ -9,6 +9,7 @@ export default function Course() {
             <li ><Link to = "/courses/work_energy/work2" className = "Course">Work2</Link></li>
             <li ><Link to = "/courses/work_energy/work3" className = "Course">Work3</Link></li>
             <li ><Link to = "/courses/work_energy/work4" className = "Course">Work4</Link></li>
+            <li ><Link to = "/courses/work_energy/power1" className = "Course">Power1</Link></li>
             <li ><Link to = "/" className = "Course">Activties : Work</Link></li>
             <li ><Link to = "/courses/work_energy/exam_work" className = "Course">Exam : Work</Link></li>
             <li ><Link to = "/courses/work_energy/physic_eng" className = "Course">Test: PhysicEngTest</Link></li>
