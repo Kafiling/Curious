@@ -91,10 +91,10 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
-    case 3 : if(Answer1.checked === false && 
-      Answer2.checked === true && 
-      Answer3.checked === true && 
-      Answer4.checked === true ) {correct(3)}
+    case 3 : if(Answer1.checked === true && 
+      Answer2.checked === false && 
+      Answer3.checked === false && 
+      Answer4.checked === false ) {correct(3)}
   else{incorrect(3)}
   break;
   case 4 :
@@ -123,24 +123,14 @@ default :
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-<div div className="LabInfo">จากการหางานที่ผ่านมาจะเป็นกรณีแรงคงตัวเท่านั้น แต่ในกรณีที่แรงไม่คงตัวเราจะคำนวณอย่างไร<br/>
-เราลองสมมุติว่ามีแรง F กระทำต่อวัตถุให้เคลื่อนที่ไปตามแนวตรง โดยเคลื่อนที่ทิศทางตามแรง จะพล็อตกราฟ ตำแหน่งของวัตถุ กับ แรงได้ดังนี้
+<div className="LabName">กำลัง</div>
+<div div className="LabInfo">กำลัง (Power) คือ อัตราการทำงานหรืองานที่เกิดขึ้นในหนึ่งหน่วยเวลา<br/><br/>
+“กำลัง” ใช้บอกความสามารถทำงานได้มาก-น้อยในช่วงเวลาหนึ่ง เช่น ปั้นจั่นดึงวัตถุ มีกำลัง 10000 W หมายความว่า ใน 1 วินาที ปั่นจั่น สามารถออกงานได้ 10000 J
+
 </div> 
-<div className='SceneContainer'>
-  <div class="chart-container" style={{position: "absolute" ,height: "150px", width: "300px", left: "32%"}}></div>
-  <Scene/>
-</div>
- <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
- <MathJaxContext>
-  <MathJax>\[W = F \cdot S\]</MathJax>
-  <MathJax>\[W = F \cdot (X_{2} - X_{1})\]</MathJax>
-  <MathJax>\[W = 5 N \cdot 10 m\]</MathJax>
-  <MathJax>\[W = 50 \]</MathJax>
-  <MathJax>\[W = พื้นที่ใต้กราฟ \]</MathJax>
-  </MathJaxContext>
-  จะได้ว่างานจากแรง F กระทำเป็นระยะกระจัด S มีค่าเท่ากับพื่นที่สี่เหลี่ยมใต้กราฟ F-S ที่เราสนใจนั้นเอง <br/>
-  W = F · S = พื้นที่ใต้กราฟ F-S
+ <div div className="LabInfo"><br/><br/>********ใส่รูปจ้า*
+ 
+  
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -164,11 +154,12 @@ function Page2 (){
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-<div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัว เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-2.png?alt=media&token=835c6f5d-3289-47aa-b58d-8d17ae591d43" />
- <div div className="LabInfo">จากกราฟข้างต้น เป็นกราฟ แรง - การกระจัด โดยแสดงค่าแรงที่ใช้ดึงสปริง
-<br/>และคำนวณงานจาก W = F · S = พื้นที่ใต้กราฟ F-S
+<div className="LabName">กำลัง</div>
+<div div className="LabInfo">โดยทั่วไป กำลังที่ใช้บอกความสามารถของอุปกรณ์ จะหมายถึง กำลังเฉลี่ย
+<br/><br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/><br/>
+</div> 
+
+ <div div className="LabInfo">เนื่องจากงานและช่วงเวลาเป็นปริมาณสเกลาร์ กำลังจึงเป็นปริมารสเกลาร์ด้วย
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -193,8 +184,8 @@ function Page3 (){
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-<div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
+<div className="LabName">กำลัง</div>
+<div className="LabInfo"><br/><br/><br/><br/>*****ใส่อะไรกะได้*
 </div> 
 
  
@@ -206,21 +197,21 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-  <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+  <div className="Question">ปั้นจั่นยกของมวล 1500 กิโลกรัม ขึ้นสูง 10 เมตร ในเวลา 20 วินาที จงหากำลังของปั้นจั่นในการยกของนี้</div>
   <div className="AnswerList">
-  <label className="container">กราฟ 1
+  <label className="container">7500 W
       <input type="checkbox" id="Answer1" />
       <span className="checkmark"></span>
     </label>
-    <label className="container">กราฟ 2
+    <label className="container">8000 W
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">กราฟ 3
+    <label className="container">8500 W
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">กราฟ 4
+    <label className="container">9000 W
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
@@ -239,8 +230,8 @@ function Page3Answered (){
   return(
     <div>
     <div className="split Index">
-<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-<div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
+<div className="LabName">กำลัง</div>
+<div className="LabInfo"><br/><br/><br/><br/>*****ใส่อะไรกะได้*
 </div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
@@ -250,23 +241,23 @@ function Page3Answered (){
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
     <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-    <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+    <div className="Question">ปั้นจั่นยกของมวล 1500 กิโลกรัม ขึ้นสูง 10 เมตร ในเวลา 20 วินาที จงหากำลังของปั้นจั่นในการยกของนี้</div>
     <div className="AnswerList">
-    <label className="container">กราฟ 1
-        <input type="checkbox" id="Answer1" disabled  />
+    <label className="container">7500 W
+        <input type="checkbox" id="Answer1"checked disabled  />
+        <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}} ></span>
+      </label>
+      <label className="container">8000 W
+        <input type="checkbox" id="Answer2" disabled/>
         <span className="checkmark" ></span>
       </label>
-      <label className="container">กราฟ 2
-        <input type="checkbox" id="Answer2" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">8500 W
+        <input type="checkbox" id="Answer3" disabled/>
+        <span className="checkmark"></span>
       </label>
-      <label className="container">กราฟ 3
-        <input type="checkbox" id="Answer3" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-      </label>
-      <label className="container">กราฟ 4
-        <input type="checkbox" id="Answer4" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">9000 W
+        <input type="checkbox" id="Answer4" disabled/>
+        <span className="checkmark"></span>
       </label>
   
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
