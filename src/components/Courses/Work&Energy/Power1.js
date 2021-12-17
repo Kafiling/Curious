@@ -185,7 +185,7 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo"><br/><br/><br/><br/>*****ใส่อะไรกะได้*
+<div className="LabInfo"><br/><br/><br/><br/>*****ใส่อะไรกะได้*h
 </div> 
 
  
