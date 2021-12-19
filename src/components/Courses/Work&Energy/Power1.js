@@ -414,7 +414,6 @@ function Page5 (){
           <div className="LabInfo"><br/>รถอีแต๋นคันหนึ่งใช้เครื่องยนต์ซึ่งมีกำลัง 5 กิโลวัตต์ <br/>สามารถแล่นได้เร็วสูงสุด 36 กิโลเมตรต่อชั่วโมง จงหาแรงฉุดสูงสุดของเครื่องยนต์
         <br/><br/><br/>********ใส่รูปจ้า*
           </div> 
-        
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
            <div div className="FooterSpace"></div>
