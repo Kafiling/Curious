@@ -33,7 +33,7 @@ function sumScore(){
   BayesScore.current = "Not Implemented"
 
   db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-    Work1: CompletionScore.current
+    Power1: CompletionScore.current
 }, { merge: true });
   
 
