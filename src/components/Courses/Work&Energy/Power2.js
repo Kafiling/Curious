@@ -11,14 +11,16 @@ export default function Power2() {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
+var [Answer2, setAnswer2] = useState(false);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
 //Var Score
-const TotalQuestionNum = useRef(3)
+const TotalQuestionNum = useRef(4)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
+const ScoreQuestion2 = useRef(0)
 const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
@@ -28,12 +30,12 @@ const {currentUser} = useContext(AuthContext)
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current
+  TotalScore.current = ScoreQuestion2.current + ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
   db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-    Work1: CompletionScore.current
+    Power2: CompletionScore.current
 }, { merge: true });
   
 
@@ -44,6 +46,9 @@ function correct(QuestionPage){
   //เช็คถูก
   alert("ถูกต้องคร้าบบ")
   switch(QuestionPage){
+    case 2 :setAnswer2(true)
+    ScoreQuestion2.current = 1
+      break;
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
       break;
@@ -62,6 +67,8 @@ function correct(QuestionPage){
 function incorrect(QuestionPage){
   alert("ผิดจ้า ลองทบทวนอีกทีนะ")
   switch(QuestionPage){
+    case 2 :setAnswer2(true)
+    break;
     case 3 :setAnswer3(true)
       break;
     case 4 :setAnswer4(true)
@@ -91,10 +98,16 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
+    case 2 : if(Answer1.checked === false && 
+        Answer2.checked === false && 
+        Answer3.checked === true && 
+        Answer4.checked === false ) {correct(2)}
+    else{incorrect(2)}
+    break;
     case 3 : if(Answer1.checked === false && 
       Answer2.checked === true && 
-      Answer3.checked === true && 
-      Answer4.checked === true ) {correct(3)}
+      Answer3.checked === false && 
+      Answer4.checked === false ) {correct(3)}
   else{incorrect(3)}
   break;
   case 4 :
@@ -123,25 +136,9 @@ default :
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-<div div className="LabInfo">จากการหางานที่ผ่านมาจะเป็นกรณีแรงคงตัวเท่านั้น แต่ในกรณีที่แรงไม่คงตัวเราจะคำนวณอย่างไร<br/>
-เราลองสมมุติว่ามีแรง F กระทำต่อวัตถุให้เคลื่อนที่ไปตามแนวตรง โดยเคลื่อนที่ทิศทางตามแรง จะพล็อตกราฟ ตำแหน่งของวัตถุ กับ แรงได้ดังนี้
+<div className="LabName">กำลัง</div>
+<div div className="LabInfo"><br/>ในบางครั้งพวกเราจะเห็นการบอกกำลังในหน่วยของ กำลังม้า (Horse Power : hp) หรือที่เรียกโดยทั่วไปว่า “แรงม้า” โดย 1 hp = 746 watt
 </div> 
-<div className='SceneContainer'>
-  <div class="chart-container" style={{position: "absolute" ,height: "150px", width: "300px", left: "32%"}}></div>
-  <Scene/>
-</div>
- <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
- <MathJaxContext>
-  <MathJax>\[W = F \cdot S\]</MathJax>
-  <MathJax>\[W = F \cdot (X_{2} - X_{1})\]</MathJax>
-  <MathJax>\[W = 5 N \cdot 10 m\]</MathJax>
-  <MathJax>\[W = 50 \]</MathJax>
-  <MathJax>\[W = พื้นที่ใต้กราฟ \]</MathJax>
-  </MathJaxContext>
-  จะได้ว่างานจากแรง F กระทำเป็นระยะกระจัด S มีค่าเท่ากับพื่นที่สี่เหลี่ยมใต้กราฟ F-S ที่เราสนใจนั้นเอง <br/>
-  W = F · S = พื้นที่ใต้กราฟ F-S
-  </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
@@ -164,7 +161,7 @@ function Page2 (){
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+<div className="LabName">กำลัง</div>
 <div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัว เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
 <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-2.png?alt=media&token=835c6f5d-3289-47aa-b58d-8d17ae591d43" />
  <div div className="LabInfo">จากกราฟข้างต้น เป็นกราฟ แรง - การกระจัด โดยแสดงค่าแรงที่ใช้ดึงสปริง
@@ -188,12 +185,54 @@ return(
 </div>
 </div>)
 }
-
+function Page2Answered (){
+  return(
+    <div>
+    <div className="split Index">
+<div className="LabName">กำลัง</div>
+<div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
+</div> 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
+  
+  <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+    <div className="AnswerList">
+    <label className="container">กราฟ 1
+        <input type="checkbox" id="Answer1" disabled  />
+        <span className="checkmark" ></span>
+      </label>
+      <label className="container">กราฟ 2
+        <input type="checkbox" id="Answer2" checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      </label>
+      <label className="container">กราฟ 3
+        <input type="checkbox" id="Answer3" checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      </label>
+      <label className="container">กราฟ 4
+        <input type="checkbox" id="Answer4" checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      </label>
+  
+      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+    
+  </div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+  
+  </div>
+  </div>)
+  }
 function Page3 (){
 return(
   <div>
   <div className="split Index">
-<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+<div className="LabName">กำลัง</div>
 <div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
 </div> 
 
@@ -239,7 +278,7 @@ function Page3Answered (){
   return(
     <div>
     <div className="split Index">
-<div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+<div className="LabName">กำลัง</div>
 <div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
 </div> 
    <div div className="FooterSpace"></div>
@@ -283,7 +322,7 @@ function Page3Answered (){
     return(
       <div>
       <div className="split Index">
-    <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+    <div className="LabName">กำลัง</div>
     <div className="LabInfo">ลองเล่นกิจกรรม “งานจากแรงไม่คงที่” ดูครับ
     </div> 
     <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-4.png?alt=media&token=1f05a2fd-c436-4560-8ea5-e3a693b52e3a" />
@@ -335,7 +374,7 @@ function Page3Answered (){
       return(
         <div>
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabName">กำลัง</div>
       <div className="LabInfo"><mark className="Yellow">มีเฉลยอยู่ด้านล่างจ้า</mark><br/><br/>เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
       "ออกแรง 40 นิวตันทิศขนานกับทางลาด ดึงวัตถุขึ้นทางลาดผิวเกลี้ยงทำมุม 53 องศากับแนวระดับ เมื่อเคลื่อนวัตถุไปได้ไกล 8 เมตร <mark className="Yellow">ตามแนวราบ</mark> งานของแรงที่ดึงวัตถุมีขนาดเท่าใด"
       <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
@@ -392,7 +431,7 @@ function Page5 (){
         return(
           <div>
           <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
+        <div className="LabName">กำลัง</div>
         <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
         "งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดย<mark className="Yellow">งานจะขึ้นอยู่กับแรงและการกระจัด</mark>"
         <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
@@ -446,7 +485,7 @@ function Page5 (){
           return(
             <div>
             <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
+          <div className="LabName">กำลัง</div>
           <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
         "งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดย<mark className="Yellow">งานจะขึ้นอยู่กับแรงและการกระจัด</mark>"
         <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
@@ -525,8 +564,13 @@ function Page5 (){
 if (page === 1) {return (
 <div><Page1/></div>)}
 
-else if (page === 2) {return(
-<div><Page2/></div>)}
+else if (page === 2 && Answer2 === false) {
+  return(<div><Page2/></div>)
+  }
+  else if (page === 2 && Answer2 === true) {
+    return(<div><Page2Answered/></div>)
+  }
+  
 
 else if (page === 3 && Answer3 === false) {
 return(<div><Page3/></div>)
