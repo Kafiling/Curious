@@ -138,6 +138,7 @@ return(
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo"><br/>ในบางครั้งพวกเราจะเห็นการบอกกำลังในหน่วยของ กำลังม้า (Horse Power : hp) หรือที่เรียกโดยทั่วไปว่า “แรงม้า” โดย 1 hp = 746 watt
+<br/><br/><br/>********ใส่รูปจ้า*
 </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -162,10 +163,9 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัว เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-2.png?alt=media&token=835c6f5d-3289-47aa-b58d-8d17ae591d43" />
- <div div className="LabInfo">จากกราฟข้างต้น เป็นกราฟ แรง - การกระจัด โดยแสดงค่าแรงที่ใช้ดึงสปริง
-<br/>และคำนวณงานจาก W = F · S = พื้นที่ใต้กราฟ F-S
+<div div className="LabInfo"><br/>
+เครื่องยนต์รถ สามารถส่งแรง 2000 N ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr  เครื่องยนต์นี้มีกำลังกี่ kW
+<br/><br/><br/>********ใส่รูปจ้า*
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -175,12 +175,31 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="20" max="100"></progress></div>
-  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="Question"></div>
   <div className="AnswerList">
+  <label className="container">35000J
+      <input type="checkbox" id="Answer1" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">37000J
+      <input type="checkbox" id="Answer2"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">40000J
+      <input type="checkbox" id="Answer3"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">42000J
+      <input type="checkbox" id="Answer4"/>
+      <span className="checkmark"></span>
+    </label>
+
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
   
 </div>
 <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-<button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+<button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+
 
 </div>
 </div>)
@@ -190,7 +209,9 @@ function Page2Answered (){
     <div>
     <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
+<div className="LabInfo"><br/>
+เครื่องยนต์รถ สามารถส่งแรง 2000 N ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr  เครื่องยนต์นี้มีกำลังกี่ kW
+<br/><br/><br/>********ใส่รูปจ้า*
 </div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
@@ -199,31 +220,31 @@ function Page2Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-    <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+    <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+    <div className="Question"></div>
     <div className="AnswerList">
-    <label className="container">กราฟ 1
+    <label className="container">35000J
         <input type="checkbox" id="Answer1" disabled  />
         <span className="checkmark" ></span>
       </label>
-      <label className="container">กราฟ 2
-        <input type="checkbox" id="Answer2" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">37000J
+        <input type="checkbox" id="Answer2"disabled/>
+        <span className="checkmark" ></span>
       </label>
-      <label className="container">กราฟ 3
+      <label className="container">40000J
         <input type="checkbox" id="Answer3" checked disabled/>
         <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">กราฟ 4
-        <input type="checkbox" id="Answer4" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">42000J
+        <input type="checkbox" id="Answer4"disabled/>
+        <span className="checkmark" ></span>
       </label>
   
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
   
   </div>
   </div>)
@@ -233,7 +254,9 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
+<div className="LabInfo"> <br/>จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
+เครื่องยนต์รถ สามารถส่งแรง 2000 N <br/>ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr
+<br/><br/><br/>********ใส่รูปจ้า*
 </div> 
 
  
@@ -244,22 +267,22 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-  <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+  <div className="Question"></div>
   <div className="AnswerList">
-  <label className="container">กราฟ 1
+  <label className="container">50.12 hp
       <input type="checkbox" id="Answer1" />
       <span className="checkmark"></span>
     </label>
-    <label className="container">กราฟ 2
+    <label className="container">53.62 hp
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">กราฟ 3
+    <label className="container">57.34 hp
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">กราฟ 4
+    <label className="container">61.78 hp
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
@@ -279,7 +302,9 @@ function Page3Answered (){
     <div>
     <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
+<div className="LabInfo"><br/>จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
+เครื่องยนต์รถ สามารถส่งแรง 2000 N <br/>ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr
+<br/><br/><br/>********ใส่รูปจ้า*
 </div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
@@ -289,23 +314,24 @@ function Page3Answered (){
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
     <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-    <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+    <div className="Question"></div>
     <div className="AnswerList">
-    <label className="container">กราฟ 1
+    <label className="container">50.12 hp
         <input type="checkbox" id="Answer1" disabled  />
         <span className="checkmark" ></span>
       </label>
-      <label className="container">กราฟ 2
+      <label className="container">53.62 hp
         <input type="checkbox" id="Answer2" checked disabled/>
         <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">กราฟ 3
-        <input type="checkbox" id="Answer3" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">57.34 hp
+        <input type="checkbox" id="Answer3"disabled/>
+        <span className="checkmark"></span>
       </label>
-      <label className="container">กราฟ 4
-        <input type="checkbox" id="Answer4" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">61.78 hp
+
+        <input type="checkbox" id="Answer4" disabled/>
+        <span className="checkmark"></span>
       </label>
   
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -323,16 +349,9 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">กำลัง</div>
-    <div className="LabInfo">ลองเล่นกิจกรรม “งานจากแรงไม่คงที่” ดูครับ
+    <div className="LabInfo"><br/>นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
+    <br/><br/><br/>********ใส่รูปจ้า*
     </div> 
-    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-4.png?alt=media&token=1f05a2fd-c436-4560-8ea5-e3a693b52e3a" />
-     <div div className="LabInfo">ทบทวน : <MathJaxContext>
-      <MathJax>\[W = F \cdot S\]</MathJax>
-      </MathJaxContext>
-      โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-      F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-      S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-      </div> 
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
@@ -341,21 +360,21 @@ function Page3Answered (){
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
       <div className="ProgessBar"><progress value="60" max="100"></progress></div>
-      <div className="Question">งานของแรงที่ดึงวัตถุมีขนาดเท่าใด</div>
+      <div className="Question"></div>
       <div className="AnswerList">
-      <label className="container">80 J
+      <label className="container">65 W
           <input type="checkbox" id="Answer1" />
           <span className="checkmark"></span>
         </label>
-        <label className="container">200 J
+        <label className="container">70 W
           <input type="checkbox" id="Answer2"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">320 J
+        <label className="container">75 W
           <input type="checkbox" id="Answer3"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">400 J
+        <label className="container">80 W
           <input type="checkbox" id="Answer4" />
           <span className="checkmark" ></span>
         </label>
@@ -375,22 +394,10 @@ function Page3Answered (){
         <div>
         <div className="split Index">
       <div className="LabName">กำลัง</div>
-      <div className="LabInfo"><mark className="Yellow">มีเฉลยอยู่ด้านล่างจ้า</mark><br/><br/>เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
-      "ออกแรง 40 นิวตันทิศขนานกับทางลาด ดึงวัตถุขึ้นทางลาดผิวเกลี้ยงทำมุม 53 องศากับแนวระดับ เมื่อเคลื่อนวัตถุไปได้ไกล 8 เมตร <mark className="Yellow">ตามแนวราบ</mark> งานของแรงที่ดึงวัตถุมีขนาดเท่าใด"
-      <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
+      <div className="LabInfo"><br/>นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
+    <br/><br/><br/>********ใส่รูปจ้า*
       </div> 
-      <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-5.png?alt=media&token=c6ecf8ac-db7d-453b-a0b1-716d94a736e6" />
-       <div div className="LabInfo"> วิธีคิด: ทำการแตกการกระจัดให้ขนานกับงานโดยใช้<a className="IndexWarp" href = "https://th.wikipedia.org/wiki/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B9%82%E0%B8%81%E0%B8%93%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%B4">
-         ฟังก์ชันตรีโกณมิติ</a> cos 53° = ชิด/ฉาก จะได้ว่า 3/5 = 8/x =&gt; x = 10 m <br/><br/>
-       จาก W = FS = 40 N(10 m) = 400 J
-       <br/><br/><br/> 
-         ทบทวน : <MathJaxContext>
-        <MathJax>\[W = F \cdot S\]</MathJax>
-        </MathJaxContext>
-        โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-        F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-        S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-        </div> 
+     
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
        <div div className="FooterSpace"></div>
@@ -399,21 +406,21 @@ function Page3Answered (){
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
         <div className="ProgessBar"><progress value="60" max="100"></progress></div>
-        <div className="Question">งานของแรงที่ดึงวัตถุมีขนาดเท่าใด</div>
+        <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">80 J
+        <label className="container">65 W
             <input type="checkbox" id="Answer1" disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">200 J
+          <label className="container">70 W
             <input type="checkbox" id="Answer2"disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">320 J
+          <label className="container">75 W
             <input type="checkbox" id="Answer3"disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">400 J
+          <label className="container">80 W
             <input type="checkbox" id="Answer4" disabled checked/>
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
@@ -432,18 +439,9 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">กำลัง</div>
-        <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
-        "งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดย<mark className="Yellow">งานจะขึ้นอยู่กับแรงและการกระจัด</mark>"
-        <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
+        <div className="LabInfo"><br/>กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 
+        <br/><br/><br/>********ใส่รูปจ้า*
         </div> 
-        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
-         <div div className="LabInfo">ทบทวน : <MathJaxContext>
-          <MathJax>\[W = F \cdot S\]</MathJax>
-          </MathJaxContext>
-          โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-          F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-          S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-          </div> 
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
@@ -452,21 +450,21 @@ function Page5 (){
         <div className="split QuestionAnswer"> 
           <div className="LabNumber">Introducing Work</div>
           <div className="ProgessBar"><progress value="80" max="100"></progress></div>
-          <div className="Question">ข้อใดถูกต้องเกี่ยวกับงาน</div>
+          <div className="Question"></div>
           <div className="AnswerList">
-          <label className="container">งานมีสูตรว่า W = F ⋅ S
+          <label className="container">แรง (Force)
               <input type="checkbox" id="Answer1" />
               <span className="checkmark"></span>
             </label>
-            <label className="container">ก่อนจะคิดงานต้องทำให้ทิศทางของการกระจัดกับแรงขนานกันก่อน
+            <label className="container">การกระจัด (Displacement)
               <input type="checkbox" id="Answer2"/>
               <span className="checkmark"></span>
             </label>
-            <label className="container">ยกของหนัก 10 N ขึ้น 1.5 m เกิดงาน 15 J
+            <label className="container">เวลา (Time)
               <input type="checkbox" id="Answer3"/>
               <span className="checkmark"></span>
             </label>
-            <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
+            <label className="container">ความเร็ว (Velocity)
               <input type="checkbox" id="Answer4" />
               <span className="checkmark" ></span>
             </label>
@@ -486,22 +484,10 @@ function Page5 (){
             <div>
             <div className="split Index">
           <div className="LabName">กำลัง</div>
-          <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
-        "งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดย<mark className="Yellow">งานจะขึ้นอยู่กับแรงและการกระจัด</mark>"
-        <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
+          <div className="LabInfo"><br/>กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 
+        <br/><br/><br/>********ใส่รูปจ้า*
           </div> 
-          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
-           <div div className="LabInfo"> วิธีคิด: ทำการแตกการกระจัดให้ขนานกับงานโดยใช้<a className="IndexWarp" href = "https://th.wikipedia.org/wiki/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B9%82%E0%B8%81%E0%B8%93%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%B4">
-             ฟังก์ชันตรีโกณมิติ</a> cos 53° = ชิด/ฉาก จะได้ว่า 3/5 = 8/x =&gt; x = 10 m <br/><br/>
-           จาก W = FS = 40 N(10 m) = 400 J
-           <br/><br/><br/> 
-             ทบทวน : <MathJaxContext>
-            <MathJax>\[W = F \cdot S\]</MathJax>
-            </MathJaxContext>
-            โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-            F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-            S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-            </div> 
+    
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
            <div div className="FooterSpace"></div>
@@ -510,21 +496,21 @@ function Page5 (){
           <div className="split QuestionAnswer"> 
             <div className="LabNumber">Introducing Work</div>
             <div className="ProgessBar"><progress value="80" max="100"></progress></div>
-            <div className="Question">ข้อใดถูกต้องเกี่ยวกับงาน</div>
+            <div className="Question"> </div>
             <div className="AnswerList">
-            <label className="container">งานมีสูตรว่า W = F ⋅ S
+            <label className="container">แรง (Force)
                 <input type="checkbox" id="Answer1" disabled checked/>
                 <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
-              <label className="container">ก่อนจะคิดงานต้องทำให้ทิศทางของการกระจัดกับแรงขนานกันก่อน
+              <label className="container">การกระจัด (Displacement)
                 <input type="checkbox" id="Answer2"disabled checked/>
                 <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
-              <label className="container">ยกของหนัก 10 N ขึ้น 1.5 m เกิดงาน 15 J
+              <label className="container">เวลา (Time)
                 <input type="checkbox" id="Answer3"disabled checked/>
                 <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
-              <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
+              <label className="container">ความเร็ว (Velocity)
                 <input type="checkbox" id="Answer4" disabled checked/>
                 <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
