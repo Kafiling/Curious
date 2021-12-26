@@ -11,12 +11,11 @@ export default function KineticEnergy () {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
-var [Answer2, setAnswer2] = useState(false);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
 //Var Score
-const TotalQuestionNum = useRef(4)
+const TotalQuestionNum = useRef(3)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
@@ -30,12 +29,12 @@ const {currentUser} = useContext(AuthContext)
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion2.current + ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current
+  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
   db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-    Power2: CompletionScore.current
+    KineticEnergy: CompletionScore.current
 }, { merge: true });
   
 
@@ -46,9 +45,6 @@ function correct(QuestionPage){
   //เช็คถูก
   alert("ถูกต้องคร้าบบ")
   switch(QuestionPage){
-    case 2 :setAnswer2(true)
-    ScoreQuestion2.current = 1
-      break;
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
       break;
@@ -67,8 +63,6 @@ function correct(QuestionPage){
 function incorrect(QuestionPage){
   alert("ผิดจ้า ลองทบทวนอีกทีนะ")
   switch(QuestionPage){
-    case 2 :setAnswer2(true)
-    break;
     case 3 :setAnswer3(true)
       break;
     case 4 :setAnswer4(true)
@@ -98,12 +92,6 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
-    case 2 : if(Answer1.checked === false && 
-        Answer2.checked === false && 
-        Answer3.checked === true && 
-        Answer4.checked === false ) {correct(2)}
-    else{incorrect(2)}
-    break;
     case 3 : if(Answer1.checked === false && 
       Answer2.checked === true && 
       Answer3.checked === false && 
@@ -210,9 +198,9 @@ function Page3 (){
 return(
   <div>
   <div className="split Index">
-<div className="LabName">กำลัง</div>
-<div className="LabInfo"> <br/>จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
-เครื่องยนต์รถ สามารถส่งแรง 2000 N <br/>ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr
+<div className="LabName">พลังงานจลน์</div>
+<div className="LabInfo"> <br/>เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
+วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
 <br/><br/><br/>********ใส่รูปจ้า*
 </div> 
 
@@ -224,22 +212,22 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
-  <label className="container">50.12 hp
+  <label className="container">20 J
       <input type="checkbox" id="Answer1" />
       <span className="checkmark"></span>
     </label>
-    <label className="container">53.62 hp
+    <label className="container">25 J
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">57.34 hp
+    <label className="container">30 J
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">61.78 hp
+    <label className="container">35 J
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
@@ -258,9 +246,9 @@ function Page3Answered (){
   return(
     <div>
     <div className="split Index">
-<div className="LabName">กำลัง</div>
-<div className="LabInfo"><br/>จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
-เครื่องยนต์รถ สามารถส่งแรง 2000 N <br/>ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr
+<div className="LabName">พลังงานจลน์</div>
+<div className="LabInfo"><br/>เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
+วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
 <br/><br/><br/>********ใส่รูปจ้า*
 </div> 
    <div div className="FooterSpace"></div>
@@ -273,20 +261,19 @@ function Page3Answered (){
     <div className="ProgessBar"><progress value="40" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
-    <label className="container">50.12 hp
+    <label className="container">20 J
         <input type="checkbox" id="Answer1" disabled  />
         <span className="checkmark" ></span>
       </label>
-      <label className="container">53.62 hp
+      <label className="container">25 J
         <input type="checkbox" id="Answer2" checked disabled/>
         <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">57.34 hp
+      <label className="container">30 J
         <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">61.78 hp
-
+      <label className="container">35 J
         <input type="checkbox" id="Answer4" disabled/>
         <span className="checkmark"></span>
       </label>
@@ -305,9 +292,19 @@ function Page3Answered (){
     return(
       <div>
       <div className="split Index">
-    <div className="LabName">กำลัง</div>
-    <div className="LabInfo"><br/>นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
-    <br/><br/><br/>********ใส่รูปจ้า*
+    <div className="LabName">พลังงานจลน์</div>
+    <div className="LabInfo"><br/>งานกับการเปลี่ยนพลังงานจลน์<br/><br/>
+เราได้ค้นพบแล้วว่างานจากแรงสามารถทำให้วัตถุที่อยู่นิ่ง เคลื่อนที่ได้ (มีพลังงานจลน์) แล้วหากวัตถุมีพลังงานจลน์อยู่แล้ว มีงานจากแรงเข้าไปกระทำเพิ่มอีกจะส่งผลอย่างไร
+
+    <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
+    เนื่องจากแรงลัพธ์เป็นแรงคงตัว ดังนั้นความเร่งจึงมีค่าคงตัวด้วย จากสมการ
+    <MathJaxContext>
+      <MathJax>\[v^2 = u^2 + 2 \cdot a \cdot \Delta x\]
+        \[v^2 - u^2 = 2 \cdot a \cdot \Delta x\]
+        \[v^2 - u^2 = 2 \cdot   \cdot \Delta x\]
+        
+      </MathJax>
+      </MathJaxContext>
     </div> 
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
