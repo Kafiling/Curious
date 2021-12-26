@@ -7,7 +7,7 @@ import {Scene} from './Material/Work4Scene1';
 import {AuthContext, db} from 'Firebase'
 
 
-export default function Power1() {
+export default function dPower1() {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
