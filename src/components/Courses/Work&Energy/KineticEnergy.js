@@ -7,7 +7,7 @@ import {Scene} from './Material/Work4Scene1';
 import {AuthContext, db} from 'Firebase'
 
 
-export default function Power2() {
+export default function KineticEnergy () {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
@@ -136,9 +136,16 @@ default :
 return(
   <div>
   <div className="split Index">
-<div className="LabName">กำลัง</div>
-<div div className="LabInfo"><br/>ในบางครั้งพวกเราจะเห็นการบอกกำลังในหน่วยของ กำลังม้า (Horse Power : hp) หรือที่เรียกโดยทั่วไปว่า “แรงม้า” โดย 1 hp = 746 watt
-<br/><br/><br/>********ใส่รูปจ้า*
+<div className="LabName">พลังงานจลน์</div>
+<div div className="LabInfo"><br/>พลังงานคืออะไร พลังงานนั้นเป็นปริมาณที่ไม่สามารถมองเห็นหรือจับต้องได้ แต่สามารถรับรู้จากผลของพลังงานนั้นได้ 
+เช่น พลังงานจากแสงอาทิตย์ที่ทำให้รู้สึกร้อน พลังงานเสียงที่มากไปทำให้เราปวดหู หรือพลังงานไฟฟ้านำไปใช้ในเครื่องใช้ไฟฟ้าต่างๆ
+<br/><br/><br/>********ภาพพลังงานชนิดต่างๆ*<br/><br/><br/>
+
+พลังงานมีหลากหลายชนิดเช่น พลังงานแสง พลังงานเสียง พลังงานความร้อน พลังงานเคมี จนไปถึง พลังงานนิวเคลียร์ โดยในบทเรียนนี้จะหยิบ พลังงานทางกลศาสตร์ 2 ชนิด มาทำการเรียนรู้กัน ได้แก่ พลังงานศักย์ (Potential energy) และ พลังงานจลน์ (Kinetic energy)
+<br/><br/>
+พลังงานมีหน่วยเป็น จูล (Joules : J)
+
+
 </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -162,10 +169,25 @@ function Page2 (){
 return(
   <div>
   <div className="split Index">
-<div className="LabName">กำลัง</div>
+<div className="LabName">พลังงานจลน์</div>
 <div div className="LabInfo"><br/>
-เครื่องยนต์รถ สามารถส่งแรง 2000 N ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr  เครื่องยนต์นี้มีกำลังกี่ kW
-<br/><br/><br/>********ใส่รูปจ้า*
+เริ่มจากพลังงานจลน์(Kinetic energy) เป็นพลังงานของวัตถุที่กำลังเคลื่อนที่ (มีความเร็ว) 
+<br/><br/><br/>********ภาพ or Matter.js*<br/><br/><br/>
+โดยพิสูจน์จาก <br/>
+(งานจากแรง) 			
+<MathJaxContext>
+      <MathJax>\[W = F \cdot S \]
+        \[W = m \cdot a \cdot S....(1) \]
+        จาก  \[S = ut+ \cfrac{1}{2} \cdot at^2		\]
+        \[S = \cfrac{1}{2}at^2 ; u = 0 ....(2)		\]
+        แทนค่า S ใน (1)
+        \[W = m \cdot a \cdot \cfrac{1}{2} \cdot at^2\]
+        \[W = \cfrac{1}{2} \cdot m \cdot (at) ^2\]
+        \[W = \cfrac{1}{2} \cdot m \cdot v^2; u = 0\]
+        \[Ek = \cfrac{1}{2} \cdot m \cdot v^2\]
+      </MathJax>
+      </MathJaxContext>
+
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -175,80 +197,15 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="20" max="100"></progress></div>
-  <div className="Question"></div>
+  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
-  <label className="container">35000J
-      <input type="checkbox" id="Answer1" />
-      <span className="checkmark"></span>
-    </label>
-    <label className="container">37000J
-      <input type="checkbox" id="Answer2"/>
-      <span className="checkmark"></span>
-    </label>
-    <label className="container">40000J
-      <input type="checkbox" id="Answer3"/>
-      <span className="checkmark"></span>
-    </label>
-    <label className="container">42000J
-      <input type="checkbox" id="Answer4"/>
-      <span className="checkmark"></span>
-    </label>
-
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
   
 </div>
 <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-<button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
-
-
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
 </div>
 </div>)
 }
-function Page2Answered (){
-  return(
-    <div>
-    <div className="split Index">
-<div className="LabName">กำลัง</div>
-<div className="LabInfo"><br/>
-เครื่องยนต์รถ สามารถส่งแรง 2000 N ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr  เครื่องยนต์นี้มีกำลังกี่ kW
-<br/><br/><br/>********ใส่รูปจ้า*
-</div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
-  
-  <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="20" max="100"></progress></div>
-    <div className="Question"></div>
-    <div className="AnswerList">
-    <label className="container">35000J
-        <input type="checkbox" id="Answer1" disabled  />
-        <span className="checkmark" ></span>
-      </label>
-      <label className="container">37000J
-        <input type="checkbox" id="Answer2"disabled/>
-        <span className="checkmark" ></span>
-      </label>
-      <label className="container">40000J
-        <input type="checkbox" id="Answer3" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-      </label>
-      <label className="container">42000J
-        <input type="checkbox" id="Answer4"disabled/>
-        <span className="checkmark" ></span>
-      </label>
-  
-      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
-    
-  </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
-  
-  </div>
-  </div>)
-  }
 function Page3 (){
 return(
   <div>
@@ -267,7 +224,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
   <label className="container">50.12 hp
@@ -550,12 +507,8 @@ function Page5 (){
 if (page === 1) {return (
 <div><Page1/></div>)}
 
-else if (page === 2 && Answer2 === false) {
-  return(<div><Page2/></div>)
-  }
-  else if (page === 2 && Answer2 === true) {
-    return(<div><Page2Answered/></div>)
-  }
+else if (page === 2) {return (
+  <div><Page2/></div>)}
   
 
 else if (page === 3 && Answer3 === false) {
