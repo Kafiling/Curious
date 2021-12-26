@@ -14,6 +14,7 @@ var [page, setPage] = useState(1);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
+var [Answer6, setAnswer6] = useState(false);
 //Var Score
 const TotalQuestionNum = useRef(3)
 const TotalScore = useRef(0)
@@ -23,13 +24,14 @@ const ScoreQuestion2 = useRef(0)
 const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
+const ScoreQuestion6 = useRef(0)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
 
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current
+  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current + ScoreQuestion6.current
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
@@ -54,6 +56,9 @@ function correct(QuestionPage){
     case 5 :setAnswer5(true)
     ScoreQuestion5.current = 1
       break;
+      case 6 :setAnswer6(true)
+    ScoreQuestion6.current = 1
+      break;
     default :
     alert("Scoring Error")
     break;
@@ -68,6 +73,8 @@ function incorrect(QuestionPage){
     case 4 :setAnswer4(true)
       break;
     case 5 :setAnswer5(true)
+      break;
+      case 6 :setAnswer6(true)
       break;
     default :
     alert("Scoring Error")
@@ -111,6 +118,13 @@ case 5 :
     Answer3.checked === true && 
     Answer4.checked === true ){correct(5)}
 else{incorrect(5)}
+break;
+case 6 :
+  if(Answer1.checked === true&& 
+    Answer2.checked ===  true&& 
+    Answer3.checked === true && 
+    Answer4.checked === true ){correct(6)}
+else{incorrect(6)}
 break;
 default :
     alert("Checking Error")
@@ -301,10 +315,15 @@ function Page3Answered (){
     <MathJaxContext>
       <MathJax>\[v^2 = u^2 + 2 \cdot a \cdot \Delta x\]
         \[v^2 - u^2 = 2 \cdot a \cdot \Delta x\]
-        \[v^2 - u^2 = 2 \cdot   \cdot \Delta x\]
-        
+        \[v^2 - u^2 = 2 \cdot \frac Fm \cdot \Delta x\]
+        \[\cfrac{1}{2} \cdot m \cdot v^2 - \cfrac{1}{2} \cdot m \cdot u^2 = F \cdot \Delta x\]
+        \[Ef - Ei - = W\]
+        \[W = Ef - Ei = \Delta Ek\]
+      เมื่อ W คืองานของแรงลัพธ์คงตัวที่ไม่เป็นศูนย์
       </MathJax>
       </MathJaxContext>
+      <br/><br/>จากสมการดังกล่าวจะสรุปได้ว่า งานเนื่องจากแรงลัพธ์ที่ไม่เป็น 0 (งานสามารถเป็น บวก หรือ ลบ) 
+      กระทำกับวัตถุจะทำให้พลังงานจลน์ของวัตถุเปลี่ยนไป เป็นความสัมพันธ์นี้ว่า Work-kinetic energy theorem (ทฤษฎีบทงาน-พลังงานจลน์)
     </div> 
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
@@ -312,89 +331,25 @@ function Page3Answered (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="60" max="100"></progress></div>
-      <div className="Question"></div>
-      <div className="AnswerList">
-      <label className="container">65 W
-          <input type="checkbox" id="Answer1" />
-          <span className="checkmark"></span>
-        </label>
-        <label className="container">70 W
-          <input type="checkbox" id="Answer2"/>
-          <span className="checkmark"></span>
-        </label>
-        <label className="container">75 W
-          <input type="checkbox" id="Answer3"/>
-          <span className="checkmark"></span>
-        </label>
-        <label className="container">80 W
-          <input type="checkbox" id="Answer4" />
-          <span className="checkmark" ></span>
-        </label>
-    
-        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
-      
-    </div>
-    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
-    <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
-    
-    </div>
-    </div>)
+  <div className="LabNumber">Introducing Work</div>
+  <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="AnswerList">
+  
+</div>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
+</div>
+</div>)
     }
-
-    function Page4Answered (){
-      return(
-        <div>
-        <div className="split Index">
-      <div className="LabName">กำลัง</div>
-      <div className="LabInfo"><br/>นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
-    <br/><br/><br/>********ใส่รูปจ้า*
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
-      
-      <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
-        <div className="Question"></div>
-        <div className="AnswerList">
-        <label className="container">65 W
-            <input type="checkbox" id="Answer1" disabled/>
-            <span className="checkmark"></span>
-          </label>
-          <label className="container">70 W
-            <input type="checkbox" id="Answer2"disabled/>
-            <span className="checkmark"></span>
-          </label>
-          <label className="container">75 W
-            <input type="checkbox" id="Answer3"disabled/>
-            <span className="checkmark"></span>
-          </label>
-          <label className="container">80 W
-            <input type="checkbox" id="Answer4" disabled checked/>
-            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-          </label>
-      
-          <button className = "btn btn-glow btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
-        
-      </div>
-      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
-      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
-      
-      </div>
-      </div>)
-      }
 function Page5 (){
         return(
           <div>
           <div className="split Index">
-        <div className="LabName">กำลัง</div>
-        <div className="LabInfo"><br/>กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 
-        <br/><br/><br/>********ใส่รูปจ้า*
+        <div className="LabName">พลังงานจลน์</div>
+        <div className="LabInfo"><br/>จะกล่าวได้ว่าพลังงานจลน์ของจะเพิ่มหรือลดได้หากมีงานเนื่องจากแรงเข้ามากกระทำกับกับวัตถุ 
+        เช่น วัตถุกำลังเคลื่อนที่แล้วเราเอามือไปกั้นทำให้วัตถุหยุดเคลื่อนที่ หรือ ลูกบอลกำลังกลิ้งด้วยความเร็ว 5 m/s แล้วเราไปเตะลูกบอลทำให้ ความเร็วลูกบอลเพิ่มขึ้น
+        <br/><br/><br/>********Matter js Again?*
         </div> 
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -402,81 +357,108 @@ function Page5 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Introducing Work</div>
-          <div className="ProgessBar"><progress value="80" max="100"></progress></div>
-          <div className="Question"></div>
-          <div className="AnswerList">
-          <label className="container">แรง (Force)
-              <input type="checkbox" id="Answer1" />
-              <span className="checkmark"></span>
-            </label>
-            <label className="container">การกระจัด (Displacement)
-              <input type="checkbox" id="Answer2"/>
-              <span className="checkmark"></span>
-            </label>
-            <label className="container">เวลา (Time)
-              <input type="checkbox" id="Answer3"/>
-              <span className="checkmark"></span>
-            </label>
-            <label className="container">ความเร็ว (Velocity)
-              <input type="checkbox" id="Answer4" />
-              <span className="checkmark" ></span>
-            </label>
-        
-            <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
-          
-        </div>
-        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
-        <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
-        
-        </div>
-        </div>)
+  <div className="LabNumber">Introducing Work</div>
+  <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="AnswerList">
+  
+</div>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
+</div>
+</div>)
         }
-    
-        function Page5Answered (){
+function Page6 (){
           return(
             <div>
             <div className="split Index">
-          <div className="LabName">กำลัง</div>
-          <div className="LabInfo"><br/>กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 
-        <br/><br/><br/>********ใส่รูปจ้า*
+          <div className="LabName">พลังงานจลน์</div>
+          <div className="LabInfo"><br/>รถมวล 800 kg แล่นด้วยความเร็ว 20 m/s คนขับเบรกรถ เมื่อเริ่มเบรกรถเคลื่อนไปได้อีก 10 m ก่อนจะหยุดนิ่ง จงหางานในการเบรกรถ
+
+          <br/><br/><br/>********ใส่รูปจ้า*
           </div> 
-    
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
            <div div className="FooterSpace"></div>
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Introducing Work</div>
-            <div className="ProgessBar"><progress value="80" max="100"></progress></div>
-            <div className="Question"> </div>
-            <div className="AnswerList">
-            <label className="container">แรง (Force)
-                <input type="checkbox" id="Answer1" disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-              </label>
-              <label className="container">การกระจัด (Displacement)
-                <input type="checkbox" id="Answer2"disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-              </label>
-              <label className="container">เวลา (Time)
-                <input type="checkbox" id="Answer3"disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-              </label>
-              <label className="container">ความเร็ว (Velocity)
-                <input type="checkbox" id="Answer4" disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-              </label>
-          
-              <button className = "btn btn-glow btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
-            
-          </div>
-          <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
-          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
-          </div>
-          </div>)
+  <div className="LabNumber">Introducing Work</div>
+  <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+  <div className="Question"></div>
+  <div className="AnswerList">
+  <label className="container">-100 J
+      <input type="checkbox" id="Answer1" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">-160 J
+      <input type="checkbox" id="Answer2"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">-100 kJ
+      <input type="checkbox" id="Answer3"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">-160 kJ
+      <input type="checkbox" id="Answer4"/>
+      <span className="checkmark"></span>
+    </label>
+
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+  
+</div>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+<button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+
+</div>
+</div>)
+          }
+  function Page6Answered (){
+  return(
+    <div>
+    <div className="split Index">
+<div className="LabName">พลังงานจลน์</div>
+<div className="LabInfo"><br/>เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
+วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
+<br/><br/><br/>********ใส่รูปจ้า*
+</div> 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
+  
+  <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="Question"></div>
+    <div className="AnswerList">
+    <label className="container">20 J
+        <input type="checkbox" id="Answer1" disabled  />
+        <span className="checkmark" ></span>
+      </label>
+      <label className="container">25 J
+        <input type="checkbox" id="Answer2" checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      </label>
+      <label className="container">30 J
+        <input type="checkbox" id="Answer3"disabled/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">35 J
+        <input type="checkbox" id="Answer4" disabled/>
+        <span className="checkmark"></span>
+      </label>
+  
+      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+    
+  </div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+  
+  </div>
+  </div>)
   }
+      
 
   function FinishPage (){
     sumScore()
@@ -515,20 +497,20 @@ else if (page === 3 && Answer3 === true) {
   return(<div><Page3Answered/></div>)
 }
 
-else if (page === 4 && Answer4 === false) {
-  return(<div><Page4/></div>)
-  }
-  else if (page === 4 && Answer4 === true) {
-    return(<div><Page4Answered/></div>)
-  }
-else if (page === 5 && Answer5 === false) {
-    return(<div><Page5/></div>)
-  }
-  else if (page === 5 && Answer5 === true) {
-      return(<div><Page5Answered/></div>)
-  }
+else if (page === 4) {return (
+  <div><Page4/></div>)}
   
-else if (page === 6) {return(
+  else if (page === 5) {return (
+    <div><Page5/></div>)}
+
+    else if (page === 6 && Answer6 === false) {
+      return(<div><Page6/></div>)
+      }
+      else if (page === 6 && Answer6 === true) {
+        return(<div><Page6Answered/></div>)
+      }
+
+else if (page === 7) {return(
     <div><FinishPage/></div>)}
     
 
