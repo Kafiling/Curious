@@ -206,7 +206,7 @@ return(
 </div>
 </div>)
 }
-function Page3 (){
+function Paged3 (){
 return(
   <div>
   <div className="split Index">
