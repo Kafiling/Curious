@@ -12,18 +12,13 @@ export default function KineticEnergy () {
 var [page, setPage] = useState(1);
 //Var Answered
 var [Answer3, setAnswer3] = useState(false);
-var [Answer4, setAnswer4] = useState(false);
-var [Answer5, setAnswer5] = useState(false);
 var [Answer6, setAnswer6] = useState(false);
 //Var Score
-const TotalQuestionNum = useRef(3)
+const TotalQuestionNum = useRef(2)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
-const ScoreQuestion2 = useRef(0)
 const ScoreQuestion3 = useRef(0)
-const ScoreQuestion4 = useRef(0)
-const ScoreQuestion5 = useRef(0)
 const ScoreQuestion6 = useRef(0)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
@@ -31,7 +26,7 @@ const {currentUser} = useContext(AuthContext)
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current + ScoreQuestion6.current
+  TotalScore.current = ScoreQuestion3.current + ScoreQuestion6.current
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
@@ -50,13 +45,7 @@ function correct(QuestionPage){
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
       break;
-    case 4 :setAnswer4(true)
-    ScoreQuestion4.current = 1
-      break;
-    case 5 :setAnswer5(true)
-    ScoreQuestion5.current = 1
-      break;
-      case 6 :setAnswer6(true)
+    case 6 :setAnswer6(true)
     ScoreQuestion6.current = 1
       break;
     default :
@@ -69,10 +58,6 @@ function incorrect(QuestionPage){
   alert("ผิดจ้า ลองทบทวนอีกทีนะ")
   switch(QuestionPage){
     case 3 :setAnswer3(true)
-      break;
-    case 4 :setAnswer4(true)
-      break;
-    case 5 :setAnswer5(true)
       break;
       case 6 :setAnswer6(true)
       break;
@@ -105,24 +90,10 @@ function retry(){
       Answer4.checked === false ) {correct(3)}
   else{incorrect(3)}
   break;
-  case 4 :
-    if(Answer1.checked === false&& 
-      Answer2.checked ===  false&& 
-      Answer3.checked === false && 
-      Answer4.checked === true ){correct(4)}
-  else{incorrect(4)}
-  break;
-case 5 :
-  if(Answer1.checked === true&& 
-    Answer2.checked ===  true&& 
-    Answer3.checked === true && 
-    Answer4.checked === true ){correct(5)}
-else{incorrect(5)}
-break;
 case 6 :
-  if(Answer1.checked === true&& 
-    Answer2.checked ===  true&& 
-    Answer3.checked === true && 
+  if(Answer1.checked === false&& 
+    Answer2.checked ===  false&& 
+    Answer3.checked === false && 
     Answer4.checked === true ){correct(6)}
 else{incorrect(6)}
 break;
@@ -198,7 +169,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="17" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
@@ -226,7 +197,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="34" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
   <label className="container">20 J
@@ -272,7 +243,7 @@ function Page3Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="34" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
     <label className="container">20 J
@@ -332,7 +303,7 @@ function Page3Answered (){
     
     <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="51" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
@@ -358,7 +329,7 @@ function Page5 (){
         
         <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="68" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
@@ -384,7 +355,7 @@ function Page6 (){
           
           <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="85" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
   <label className="container">-100 J
@@ -404,10 +375,10 @@ function Page6 (){
       <span className="checkmark"></span>
     </label>
 
-    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(6)}>Send Answer</button>
   
 </div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
 <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 
 </div>
@@ -429,31 +400,31 @@ function Page6 (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="85" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
-    <label className="container">20 J
+    <label className="container">-100 J
         <input type="checkbox" id="Answer1" disabled  />
         <span className="checkmark" ></span>
       </label>
-      <label className="container">25 J
-        <input type="checkbox" id="Answer2" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">-160 J
+        <input type="checkbox" id="Answer2" disabled/>
+        <span className="checkmark"></span>
       </label>
-      <label className="container">30 J
+      <label className="container">-100 kJ
         <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">35 J
-        <input type="checkbox" id="Answer4" disabled/>
-        <span className="checkmark"></span>
+      <label className="container">-160 kJ
+        <input type="checkbox" id="Answer4" checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
   
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(7)}>Next page</button></div>
   
   </div>
   </div>)
