@@ -1,4 +1,3 @@
-/* need to be redo the chart thing*/
 import React from "react";
 import Matter from "matter-js";
 import {Line} from 'react-chartjs-2';
