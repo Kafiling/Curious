@@ -37,7 +37,7 @@ var render = Render.create({
 // create boxe and a ground
 var boxA = Bodies.rectangle(70, 200, 80, 80);
 var pusher = Bodies.rectangle(-1000, 610, 850, 160, { isStatic: true }),counter = -1;;
-var ground = Bodies.rectangle(400, 610, 850, 60, { isStatic: true });
+var ground = Bodies.rectangle(400, 610, 850, 60, { isStatic: true,  });
 var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var wallL = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var ceiling = Bodies.rectangle(500, -10, 1000, 350, { isStatic: true });
