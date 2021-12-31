@@ -7,7 +7,7 @@ import {Scene} from './Material/Work4Scene1';
 import {AuthContext, db} from 'Firebase'
 
 
-export default function PotentialEnergy() {
+export default function PotentialEnergy1() {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
@@ -35,7 +35,7 @@ function sumScore(){
   BayesScore.current = "Not Implemented"
 
   db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-    PotentialEnergy: CompletionScore.current
+    PotentialEnergy1: CompletionScore.current
 }, { merge: true });
   
 
@@ -182,7 +182,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="14" max="100"></progress></div>
   <div className="Question">ข้อใดผิดเกี่ยวกับพลังงานศักย์</div>
   <div className="AnswerList">
   <label className="container">พลังงานที่สะสมไว้ในวัตถุและพร้อมที่จะนำมาใช้
@@ -231,7 +231,7 @@ function Page2Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="14" max="100"></progress></div>
     <div className="Question">ข้อใดผิดเกี่ยวกับพลังงานศักย์</div>
     <div className="AnswerList">
     <label className="container">พลังงานที่สะสมไว้ในวัตถุและพร้อมที่จะนำมาใช้
@@ -288,7 +288,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="28" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
@@ -314,7 +314,7 @@ return(
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+      <div className="ProgessBar"><progress value="42" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
       <label className="container">1000 J
@@ -361,7 +361,7 @@ return(
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="42" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
         <label className="container">1000 J
@@ -408,7 +408,7 @@ function Page5 (){
         
         <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="56" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
@@ -436,7 +436,7 @@ function Page6 (){
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+      <div className="ProgessBar"><progress value="70" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
       <label className="container">20 J
@@ -483,7 +483,7 @@ function Page6 (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="70" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
         <label className="container">20 J
@@ -528,7 +528,7 @@ function Page6 (){
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+      <div className="ProgessBar"><progress value="84" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
       <label className="container">2000 J
@@ -574,7 +574,7 @@ function Page6 (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="84" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
         <label className="container">2000 J
