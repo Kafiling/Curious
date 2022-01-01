@@ -169,12 +169,20 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-<div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัว เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
+<div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัวเช่นแรงที่ใช้ดึงสปริง เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
 <div className='SceneContainer'>
   <Chart2/>
 </div>
+
  <div div className="LabInfo">จากกราฟข้างต้น เป็นกราฟ แรง - การกระจัด โดยแสดงค่าแรงที่ใช้ดึงสปริง
-<br/>และคำนวณงานจาก W = F · S = พื้นที่ใต้กราฟ F-S
+<br/>และคำนวณงานจาก 
+<MathJaxContext>
+  <MathJax>\[W = F \cdot S\]</MathJax>
+  <MathJax>\[W = พื้นที่ใต้กราฟ \]</MathJax>
+  <MathJax>\[W =\frac{1}{2} \cdot b \cdot  h\]</MathJax>
+  <MathJax>\[W =\frac{1}{2} \cdot 10 \cdot  10\]</MathJax>
+  <MathJax>\[W = 50 J \]</MathJax>
+  </MathJaxContext>
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
