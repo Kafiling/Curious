@@ -1,7 +1,9 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-import {Scene,MyChart} from './Material/Work4Scene1';
+import {Scene} from './Material/Work4Scene1';
+import {MyChart} from './Material/Work4Chart1';
+
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
