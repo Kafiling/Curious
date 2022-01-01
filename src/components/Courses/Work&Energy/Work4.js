@@ -1,7 +1,7 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-import {Scene} from './Material/Work4Scene1';
+import {Scene,MyChart} from './Material/Work4Scene1';
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -129,7 +129,7 @@ return(
 </div> 
 <div className='SceneContainer'>
   <div class="chart-container" style={{position: "absolute" ,height: "150px", width: "300px", left: "32%"}}></div>
-  <Scene/>
+  <Scene/><MyChart/>
 </div>
  <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
  <MathJaxContext>

@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import Matter from "matter-js";
 import {Line} from 'react-chartjs-2';
-import { Chart as ChartJS } from 'chart.js/auto'
+import { Chart } from 'chart.js/auto'
 
 export class Scene extends React.Component {
   constructor(props) {
@@ -40,7 +40,7 @@ var pusher = Bodies.rectangle(-1000, 610, 850, 160, { isStatic: true }),counter 
 var ground = Bodies.rectangle(400, 610, 850, 60, { isStatic: true,  });
 var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var wallL = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
-var ceiling = Bodies.rectangle(500, -10, 1000, 350, { isStatic: true });
+var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
 // add all of the bodies to the world
 Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling]);
  // body is static so must manually update velocity for friction to work
@@ -95,30 +95,55 @@ var runner = Runner.create();
 // run the engine
 Runner.run(runner, engine);
 
+
+
 }
 
   render() {
     return(<div>
-      <div class="chart-container" style={{position: "absolute" ,height: "150px", width: "330px", left: "32%" , top: "5px", paddingBottom: "10px", backgroundColor: "white"}}>
-        <Line
-  datasetIdKey='id'
-  data = {{
-    label: 'ความสัมพันธุ์ระหว่างแรงผลัก (F) กับ ตำแหน่งกล่อง (S)',
-    datasets: [
-      {
-        label: 'ความสัมพันธุ์ระหว่างแรงผลัก (F) กับ ตำแหน่งกล่อง (S)',
-        backgroundColor: "#5B43F0",
-        data: [],
-        
-      }],
-  }}
-/>
-</div>
-        
-      <div ref="scene" />
-      </div> )
+    <div ref="scene" />
+    </div> )
   }
   
+}
+
+const state = {
+  labels: ['January', 'February', 'March',
+           'April', 'May'],
+  datasets: [
+    {
+      label: 'Rainfall',
+      fill: false,
+      lineTension: 0.5,
+      backgroundColor: 'rgba(75,192,192,1)',
+      borderColor: 'rgba(0,0,0,1)',
+      borderWidth: 2,
+      data: [65, 59, 80, 81, 56]
+    }
+  ]
+}
+
+export class MyChart extends React.Component {
+  render() {
+    return (
+      <div>
+        <Line
+          data={state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+      </div>
+    );
+  }
 }
 
 
