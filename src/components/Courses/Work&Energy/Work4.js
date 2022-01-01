@@ -171,7 +171,7 @@ return(
 <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
 <div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัว เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
 <div className='SceneContainer'>
-  <div class="chart-container" style={{position: "absolute" ,height: "300px", width: "500px", left: "45%"}}><Chart2/></div>
+  <Chart2/>
 </div>
  <div div className="LabInfo">จากกราฟข้างต้น เป็นกราฟ แรง - การกระจัด โดยแสดงค่าแรงที่ใช้ดึงสปริง
 <br/>และคำนวณงานจาก W = F · S = พื้นที่ใต้กราฟ F-S
