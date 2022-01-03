@@ -10,13 +10,13 @@ import 'firebase/compat/auth';
 
 //initialize Firebase
 export const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyAkEuo0aQSQzpO4quILJXe36eq-sgOWHHQ",
-    authDomain: "lab-anywhere.firebaseapp.com",
-    projectId: "lab-anywhere",
-    storageBucket: "lab-anywhere.appspot.com",
-    messagingSenderId: "513398828622",
-    appId: "1:513398828622:web:4c2a5ea10909b928e7dd1f",
-    measurementId: "G-P7LGDRT24B"
+  apiKey: "AIzaSyCLzwwu-Ag4jcnkxWNl_kQ41kziCCFRFVs",
+  authDomain: "keep-curious.firebaseapp.com",
+  projectId: "keep-curious",
+  storageBucket: "keep-curious.appspot.com",
+  messagingSenderId: "968580312590",
+  appId: "1:968580312590:web:731281b07985cd799ed65f",
+  measurementId: "G-D2NMVZ97XT"
   })
   
 //ประกาศตัวแปรของ Firebase Service

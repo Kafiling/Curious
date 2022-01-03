@@ -1,7 +1,11 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-import {Scene} from './Material/Work4Scene1';
+import {Scene as Scene1} from './Material/Work4Scene1';
+import {MyChart as Chart1} from './Material/Work4Chart1';
+import {MyChart as Chart2} from './Material/Work4Chart2';
+
+
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -128,8 +132,8 @@ return(
 เราลองสมมุติว่ามีแรง F กระทำต่อวัตถุให้เคลื่อนที่ไปตามแนวตรง โดยเคลื่อนที่ทิศทางตามแรง จะพล็อตกราฟ ตำแหน่งของวัตถุ กับ แรงได้ดังนี้
 </div> 
 <div className='SceneContainer'>
-  <div class="chart-container" style={{position: "absolute" ,height: "150px", width: "300px", left: "32%"}}></div>
-  <Scene/>
+  <div class="chart-container" style={{position: "absolute" ,height: "300px", width: "500px", left: "45%"}}><Chart1/></div>
+  <Scene1/>
 </div>
  <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
  <MathJaxContext>
@@ -165,10 +169,20 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-<div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัว เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-2.png?alt=media&token=835c6f5d-3289-47aa-b58d-8d17ae591d43" />
+<div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัวเช่นแรงที่ใช้ดึงสปริง เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
+<div className='SceneContainer'>
+  <Chart2/>
+</div>
+
  <div div className="LabInfo">จากกราฟข้างต้น เป็นกราฟ แรง - การกระจัด โดยแสดงค่าแรงที่ใช้ดึงสปริง
-<br/>และคำนวณงานจาก W = F · S = พื้นที่ใต้กราฟ F-S
+<br/>และคำนวณงานจาก 
+<MathJaxContext>
+  <MathJax>\[W = F \cdot S\]</MathJax>
+  <MathJax>\[W = พื้นที่ใต้กราฟ \]</MathJax>
+  <MathJax>\[W =\frac{1}{2} \cdot b \cdot  h\]</MathJax>
+  <MathJax>\[W =\frac{1}{2} \cdot 10 \cdot  10\]</MathJax>
+  <MathJax>\[W = 50 J \]</MathJax>
+  </MathJaxContext>
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
