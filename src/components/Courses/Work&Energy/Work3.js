@@ -10,24 +10,28 @@ export default function Work3() {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
+var [Answer2, setAnswer2] = useState(false);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
+var [Answer3, setAnswer6] = useState(false);
 //Var Score
-const TotalQuestionNum = useRef(3)
+const TotalQuestionNum = useRef(5)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
+const ScoreQuestion2 = useRef(0)
 const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
+const ScoreQuestion6 = useRef(0)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
 
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current
+  TotalScore.current =  ScoreQuestion2.current + ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current + ScoreQuestion6.current
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
@@ -43,6 +47,9 @@ function correct(QuestionPage){
   //เช็คถูก
   alert("ถูกต้องคร้าบบ")
   switch(QuestionPage){
+    case 2 :setAnswer2(true)
+    ScoreQuestion2.current = 1
+      break;
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
       break;
@@ -51,6 +58,9 @@ function correct(QuestionPage){
       break;
     case 5 :setAnswer5(true)
     ScoreQuestion5.current = 1
+      break;
+      case 6 :setAnswer6(true)
+    ScoreQuestion6.current = 1
       break;
     default :
     alert("Scoring Error")
@@ -61,11 +71,15 @@ function correct(QuestionPage){
 function incorrect(QuestionPage){
   alert("ผิดจ้า ลองทบทวนอีกทีนะ")
   switch(QuestionPage){
+    case 2 :setAnswer2(true)
+      break;
     case 3 :setAnswer3(true)
       break;
     case 4 :setAnswer4(true)
       break;
     case 5 :setAnswer5(true)
+      break;
+      case 6 :setAnswer6(true)
       break;
     default :
     alert("Scoring Error")
@@ -90,7 +104,14 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
-    case 3 : if(Answer1.checked === true && 
+  case 2 : if(Answer1.checked === true && 
+      Answer2.checked === false && 
+      Answer3.checked === false && 
+      Answer4.checked === false ) {correct(2)}
+  else{incorrect(2)}
+  break;
+  case 3 : 
+  if(Answer1.checked === true && 
       Answer2.checked === false && 
       Answer3.checked === false && 
       Answer4.checked === false ) {correct(3)}
@@ -104,11 +125,18 @@ function retry(){
   else{incorrect(4)}
   break;
 case 5 :
+  if(Answer1.checked === false&& 
+    Answer2.checked ===  false&& 
+    Answer3.checked === false && 
+    Answer4.checked === true ){correct(5)}
+else{incorrect(5)}
+break;
+case 6 :
   if(Answer1.checked === true&& 
     Answer2.checked ===  true&& 
     Answer3.checked === true && 
-    Answer4.checked === true ){correct(5)}
-else{incorrect(5)}
+    Answer4.checked === true ){correct(6)}
+else{incorrect(6)}
 break;
 default :
     alert("Checking Error")
@@ -123,15 +151,21 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดยงานจะขึ้นอยู่กับแรงและการกระจัด</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
- <div div className="LabInfo">เขียนเป็นสมการได้ดังนี้
+<div div className="LabInfo">จากคอร์สเรียนที่เราได้เรียน “W = F • S • Cosθ” จะสังเกตว่า
+หาก แทน θ = 90° <br/>จะทำให้ Cosθ = 0 ส่งผลให้ งานนั้นกลายเป็น 0 ไปด้วย
+
+</div>  <br/> <br/> <br/>
+<img className='LabImg' id='img' alt ="LabImg"src="" />
+ <div div className="LabInfo"> <br/> <br/>
+
  <MathJaxContext>
-  <MathJax>\[W = F \cdot S\]</MathJax>
-  </MathJaxContext>
-  โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-  F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-  S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+      <MathJax>\[W = F \cdot S \cdot Cosθ\]
+      \[W = F \cdot S \cdot (0)\]
+      \[W = 0\]
+
+      </MathJax>
+      </MathJaxContext>
+
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -156,10 +190,11 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">เพื่อให้เข้าใจง่าย เราลองมาดูสถานการณ์สมมุติกัน มีคนสองคน คนนึงกำลังลากท่อนซุงกับอีกคนที่กำลังลากกระสอบข้าวสารคุณคิดว่าใครจะเหนื่อยกว่ากัน?</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-2.png?alt=media&token=835c6f5d-3289-47aa-b58d-8d17ae591d43" />
- <div div className="LabInfo">แน่นอนว่าคนส่วนใหญ่ก็ต้องคิดว่าคนที่ลากท่อนซุงต้องเหนื่อยกว่าแน่นอน เพราะต้องลากท่องซุงจึงต้องออกแรงมากกว่า แต่ถ้าเราเพิ่มข้อมูลตัวแปรการกระจัดเข้าไปบ้างจะเกิดอะไรขึ้น?
-  </div> 
+<div div className="LabInfo">ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
+<br/><br/><br/>รูปจ้า*********<br/><br/><br/>
+</div> 
+
+
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
@@ -168,33 +203,87 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="20" max="100"></progress></div>
-  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
+  <div className="Question"></div>
   <div className="AnswerList">
+  <label className="container">0 J
+      <input type="checkbox" id="Answer1" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">50 J
+      <input type="checkbox" id="Answer2"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">100 J
+      <input type="checkbox" id="Answer3"/>
+      <span className="checkmark"></span>
+    </label>
+    <label className="container">1000 J
+      <input type="checkbox" id="Answer4"/>
+      <span className="checkmark"></span>
+    </label>
+
+    <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
   
 </div>
 <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-<button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+<button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 
 </div>
 </div>)
 }
+function Page2Answered (){
+  return(
+    <div>
+    <div className="split Index">
+  <div className="LabName">งานทางฟิสิกส์</div>
+  <div className="LabInfo">ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
+  <br/><br/><br/>รูปจ้า*********<br/><br/><br/>
+  </div>
 
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
+  </div>
+  
+  <div className="split QuestionAnswer"> 
+    <div className="LabNumber">Introducing Work</div>
+    <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+    <div className="Question"></div>
+    <div className="AnswerList">
+    <label className="container">0 J
+        <input type="checkbox" id="Answer1" checked disabled  />
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      </label>
+      <label className="container">50 J
+        <input type="checkbox" id="Answer2" disabled/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">100 J
+        <input type="checkbox" id="Answer3" disabled/>
+        <span className="checkmark"></span>
+      </label>
+      <label className="container">1000 J
+        <input type="checkbox" id="Answer4" disabled/>
+        <span className="checkmark"></span>
+      </label>
+  
+      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+    
+  </div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+  
+  </div>
+  </div>)
+  }
 function Page3 (){
 return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
-ผู้ชายที่ลากซุงสร้างงาน 1000*(0.1) = 100 J ในขณะที่ผู้หญิงลากกระสอบข้าวสารสร้างงาน 40*(50) = 200 J<br/>
-จะเห็นได้ว่างานจะเป็นบริมาณที่บ่งบอก = <mark className="Yellow">การส่งผ่านพลังงานผ่านแรงจนทำให้วัตถุเกิดการเคลื่อนที่</mark></div> 
-<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-3.png?alt=media&token=93239986-5d6a-4a6c-afc2-78c61e0bb8cb" />
- <div div className="LabInfo">เราลองเอาหลักการงานนี้ไปปรับใช้ทำโจทย์ด้านขวามือกันครับ<br/>
- <br/>ทบทวน : <MathJaxContext>
-  <MathJax>\[W = F \cdot S\]</MathJax>
-  </MathJaxContext>
-  โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-  F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-  S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+<div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง 
+<br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
+<br/><br/><br/>รูปจ้า*********<br/><br/><br/>
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -204,21 +293,21 @@ return(
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
   <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-  <div className="Question">ออกแรง 20 นิวตัน ในแนวขนานกับพื้นราบไปได้ไกล 5 เมตร จงหางานที่เกิดจากแรงที่กระทำ</div>
+  <div className="Question"></div>
   <div className="AnswerList">
-  <label className="container">100 J
+  <label className="container">0 J
       <input type="checkbox" id="Answer1" />
       <span className="checkmark"></span>
     </label>
-    <label className="container">200 J
+    <label className="container">150 J
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">400 J
+    <label className="container">300 J
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">1000 J
+    <label className="container">450 J
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
@@ -232,24 +321,15 @@ return(
 </div>
 </div>)
 }
-
 function Page3Answered (){
   return(
-    <div>
+     <div>
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
-  <div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
-  ผู้ชายที่ลากซุงสร้างงาน 1000*(0.1) = 100 J ในขณะที่ผู้หญิงลากกระสอบข้าวสารสร้างงาน 40*(50) = 200 J<br/>
-  จะเห็นได้ว่างานจะเป็นบริมาณที่บ่งบอก = <mark className="Yellow">การส่งผ่านพลังงานผ่านแรงจนทำให้วัตถุเกิดการเคลื่อนที่</mark></div> 
-  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-3.png?alt=media&token=93239986-5d6a-4a6c-afc2-78c61e0bb8cb" />
-   <div div className="LabInfo">เราลองเอาหลักการงานนี้ไปปรับใช้ทำโจทย์ด้านขวามือกันครับ<br/>
-   <br/>ทบทวน : <MathJaxContext>
-    <MathJax>\[W = F \cdot S\]</MathJax>
-    </MathJaxContext>
-    โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-    F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-    S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-    </div> 
+  <div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง 
+<br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
+<br/><br/><br/>รูปจ้า*********<br/><br/><br/>
+  </div>
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
    <div div className="FooterSpace"></div>
@@ -258,21 +338,21 @@ function Page3Answered (){
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
     <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-    <div className="Question">ออกแรง 20 นิวตัน ในแนวขนานกับพื้นราบไปได้ไกล 5 เมตร จงหางานที่เกิดจากแรงที่กระทำ</div>
+    <div className="Question"></div>
     <div className="AnswerList">
-    <label className="container">100 J
+    <label className="container">0 J
         <input type="checkbox" id="Answer1" checked disabled  />
         <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">200 J
+      <label className="container">150 J
         <input type="checkbox" id="Answer2" disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">400 J
+      <label className="container">300 J
         <input type="checkbox" id="Answer3" disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">1000 J
+      <label className="container">450 J
         <input type="checkbox" id="Answer4" disabled/>
         <span className="checkmark"></span>
       </label>
@@ -535,15 +615,19 @@ function Page5 (){
 if (page === 1) {return (
 <div><Page1/></div>)}
 
-else if (page === 2) {return(
-<div><Page2/></div>)}
+else if (page === 2 && Answer2 === false) {
+  return(<div><Page2/></div>)
+  }
+  else if (page === 2 && Answer2 === true) {
+    return(<div><Page2Answered/></div>)
+  }
 
-else if (page === 3 && Answer3 === false) {
-return(<div><Page3/></div>)
-}
-else if (page === 3 && Answer3 === true) {
-  return(<div><Page3Answered/></div>)
-}
+  else if (page === 3 && Answer3 === false) {
+    return(<div><Page3/></div>)
+    }
+    else if (page === 3 && Answer3 === true) {
+      return(<div><Page3Answered/></div>)
+    }
 
 else if (page === 4 && Answer4 === false) {
   return(<div><Page4/></div>)
