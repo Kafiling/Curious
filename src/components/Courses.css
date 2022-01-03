@@ -340,6 +340,11 @@ progress[value]::-webkit-progress-value {
 }
 .btn-answerSent{
   border: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #FFFFFF;
 }
 
 .FinishContainer{
