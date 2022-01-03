@@ -281,7 +281,7 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง 
+<div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง
 <br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
 <br/><br/><br/>รูปจ้า*********<br/><br/><br/>
   </div> 
@@ -321,15 +321,16 @@ return(
 </div>
 </div>)
 }
+
 function Page3Answered (){
   return(
-     <div>
+    <div>
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง 
-<br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
-<br/><br/><br/>รูปจ้า*********<br/><br/><br/>
-  </div>
+  <br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
+  <br/><br/><br/>รูปจ้า*********<br/><br/><br/>
+    </div> 
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
    <div div className="FooterSpace"></div>
@@ -366,7 +367,6 @@ function Page3Answered (){
   </div>
   </div>)
   }
-
   function Page4 (){
     return(
       <div>
