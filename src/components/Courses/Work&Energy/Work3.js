@@ -14,7 +14,6 @@ var [Answer2, setAnswer2] = useState(false);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
-var [Answer3, setAnswer6] = useState(false);
 //Var Score
 const TotalQuestionNum = useRef(5)
 const TotalScore = useRef(0)
@@ -59,9 +58,6 @@ function correct(QuestionPage){
     case 5 :setAnswer5(true)
     ScoreQuestion5.current = 1
       break;
-      case 6 :setAnswer6(true)
-    ScoreQuestion6.current = 1
-      break;
     default :
     alert("Scoring Error")
     break;
@@ -78,8 +74,6 @@ function incorrect(QuestionPage){
     case 4 :setAnswer4(true)
       break;
     case 5 :setAnswer5(true)
-      break;
-      case 6 :setAnswer6(true)
       break;
     default :
     alert("Scoring Error")
