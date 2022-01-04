@@ -1,6 +1,10 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
+import Alert from '@mui/material/Alert';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton'
+import CloseIcon from '@mui/icons-material/Close'
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -38,10 +42,11 @@ function sumScore(){
 
 }
 
+
   //เช็คคำตอบถูก-ผิด
 function correct(QuestionPage){
   //เช็คถูก
-  alert("ถูกต้องคร้าบบ")
+  
   switch(QuestionPage){
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
