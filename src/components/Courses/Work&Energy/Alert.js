@@ -3,6 +3,7 @@ import Alert from '@mui/material/Alert';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
+import Sound from 'react-sound';
 
 
 export function CorrectAlert() {
@@ -10,6 +11,10 @@ export function CorrectAlert() {
     setTimeout(() => { setOpen(false);},3000)
     return (
         <div className = "MessageAlert" > 
+      {open? <Sound
+      url="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Correct.mp3?alt=media&token=f00a3ca4-2cb7-4892-a802-2b0e0ba46b1c"
+      playStatus={Sound.status.PLAYING}
+    /> : null}
             <Collapse in={open}>
         <Alert
           action={
@@ -40,6 +45,10 @@ export function IncorrectAlert() {
   return (
     
         <div className = "MessageAlert" > 
+        {open? <Sound
+      url="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Incorrect.mp3?alt=media&token=29e2afc2-f037-42b3-8d4d-c8b9b0316dae"
+      playStatus={Sound.status.PLAYING}
+    /> : null}
         <Collapse in={open}>
         <Alert
           action={
@@ -69,6 +78,10 @@ export function IncorrectAlert() {
     setTimeout(() => { setOpen(false);},3000)
     return (
         <div className = "MessageAlert" > 
+        {open? <Sound
+      url="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Correct.mp3?alt=media&token=f00a3ca4-2cb7-4892-a802-2b0e0ba46b1c"
+      playStatus={Sound.status.PLAYING}
+    /> : null}
             <Collapse in={open}>
         <Alert
           action={
@@ -99,6 +112,10 @@ export function IncorrectAlert() {
     return (
       
           <div className = "MessageAlert" > 
+           {open? <Sound
+      url="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Incorrect.mp3?alt=media&token=29e2afc2-f037-42b3-8d4d-c8b9b0316dae"
+      playStatus={Sound.status.PLAYING}
+    /> : null}
           <Collapse in={open}>
           <Alert
             action={
