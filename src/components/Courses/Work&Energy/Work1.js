@@ -2,6 +2,8 @@ import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -24,12 +26,40 @@ const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
 //Alert
 const AlertState = useRef(0)
-
+var [Upvote, setUpvote] = useState(false);
+var [Report, setReport] = useState(false);
+const ReportText = useRef(null)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
 
 function resetAlert(){
   AlertState.current = 0
+}
+
+function handleUpvote(){
+  if(Upvote === false){
+    db.collection('feedback').doc('upvote').update({
+      work1 : firebase.firestore.FieldValue.increment(1)
+    })
+    setUpvote(true)
+    AlertState.current = 3
+    setTimeout(resetAlert,3000)}
+  
+  else{alert('You already upvote this course')}
+}
+
+function handleReport(){
+  if(Report === false){
+    ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
+    db.collection('report').doc(currentUser.providerData[0]['uid']).set({
+      On: "Work1",
+      Text: ReportText.current
+  }, { merge: true });
+    setReport(true)
+    AlertState.current = 4
+    setTimeout(resetAlert,3000)}
+    else{alert('You already report this course')}
+  
 }
 
 function sumScore(){
@@ -539,6 +569,8 @@ function Page5 (){
     sumScore()
     return(
       <div>
+    {AlertState.current === 3? <UpvoteAlert/> : null}
+    {AlertState.current === 4? <ReportAlert/> : null}
     <div className = 'FinishContainer'>
       <img className='FinishImg' id='img' alt ="Check.png"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/check.png?alt=media&token=10d8a285-0a16-4009-a4fa-5725aeba2cef" />
     </div>
@@ -551,8 +583,8 @@ function Page5 (){
       <button className = "UpvoteButton" style = {{right : "0%" , backgroundColor: "rgb(var(--secondary-color))" }}  ><Link to = "/courses" >Back to Courses</Link></button>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" >Upvote!</button>
-      <button className = "ReportButton" >Report</button>
+      <button className = "UpvoteButton" onClick={() => handleUpvote()}>Upvote!</button>
+      <button className = "ReportButton" onClick={() => handleReport()}>Report</button>
     </div>
     
      </div> )

@@ -6,8 +6,12 @@
     In Var Score
     1.Change TotalQuestionNum 
     2.Add ScoreQuestionX = useRef(0) to every question we have.
+    In function handleUpvote
+    3. Change --> work1 : firebase.firestore.FieldValue.increment(1) to Coruse_Name
+    In function handleReport
+    3.1 Change On: "Work1" <-- to Coruse_Name
     In function sumScore() 
-    3. Change "Coruse_Name": CompletionScore.current 
+    3.2 Change "Coruse_Name": CompletionScore.current 
     In function correct(QuestionPage) & function incorrect(QuestionPage)
     4. Add switch case
     In function checkAnswer(QuestionNumber)
