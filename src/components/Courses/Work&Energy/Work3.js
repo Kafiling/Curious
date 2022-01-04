@@ -14,6 +14,7 @@ var [Answer2, setAnswer2] = useState(false);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
+var [Answer6, setAnswer6] = useState(false);
 //Var Score
 const TotalQuestionNum = useRef(5)
 const TotalScore = useRef(0)
@@ -58,6 +59,9 @@ function correct(QuestionPage){
     case 5 :setAnswer5(true)
     ScoreQuestion5.current = 1
       break;
+      case 6 :setAnswer6(true)
+      ScoreQuestion6.current = 1
+        break;
     default :
     alert("Scoring Error")
     break;
@@ -74,6 +78,8 @@ function incorrect(QuestionPage){
     case 4 :setAnswer4(true)
       break;
     case 5 :setAnswer5(true)
+      break;
+      case 6 :setAnswer6(true)
       break;
     default :
     alert("Scoring Error")
@@ -184,7 +190,8 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo">ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
+<div div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
+  ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
 <br/><br/><br/>รูปจ้า*********<br/><br/><br/>
 </div> 
 
@@ -196,7 +203,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="17" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
   <label className="container">0 J
@@ -230,7 +237,8 @@ function Page2Answered (){
     <div>
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
-  <div className="LabInfo">ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
+  <div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/>
+  <br/>ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
   <br/><br/><br/>รูปจ้า*********<br/><br/><br/>
   </div>
 
@@ -241,7 +249,7 @@ function Page2Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="17" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
     <label className="container">0 J
@@ -286,7 +294,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="34" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
   <label className="container">0 J
@@ -332,7 +340,7 @@ function Page3Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="34" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
     <label className="container">0 J
@@ -366,17 +374,12 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
-    <div className="LabInfo">เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
-    "ออกแรง 40 นิวตันทิศขนานกับทางลาด ดึงวัตถุขึ้นทางลาดผิวเกลี้ยงทำมุม 53 องศากับแนวระดับ เมื่อเคลื่อนวัตถุไปได้ไกล 8 เมตร <mark className="Yellow">ตามแนวราบ</mark> งานของแรงที่ดึงวัตถุมีขนาดเท่าใด"
-    <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
-    </div> 
-    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-4.png?alt=media&token=1f05a2fd-c436-4560-8ea5-e3a693b52e3a" />
-     <div div className="LabInfo">ทบทวน : <MathJaxContext>
-      <MathJax>\[W = F \cdot S\]</MathJax>
-      </MathJaxContext>
-      โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-      F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-      S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+    <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/><br/>
+    ชายคนหนึ่งใช้เชือกลากกล่องไม้มวล 60 กิโลกรัม ด้วยอัตราเร็วสม่ำเสมอ เป็นระยะทาง 1 กิโลเมตร ถ้าสัมประสิทธิ์ความเสียดทานระหว่างพื้นกับกล่องไม้เท่ากับ 0.02
+   จงหางานที่ชายคนนี้ทำและงานเนื่องจากแรงเสียดทานระหว่างพื้นกับกล่องไม้
+    <br/><br/>
+
+    <br/><br/> <mark className="Yellow">Hint : </mark>ลากวัตถุด้วยความเร็วสม่ำเสมอหมายความว่า วัตถุไม่มีความเร่ง ผลรวมแรง = 0 (ΣF = 0)
       </div> 
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
@@ -385,22 +388,22 @@ function Page3Answered (){
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="60" max="100"></progress></div>
-      <div className="Question">งานของแรงที่ดึงวัตถุมีขนาดเท่าใด</div>
+      <div className="ProgessBar"><progress value="51" max="100"></progress></div>
+      <div className="Question"></div>
       <div className="AnswerList">
-      <label className="container">80 J
+      <label className="container">10 kJ , -5 kJ
           <input type="checkbox" id="Answer1" />
           <span className="checkmark"></span>
         </label>
-        <label className="container">200 J
+        <label className="container">12 kJ , -8 kJ
           <input type="checkbox" id="Answer2"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">320 J
+        <label className="container">12 kJ , -2 kJ
           <input type="checkbox" id="Answer3"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">400 J
+        <label className="container">12 kJ , -12 kJ
           <input type="checkbox" id="Answer4" />
           <span className="checkmark" ></span>
         </label>
@@ -420,21 +423,12 @@ function Page3Answered (){
         <div>
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
-      <div className="LabInfo"><mark className="Yellow">มีเฉลยอยู่ด้านล่างจ้า</mark><br/><br/>เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
-      "ออกแรง 40 นิวตันทิศขนานกับทางลาด ดึงวัตถุขึ้นทางลาดผิวเกลี้ยงทำมุม 53 องศากับแนวระดับ เมื่อเคลื่อนวัตถุไปได้ไกล 8 เมตร <mark className="Yellow">ตามแนวราบ</mark> งานของแรงที่ดึงวัตถุมีขนาดเท่าใด"
-      <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
-      </div> 
-      <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-5.png?alt=media&token=c6ecf8ac-db7d-453b-a0b1-716d94a736e6" />
-       <div div className="LabInfo"> วิธีคิด: ทำการแตกการกระจัดให้ขนานกับงานโดยใช้<a className="IndexWarp" href = "https://th.wikipedia.org/wiki/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B9%82%E0%B8%81%E0%B8%93%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%B4">
-         ฟังก์ชันตรีโกณมิติ</a> cos 53° = ชิด/ฉาก จะได้ว่า 3/5 = 8/x =&gt; x = 10 m <br/><br/>
-       จาก W = FS = 40 N(10 m) = 400 J
-       <br/><br/><br/> 
-         ทบทวน : <MathJaxContext>
-        <MathJax>\[W = F \cdot S\]</MathJax>
-        </MathJaxContext>
-        โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-        F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-        S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+      <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/><br/>
+    ชายคนหนึ่งใช้เชือกลากกล่องไม้มวล 60 กิโลกรัม ด้วยอัตราเร็วสม่ำเสมอ เป็นระยะทาง 1 กิโลเมตร ถ้าสัมประสิทธิ์ความเสียดทานระหว่างพื้นกับกล่องไม้เท่ากับ 0.02
+   จงหางานที่ชายคนนี้ทำและงานเนื่องจากแรงเสียดทานระหว่างพื้นกับกล่องไม้
+    <br/><br/>
+
+    <br/><br/> <mark className="Yellow">Hint : </mark>ลากวัตถุด้วยความเร็วสม่ำเสมอหมายความว่า วัตถุไม่มีความเร่ง ผลรวมแรง = 0 (ΣF = 0)
         </div> 
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
@@ -443,22 +437,22 @@ function Page3Answered (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
-        <div className="Question">งานของแรงที่ดึงวัตถุมีขนาดเท่าใด</div>
+        <div className="ProgessBar"><progress value="51" max="100"></progress></div>
+        <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">80 J
+        <label className="container">10 kJ , -5 kJ
             <input type="checkbox" id="Answer1" disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">200 J
+          <label className="container">12 kJ , -8 kJ
             <input type="checkbox" id="Answer2"disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">320 J
+          <label className="container">12 kJ , -2 kJ
             <input type="checkbox" id="Answer3"disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">400 J
+          <label className="container">12 kJ , -12 kJ
             <input type="checkbox" id="Answer4" disabled checked/>
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
@@ -477,17 +471,8 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
-        <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
-        "งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดย<mark className="Yellow">งานจะขึ้นอยู่กับแรงและการกระจัด</mark>"
-        <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
-        </div> 
-        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
-         <div div className="LabInfo">ทบทวน : <MathJaxContext>
-          <MathJax>\[W = F \cdot S\]</MathJax>
-          </MathJaxContext>
-          โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-          F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-          S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+        <div className="LabInfo">ด.ช.ป๋องเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่ ด.ช.ป๋อง ทำได้ในการหิ้วกระเป๋า
+ 
           </div> 
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -496,22 +481,22 @@ function Page5 (){
         
         <div className="split QuestionAnswer"> 
           <div className="LabNumber">Introducing Work</div>
-          <div className="ProgessBar"><progress value="80" max="100"></progress></div>
-          <div className="Question">ข้อใดถูกต้องเกี่ยวกับงาน</div>
+          <div className="ProgessBar"><progress value="68" max="100"></progress></div>
+          <div className="Question"></div>
           <div className="AnswerList">
-          <label className="container">งานมีสูตรว่า W = F ⋅ S
+          <label className="container">80 J
               <input type="checkbox" id="Answer1" />
               <span className="checkmark"></span>
             </label>
-            <label className="container">ก่อนจะคิดงานต้องทำให้ทิศทางของการกระจัดกับแรงขนานกันก่อน
+            <label className="container">120 J
               <input type="checkbox" id="Answer2"/>
               <span className="checkmark"></span>
             </label>
-            <label className="container">ยกของหนัก 10 N ขึ้น 1.5 m เกิดงาน 15 J
+            <label className="container">-80 J
               <input type="checkbox" id="Answer3"/>
               <span className="checkmark"></span>
             </label>
-            <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
+            <label className="container">-120 J
               <input type="checkbox" id="Answer4" />
               <span className="checkmark" ></span>
             </label>
@@ -531,21 +516,9 @@ function Page5 (){
             <div>
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
-          <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
-        "งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดย<mark className="Yellow">งานจะขึ้นอยู่กับแรงและการกระจัด</mark>"
-        <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
-          </div> 
-          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
-           <div div className="LabInfo"> วิธีคิด: ทำการแตกการกระจัดให้ขนานกับงานโดยใช้<a className="IndexWarp" href = "https://th.wikipedia.org/wiki/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B9%82%E0%B8%81%E0%B8%93%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%B4">
-             ฟังก์ชันตรีโกณมิติ</a> cos 53° = ชิด/ฉาก จะได้ว่า 3/5 = 8/x =&gt; x = 10 m <br/><br/>
-           จาก W = FS = 40 N(10 m) = 400 J
-           <br/><br/><br/> 
-             ทบทวน : <MathJaxContext>
-            <MathJax>\[W = F \cdot S\]</MathJax>
-            </MathJaxContext>
-            โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-            F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-            S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+          <div className="LabInfo">ด.ช.ป๋องเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่ ด.ช.ป๋อง ทำได้ในการหิ้วกระเป๋า
+
+
             </div> 
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
@@ -554,22 +527,22 @@ function Page5 (){
           
           <div className="split QuestionAnswer"> 
             <div className="LabNumber">Introducing Work</div>
-            <div className="ProgessBar"><progress value="80" max="100"></progress></div>
-            <div className="Question">ข้อใดถูกต้องเกี่ยวกับงาน</div>
+            <div className="ProgessBar"><progress value="68" max="100"></progress></div>
+            <div className="Question"></div>
             <div className="AnswerList">
-            <label className="container">งานมีสูตรว่า W = F ⋅ S
-                <input type="checkbox" id="Answer1" disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+            <label className="container">80 J
+                <input type="checkbox" id="Answer1" disabled/>
+                <span className="checkmark"></span>
               </label>
-              <label className="container">ก่อนจะคิดงานต้องทำให้ทิศทางของการกระจัดกับแรงขนานกันก่อน
-                <input type="checkbox" id="Answer2"disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              <label className="container">120 J
+                <input type="checkbox" id="Answer2"disabled/>
+                <span className="checkmark"></span>
               </label>
-              <label className="container">ยกของหนัก 10 N ขึ้น 1.5 m เกิดงาน 15 J
-                <input type="checkbox" id="Answer3"disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+              <label className="container">-80 J
+                <input type="checkbox" id="Answer3"disabled/>
+                <span className="checkmark"></span>
               </label>
-              <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
+              <label className="container">-120 J
                 <input type="checkbox" id="Answer4" disabled checked/>
                 <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
@@ -582,7 +555,95 @@ function Page5 (){
           </div>
           </div>)
   }
+  function Page6 (){
+    return(
+      <div>
+      <div className="split Index">
+    <div className="LabName">งานทางฟิสิกส์</div>
+    <div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน
 
+      </div> 
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
+    
+    <div className="split QuestionAnswer"> 
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="85" max="100"></progress></div>
+      <div className="Question"></div>
+      <div className="AnswerList">
+      <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
+          <input type="checkbox" id="Answer1" />
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">เมื่อมีหลายแรงกระทำ ให้ทำการรวมแรงแล้วค่อยคำนวณ
+          <input type="checkbox" id="Answer2"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">เมื่อแรงทำมุมกับการกระจัดให้แตกแรงแล้วคำนวณ
+          <input type="checkbox" id="Answer3"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">งานมีสูตรว่า W = F • S 
+          <input type="checkbox" id="Answer4" />
+          <span className="checkmark" ></span>
+        </label>
+    
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(6)}>Send Answer</button>
+      
+    </div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+    
+    </div>
+    </div>)
+    }
+
+    function Page6Answered (){
+      return(
+        <div>
+        <div className="split Index">
+      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน
+
+
+        </div> 
+       <div div className="FooterSpace"></div>
+       <div className="Footer">Curious Project</div>
+       <div div className="FooterSpace"></div>
+      </div>
+      
+      <div className="split QuestionAnswer"> 
+        <div className="LabNumber">Introducing Work</div>
+        <div className="ProgessBar"><progress value="85" max="100"></progress></div>
+        <div className="Question"></div>
+        <div className="AnswerList">
+        <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
+            <input type="checkbox" id="Answer1" disabled checked/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">เมื่อมีหลายแรงกระทำ ให้ทำการรวมแรงแล้วค่อยคำนวณ
+            <input type="checkbox" id="Answer2"disabled checked/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">เมื่อแรงทำมุมกับการกระจัดให้แตกแรงแล้วคำนวณ
+            <input type="checkbox" id="Answer3"disabled checked/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">งานมีสูตรว่า W = F • S 
+            <input type="checkbox" id="Answer4" disabled checked/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+      
+          <button className = "btn btn-glow btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+        
+      </div>
+      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(7)}>Next page</button></div>
+      </div>
+      </div>)
+}
   function FinishPage (){
     sumScore()
     return(
@@ -635,8 +696,13 @@ else if (page === 5 && Answer5 === false) {
   else if (page === 5 && Answer5 === true) {
       return(<div><Page5Answered/></div>)
   }
-  
-else if (page === 6) {return(
+  else if (page === 6 && Answer6 === false) {
+    return(<div><Page6/></div>)
+  }
+  else if (page === 6 && Answer6 === true) {
+      return(<div><Page6Answered/></div>)
+  }
+else if (page === 7) {return(
     <div><FinishPage/></div>)}
     
 
