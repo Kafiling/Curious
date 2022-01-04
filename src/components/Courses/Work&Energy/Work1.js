@@ -1,7 +1,7 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-import {SuccessAlert,ErrorAlert} from './Alert'
+import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -131,8 +131,8 @@ default :
   function Page1 (){
 return(
   <div>
-    {AlertState.current === 1? <SuccessAlert/> : null}
-    {AlertState.current === 2? <ErrorAlert/> : null}
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดยงานจะขึ้นอยู่กับแรงและการกระจัด</div> 
@@ -166,8 +166,8 @@ return(
 function Page2 (){
 return(
   <div>
-    {AlertState.current === 1? <SuccessAlert/> : null}
-    {AlertState.current === 2? <ErrorAlert/> : null}
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">เพื่อให้เข้าใจง่าย เราลองมาดูสถานการณ์สมมุติกัน มีคนสองคน คนนึงกำลังลากท่อนซุงกับอีกคนที่กำลังลากกระสอบข้าวสารคุณคิดว่าใครจะเหนื่อยกว่ากัน?</div> 
@@ -196,8 +196,8 @@ return(
 function Page3 (){
 return(
   <div>
-    {AlertState.current === 1? <SuccessAlert/> : null}
-    {AlertState.current === 2? <ErrorAlert/> : null}
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
@@ -252,8 +252,8 @@ return(
 function Page3Answered (){
   return(
     <div>
-      {AlertState.current === 1? <SuccessAlert/> : null}
-    {AlertState.current === 2? <ErrorAlert/> : null}
+      {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
@@ -308,8 +308,8 @@ function Page3Answered (){
   function Page4 (){
     return(
       <div>
-        {AlertState.current === 1? <SuccessAlert/> : null}
-    {AlertState.current === 2? <ErrorAlert/> : null}
+        {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div className="LabInfo">เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
@@ -364,8 +364,8 @@ function Page3Answered (){
     function Page4Answered (){
       return(
         <div>
-          {AlertState.current === 1? <SuccessAlert/> : null}
-    {AlertState.current === 2? <ErrorAlert/> : null}
+          {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div className="LabInfo"><mark className="Yellow">มีเฉลยอยู่ด้านล่างจ้า</mark><br/><br/>เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
@@ -423,8 +423,8 @@ function Page3Answered (){
 function Page5 (){
         return(
           <div>
-            {AlertState.current === 1? <SuccessAlert/> : null}
-    {AlertState.current === 2? <ErrorAlert/> : null}
+            {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
@@ -479,8 +479,8 @@ function Page5 (){
         function Page5Answered (){
           return(
             <div>
-              {AlertState.current === 1? <SuccessAlert/> : null}
-    {AlertState.current === 2? <ErrorAlert/> : null}
+              {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
