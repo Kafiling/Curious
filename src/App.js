@@ -15,7 +15,7 @@ import Courses from './components/Courses'
 import Dashboard from './components/Dashboard';
 import AboutUs from './components/AboutUs';
 import Header from './components/Header'
-import MessageAlert from './components/Alert'
+import {SuccessAlert,ErrorAlert} from './components/Courses/Work&Energy/Alert'
 
 //Import Courses Component
 import Work1 from './components/Courses/Work&Energy/Work1'
@@ -41,9 +41,7 @@ function App() {
       <AuthProvider>
       <div className = "Container">
 
-      <div >
-        <MessageAlert/>
-        </div>
+     
 
         <div className = "Header"> 
         <Header/>

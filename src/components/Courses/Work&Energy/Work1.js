@@ -1,10 +1,7 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-import Alert from '@mui/material/Alert';
-import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton'
-import CloseIcon from '@mui/icons-material/Close'
+import {SuccessAlert,ErrorAlert} from './Alert'
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -25,9 +22,15 @@ const BayesScore = useRef(0)
 const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
+//Alert
+const AlertState = useRef(0)
+
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
 
+function resetAlert(){
+  AlertState.current = 0
+}
 
 function sumScore(){
   
@@ -46,7 +49,8 @@ function sumScore(){
   //เช็คคำตอบถูก-ผิด
 function correct(QuestionPage){
   //เช็คถูก
-  
+  AlertState.current = 1
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
@@ -64,7 +68,8 @@ function correct(QuestionPage){
 }
 
 function incorrect(QuestionPage){
-  alert("ผิดจ้า ลองทบทวนอีกทีนะ")
+  AlertState.current = 2
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 3 :setAnswer3(true)
       break;
@@ -126,6 +131,8 @@ default :
   function Page1 (){
 return(
   <div>
+    {AlertState.current === 1? <SuccessAlert/> : null}
+    {AlertState.current === 2? <ErrorAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดยงานจะขึ้นอยู่กับแรงและการกระจัด</div> 
@@ -159,6 +166,8 @@ return(
 function Page2 (){
 return(
   <div>
+    {AlertState.current === 1? <SuccessAlert/> : null}
+    {AlertState.current === 2? <ErrorAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">เพื่อให้เข้าใจง่าย เราลองมาดูสถานการณ์สมมุติกัน มีคนสองคน คนนึงกำลังลากท่อนซุงกับอีกคนที่กำลังลากกระสอบข้าวสารคุณคิดว่าใครจะเหนื่อยกว่ากัน?</div> 
@@ -187,6 +196,8 @@ return(
 function Page3 (){
 return(
   <div>
+    {AlertState.current === 1? <SuccessAlert/> : null}
+    {AlertState.current === 2? <ErrorAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
@@ -241,6 +252,8 @@ return(
 function Page3Answered (){
   return(
     <div>
+      {AlertState.current === 1? <SuccessAlert/> : null}
+    {AlertState.current === 2? <ErrorAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div className="LabInfo">เมื่อเราเพิ่มตัวแปรการกระจัดเข้าไปจะพบว่า:<br/>
@@ -295,6 +308,8 @@ function Page3Answered (){
   function Page4 (){
     return(
       <div>
+        {AlertState.current === 1? <SuccessAlert/> : null}
+    {AlertState.current === 2? <ErrorAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div className="LabInfo">เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
@@ -349,6 +364,8 @@ function Page3Answered (){
     function Page4Answered (){
       return(
         <div>
+          {AlertState.current === 1? <SuccessAlert/> : null}
+    {AlertState.current === 2? <ErrorAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div className="LabInfo"><mark className="Yellow">มีเฉลยอยู่ด้านล่างจ้า</mark><br/><br/>เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
@@ -406,6 +423,8 @@ function Page3Answered (){
 function Page5 (){
         return(
           <div>
+            {AlertState.current === 1? <SuccessAlert/> : null}
+    {AlertState.current === 2? <ErrorAlert/> : null}
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
@@ -460,6 +479,8 @@ function Page5 (){
         function Page5Answered (){
           return(
             <div>
+              {AlertState.current === 1? <SuccessAlert/> : null}
+    {AlertState.current === 2? <ErrorAlert/> : null}
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>

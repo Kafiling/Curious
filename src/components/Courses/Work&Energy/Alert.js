@@ -5,10 +5,9 @@ import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 
 
-export default function MessageAlert(props) {
+export function SuccessAlert() {
     const [open, setOpen] = React.useState(true);
-
-    if (props === 'Correct')
+    setTimeout(() => { setOpen(false);},3000)
     return (
         <div className = "MessageAlert" > 
             <Collapse in={open}>
@@ -25,16 +24,21 @@ export default function MessageAlert(props) {
               <CloseIcon fontSize="inherit" />
             </IconButton>
           }
-          sx={{ mb: 2 }}
+          sx={{ mb: 2, backgroundColor: '#32C35B',}}
           variant="filled" severity="success"
         >
-          This is a success alert — check it out!
+          That's correct! 
         </Alert>
       </Collapse>
         </div>
     )
-   else if (props === 'Incorrect')
-    return (
+}
+
+export function ErrorAlert() {
+  const [open, setOpen] = React.useState(true);
+  setTimeout(() => { setOpen(false);},3000)
+  return (
+    
         <div className = "MessageAlert" > 
         <Collapse in={open}>
         <Alert
@@ -50,15 +54,15 @@ export default function MessageAlert(props) {
               <CloseIcon fontSize="inherit" />
             </IconButton>
           }
-          sx={{ mb: 2 }}
+          sx={{ mb: 2 , backgroundColor: '#FF0035',}}
           variant="filled" severity="error"
         >
-          This is a success alert — check it out!
+          That's incorrect
         </Alert>
       </Collapse>
         </div>
     )
-    else{return(<div style={{visibility: "hidden" }}>
-      
-    </div>)}
-}
+        
+  }
+
+
