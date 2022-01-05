@@ -1,7 +1,9 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-
+import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
@@ -25,9 +27,43 @@ const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
 const ScoreQuestion6 = useRef(0)
+//Alert
+const AlertState = useRef(0)
+var [Upvote, setUpvote] = useState(false);
+var [Report, setReport] = useState(false);
+const ReportText = useRef(null)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
 
+function resetAlert(){
+  AlertState.current = 0
+}
+
+function handleUpvote(){
+  if(Upvote === false){
+    db.collection('feedback').doc('upvote').update({
+      work3 : firebase.firestore.FieldValue.increment(1)
+    })
+    setUpvote(true)
+    AlertState.current = 3
+    setTimeout(resetAlert,3000)}
+  
+  else{alert('You already upvote this course')}
+}
+
+function handleReport(){
+  if(Report === false){
+    ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
+    db.collection('report').doc(currentUser.providerData[0]['uid']).set({
+      On: "Work3",
+      Text: ReportText.current
+  }, { merge: true });
+    setReport(true)
+    AlertState.current = 4
+    setTimeout(resetAlert,3000)}
+    else{alert('You already report this course')}
+  
+}
 
 function sumScore(){
   
@@ -45,7 +81,8 @@ function sumScore(){
   //เช็คคำตอบถูก-ผิด
 function correct(QuestionPage){
   //เช็คถูก
-  alert("ถูกต้องคร้าบบ")
+  AlertState.current = 1
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 2 :setAnswer2(true)
     ScoreQuestion2.current = 1
@@ -69,7 +106,8 @@ function correct(QuestionPage){
 }
 
 function incorrect(QuestionPage){
-  alert("ผิดจ้า ลองทบทวนอีกทีนะ")
+  AlertState.current = 2
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 2 :setAnswer2(true)
       break;
@@ -149,6 +187,8 @@ default :
   function Page1 (){
 return(
   <div>
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จากคอร์สเรียนที่เราได้เรียน “W = F • S • Cosθ” จะสังเกตว่า
@@ -188,6 +228,8 @@ return(
 function Page2 (){
 return(
   <div>
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
@@ -235,6 +277,8 @@ return(
 function Page2Answered (){
   return(
     <div>
+      {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/>
@@ -269,7 +313,7 @@ function Page2Answered (){
         <span className="checkmark"></span>
       </label>
   
-      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+      <button className = "btn btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
   <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
@@ -281,6 +325,8 @@ function Page2Answered (){
 function Page3 (){
 return(
   <div>
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง
@@ -327,6 +373,8 @@ return(
 function Page3Answered (){
   return(
     <div>
+      {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง 
@@ -360,7 +408,7 @@ function Page3Answered (){
         <span className="checkmark"></span>
       </label>
   
-      <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+      <button className = "btn btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
   <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
@@ -372,6 +420,8 @@ function Page3Answered (){
   function Page4 (){
     return(
       <div>
+        {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/><br/>
@@ -421,6 +471,8 @@ function Page3Answered (){
     function Page4Answered (){
       return(
         <div>
+          {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/><br/>
@@ -457,7 +509,7 @@ function Page3Answered (){
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
       
-          <button className = "btn btn-glow btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+          <button className = "btn btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
         
       </div>
       <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
@@ -469,6 +521,8 @@ function Page3Answered (){
 function Page5 (){
         return(
           <div>
+            {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div className="LabInfo">ด.ช.ป๋องเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่ ด.ช.ป๋อง ทำได้ในการหิ้วกระเป๋า
@@ -514,6 +568,8 @@ function Page5 (){
         function Page5Answered (){
           return(
             <div>
+              {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div className="LabInfo">ด.ช.ป๋องเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่ ด.ช.ป๋อง ทำได้ในการหิ้วกระเป๋า
@@ -547,7 +603,7 @@ function Page5 (){
                 <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
               </label>
           
-              <button className = "btn btn-glow btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+              <button className = "btn btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
             
           </div>
           <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
@@ -558,6 +614,8 @@ function Page5 (){
   function Page6 (){
     return(
       <div>
+        {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน
@@ -603,6 +661,8 @@ function Page5 (){
     function Page6Answered (){
       return(
         <div>
+          {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน
@@ -636,7 +696,7 @@ function Page5 (){
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
       
-          <button className = "btn btn-glow btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+          <button className = "btn btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
         
       </div>
       <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
@@ -648,6 +708,8 @@ function Page5 (){
     sumScore()
     return(
       <div>
+        {AlertState.current === 3? <UpvoteAlert/> : null}
+    {AlertState.current === 4? <ReportAlert/> : null}
     <div className = 'FinishContainer'>
       <img className='FinishImg' id='img' alt ="Check.png"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/check.png?alt=media&token=10d8a285-0a16-4009-a4fa-5725aeba2cef" />
     </div>
@@ -660,8 +722,8 @@ function Page5 (){
       <button className = "UpvoteButton" style = {{right : "0%", backgroundColor: "rgb(var(--secondary-color))" }} ><Link to = "/courses" >Back to Courses</Link></button>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" >Upvote!</button>
-      <button className = "ReportButton" >Report</button>
+    <button className = "UpvoteButton" onClick={() => handleUpvote()}>Upvote!</button>
+      <button className = "ReportButton" onClick={() => handleReport()}>Report</button>
     </div>
     
      </div> )

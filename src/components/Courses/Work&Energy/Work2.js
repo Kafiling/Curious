@@ -12,7 +12,6 @@ export default function Work2() {
 // Set Page
 var [page, setPage] = useState(1);
 //Var Answered
-var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
 var [Answer6, setAnswer6] = useState(false);
@@ -21,7 +20,6 @@ const TotalQuestionNum = useRef(3)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
-const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
 const ScoreQuestion6 = useRef(0)
@@ -40,7 +38,7 @@ function resetAlert(){
 function handleUpvote(){
   if(Upvote === false){
     db.collection('feedback').doc('upvote').update({
-      work1 : firebase.firestore.FieldValue.increment(1)
+      work2 : firebase.firestore.FieldValue.increment(1)
     })
     setUpvote(true)
     AlertState.current = 3
@@ -53,7 +51,7 @@ function handleReport(){
   if(Report === false){
     ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
     db.collection('report').doc(currentUser.providerData[0]['uid']).set({
-      On: "Work1",
+      On: "Work2",
       Text: ReportText.current
   }, { merge: true });
     setReport(true)
