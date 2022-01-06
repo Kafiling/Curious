@@ -1,7 +1,10 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-import {Scene} from './Material/Work4Scene1';
+
+import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
