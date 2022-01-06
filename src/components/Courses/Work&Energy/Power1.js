@@ -52,8 +52,7 @@ function handleReport(){
   if(Report === false){
     ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
     db.collection('report').doc(currentUser.providerData[0]['uid']).set({
-      On: "power1",
-      Text: ReportText.current
+      Power1: ReportText.current
   }, { merge: true });
     setReport(true)
     AlertState.current = 4
