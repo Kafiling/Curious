@@ -1,5 +1,8 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {Link } from 'react-router-dom'
+import {AnswerSentAlert, UpvoteAlert, ReportAlert} from './Alert'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -34,9 +37,44 @@ const ScoreQuestion7 = useRef(0)
 const ScoreQuestion8 = useRef(0)
 const ScoreQuestion9 = useRef(0)
 const ScoreQuestion10 = useRef(0)
+//Alert
+const AlertState = useRef(0)
+var [Upvote, setUpvote] = useState(false);
+var [Report, setReport] = useState(false);
+const ReportText = useRef(null)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
 
+
+function resetAlert(){
+  AlertState.current = 0
+}
+
+function handleUpvote(){
+  if(Upvote === false){
+    db.collection('feedback').doc('upvote').update({
+      work1 : firebase.firestore.FieldValue.increment(1)
+    })
+    setUpvote(true)
+    AlertState.current = 3
+    setTimeout(resetAlert,3000)}
+  
+  else{alert('You already upvote this course')}
+}
+
+function handleReport(){
+  if(Report === false){
+    ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
+    db.collection('report').doc(currentUser.providerData[0]['uid']).set({
+      On: "Work1",
+      Text: ReportText.current
+  }, { merge: true });
+    setReport(true)
+    AlertState.current = 4
+    setTimeout(resetAlert,3000)}
+    else{alert('You already report this course')}
+  
+}
 
 function sumScore(){
   
@@ -54,7 +92,8 @@ function sumScore(){
   //เช็คคำตอบถูก-ผิด
 function correct(QuestionPage){
   //เช็คถูก
-  alert("ถูกต้องคร้าบบ")
+  AlertState.current = 1
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 1 :setAnswer1(true)
     ScoreQuestion1.current = 1
@@ -93,7 +132,8 @@ function correct(QuestionPage){
 }
 
 function incorrect(QuestionPage){
-  alert("ผิดจ้า ลองทบทวนอีกทีนะ")
+  AlertState.current = 1
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 1 :setAnswer1(true)
       break;
@@ -254,6 +294,7 @@ function allAnswerSummitCheck(){
 function Page1 (){
   return(
     <div>
+      {AlertState.current === 1? <AnswerSentAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -298,6 +339,7 @@ function Page1 (){
   function Page1Answered (){
     return(
       <div>
+        {AlertState.current === 1? <AnswerSentAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -342,6 +384,7 @@ function Page1 (){
   function Page2 (){
       return(
         <div>
+          {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -385,6 +428,7 @@ function Page1 (){
   function Page2Answered (){
         return(
           <div>
+            {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -428,6 +472,7 @@ function Page1 (){
   function Page3 (){
           return(
             <div>
+              {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -474,6 +519,7 @@ function Page1 (){
   function Page3Answered (){
             return(
               <div>
+                {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
             <div className="LabName">งานทางฟิสิกส์</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -517,6 +563,7 @@ function Page1 (){
     function Page4 (){
               return(
                 <div>
+                  {AlertState.current === 1? <AnswerSentAlert/> : null}
                 <div className="split Index">
               <div className="LabName">งานทางฟิสิกส์</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -562,6 +609,7 @@ function Page1 (){
       function Page4Answered (){
                 return(
                   <div>
+                    {AlertState.current === 1? <AnswerSentAlert/> : null}
                   <div className="split Index">
                 <div className="LabName">งานทางฟิสิกส์</div>
                 <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -605,6 +653,7 @@ function Page1 (){
 function Page5 (){
       return(
         <div>
+          {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -649,6 +698,7 @@ function Page5 (){
   function Page5Answered (){
         return(
           <div>
+            {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -693,6 +743,7 @@ function Page5 (){
         function Page6 (){
           return(
             <div>
+              {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -737,6 +788,7 @@ function Page5 (){
       function Page6Answered (){
             return(
               <div>
+                {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
             <div className="LabName">งานทางฟิสิกส์</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -781,6 +833,7 @@ function Page5 (){
         function Page7 (){
               return(
                 <div>
+                  {AlertState.current === 1? <AnswerSentAlert/> : null}
                 <div className="split Index">
               <div className="LabName">งานทางฟิสิกส์</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -825,6 +878,7 @@ function Page5 (){
           function Page7Answered (){
                 return(
                   <div>
+                    {AlertState.current === 1? <AnswerSentAlert/> : null}
                   <div className="split Index">
                 <div className="LabName">งานทางฟิสิกส์</div>
                 <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -868,6 +922,7 @@ function Page5 (){
   function Page8 (){
       return(
         <div>
+          {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -913,6 +968,7 @@ function Page5 (){
   function Page8Answered (){
         return(
           <div>
+            {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -958,6 +1014,7 @@ function Page5 (){
 function Page9 (){
       return(
         <div>
+          {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -1003,6 +1060,7 @@ function Page9 (){
   function Page9Answered (){
         return(
           <div>
+            {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -1047,6 +1105,7 @@ function Page9 (){
 function Page10 (){
           return(
             <div>
+              {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -1106,6 +1165,7 @@ function Page10 (){
   function Page10Answered (){
             return(
               <div>
+                {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
             <div className="LabName">งานทางฟิสิกส์</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -1166,6 +1226,8 @@ function Page10 (){
     sumScore()
     return(
       <div>
+        {AlertState.current === 3? <UpvoteAlert/> : null}
+    {AlertState.current === 4? <ReportAlert/> : null}
     <div className = 'FinishContainer'>
       <img className='FinishImg' id='img' alt ="Check.png"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/check.png?alt=media&token=10d8a285-0a16-4009-a4fa-5725aeba2cef" />
     </div>
@@ -1175,11 +1237,11 @@ function Page10 (){
       Bayes's Score = {BayesScore.current}</div>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" style = {{right : "0%"}} onClick ={() => setPage(1)}><Link to = "/courses" >Back to Courses</Link></button>
+    <button className = "UpvoteButton" style = {{right : "0%" , backgroundColor: "rgb(var(--secondary-color))" }}  ><Link to = "/courses" >Back to Courses</Link></button>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" onClick ={() => setPage(1)}>Upvote!</button>
-      <button className = "ReportButton" >Report</button>
+    <button className = "UpvoteButton" onClick={() => handleUpvote()}>Upvote!</button>
+      <button className = "ReportButton" onClick={() => handleReport()}>Report</button>
     </div>
     
      </div> )

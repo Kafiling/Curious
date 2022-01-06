@@ -73,6 +73,42 @@ export function IncorrectAlert() {
     )
         
   }
+
+  export function AnswerSentAlert() {
+    const [open, setOpen] = React.useState(true);
+    setTimeout(() => { setOpen(false);},3000)
+    return (
+      
+          <div className = "MessageAlert" > 
+          {open? <Sound
+        url="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Correct.mp3?alt=media&token=f00a3ca4-2cb7-4892-a802-2b0e0ba46b1c"
+        playStatus={Sound.status.PLAYING}
+      /> : null}
+          <Collapse in={open}>
+          <Alert
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2 , backgroundColor: '#473BF0',}}
+            variant="filled" severity="success"
+          >
+            Answer Sent! - Keep going on!
+          </Alert>
+        </Collapse>
+          </div>
+      )
+          
+    }
+
   export function UpvoteAlert() {
     const [open, setOpen] = React.useState(true);
     setTimeout(() => { setOpen(false);},3000)
