@@ -190,8 +190,8 @@ return(
 จาก
 <MathJaxContext>
       <MathJax>\[y = m \cdot x +c\]
-        \[F \cdot s = k \cdot x + 0\]
-        \[F \cdot s = k \cdot x \]
+        \[F  = k \cdot x + 0\]
+        \[F = k \cdot x \]
       </MathJax>
       </MathJaxContext>
       โดยที่ <br/>Fs แทน แรงจากสปริง (N)<br/>
