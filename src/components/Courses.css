@@ -47,6 +47,8 @@ color: rgb(var(--text-color)) ;
 
 .LabInfo {
   position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
   top: 27px;
   font-size: 22px;
   font-family: 'Sarabun', sans-serif;
