@@ -1,7 +1,6 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -27,8 +26,43 @@ const ScoreQuestion2 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion6 = useRef(0)
 const ScoreQuestion7 = useRef(0)
+//Alert
+const AlertState = useRef(0)
+var [Upvote, setUpvote] = useState(false);
+var [Report, setReport] = useState(false);
+const ReportText = useRef(null)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
+
+function resetAlert(){
+  AlertState.current = 0
+}
+
+function handleUpvote(){
+  if(Upvote === false){
+    db.collection('feedback').doc('upvote').update({
+      PotentialEnergy1 : firebase.firestore.FieldValue.increment(1)
+    })
+    setUpvote(true)
+    AlertState.current = 3
+    setTimeout(resetAlert,3000)}
+  
+  else{alert('You already upvote this course')}
+}
+
+function handleReport(){
+  if(Report === false){
+    ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
+    db.collection('report').doc(currentUser.providerData[0]['uid']).set({
+      On: "PotentialEnergy1",
+      Text: ReportText.current
+  }, { merge: true });
+    setReport(true)
+    AlertState.current = 4
+    setTimeout(resetAlert,3000)}
+    else{alert('You already report this course')}
+  
+}
 
 
 function sumScore(){
@@ -47,7 +81,8 @@ function sumScore(){
   //เช็คคำตอบถูก-ผิด
 function correct(QuestionPage){
   //เช็คถูก
-  alert("ถูกต้องคร้าบบ")
+  AlertState.current = 1
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 2 :setAnswer2(true)
     ScoreQuestion2.current = 1
@@ -68,7 +103,8 @@ function correct(QuestionPage){
 }
 
 function incorrect(QuestionPage){
-  alert("ผิดจ้า ลองทบทวนอีกทีนะ")
+  AlertState.current = 2
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 2 :setAnswer2(true)
     break;
@@ -139,6 +175,8 @@ default :
   function Page1 (){
 return(
   <div>
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div div className="LabInfo"><br/>จากทฤษฎีบทงาน-พลังงานจลน์ ในตอนที่แล้ว อาจจะทำให้สงสัยได้ 
@@ -168,6 +206,8 @@ return(
 function Page2 (){
 return(
   <div>
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div div className="LabInfo"><br/>
@@ -218,6 +258,8 @@ return(
 function Page2Answered (){
   return(
     <div>
+      {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div className="LabInfo"><br/>
@@ -266,6 +308,8 @@ function Page2Answered (){
 function Page3 (){
 return(
   <div>
+    {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div className="LabInfo"> <br/>พลังงานศักย์โน้มถ่วงคือพลังงานที่สะสมอยู่ในวัตถุ เกิดจากแรงโน้มถ่วงและตำแหน่ง<br/>ความสูงของวัตถุ 
@@ -304,6 +348,8 @@ return(
   function Page4 (){
     return(
       <div>
+        {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>มาทดสอบความเข้าใจกันครับ
@@ -350,6 +396,8 @@ return(
     function Page4Answered (){
       return(
         <div>
+          {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">พลังงานศักย์</div>
       <div className="LabInfo"><br/>มาทดสอบความเข้าใจกันครับ
@@ -396,6 +444,8 @@ return(
 function Page5 (){
         return(
           <div>
+            {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">พลังงานศักย์</div>
         <div className="LabInfo"><br/>ในการทำโจทย์เกี่ยวกับพลังงานศักย์โน้มถ่วง เรามักจะมีการตั้ง “ระดับอ้างอิง” 
@@ -425,6 +475,8 @@ function Page5 (){
 function Page6 (){
     return(
       <div>
+        {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน
@@ -472,6 +524,8 @@ function Page6 (){
     function Page6Answered (){
       return(
         <div>
+          {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">พลังงานศักย์</div>
       <div className="LabInfo"><br/>จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน
@@ -518,6 +572,8 @@ function Page6 (){
       function Page7 (){
     return(
       <div>
+        {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
@@ -564,6 +620,8 @@ function Page6 (){
     function Page7Answered (){
       return(
         <div>
+          {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">พลังงานศักย์</div>
       <div className="LabInfo"><br/>ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
@@ -610,6 +668,8 @@ function Page6 (){
     sumScore()
     return(
       <div>
+        {AlertState.current === 3? <UpvoteAlert/> : null}
+    {AlertState.current === 4? <ReportAlert/> : null}
     <div className = 'FinishContainer'>
       <img className='FinishImg' id='img' alt ="Check.png"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/check.png?alt=media&token=10d8a285-0a16-4009-a4fa-5725aeba2cef" />
     </div>
@@ -622,8 +682,8 @@ function Page6 (){
       <button className = "UpvoteButton" style = {{right : "0%", backgroundColor: "rgb(var(--secondary-color))" }} ><Link to = "/courses" >Back to Courses</Link></button>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" >Upvote!</button>
-      <button className = "ReportButton" >Report</button>
+    <button className = "UpvoteButton" onClick={() => handleUpvote()}>Upvote!</button>
+      <button className = "ReportButton" onClick={() => handleReport()}>Report</button>
     </div>
     
      </div> )
