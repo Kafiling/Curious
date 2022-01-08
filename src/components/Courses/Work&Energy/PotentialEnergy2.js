@@ -1,7 +1,9 @@
 import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
-import {Scene} from './Material/Work4Scene1';
+import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
@@ -25,8 +27,42 @@ const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
 const ScoreQuestion6 = useRef(0)
 const ScoreQuestion7 = useRef(0)
+//Alert
+const AlertState = useRef(0)
+var [Upvote, setUpvote] = useState(false);
+var [Report, setReport] = useState(false);
+const ReportText = useRef(null)
 //Var currentUser (Context from Firebase.js)
 const {currentUser} = useContext(AuthContext)
+
+function resetAlert(){
+  AlertState.current = 0
+}
+
+function handleUpvote(){
+  if(Upvote === false){
+    db.collection('feedback').doc('upvote').update({
+      PotentialEnergy2 : firebase.firestore.FieldValue.increment(1)
+    })
+    setUpvote(true)
+    AlertState.current = 3
+    setTimeout(resetAlert,3000)}
+  
+  else{alert('You already upvote this course')}
+}
+
+function handleReport(){
+  if(Report === false){
+    ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
+    db.collection('report').doc(currentUser.providerData[0]['uid']).set({
+      PotentialEnergy2: ReportText.current
+  }, { merge: true });
+    setReport(true)
+    AlertState.current = 4
+    setTimeout(resetAlert,3000)}
+    else{alert('You already report this course')}
+  
+}
 
 
 function sumScore(){
@@ -45,7 +81,8 @@ function sumScore(){
   //เช็คคำตอบถูก-ผิด
 function correct(QuestionPage){
   //เช็คถูก
-  alert("ถูกต้องคร้าบบ")
+  AlertState.current = 1
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     
     case 4 :setAnswer4(true)
@@ -67,7 +104,8 @@ function correct(QuestionPage){
 }
 
 function incorrect(QuestionPage){
-  alert("ผิดจ้า ลองทบทวนอีกทีนะ")
+  AlertState.current = 2
+  setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 4 :setAnswer4(true)
       break;
@@ -139,6 +177,8 @@ default :
   function Page1 (){
 return(
   <div>
+     {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div div className="LabInfo"><br/>
@@ -149,8 +189,8 @@ return(
 จาก
 <MathJaxContext>
       <MathJax>\[y = m \cdot x +c\]
-        \[F \cdot s = k \cdot x + 0\]
-        \[F \cdot s = k \cdot x \]
+        \[F  = k \cdot x + 0\]
+        \[F = k \cdot x \]
       </MathJax>
       </MathJaxContext>
       โดยที่ <br/>Fs แทน แรงจากสปริง (N)<br/>
@@ -180,6 +220,8 @@ return(
 function Page2 (){
 return(
   <div>
+     {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div div className="LabInfo"><br/>
@@ -212,6 +254,8 @@ return(
 function Page3 (){
 return(
   <div>
+     {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div className="LabInfo"> <br/>เมื่อเราสามารถหาแรงจากสปริงได้แล้ว เราก็สามารถหางานจากพื้นที่ใต้กราฟ F-S
@@ -246,6 +290,8 @@ return(
   function Page4 (){
     return(
       <div>
+         {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
@@ -292,6 +338,8 @@ return(
     function Page4Answered (){
       return(
         <div>
+           {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">พลังงานศักย์</div>
       <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
@@ -338,6 +386,8 @@ return(
 function Page5 (){
         return(
           <div>
+             {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">พลังงานศักย์</div>
         <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
@@ -380,6 +430,8 @@ function Page5 (){
   function Page5Answered (){
       return(
         <div>
+           {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">พลังงานศักย์</div>
       <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
@@ -426,6 +478,8 @@ function Page5 (){
 function Page6 (){
     return(
       <div>
+         {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
@@ -473,6 +527,8 @@ function Page6 (){
     function Page6Answered (){
       return(
         <div>
+           {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">พลังงานศักย์</div>
       <div className="LabInfo"><br/>จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
@@ -518,6 +574,8 @@ function Page6 (){
       function Page7 (){
     return(
       <div>
+         {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm
@@ -566,6 +624,8 @@ function Page6 (){
     function Page7Answered (){
       return(
         <div>
+           {AlertState.current === 1? <CorrectAlert/> : null}
+    {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">พลังงานศักย์</div>
       <div className="LabInfo"><br/>มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm
@@ -614,6 +674,8 @@ function Page6 (){
     sumScore()
     return(
       <div>
+         {AlertState.current === 3? <UpvoteAlert/> : null}
+    {AlertState.current === 4? <ReportAlert/> : null}
     <div className = 'FinishContainer'>
       <img className='FinishImg' id='img' alt ="Check.png"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/check.png?alt=media&token=10d8a285-0a16-4009-a4fa-5725aeba2cef" />
     </div>
@@ -626,8 +688,8 @@ function Page6 (){
       <button className = "UpvoteButton" style = {{right : "0%", backgroundColor: "rgb(var(--secondary-color))" }} ><Link to = "/courses" >Back to Courses</Link></button>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" >Upvote!</button>
-      <button className = "ReportButton" >Report</button>
+    <button className = "UpvoteButton" onClick={() => handleUpvote()}>Upvote!</button>
+      <button className = "ReportButton" onClick={() => handleReport()}>Report</button>
     </div>
     
      </div> )
