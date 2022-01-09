@@ -27,6 +27,7 @@ import Power2 from './components/Courses/Work&Energy/Power2'
 import KineticEnergy from './components/Courses/Work&Energy/KineticEnergy'
 import PotentialEnergy1 from './components/Courses/Work&Energy/PotentialEnergy1'
 import PotentialEnergy2 from './components/Courses/Work&Energy/PotentialEnergy2'
+import Lawofconservationofenergy1 from './components/Courses/Work&Energy/Lawofconservationofenergy1'
 import ExamWork from './components/Courses/Work&Energy/ExamWork'
 
 import PhysicEngTest from './components/Courses/Work&Energy/PhysicEngTest'
@@ -65,6 +66,7 @@ function App() {
           <Route exact path="/courses/work_energy/kineticenergy"  ><KineticEnergy/></Route>
           <Route exact path="/courses/work_energy/potentialenergy1"  ><PotentialEnergy1/></Route>
           <Route exact path="/courses/work_energy/potentialenergy2"  ><PotentialEnergy2/></Route>
+          <Route exact path="/courses/work_energy/lawofconservationofenergy1"  ><Lawofconservationofenergy1/></Route>
           <Route exact path="/courses/work_energy/exam_work"  ><ExamWork/></Route>
           <Route exact path="/courses/work_energy/physic_eng"  ><PhysicEngTest/></Route>
 
