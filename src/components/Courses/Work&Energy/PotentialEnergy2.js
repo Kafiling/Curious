@@ -257,7 +257,7 @@ return(
      {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
-<div className="LabName">พลังงานศักย์</div>
+<div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
 <div className="LabInfo"> <br/>เมื่อเราสามารถหาแรงจากสปริงได้แล้ว เราก็สามารถหางานจากพื้นที่ใต้กราฟ F-S
 <br/><br/><br/>********Chart.js แบบเบิ้มๆ*<br/><br/><br/>
 <MathJaxContext>
@@ -293,7 +293,7 @@ return(
          {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
-    <div className="LabName">พลังงานศักย์</div>
+    <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
     <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
     <br/> <br/><br/>ถ้าออกแรง 5 N กดสปริงที่มีค่านิจ 50 N/m จงหาว่าสปริงหดจากเดิมกี่ cm
     <br/><br/><br/>********ใส่รูปจ้า*
@@ -341,7 +341,7 @@ return(
            {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
-      <div className="LabName">พลังงานศักย์</div>
+      <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
       <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
     <br/> <br/><br/>ถ้าออกแรง 5 N กดสปริงที่มีค่านิจ 50 N/m จงหาว่าสปริงหดจากเดิมกี่ cm
     <br/><br/><br/>********ใส่รูปจ้า*
@@ -389,7 +389,7 @@ function Page5 (){
              {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
-        <div className="LabName">พลังงานศักย์</div>
+        <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
         <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
 
         <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
@@ -433,7 +433,7 @@ function Page5 (){
            {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
-      <div className="LabName">พลังงานศักย์</div>
+      <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
       <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
 
 <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
@@ -481,7 +481,7 @@ function Page6 (){
          {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
-    <div className="LabName">พลังงานศักย์</div>
+    <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
     <div className="LabInfo"><br/>จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
     <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
 
@@ -530,7 +530,7 @@ function Page6 (){
            {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
-      <div className="LabName">พลังงานศักย์</div>
+      <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
       <div className="LabInfo"><br/>จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
     <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
       </div> 
@@ -577,7 +577,7 @@ function Page6 (){
          {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
-    <div className="LabName">พลังงานศักย์</div>
+    <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
     <div className="LabInfo"><br/>มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm
 จากนั้นนำมวลใหม่เข้าไปผูกทำให้ในสปริงเกิดพลังงานศักย์ยืดหยุ่น 250 J จงหาว่าสปริงยืดจากเดิมกี่ cm
 
@@ -627,7 +627,7 @@ function Page6 (){
            {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
-      <div className="LabName">พลังงานศักย์</div>
+      <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
       <div className="LabInfo"><br/>มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm
 จากนั้นนำมวลใหม่เข้าไปผูกทำให้ในสปริงเกิดพลังงานศักย์ยืดหยุ่น 250 J จงหาว่าสปริงยืดจากเดิมกี่ cm
 
