@@ -145,8 +145,6 @@ default :
   function Page1 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานจลน์</div>
 <div div className="LabInfo">พลังงานคืออะไร พลังงานนั้นเป็นปริมาณที่ไม่สามารถมองเห็นหรือจับต้องได้ แต่สามารถรับรู้จากผลของพลังงานนั้นได้ 
@@ -180,8 +178,6 @@ return(
 function Page2 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานจลน์</div>
 <div div className="LabInfo">
@@ -223,8 +219,6 @@ return(
 function Page3 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานจลน์</div>
 <div className="LabInfo">เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
@@ -321,8 +315,6 @@ function Page3Answered (){
   function Page4 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานจลน์</div>
     <div className="LabInfo">งานกับการเปลี่ยนพลังงานจลน์<br/><br/>
@@ -363,8 +355,6 @@ function Page3Answered (){
 function Page5 (){
         return(
           <div>
-            {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">พลังงานจลน์</div>
         <div className="LabInfo">จะกล่าวได้ว่าพลังงานจลน์ของจะเพิ่มหรือลดได้หากมีงานเนื่องจากแรงเข้ามากกระทำกับกับวัตถุ 
@@ -391,8 +381,6 @@ function Page5 (){
 function Page6 (){
           return(
             <div>
-              {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
             <div className="split Index">
           <div className="LabName">พลังงานจลน์</div>
           <div className="LabInfo">รถมวล 800 kg แล่นด้วยความเร็ว 20 m/s คนขับเบรกรถ เมื่อเริ่มเบรกรถเคลื่อนไปได้อีก 10 m ก่อนจะหยุดนิ่ง จงหางานในการเบรกรถ

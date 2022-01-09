@@ -177,8 +177,6 @@ default :
   function Page1 (){
 return(
   <div>
-     {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div div className="LabInfo"><br/>
@@ -220,8 +218,6 @@ return(
 function Page2 (){
 return(
   <div>
-     {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div div className="LabInfo"><br/>
@@ -254,8 +250,6 @@ return(
 function Page3 (){
 return(
   <div>
-     {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
 <div className="LabInfo"> <br/>เมื่อเราสามารถหาแรงจากสปริงได้แล้ว เราก็สามารถหางานจากพื้นที่ใต้กราฟ F-S
@@ -290,8 +284,6 @@ return(
   function Page4 (){
     return(
       <div>
-         {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
     <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
@@ -386,8 +378,6 @@ return(
 function Page5 (){
         return(
           <div>
-             {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
         <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
@@ -478,8 +468,6 @@ function Page5 (){
 function Page6 (){
     return(
       <div>
-         {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
     <div className="LabInfo"><br/>จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
@@ -574,8 +562,6 @@ function Page6 (){
       function Page7 (){
     return(
       <div>
-         {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
     <div className="LabInfo"><br/>มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm

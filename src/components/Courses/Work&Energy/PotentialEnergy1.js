@@ -174,8 +174,6 @@ default :
   function Page1 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div div className="LabInfo"><br/>จากทฤษฎีบทงาน-พลังงานจลน์ ในตอนที่แล้ว อาจจะทำให้สงสัยได้ 
@@ -205,8 +203,6 @@ return(
 function Page2 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div div className="LabInfo"><br/>
@@ -307,8 +303,6 @@ function Page2Answered (){
 function Page3 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
 <div className="LabInfo"> <br/>พลังงานศักย์โน้มถ่วงคือพลังงานที่สะสมอยู่ในวัตถุ เกิดจากแรงโน้มถ่วงและตำแหน่ง<br/>ความสูงของวัตถุ 
@@ -347,8 +341,6 @@ return(
   function Page4 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>มาทดสอบความเข้าใจกันครับ
@@ -443,8 +435,6 @@ return(
 function Page5 (){
         return(
           <div>
-            {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">พลังงานศักย์</div>
         <div className="LabInfo"><br/>ในการทำโจทย์เกี่ยวกับพลังงานศักย์โน้มถ่วง เรามักจะมีการตั้ง “ระดับอ้างอิง” 
@@ -474,8 +464,6 @@ function Page5 (){
 function Page6 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน
@@ -571,8 +559,6 @@ function Page6 (){
       function Page7 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo"><br/>ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
