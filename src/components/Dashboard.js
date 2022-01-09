@@ -13,7 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.primary,
 }));
 
 export default function Dashboard() {
@@ -21,26 +21,27 @@ export default function Dashboard() {
     return (
         <div>
             <div className='CoursePageName'><h1>Work and Energy</h1></div>
+            <div div className="LabInfo">พลังงานคืออะไร พลังงานนั้นเป็นปริมาณที่ไม่สามารถมองเห็นหรือจับต้องได้ แต่สามารถรับรู้จากผลของพลังงานนั้นได้ 
+            เช่น พลังงานจากแสงอาทิตย์ที่ทำให้รู้สึกร้อน พลังงานเสียงที่มากไปทำให้เราปวดหู หรือพลังงานไฟฟ้านำไปใช้ในเครื่องใช้ไฟฟ้าต่างๆ
+            </div> 
             <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={12}>
+      <Grid container spacing={2}>
         <Grid item xs={4}>
-          <Item>xs=8</Item>
+          <Item><h2>Course</h2><br/>12</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>xs=4</Item>
+          <Item><h2>Question</h2><br/>103</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>xs=4</Item>
+          <Item><h2>Time estimate</h2><br/>4.5 hr</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>xs=8</Item>
+          <Item><h2>Completion Score</h2><br/> 100%</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>xs=4</Item>
+          <Item><h2>Bayes's Score</h2><br/>0.89</Item>
         </Grid>
-        <Grid item xs={4}>
-          <Item>xs=8</Item>
-        </Grid>
+
       </Grid>
     </Box>
             <div className='Fragment-Container'>

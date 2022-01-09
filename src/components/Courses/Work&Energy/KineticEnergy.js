@@ -149,7 +149,7 @@ return(
     {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานจลน์</div>
-<div div className="LabInfo"><br/>พลังงานคืออะไร พลังงานนั้นเป็นปริมาณที่ไม่สามารถมองเห็นหรือจับต้องได้ แต่สามารถรับรู้จากผลของพลังงานนั้นได้ 
+<div div className="LabInfo">พลังงานคืออะไร พลังงานนั้นเป็นปริมาณที่ไม่สามารถมองเห็นหรือจับต้องได้ แต่สามารถรับรู้จากผลของพลังงานนั้นได้ 
 เช่น พลังงานจากแสงอาทิตย์ที่ทำให้รู้สึกร้อน พลังงานเสียงที่มากไปทำให้เราปวดหู หรือพลังงานไฟฟ้านำไปใช้ในเครื่องใช้ไฟฟ้าต่างๆ
 <br/><br/><br/>********ภาพพลังงานชนิดต่างๆ*<br/><br/><br/>
 
@@ -184,7 +184,7 @@ return(
     {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานจลน์</div>
-<div div className="LabInfo"><br/>
+<div div className="LabInfo">
 เริ่มจากพลังงานจลน์(Kinetic energy) เป็นพลังงานของวัตถุที่กำลังเคลื่อนที่ (มีความเร็ว) 
 <br/><br/><br/>********ภาพ or Matter.js*<br/><br/><br/>
 โดยพิสูจน์จาก <br/>
@@ -227,7 +227,7 @@ return(
     {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">พลังงานจลน์</div>
-<div className="LabInfo"> <br/>เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
+<div className="LabInfo">เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
 วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
 <br/><br/><br/>********ใส่รูปจ้า*
 </div> 
@@ -277,7 +277,7 @@ function Page3Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
 <div className="LabName">พลังงานจลน์</div>
-<div className="LabInfo"><br/>เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
+<div className="LabInfo">เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
 วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
 <br/><br/><br/>********ใส่รูปจ้า*
 </div> 
@@ -325,7 +325,7 @@ function Page3Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">พลังงานจลน์</div>
-    <div className="LabInfo"><br/>งานกับการเปลี่ยนพลังงานจลน์<br/><br/>
+    <div className="LabInfo">งานกับการเปลี่ยนพลังงานจลน์<br/><br/>
 เราได้ค้นพบแล้วว่างานจากแรงสามารถทำให้วัตถุที่อยู่นิ่ง เคลื่อนที่ได้ (มีพลังงานจลน์) แล้วหากวัตถุมีพลังงานจลน์อยู่แล้ว มีงานจากแรงเข้าไปกระทำเพิ่มอีกจะส่งผลอย่างไร
 
     <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
@@ -367,7 +367,7 @@ function Page5 (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">พลังงานจลน์</div>
-        <div className="LabInfo"><br/>จะกล่าวได้ว่าพลังงานจลน์ของจะเพิ่มหรือลดได้หากมีงานเนื่องจากแรงเข้ามากกระทำกับกับวัตถุ 
+        <div className="LabInfo">จะกล่าวได้ว่าพลังงานจลน์ของจะเพิ่มหรือลดได้หากมีงานเนื่องจากแรงเข้ามากกระทำกับกับวัตถุ 
         เช่น วัตถุกำลังเคลื่อนที่แล้วเราเอามือไปกั้นทำให้วัตถุหยุดเคลื่อนที่ หรือ ลูกบอลกำลังกลิ้งด้วยความเร็ว 5 m/s แล้วเราไปเตะลูกบอลทำให้ ความเร็วลูกบอลเพิ่มขึ้น
         <br/><br/><br/>********Matter js Again?*
         </div> 
@@ -395,7 +395,7 @@ function Page6 (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
             <div className="split Index">
           <div className="LabName">พลังงานจลน์</div>
-          <div className="LabInfo"><br/>รถมวล 800 kg แล่นด้วยความเร็ว 20 m/s คนขับเบรกรถ เมื่อเริ่มเบรกรถเคลื่อนไปได้อีก 10 m ก่อนจะหยุดนิ่ง จงหางานในการเบรกรถ
+          <div className="LabInfo">รถมวล 800 kg แล่นด้วยความเร็ว 20 m/s คนขับเบรกรถ เมื่อเริ่มเบรกรถเคลื่อนไปได้อีก 10 m ก่อนจะหยุดนิ่ง จงหางานในการเบรกรถ
 
           <br/><br/><br/>********ใส่รูปจ้า*
           </div> 
@@ -442,7 +442,7 @@ function Page6 (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
 <div className="LabName">พลังงานจลน์</div>
-<div className="LabInfo"><br/>เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
+<div className="LabInfo">เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
 วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
 <br/><br/><br/>********ใส่รูปจ้า*
 </div> 
