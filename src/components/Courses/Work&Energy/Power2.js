@@ -173,8 +173,6 @@ default :
   function Page1 (){
 return(
   <div>
-      {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo"><br/>ในบางครั้งพวกเราจะเห็นการบอกกำลังในหน่วยของ กำลังม้า (Horse Power : hp) หรือที่เรียกโดยทั่วไปว่า “แรงม้า” โดย 1 hp = 746 watt
@@ -201,8 +199,6 @@ return(
 function Page2 (){
 return(
   <div>
-      {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo"><br/>
@@ -296,8 +292,6 @@ function Page2Answered (){
 function Page3 (){
 return(
   <div>
-      {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div className="LabInfo"> <br/>จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
@@ -395,8 +389,6 @@ function Page3Answered (){
   function Page4 (){
     return(
       <div>
-          {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">กำลัง</div>
     <div className="LabInfo"><br/>นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
@@ -489,8 +481,6 @@ function Page3Answered (){
 function Page5 (){
         return(
           <div>
-              {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">กำลัง</div>
         <div className="LabInfo"><br/>กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 

@@ -159,8 +159,6 @@ default :
   function Page1 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จะสังเกตได้ว่า จากข้อที่ผ่านๆมา แรงจะมีทิศทางไปทางเดียวกับการกระจัด จะเป็นอย่างไรหากแรงกับการกระจัดมีทิศทางต่างๆกันออกไป</div> 
@@ -189,8 +187,6 @@ return(
 function Page2 (){
   return(
     <div>
-      {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div div className="LabInfo">ในกรณีที่แรงไม่ได้มีทิศทางเดียวกับการกระจัด เราจะทำการแยกองค์ประกอบแรง (เรียกง่ายๆว่า “แตกแรง”) 2 แรงที่ตั้งฉากกัน (แตกออกเป็นแกน x และ y) โดยให้แรงหนึ่งแนวขนานกับการกระจัด</div> 
@@ -223,8 +219,6 @@ function Page2 (){
   function Page3 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div div className="LabInfo">ในการแตกองค์ประกองของแรง จะยึดด้านที่อยู่ “ใกล้มุม” หรือ ด้านที่ติดกับมุมเป็น Fcosθ และด้านที่อยู่ “ไกลมุม” เป็น Fsinθ
@@ -263,8 +257,6 @@ function Page2 (){
 function Page4 (){
   return(
     <div>
-      {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div div className="LabInfo">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้
@@ -362,8 +354,6 @@ function Page4 (){
 function Page5 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา จากสมการจะได้</div> 
@@ -463,8 +453,6 @@ function Page5Answered (){
 function Page6 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div className="LabInfo">เช่นเดียวกับงานที่มีหลายแรงกระทำกับวัตถุ ให้ทำการรวมแรงแล้วค่อยคิดคำนวณ<br/>

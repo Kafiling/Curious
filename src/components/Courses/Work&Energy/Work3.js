@@ -186,8 +186,6 @@ default :
   function Page1 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จากคอร์สเรียนที่เราได้เรียน “W = F • S • Cosθ” จะสังเกตว่า
@@ -227,8 +225,6 @@ return(
 function Page2 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
@@ -324,8 +320,6 @@ function Page2Answered (){
 function Page3 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง
@@ -419,8 +413,6 @@ function Page3Answered (){
   function Page4 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/><br/>
@@ -520,8 +512,6 @@ function Page3Answered (){
 function Page5 (){
         return(
           <div>
-            {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div className="LabInfo">ด.ช.ป๋องเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่ ด.ช.ป๋อง ทำได้ในการหิ้วกระเป๋า
@@ -613,8 +603,6 @@ function Page5 (){
   function Page6 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน

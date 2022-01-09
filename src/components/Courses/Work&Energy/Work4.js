@@ -174,8 +174,6 @@ default :
   function Page1 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
 <div div className="LabInfo">จากการหางานที่ผ่านมาจะเป็นกรณีแรงคงตัวเท่านั้น แต่ในกรณีที่แรงไม่คงตัวเราจะคำนวณอย่างไร<br/>
@@ -217,8 +215,6 @@ return(
 function Page2 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
 <div div className="LabInfo">ดังนั้นในกรณีที่แรงกระทำต่อวัตถุไม่คงตัวเช่นแรงที่ใช้ดึงสปริง เราก็สามารถใช้หลักการเดียวกันใน การคิดงานเนื่องจากแรงด้วย พื้นที่ใต้กราฟ</div> 
@@ -258,8 +254,6 @@ return(
 function Page3 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
 <div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
@@ -387,8 +381,6 @@ function Page3Answered (){
   function Page4 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-        {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
     <div className="LabInfo">จะสังเกตว่าบางครั้งในกราฟจะแสดง แรงที่มีค่าติดลบ นั้นก็เพราะทิศทางของแรงกับการกระจัดตรงข้ามกันนั้นเอง และก็จะคิดค่างานออกมาได้เป็นงานติดลบด้วย
@@ -516,8 +508,6 @@ function Page3Answered (){
   function Page5 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
     <div className="LabInfo">ลองเล่นกิจกรรม “งานจากแรงไม่คงที่” ดูครับ

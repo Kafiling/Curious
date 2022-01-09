@@ -159,8 +159,6 @@ default :
   function Page1 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo">กำลัง (Power) คือ อัตราการทำงานหรืองานที่เกิดขึ้นในหนึ่งหน่วยเวลา<br/><br/>
@@ -192,8 +190,6 @@ return(
 function Page2 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo">โดยทั่วไป กำลังที่ใช้บอกความสามารถของอุปกรณ์ จะหมายถึง กำลังเฉลี่ย
@@ -224,8 +220,6 @@ return(
 function Page3 (){
 return(
   <div>
-    {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div className="LabInfo"><br/>ทำโจทย์เพื่อทดสอบความเข้าใจครับ<br/><br/>ปั้นจั่นยกของมวล 1500 กิโลกรัม ขึ้นสูง 10 เมตร ในเวลา 20 วินาที <br/>จงหากำลังของปั้นจั่นในการยกของนี้
@@ -320,8 +314,6 @@ function Page3Answered (){
   function Page4 (){
     return(
       <div>
-        {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
       <div className="split Index">
     <div className="LabName">กำลัง</div>
     <div className="LabInfo"><br/>จงหากำลังของเครื่องจักรเครื่องหนึ่ง ซึ่งกำลังยกวัตถุมวล 500 กิโลกรัม <br/>ขึ้นในแนวดิ่งด้วยความเร็วคงที่ 1.6 เมตรต่อวินาที
@@ -413,8 +405,6 @@ function Page3Answered (){
 function Page5 (){
         return(
           <div>
-            {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
           <div className="split Index">
         <div className="LabName">กำลัง</div>
         <div className="LabInfo"><br/>รถอีแต๋นคันหนึ่งใช้เครื่องยนต์ซึ่งมีกำลัง 5 กิโลวัตต์ <br/>สามารถแล่นได้เร็วสูงสุด 36 กิโลเมตรต่อชั่วโมง จงหาแรงฉุดสูงสุดของเครื่องยนต์
