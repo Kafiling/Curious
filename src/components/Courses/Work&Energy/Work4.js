@@ -2,9 +2,11 @@ import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
 import {Scene as Scene1} from './Material/Work4Scene1';
+import {Scene as Scene5} from './Material/Work4Scene5';
 import {MyChart as Chart1} from './Material/Work4Chart1';
 import {MyChart as Chart2} from './Material/Work4Chart2';
 import {MyChart1,MyChart2,MyChart3,MyChart4} from './Material/Work4Chart3';
+import {Chart5} from './Material/Work4Chart5';
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -152,8 +154,8 @@ function retry(){
   case 4 :
     if(Answer1.checked === false&& 
       Answer2.checked ===  false&& 
-      Answer3.checked === false && 
-      Answer4.checked === true ){correct(4)}
+      Answer3.checked === true && 
+      Answer4.checked === false ){correct(4)}
   else{incorrect(4)}
   break;
 case 5 :
@@ -412,7 +414,7 @@ function Page3Answered (){
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
       <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-      <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+      <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดเกิดงานน้อยที่สุด</div>
       <div className="AnswerList">
       <label className="container">กราฟ 1
           <input type="checkbox" id="Answer1" />
@@ -431,10 +433,10 @@ function Page3Answered (){
           <span className="checkmark"></span>
         </label>
     
-        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
       
     </div>
-    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
     <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
     
     </div>
@@ -475,31 +477,31 @@ function Page3Answered (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-        <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+        <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดเกิดงานน้อยที่สุด</div>
         <div className="AnswerList">
         <label className="container">กราฟ 1
             <input type="checkbox" id="Answer1" disabled  />
             <span className="checkmark" ></span>
           </label>
           <label className="container">กราฟ 2
-            <input type="checkbox" id="Answer2" checked disabled/>
-            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+            <input type="checkbox" id="Answer2" disabled/>
+            <span className="checkmark" ></span>
           </label>
           <label className="container">กราฟ 3
             <input type="checkbox" id="Answer3" checked disabled/>
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
           <label className="container">กราฟ 4
-            <input type="checkbox" id="Answer4" checked disabled/>
-            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+            <input type="checkbox" id="Answer4"  disabled/>
+            <span className="checkmark" ></span>
           </label>
       
           <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
         
       </div>
-      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
       
       </div>
       </div>)
@@ -510,15 +512,23 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-    <div className="LabInfo">ลองเล่นกิจกรรม “งานจากแรงไม่คงที่” ดูครับ
+    <div div className="LabInfo">จากการหางานที่ผ่านมาจะเป็นกรณีแรงคงตัวเท่านั้น แต่ในกรณีที่แรงไม่คงตัวเราจะคำนวณอย่างไร<br/>
+    เราลองสมมุติว่ามีแรง F กระทำต่อวัตถุให้เคลื่อนที่ไปตามแนวตรง โดยเคลื่อนที่ทิศทางตามแรง จะพล็อตกราฟ ตำแหน่งของวัตถุ กับ แรงได้ดังนี้
     </div> 
-    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-4.png?alt=media&token=1f05a2fd-c436-4560-8ea5-e3a693b52e3a" />
-     <div div className="LabInfo">ทบทวน : <MathJaxContext>
+    <div className='SceneContainer'>
+      <div class="chart-container" style={{position: "absolute" ,height: "300px", width: "500px", left: "45%"}}><Chart1/></div>
+      <Scene5/>
+    </div>
+     <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
+     <MathJaxContext>
       <MathJax>\[W = F \cdot S\]</MathJax>
+      <MathJax>\[W = F \cdot (X_{2} - X_{1})\]</MathJax>
+      <MathJax>\[W = 5 N \cdot 10 m\]</MathJax>
+      <MathJax>\[W = 50 \]</MathJax>
+      <MathJax>\[W = พื้นที่ใต้กราฟ \]</MathJax>
       </MathJaxContext>
-      โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-      F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-      S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+      จะได้ว่างานจากแรง F กระทำเป็นระยะกระจัด S มีค่าเท่ากับพื่นที่สี่เหลี่ยมใต้กราฟ F-S ที่เราสนใจนั้นเอง <br/>
+      W = F · S = พื้นที่ใต้กราฟ F-S
       </div> 
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
@@ -527,30 +537,30 @@ function Page3Answered (){
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="60" max="100"></progress></div>
-      <div className="Question">งานของแรงที่ดึงวัตถุมีขนาดเท่าใด</div>
+      <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+      <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดเกิดงานน้อยที่สุด</div>
       <div className="AnswerList">
-      <label className="container">80 J
+      <label className="container">กราฟ 1
           <input type="checkbox" id="Answer1" />
           <span className="checkmark"></span>
         </label>
-        <label className="container">200 J
+        <label className="container">กราฟ 2
           <input type="checkbox" id="Answer2"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">320 J
+        <label className="container">กราฟ 3
           <input type="checkbox" id="Answer3"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">400 J
-          <input type="checkbox" id="Answer4" />
-          <span className="checkmark" ></span>
+        <label className="container">กราฟ 4
+          <input type="checkbox" id="Answer4"/>
+          <span className="checkmark"></span>
         </label>
     
-        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(4)}>Send Answer</button>
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
       
     </div>
-    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
     <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
     
     </div>

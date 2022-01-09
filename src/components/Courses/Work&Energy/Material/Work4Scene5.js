@@ -16,6 +16,7 @@ export class Scene extends React.Component {
     Mouse = Matter.Mouse,
     Events = Matter.Events,
     MouseConstraint = Matter.MouseConstraint,
+    Constraint = Matter.Constraint,
     Composite = Matter.Composite;
     
 
@@ -34,41 +35,24 @@ var render = Render.create({
     }
 });
 
-// create boxe and a ground
-var boxA = Bodies.rectangle(70, 200, 80, 80);
-var pusher = Bodies.rectangle(-1000, 610, 850, 160, { isStatic: true }),counter = -1;;
-var ground = Bodies.rectangle(400, 610, 850, 60, { isStatic: true,  });
-var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
+// create box and a ground
+var boxA = Bodies.rectangle(400, 560, 80, 80);
+var ground = Bodies.rectangle(500, 610, 1000, 60, { isStatic: true,  });
 var wallL = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
+var wallR = Bodies.rectangle(1010, 300, 60, 600, { isStatic: true });
 var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
+
 // add all of the bodies to the world
-Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling]);
- // body is static so must manually update velocity for friction to work
-
- Events.on(engine, 'beforeUpdate', function(event) {
-        counter += 0.01;
-
-        if (counter < 0) {
-            return;
-        }
-
-        var px = -425 + 825 * Math.sin(counter);
-
-        // body is static so must manually update velocity for friction to work
-        Body.setVelocity(pusher, { x: 0, y: 0 });
-        Body.setPosition(pusher, { x: px, y: pusher.position.y });
-    });
-
-     Matter.Events.on(engine, 'afterUpdate', function(event){
-      if(boxA.position.y >= 650){
-      Body.setVelocity(boxA, { x: 0, y: 0 });
-      Body.setAngle(boxA, 0)
-      Body.setAngularVelocity(boxA, 0)
-      Body.setPosition(boxA, { x: 70, y: 200 })
-      }
-    })
-    
-
+Composite.add(engine.world, [boxA, ground, wallL ,wallR ,ceiling]);
+var constraint = Constraint.create({
+  bodyA: boxA,
+  bodyB: wallL,
+  pointB: { x: 20, y: 240 },
+  stiffness: 0.01,
+  damping: 0.05
+  
+});
+Composite.add(world, [constraint]);
 // add mouse control
     var mouse = Mouse.create(render.canvas),
         mouseConstraint = MouseConstraint.create(engine, {
@@ -98,6 +82,10 @@ Runner.run(runner, engine);
 var PosXBoxA = boxA.position.x
 var PosYBoxA = boxA.position.Y
 
+return{
+  PosXBoxA,PosYBoxA
+}
+
 }
 
   render() {
@@ -110,5 +98,6 @@ var PosYBoxA = boxA.position.Y
 
 }
 
-
+export var PosXBoxA
+export var PosYBoxA
 
