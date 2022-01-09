@@ -4,15 +4,25 @@ import {Link } from 'react-router-dom'
 import {Scene as Scene1} from './Material/Work4Scene1';
 import {MyChart as Chart1} from './Material/Work4Chart1';
 import {MyChart as Chart2} from './Material/Work4Chart2';
+import {MyChart1,MyChart2,MyChart3,MyChart4} from './Material/Work4Chart3';
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.primary,
+}));
 
 export default function Work4() {
 // Set Page
@@ -254,7 +264,24 @@ return(
 <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
 <div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
 </div> 
-
+<div className='SceneContainer'>
+<Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={4}>
+        <Grid item xs={6}>
+          <Item><MyChart1/>1</Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item><MyChart2/>2</Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item><MyChart3/>3</Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item><MyChart4/>4</Item>
+        </Grid>
+      </Grid>
+    </Box>
+    </div>
  
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -302,6 +329,24 @@ function Page3Answered (){
 <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
 <div className="LabInfo">และเราก็สามารถใช้หลักการเดียวกันนี้ในการคำนวณ งานเนื่องจากแรงต่างๆ
 </div> 
+<div className='SceneContainer'>
+<Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={4}>
+        <Grid item xs={6}>
+          <Item><MyChart1/>1</Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item><MyChart2/>2</Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item><MyChart3/>3</Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item><MyChart4/>4</Item>
+        </Grid>
+      </Grid>
+    </Box>
+    </div>
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
    <div div className="FooterSpace"></div>
@@ -340,6 +385,135 @@ function Page3Answered (){
   }
 
   function Page4 (){
+    return(
+      <div>
+        {AlertState.current === 1? <CorrectAlert/> : null}
+        {AlertState.current === 2? <IncorrectAlert/> : null}
+      <div className="split Index">
+    <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+    <div className="LabInfo">จะสังเกตว่าบางครั้งในกราฟจะแสดง แรงที่มีค่าติดลบ นั้นก็เพราะทิศทางของแรงกับการกระจัดตรงข้ามกันนั้นเอง และก็จะคิดค่างานออกมาได้เป็นงานติดลบด้วย
+    </div> 
+    <div className='SceneContainer'>
+    <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={4}>
+            <Grid item xs={6}>
+              <Item><MyChart1/>1</Item>
+            </Grid>
+            <Grid item xs={6}>
+              <Item><MyChart2/>2</Item>
+            </Grid>
+            <Grid item xs={6}>
+              <Item><MyChart3/>3</Item>
+            </Grid>
+            <Grid item xs={6}>
+              <Item><MyChart4/>4</Item>
+            </Grid>
+          </Grid>
+        </Box>
+        </div>
+     
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
+    
+    <div className="split QuestionAnswer"> 
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+      <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+      <div className="AnswerList">
+      <label className="container">กราฟ 1
+          <input type="checkbox" id="Answer1" />
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">กราฟ 2
+          <input type="checkbox" id="Answer2"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">กราฟ 3
+          <input type="checkbox" id="Answer3"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">กราฟ 4
+          <input type="checkbox" id="Answer4"/>
+          <span className="checkmark"></span>
+        </label>
+    
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+      
+    </div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+    
+    </div>
+    </div>)
+    }
+    
+    function Page4Answered (){
+      return(
+        <div>
+          {AlertState.current === 1? <CorrectAlert/> : null}
+        {AlertState.current === 2? <IncorrectAlert/> : null}
+        <div className="split Index">
+    <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+    <div className="LabInfo">จะสังเกตว่าบางครั้งในกราฟจะแสดง แรงที่มีค่าติดลบ นั้นก็เพราะทิศทางของแรงกับการกระจัดตรงข้ามกันนั้นเอง และก็จะคิดค่างานออกมาได้เป็นงานติดลบด้วย
+    </div> 
+    <div className='SceneContainer'>
+    <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={4}>
+            <Grid item xs={6}>
+              <Item><MyChart1/>1</Item>
+            </Grid>
+            <Grid item xs={6}>
+              <Item><MyChart2/>2</Item>
+            </Grid>
+            <Grid item xs={6}>
+              <Item><MyChart3/>3</Item>
+            </Grid>
+            <Grid item xs={6}>
+              <Item><MyChart4/>4</Item>
+            </Grid>
+          </Grid>
+        </Box>
+        </div>
+       <div div className="FooterSpace"></div>
+       <div className="Footer">Curious Project</div>
+       <div div className="FooterSpace"></div>
+      </div>
+      
+      <div className="split QuestionAnswer"> 
+        <div className="LabNumber">Introducing Work</div>
+        <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+        <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
+        <div className="AnswerList">
+        <label className="container">กราฟ 1
+            <input type="checkbox" id="Answer1" disabled  />
+            <span className="checkmark" ></span>
+          </label>
+          <label className="container">กราฟ 2
+            <input type="checkbox" id="Answer2" checked disabled/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">กราฟ 3
+            <input type="checkbox" id="Answer3" checked disabled/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">กราฟ 4
+            <input type="checkbox" id="Answer4" checked disabled/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+      
+          <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+        
+      </div>
+      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+      
+      </div>
+      </div>)
+      }
+
+  function Page5 (){
     return(
       <div>
         {AlertState.current === 1? <CorrectAlert/> : null}
@@ -393,7 +567,7 @@ function Page3Answered (){
     </div>)
     }
 
-    function Page4Answered (){
+    function Page5Answered (){
       return(
         <div>
           {AlertState.current === 1? <CorrectAlert/> : null}
@@ -452,120 +626,6 @@ function Page3Answered (){
       </div>
       </div>)
       }
-function Page5 (){
-        return(
-          <div>
-            {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
-          <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
-        <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
-        "งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดย<mark className="Yellow">งานจะขึ้นอยู่กับแรงและการกระจัด</mark>"
-        <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
-        </div> 
-        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
-         <div div className="LabInfo">ทบทวน : <MathJaxContext>
-          <MathJax>\[W = F \cdot S\]</MathJax>
-          </MathJaxContext>
-          โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-          F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-          S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-          </div> 
-         <div div className="FooterSpace"></div>
-         <div className="Footer">Curious Project</div>
-         <div div className="FooterSpace"></div>
-        </div>
-        
-        <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Introducing Work</div>
-          <div className="ProgessBar"><progress value="80" max="100"></progress></div>
-          <div className="Question">ข้อใดถูกต้องเกี่ยวกับงาน</div>
-          <div className="AnswerList">
-          <label className="container">งานมีสูตรว่า W = F ⋅ S
-              <input type="checkbox" id="Answer1" />
-              <span className="checkmark"></span>
-            </label>
-            <label className="container">ก่อนจะคิดงานต้องทำให้ทิศทางของการกระจัดกับแรงขนานกันก่อน
-              <input type="checkbox" id="Answer2"/>
-              <span className="checkmark"></span>
-            </label>
-            <label className="container">ยกของหนัก 10 N ขึ้น 1.5 m เกิดงาน 15 J
-              <input type="checkbox" id="Answer3"/>
-              <span className="checkmark"></span>
-            </label>
-            <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
-              <input type="checkbox" id="Answer4" />
-              <span className="checkmark" ></span>
-            </label>
-        
-            <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
-          
-        </div>
-        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
-        <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
-        
-        </div>
-        </div>)
-        }
-    
-        function Page5Answered (){
-          return(
-            <div>
-              {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
-            <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
-          <div className="LabInfo">มาทบทวนกันอีกทีนะ <br/><br/>
-        "งานตามความหมายของฟิสิกส์จะเกิดขึ้นได้ก็ต่อเมื่อ มีแรงมากระทำต่อวัตถุ ทำให้วัตถุมีการเคลื่อนที่เกิดการกระจัด โดย<mark className="Yellow">งานจะขึ้นอยู่กับแรงและการกระจัด</mark>"
-        <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
-          </div> 
-          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-1.png?alt=media&token=d2c2ffa4-f6bc-40db-a20c-85e175c8b831" />
-           <div div className="LabInfo"> วิธีคิด: ทำการแตกการกระจัดให้ขนานกับงานโดยใช้<a className="IndexWarp" href = "https://th.wikipedia.org/wiki/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B9%82%E0%B8%81%E0%B8%93%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%B4">
-             ฟังก์ชันตรีโกณมิติ</a> cos 53° = ชิด/ฉาก จะได้ว่า 3/5 = 8/x =&gt; x = 10 m <br/><br/>
-           จาก W = FS = 40 N(10 m) = 400 J
-           <br/><br/><br/> 
-             ทบทวน : <MathJaxContext>
-            <MathJax>\[W = F \cdot S\]</MathJax>
-            </MathJaxContext>
-            โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-            F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-            S แทน การกระจัด มีหน่วยเป็น เมตร (m)
-            </div> 
-           <div div className="FooterSpace"></div>
-           <div className="Footer">Curious Project</div>
-           <div div className="FooterSpace"></div>
-          </div>
-          
-          <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Introducing Work</div>
-            <div className="ProgessBar"><progress value="80" max="100"></progress></div>
-            <div className="Question">ข้อใดถูกต้องเกี่ยวกับงาน</div>
-            <div className="AnswerList">
-            <label className="container">งานมีสูตรว่า W = F ⋅ S
-                <input type="checkbox" id="Answer1" disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-              </label>
-              <label className="container">ก่อนจะคิดงานต้องทำให้ทิศทางของการกระจัดกับแรงขนานกันก่อน
-                <input type="checkbox" id="Answer2"disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-              </label>
-              <label className="container">ยกของหนัก 10 N ขึ้น 1.5 m เกิดงาน 15 J
-                <input type="checkbox" id="Answer3"disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-              </label>
-              <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
-                <input type="checkbox" id="Answer4" disabled checked/>
-                <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-              </label>
-          
-              <button className = "btn btn-glow btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
-            
-          </div>
-          <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
-          <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
-          </div>
-          </div>)
-  }
 
   function FinishPage (){
     sumScore()
