@@ -160,15 +160,31 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-<div div className="LabInfo"><br/>
-ค่านิจสปริง เป็นค่าคงตัวที่แสดงความแข็งของสปริง มีหน่วยเป็น N/m 
-เช่น สปริงในปากกามี<br/>ค่านิจสปริง 20 N/m หมายความว่า ต้องออกแรง 20 N ถึงจะหดสปริงได้ 1 m ในขณะที่สปริงของโช๊คมอเตอร์ไซค์ จะมีค่านิจสปริงอยู่ที่ 5000 N/m 
+<div div className="LabInfo">ด้านล่างเป็นตัวอย่างเพื่อเพิ่มความเข้าใจครับ<br/><br/>
+จากรูปวัตถุมีมวล 1 kg  เคลื่อนที่จากจุด A ไป จุด E โดยทางพื้นผิวไม่มีแรงเสียดทาน จงหาความเร็ววัตถุที่จุด C และ D
 
 
-<br/><br/><br/>********Matter.js เปลี่ยน ค่า K*<br/><br/><br/>
-ค่านิจสปริงจะมีส่วนสำคัญ เช่น สปริงปากกา ต้องการความสะดวกสะบาย ก็จะมีค่านิจสปริงน้อย เพื่อกดง่ายๆ 
-แต่สปริงของโช๊คมอเตอร์ไซค์จะมีค่านิจสปริงสูงเพื่อรับแรงกระแทก แต่ก็ไม่มาก<br/>เกินไปเพื่อความนิ่มนวลในการขับขี่
-
+<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*<br/><br/><br/>
+1) สามารถหาความเร็วที่จุด C เพราะพลังงานที่จุด A = พลังงานที่จุด C<br/>
+เราจะพบว่าที่จุด A มีพลังงานศักย์โน้มถ่วง (มีความสูง) และจุด C มีทั้งพลังงานศักย์โน้มถ่วง (มีความสูง) และ พลังงานจลน์ (มีความเร็ว)<br/>
+<MathJaxContext>
+      <MathJax>\[(m \cdot g \cdot h) ของ A = (m \cdot g \cdot h) ของ C + (\cfrac{1}{2} \cdot m \cdot v^2) \]
+        \[(1 \cdot 10 \cdot 5) = (1 \cdot 10 \cdot 2) + (\cfrac{1}{2} \cdot 1 \cdot v^2)\]
+        \[v^2 = (50-20) \cdot 2 \]
+        \[v^2 = 60 \]
+        \[v = 2\sqrt{15} m/s \]
+      </MathJax>
+      </MathJaxContext>
+      2) สามารถหาความเร็วที่จุด D เพราะพลังงานที่จุด A = พลังงานที่จุด D<br/>
+      เราจะพบว่าที่จุด A มีพลังงานศักย์โน้มถ่วง (มีความสูง) และจุด D มีแค่พลังงานจลน์ (มีความเร็ว)<br/>
+      <MathJaxContext>
+      <MathJax>\[(m \cdot g \cdot h) ของ A = (\cfrac{1}{2} \cdot m \cdot v^2) ของ D \]
+        \[(1 \cdot 10 \cdot 5) = (\cfrac{1}{2} \cdot 1 \cdot v^2)\]
+        \[v^2 = (50) \cdot 2 \]
+        \[v^2 = 100 \]
+        \[v = 10 m/s \]
+      </MathJax>
+      </MathJaxContext>
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -192,32 +208,43 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-<div className="LabInfo"> <br/>เมื่อเราสามารถหาแรงจากสปริงได้แล้ว เราก็สามารถหางานจากพื้นที่ใต้กราฟ F-S
-<br/><br/><br/>********Chart.js แบบเบิ้มๆ*<br/><br/><br/>
-<MathJaxContext>
-      <MathJax>\[W = พื้นที่ใต้กราฟ\]
-        \[W = \cfrac{1}{2} \cdot k \cdot x \cdot x\]
-        \[W = \cfrac{1}{2} \cdot k \cdot x^2\]
-      </MathJax>
-      </MathJaxContext>
+<div className="LabInfo">เรามาทดสอบความเข้าใจกันครับ <br/> <br/>
+  จากรูปวัตถุมีมวล 1 kg  เคลื่อนที่จากจุด A ไป จุด E โดยทางพื้นผิวไม่มีแรงเสียดทาน <br/>จงหาความเร็ววัตถุที่จุด B และ E
+<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
 
 </div> 
-
- 
 <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
-  <div className="AnswerList">
-  
-</div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-<button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+      <div className="Question"></div>
+      <div className="AnswerList">
+      <label className="container">5 m/s , 5 m/s
+          <input type="checkbox" id="Answer1" />
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">5√12 m/s , 2√15 m/s
+          <input type="checkbox" id="Answer2"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">2√15 m/s ,5√12 m/s
+          <input type="checkbox" id="Answer3"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">10 m/s , 10 m/s
+          <input type="checkbox" id="Answer4" />
+          <span className="checkmark" ></span>
+        </label>
+    
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(3)}>Send Answer</button>
+      
+    </div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 </div>
 </div>)
 }
@@ -226,7 +253,8 @@ function Page3Answered (){
     <div>
     <div className="split Index">
   <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-  <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
+  <div className="LabInfo">เรามาทดสอบความเข้าใจกันครับ <br/> <br/>จากรูปวัตถุมีมวล 1 kg  เคลื่อนที่จากจุด A ไป จุด E โดยทางพื้นผิวไม่มีแรงเสียดทาน <br/>จงหาความเร็ววัตถุที่จุด B และ E
+
 
 <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
   </div> 
@@ -241,28 +269,28 @@ function Page3Answered (){
     <div className="ProgessBar"><progress value="40" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
-    <label className="container">40 N/m
+    <label className="container">5 m/s , 5 m/s
         <input type="checkbox" id="Answer1" disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">80 N/m
-        <input type="checkbox" id="Answer2"disabled checked/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">5√12 m/s , 2√15 m/s
+        <input type="checkbox" id="Answer2"disabled/>
+        <span className="checkmark"></span>
       </label>
-      <label className="container">120 N/m
+      <label className="container">2√15 m/s ,5√12 m/s
         <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">180 N/m
-        <input type="checkbox" id="Answer4" disabled />
-        <span className="checkmark"></span>
+      <label className="container">10 m/s , 10 m/s
+        <input type="checkbox" id="Answer4" disabled checked />
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
   
       <button className = "btn btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
   
   </div>
   </div>)
@@ -272,8 +300,8 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-    <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
-    <br/> <br/><br/>ถ้าออกแรง 5 N กดสปริงที่มีค่านิจ 50 N/m จงหาว่าสปริงหดจากเดิมกี่ cm
+    <div className="LabInfo">ยิงจรวดขวดน้ำขึ้นด้วยความเร็ว 100 m/s ขึ้นในแนวดิ่ง จงหาว่าจรวดขวดน้ำจะขึ้นไปสูงสุดเท่าไร(ที่จุดสูงสุดความเร็วแนวดิ่ง = 0 เสมอ )
+
     <br/><br/><br/>********ใส่รูปจ้า*
     </div> 
      <div div className="FooterSpace"></div>
@@ -286,19 +314,19 @@ function Page3Answered (){
       <div className="ProgessBar"><progress value="60" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
-      <label className="container">0.1 cm
+      <label className="container">300 m
           <input type="checkbox" id="Answer1" />
           <span className="checkmark"></span>
         </label>
-        <label className="container">1 cm
+        <label className="container">400 m
           <input type="checkbox" id="Answer2"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">10 cm
+        <label className="container">500 m
           <input type="checkbox" id="Answer3"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">100 cm
+        <label className="container">550 m
           <input type="checkbox" id="Answer4" />
           <span className="checkmark" ></span>
         </label>
@@ -318,8 +346,8 @@ function Page3Answered (){
         <div>
         <div className="split Index">
       <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-      <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
-    <br/> <br/><br/>ถ้าออกแรง 5 N กดสปริงที่มีค่านิจ 50 N/m จงหาว่าสปริงหดจากเดิมกี่ cm
+      <div className="LabInfo">
+      ยิงจรวดขวดน้ำขึ้นด้วยความเร็ว 100 m/s ขึ้นในแนวดิ่ง จงหาว่าจรวดขวดน้ำจะขึ้นไปสูงสุดเท่าไร(ที่จุดสูงสุดความเร็วแนวดิ่ง = 0 เสมอ )
     <br/><br/><br/>********ใส่รูปจ้า*
       </div> 
      
@@ -333,19 +361,19 @@ function Page3Answered (){
         <div className="ProgessBar"><progress value="60" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">0.1 cm
+        <label className="container">300 m
             <input type="checkbox" id="Answer1" disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">1 cm
+          <label className="container">400 m
             <input type="checkbox" id="Answer2"disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">10 cm
+          <label className="container">500 m
             <input type="checkbox" id="Answer3"disabled checked/>
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
-          <label className="container">100 cm
+          <label className="container">550 m
             <input type="checkbox" id="Answer4" disabled />
             <span className="checkmark"></span>
           </label>
@@ -364,7 +392,7 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-        <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
+        <div className="LabInfo">ยิงธนูที่มีค่านิจสปริง 400 N/m ดึงสายธนู 10 cm ยิงลูกธนู 10 g ออกไป จงหาความเร็วของลูกธนูตอนออกจากคันธนู
 
         <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
         </div> 
@@ -378,19 +406,19 @@ function Page5 (){
         <div className="ProgessBar"><progress value="80" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">40 N/m
+        <label className="container">12.5 m/s
             <input type="checkbox" id="Answer1" />
             <span className="checkmark"></span>
           </label>
-          <label className="container">80 N/m
+          <label className="container">17.5 m/s
             <input type="checkbox" id="Answer2"/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">120 N/m
+          <label className="container">20 m/s
             <input type="checkbox" id="Answer3"/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">180 N/m
+          <label className="container">25 m/s
             <input type="checkbox" id="Answer4" />
             <span className="checkmark"></span>
           </label>
@@ -406,7 +434,7 @@ function Page5 (){
         <div>
         <div className="split Index">
       <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-      <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
+      <div className="LabInfo">ยิงธนูที่มีค่านิจสปริง 400 N/m ดึงสายธนู 10 cm ยิงลูกธนู 10 g ออกไป จงหาความเร็วของลูกธนูตอนออกจากคันธนู
 
 <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
       </div> 
@@ -421,19 +449,19 @@ function Page5 (){
         <div className="ProgessBar"><progress value="80" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">40 N/m
+        <label className="container">12.5 m/s
             <input type="checkbox" id="Answer1" disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">80 N/m
-            <input type="checkbox" id="Answer2"disabled checked/>
+          <label className="container">17.5 m/s
+            <input type="checkbox" id="Answer2"disabled/>
+            <span className="checkmark" ></span>
+          </label>
+          <label className="container">20 m/s
+            <input type="checkbox" id="Answer3"disabled checked/>
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
-          <label className="container">120 N/m
-            <input type="checkbox" id="Answer3"disabled/>
-            <span className="checkmark"></span>
-          </label>
-          <label className="container">180 N/m
+          <label className="container">25 m/s
             <input type="checkbox" id="Answer4" disabled />
             <span className="checkmark"></span>
           </label>
