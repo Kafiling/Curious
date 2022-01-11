@@ -41,9 +41,9 @@ var ground = Bodies.rectangle(500, 610, 1000, 60, { isStatic: true,  });
 var wallL = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var wallR = Bodies.rectangle(1010, 300, 60, 600, { isStatic: true });
 var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
-
+var pointer = Bodies.rectangle(965, 128, 10, 200,{ isStatic: true , render: { fillStyle: '#FFFFFF' } });
 // add all of the bodies to the world
-Composite.add(engine.world, [boxA, ground, wallL ,wallR ,ceiling]);
+Composite.add(engine.world, [boxA, ground, wallL ,wallR ,ceiling,pointer]);
 var constraint = Constraint.create({
   bodyA: boxA,
   bodyB: wallL,
@@ -64,6 +64,15 @@ Composite.add(world, [constraint]);
                 }
             }
         });
+var Distance = Math.pow((Math.pow(390 - boxA.position.x, 2)+Math.pow(550 - boxA.position.y, 2)), 1/2)
+function setPointer(){
+  Body.setPosition(pointer, { x: Distance, y : 128});
+  console.log (500)
+}
+ Matter.Events.on(engine, 'afterUpdate', function(event){
+setPointer()
+ })
+
 
     Composite.add(world, mouseConstraint);
 
@@ -79,12 +88,6 @@ var runner = Runner.create();
 // run the engine
 Runner.run(runner, engine);
 
-var PosXBoxA = boxA.position.x
-var PosYBoxA = boxA.position.Y
-
-return{
-  PosXBoxA,PosYBoxA
-}
 
 }
 

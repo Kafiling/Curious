@@ -516,7 +516,7 @@ function Page3Answered (){
     เราลองสมมุติว่ามีแรง F กระทำต่อวัตถุให้เคลื่อนที่ไปตามแนวตรง โดยเคลื่อนที่ทิศทางตามแรง จะพล็อตกราฟ ตำแหน่งของวัตถุ กับ แรงได้ดังนี้
     </div> 
     <div className='SceneContainer'>
-      <div class="chart-container" style={{position: "absolute" ,height: "300px", width: "500px", left: "45%"}}><Chart1/></div>
+      <div class="chart-container" style={{position: "absolute" ,height: "300px", width: "500px", left: "45%"}}><Chart5/></div>
       <Scene5/>
     </div>
      <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
