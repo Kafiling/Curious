@@ -2,16 +2,16 @@ import {Line} from 'react-chartjs-2';
 import { Chart } from 'chart.js/auto'
 import { PosXBoxA, PosYBoxA} from './Work4Scene5'
 const state = {
-    labels: ['0m','1m', '2m', '3m','4m','5m','6m','7m','8m','9m','10m'],
+    labels: ['-5m','-4m', '-3m', '-2m','-1m','0m','1m','2m','3m','4m','5m'],
     datasets: [
       {
         label: 'Force',
         fill: true,
         lineTension: 0.5,
-        backgroundColor: 'rgba(75,192,192,200)',
-        borderColor: 'rgba(0,0,0,1)',
+        backgroundColor: 'rgba(71,59,240,0.7)',
+        borderColor: 'rgba(255,255,255,1)',
         borderWidth: 2,
-        data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+        data: [-25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25]
       }
     ]
   }
@@ -30,6 +30,7 @@ const state = {
                   display:true,
                   position:'right'
                 }
+                
               }}
             />
           
