@@ -36,13 +36,14 @@ var render = Render.create({
 
 // create boxe and a ground
 var boxA = Bodies.rectangle(70, 200, 80, 80);
-var pusher = Bodies.rectangle(-1000, 610, 850, 160, { isStatic: true }),counter = -1;;
-var ground = Bodies.rectangle(400, 610, 850, 60, { isStatic: true,  });
+var pusher = Bodies.rectangle(-1000, 610, 900, 160, { isStatic: true }),counter = -1;;
+var ground = Bodies.rectangle(400, 610, 900, 60, { isStatic: true,  });
 var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var wallL = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
+var pointer = Bodies.rectangle(965, 128, 10, 200,{ isStatic: true , render: { fillStyle: '#FFFFFF' } });
 // add all of the bodies to the world
-Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling]);
+Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling, pointer]);
  // body is static so must manually update velocity for friction to work
 
  Events.on(engine, 'beforeUpdate', function(event) {
@@ -52,13 +53,19 @@ Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling]);
             return;
         }
 
-        var px = -425 + 825 * Math.sin(counter);
+        var px = -450 + 850 * Math.sin(counter);
 
         // body is static so must manually update velocity for friction to work
         Body.setVelocity(pusher, { x: 0, y: 0 });
         Body.setPosition(pusher, { x: px, y: pusher.position.y });
     });
+    function setPointer(){
 
+      Body.setPosition(pointer, { x: (boxA.position.x/2) + 475, y : 128});
+    }
+     Matter.Events.on(engine, 'afterUpdate', function(event){
+    setPointer()
+     })
      Matter.Events.on(engine, 'afterUpdate', function(event){
       if(boxA.position.y >= 650){
       Body.setVelocity(boxA, { x: 0, y: 0 });

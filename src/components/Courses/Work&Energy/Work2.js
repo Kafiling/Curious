@@ -141,10 +141,10 @@ function retry(){
   else{incorrect(5)}
   break;
   case 6 :
-    if(Answer1.checked === false&& 
+    if(Answer1.checked === true&& 
       Answer2.checked ===  false&& 
       Answer3.checked === false && 
-      Answer4.checked === true ){correct(6)}
+      Answer4.checked === false ){correct(6)}
   else{incorrect(6)}
   break;
 
@@ -195,7 +195,7 @@ function Page2 (){
    <img className='LabImg' id='img' alt ="LabImg"src="" />
    <br/><br/>ในภาพนี้ Fx เป็นแรงองค์ประกอบของ F ในแนวระดับ 
   
-  ส่วน Fy เป็นแรงองค์ประกอบของ F ในแนวตั้งฉากกับการกระจัด ซึ่งอยู่ในแนวดิ่ง ไม่ส่งผลต่อการเคลื่อนที่แนวระดับ จึงไม่มีผลกับการเกิดงาน (อธิบายอย่างระเอียดใน Work 3) 
+  ส่วน Fy เป็นแรงองค์ประกอบของ F ในแนวตั้งฉากกับการกระจัด ซึ่งอยู่ในแนวดิ่ง ไม่ส่งผลต่อการเคลื่อนที่แนวระดับ จึงไม่มีผลกับการเกิดงาน (อธิบายอย่างละเอียดในเนื้อหาถัดไป) 
   
    
     </div> 
@@ -480,19 +480,19 @@ return(
   : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
   </div>
   <div className="AnswerList">
-  <label className="container">1 J
+  <label className="container">85 J
       <input type="checkbox" id="Answer1" />
       <span className="checkmark"></span>
     </label>
-    <label className="container">1 J
+    <label className="container">95 J
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">1 J
+    <label className="container">105 J
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">1 J
+    <label className="container">115 J
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
@@ -539,19 +539,19 @@ function Page6Answered (){
     : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
     </div>
     <div className="AnswerList">
-    <label className="container">1 J
-        <input type="checkbox" id="Answer1" disabled/>
-        <span className="checkmark"></span>
+    <label className="container">85 J
+        <input type="checkbox" id="Answer1" checked disabled/>
+        <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">1 J
+      <label className="container">95 J
         <input type="checkbox" id="Answer2"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">1 J
+      <label className="container">105 J
         <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">1 J
+      <label className="container">115 J
         <input type="checkbox" id="Answer4"disabled/>
         <span className="checkmark"></span>
       </label>

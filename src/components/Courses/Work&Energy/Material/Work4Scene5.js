@@ -36,7 +36,7 @@ var render = Render.create({
 });
 
 // create box and a ground
-var boxA = Bodies.rectangle(400, 560, 80, 80);
+var boxA = Bodies.rectangle(10, 560, 80, 80);
 var ground = Bodies.rectangle(500, 610, 1000, 60, { isStatic: true,  });
 var wallL = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var wallR = Bodies.rectangle(1010, 300, 60, 600, { isStatic: true });
@@ -64,10 +64,13 @@ Composite.add(world, [constraint]);
                 }
             }
         });
-var Distance = Math.pow((Math.pow(390 - boxA.position.x, 2)+Math.pow(550 - boxA.position.y, 2)), 1/2)
+
 function setPointer(){
-  Body.setPosition(pointer, { x: Distance, y : 128});
-  console.log (500)
+  var Distance = (( 60 - boxA.position.x)**2+(540 - boxA.position.y)**2)**(1/2)
+  Body.setPosition(pointer, { x: (Distance/2) + 505, y : 128});
+  console.log (Distance)
+  console.log ("x" + boxA.position.x)
+  console.log ("y" + boxA.position.y)
 }
  Matter.Events.on(engine, 'afterUpdate', function(event){
 setPointer()

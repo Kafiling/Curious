@@ -159,10 +159,10 @@ function retry(){
   else{incorrect(4)}
   break;
 case 5 :
-  if(Answer1.checked === true&& 
+  if(Answer1.checked === false&& 
     Answer2.checked ===  true&& 
-    Answer3.checked === true && 
-    Answer4.checked === true ){correct(5)}
+    Answer3.checked === false && 
+    Answer4.checked === false ){correct(5)}
 else{incorrect(5)}
 break;
 default :
@@ -512,23 +512,26 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-    <div div className="LabInfo">จากการหางานที่ผ่านมาจะเป็นกรณีแรงคงตัวเท่านั้น แต่ในกรณีที่แรงไม่คงตัวเราจะคำนวณอย่างไร<br/>
-    เราลองสมมุติว่ามีแรง F กระทำต่อวัตถุให้เคลื่อนที่ไปตามแนวตรง โดยเคลื่อนที่ทิศทางตามแรง จะพล็อตกราฟ ตำแหน่งของวัตถุ กับ แรงได้ดังนี้
+    <div div className="LabInfo">ลองเล่นกิจกรรม “งานจากแรงไม่คงที่” ดูครับ<br/>
+    ให้นักเรียนลองทำการทดลองดังนี้
+    <li>ดึงสปริงในแนวแกนราบ</li>
+    <li>ดึงสปริงในแนวแกนดิ่ง</li>
+    <li>ดึงสปริงในแนวเฉียง</li>
     </div> 
     <div className='SceneContainer'>
       <div class="chart-container" style={{position: "absolute" ,height: "300px", width: "500px", left: "45%"}}><Chart5/></div>
       <Scene5/>
     </div>
-     <div div className="LabInfo">จากกราฟนี้แปลความหมายได้ว่ามีแรง 5N กระทำกับวัตถุทำให้วัตถุเลื่อนจากจุด X1 ไปจุด X2 เป็นระยะกระจัด 10 m
+     <div div className="LabInfo">จะสังเกตได้ว่าเมื่อเราดึงตัวสปริงยาวมากขึ้นเท่าไรก็จะใช้แรงมากขึ้นเรื่อยๆ เราสามารถใช้หลักการการหางานจากพื้นที่ใต้กราฟได้ดังนี้
      <MathJaxContext>
       <MathJax>\[W = F \cdot S\]</MathJax>
-      <MathJax>\[W = F \cdot (X_{2} - X_{1})\]</MathJax>
-      <MathJax>\[W = 5 N \cdot 10 m\]</MathJax>
-      <MathJax>\[W = 50 \]</MathJax>
       <MathJax>\[W = พื้นที่ใต้กราฟ \]</MathJax>
+      <MathJax>\[W = \frac{1}{2}\cdot B\cdot H\]</MathJax>
+      <MathJax>\[W = \frac{1}{2}\cdot 10\cdot 100\]</MathJax>
+      <MathJax>\[W = 500 J \]</MathJax>
+    
       </MathJaxContext>
-      จะได้ว่างานจากแรง F กระทำเป็นระยะกระจัด S มีค่าเท่ากับพื่นที่สี่เหลี่ยมใต้กราฟ F-S ที่เราสนใจนั้นเอง <br/>
-      W = F · S = พื้นที่ใต้กราฟ F-S
+      จะได้ว่างานจากแรงที่ใช้ดึงสปริงจากสภาพสมดุล เป็นระยะ 10 m มีค่าเท่ากับ 500 J 
       </div> 
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
@@ -538,21 +541,21 @@ function Page3Answered (){
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
       <div className="ProgessBar"><progress value="40" max="100"></progress></div>
-      <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดเกิดงานน้อยที่สุด</div>
+      <div className="Question">จากการทดลองดังกล่าว จงหางานที่ใช้ในการดึงสปริง 7 m </div>
       <div className="AnswerList">
-      <label className="container">กราฟ 1
+      <label className="container">250 J
           <input type="checkbox" id="Answer1" />
           <span className="checkmark"></span>
         </label>
-        <label className="container">กราฟ 2
+        <label className="container">350 J
           <input type="checkbox" id="Answer2"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">กราฟ 3
+        <label className="container">700 J
           <input type="checkbox" id="Answer3"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">กราฟ 4
+        <label className="container">850 J
           <input type="checkbox" id="Answer4"/>
           <span className="checkmark"></span>
         </label>
@@ -570,25 +573,30 @@ function Page3Answered (){
     function Page5Answered (){
       return(
         <div>
-          {AlertState.current === 1? <CorrectAlert/> : null}
-    {AlertState.current === 2? <IncorrectAlert/> : null}
+        {AlertState.current === 1? <CorrectAlert/> : null}
+        {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
-      <div className="LabInfo"><mark className="Yellow">มีเฉลยอยู่ด้านล่างจ้า</mark><br/><br/>เก่งมาก! ทีนี้มาลองอีกข้อนึงนะ! <br/><br/>
-      "ออกแรง 40 นิวตันทิศขนานกับทางลาด ดึงวัตถุขึ้นทางลาดผิวเกลี้ยงทำมุม 53 องศากับแนวระดับ เมื่อเคลื่อนวัตถุไปได้ไกล 8 เมตร <mark className="Yellow">ตามแนวราบ</mark> งานของแรงที่ดึงวัตถุมีขนาดเท่าใด"
-      <br/><br/>อย่าลืมว่าก่อนคิดงานต้องทำให้ทิศทางของแรงกับการกระจัดขนานกันก่อนนะ
+      <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+      <div div className="LabInfo">ลองเล่นกิจกรรม “งานจากแรงไม่คงที่” ดูครับ<br/>
+      ให้นักเรียนลองทำการทดลองดังนี้
+      <li>ดึงสปริงในแนวแกนราบ</li>
+      <li>ดึงสปริงในแนวแกนดิ่ง</li>
+      <li>ดึงสปริงในแนวเฉียง</li>
       </div> 
-      <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/Work%26Energy%2FWork01-5.png?alt=media&token=c6ecf8ac-db7d-453b-a0b1-716d94a736e6" />
-       <div div className="LabInfo"> วิธีคิด: ทำการแตกการกระจัดให้ขนานกับงานโดยใช้<a className="IndexWarp" href = "https://th.wikipedia.org/wiki/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B9%82%E0%B8%81%E0%B8%93%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%B4">
-         ฟังก์ชันตรีโกณมิติ</a> cos 53° = ชิด/ฉาก จะได้ว่า 3/5 = 8/x =&gt; x = 10 m <br/><br/>
-       จาก W = FS = 40 N(10 m) = 400 J
-       <br/><br/><br/> 
-         ทบทวน : <MathJaxContext>
+      <div className='SceneContainer'>
+        <div class="chart-container" style={{position: "absolute" ,height: "300px", width: "500px", left: "45%"}}><Chart5/></div>
+        <Scene5/>
+      </div>
+       <div div className="LabInfo">จะสังเกตได้ว่าเมื่อเราดึงตัวสปริงยาวมากขึ้นเท่าไรก็จะใช้แรงมากขึ้นเรื่อยๆ เราสามารถใช้หลักการการหางานจากพื้นที่ใต้กราฟได้ดังนี้
+       <MathJaxContext>
         <MathJax>\[W = F \cdot S\]</MathJax>
+        <MathJax>\[W = พื้นที่ใต้กราฟ \]</MathJax>
+        <MathJax>\[W = \frac{1}{2}\cdot B\cdot H\]</MathJax>
+        <MathJax>\[W = \frac{1}{2}\cdot 10\cdot 100\]</MathJax>
+        <MathJax>\[W = 500 J \]</MathJax>
+      
         </MathJaxContext>
-        โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-        F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
-        S แทน การกระจัด มีหน่วยเป็น เมตร (m)
+        จะได้ว่างานจากแรงที่ใช้ดึงสปริงจากสภาพสมดุล เป็นระยะ 10 m มีค่าเท่ากับ 500 J 
         </div> 
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
@@ -596,34 +604,33 @@ function Page3Answered (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
-        <div className="Question">งานของแรงที่ดึงวัตถุมีขนาดเท่าใด</div>
-        <div className="AnswerList">
-        <label className="container">80 J
-            <input type="checkbox" id="Answer1" disabled/>
-            <span className="checkmark"></span>
-          </label>
-          <label className="container">200 J
-            <input type="checkbox" id="Answer2"disabled/>
-            <span className="checkmark"></span>
-          </label>
-          <label className="container">320 J
-            <input type="checkbox" id="Answer3"disabled/>
-            <span className="checkmark"></span>
-          </label>
-          <label className="container">400 J
-            <input type="checkbox" id="Answer4" disabled checked/>
-            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
-          </label>
-      
-          <button className = "btn btn-glow btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+      <div className="Question">จากการทดลองดังกล่าว จงหางานที่ใช้ในการดึงสปริง 7 m </div>
+      <div className="AnswerList">
+      <label className="container" >250 J
+          <input type="checkbox" id="Answer1" disabled />
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">350 J
+          <input type="checkbox" id="Answer2" checked disabled/>
+          <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+        </label>
+        <label className="container">700 J
+          <input type="checkbox" id="Answer3" disabled/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">850 J
+          <input type="checkbox" id="Answer4" disabled/>
+          <span className="checkmark"></span>
+        </label>
+    
+        <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
         
-      </div>
-      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(3)}>Previous page</button>
-      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(5)}>Next page</button></div>
-      
-      </div>
+        </div>
+        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+        <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
+    </div>
       </div>)
       }
 
