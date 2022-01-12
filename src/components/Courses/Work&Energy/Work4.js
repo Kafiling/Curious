@@ -33,14 +33,18 @@ var [page, setPage] = useState(1);
 var [Answer3, setAnswer3] = useState(false);
 var [Answer4, setAnswer4] = useState(false);
 var [Answer5, setAnswer5] = useState(false);
+var [Answer6, setAnswer6] = useState(false);
+var [Answer7, setAnswer7] = useState(false);
 //Var Score
-const TotalQuestionNum = useRef(3)
+const TotalQuestionNum = useRef(5)
 const TotalScore = useRef(0)
 const CompletionScore = useRef(0)
 const BayesScore = useRef(0)
 const ScoreQuestion3 = useRef(0)
 const ScoreQuestion4 = useRef(0)
 const ScoreQuestion5 = useRef(0)
+const ScoreQuestion6 = useRef(0)
+const ScoreQuestion7 = useRef(0)
 //Alert
 const AlertState = useRef(0)
 var [Upvote, setUpvote] = useState(false);
@@ -80,7 +84,7 @@ function handleReport(){
 
 function sumScore(){
   
-  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current
+  TotalScore.current = ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current + ScoreQuestion6.current + ScoreQuestion7.current
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
   BayesScore.current = "Not Implemented"
 
@@ -106,6 +110,12 @@ function correct(QuestionPage){
     case 5 :setAnswer5(true)
     ScoreQuestion5.current = 1
       break;
+      case 6 :setAnswer6(true)
+    ScoreQuestion6.current = 1
+      break;
+      case 7 :setAnswer7(true)
+    ScoreQuestion7.current = 1
+      break;
     default :
     alert("Scoring Error")
     break;
@@ -121,6 +131,10 @@ function incorrect(QuestionPage){
     case 4 :setAnswer4(true)
       break;
     case 5 :setAnswer5(true)
+      break;
+     case 6 :setAnswer6(true)
+      break;
+      case 7 :setAnswer7(true)
       break;
     default :
     alert("Scoring Error")
@@ -164,6 +178,20 @@ case 5 :
     Answer3.checked === false && 
     Answer4.checked === false ){correct(5)}
 else{incorrect(5)}
+break;
+case 6 :
+  if(Answer1.checked === false&& 
+    Answer2.checked ===  false&& 
+    Answer3.checked === true && 
+    Answer4.checked === false ){correct(6)}
+else{incorrect(6)}
+break;
+case 7 :
+  if(Answer1.checked === true&& 
+    Answer2.checked ===  false&& 
+    Answer3.checked === false && 
+    Answer4.checked === false ){correct(7)}
+else{incorrect(7)}
 break;
 default :
     alert("Checking Error")
@@ -241,7 +269,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="14" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
   
@@ -286,7 +314,7 @@ return(
 
 <div className="split QuestionAnswer"> 
   <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+  <div className="ProgessBar"><progress value="28" max="100"></progress></div>
   <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
   <div className="AnswerList">
   <label className="container">กราฟ 1
@@ -350,7 +378,7 @@ function Page3Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="28" max="100"></progress></div>
     <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
     <div className="AnswerList">
     <label className="container">กราฟ 1
@@ -413,7 +441,7 @@ function Page3Answered (){
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+      <div className="ProgessBar"><progress value="42" max="100"></progress></div>
       <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดเกิดงานน้อยที่สุด</div>
       <div className="AnswerList">
       <label className="container">กราฟ 1
@@ -477,7 +505,7 @@ function Page3Answered (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="42" max="100"></progress></div>
         <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดเกิดงานน้อยที่สุด</div>
         <div className="AnswerList">
         <label className="container">กราฟ 1
@@ -540,7 +568,7 @@ function Page3Answered (){
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+      <div className="ProgessBar"><progress value="56" max="100"></progress></div>
       <div className="Question">จากการทดลองดังกล่าว จงหางานที่ใช้ในการดึงสปริง 7 m </div>
       <div className="AnswerList">
       <label className="container">250 J
@@ -605,7 +633,7 @@ function Page3Answered (){
       
       <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+      <div className="ProgessBar"><progress value="56" max="100"></progress></div>
       <div className="Question">จากการทดลองดังกล่าว จงหางานที่ใช้ในการดึงสปริง 7 m </div>
       <div className="AnswerList">
       <label className="container" >250 J
@@ -633,7 +661,181 @@ function Page3Answered (){
     </div>
       </div>)
       }
+function Page6 (){
+    return(
+      <div>
+      <div className="split Index">
+    <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+    <div div className="LabInfo">เมื่อมีแรงมากระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงโดยแรงทีี่กระทำสัมพันธ์กับการกระจัดดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ไปได้ไกล 20 เมตร
+      </div> 
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
+    
+    <div className="split QuestionAnswer"> 
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="70" max="100"></progress></div>
+      <div className="Question"></div>
+      <div className="AnswerList">
+      <label className="container">80 J
+          <input type="checkbox" id="Answer1" />
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">100 J
+          <input type="checkbox" id="Answer2"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">120 J
+          <input type="checkbox" id="Answer3"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">140 J
+          <input type="checkbox" id="Answer4"/>
+          <span className="checkmark"></span>
+        </label>
+    
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(6)}>Send Answer</button>
+      
+    </div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+    
+    </div>
+    </div>)
+    }
+    function Page6Answered (){
+      return(
+        <div>
+        {AlertState.current === 1? <CorrectAlert/> : null}
+        {AlertState.current === 2? <IncorrectAlert/> : null}
+        <div className="split Index">
+      <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+      <div div className="LabInfo">เมื่อมีแรงมากระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงโดยแรงทีี่กระทำสัมพันธ์กับการกระจัดดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ไปได้ไกล 20 เมตร
+        </div> 
+       <div div className="FooterSpace"></div>
+       <div className="Footer">Curious Project</div>
+       <div div className="FooterSpace"></div>
+      </div>
+      
+      <div className="split QuestionAnswer"> 
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="70" max="100"></progress></div>
+      <div className="Question"></div>
+      <div className="AnswerList">
+      <label className="container" >80 J
+          <input type="checkbox" id="Answer1" disabled />
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">100 J
+          <input type="checkbox" id="Answer2"disabled/>
+          <span className="checkmark" ></span>
+        </label>
+        <label className="container">120 J
+          <input type="checkbox" id="Answer3" checked disabled/>
+          <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+        </label>
+        <label className="container">140 J
+          <input type="checkbox" id="Answer4" disabled/>
+          <span className="checkmark"></span>
+        </label>
+    
+        <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+        
+        </div>
+        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+        <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(7)}>Next page</button></div>
+    </div>
+      </div>)
+      }
+  function Page7 (){
+    return(
+      <div>
+      <div className="split Index">
+    <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+    <div div className="LabInfo">แรงซึ่งไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะการกระจัดจาก 20 เมตร
+      </div> 
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
+    
+    <div className="split QuestionAnswer"> 
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="84" max="100"></progress></div>
+      <div className="Question"></div>
+      <div className="AnswerList">
+      <label className="container">400 J
+          <input type="checkbox" id="Answer1" />
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">408.2 J
+          <input type="checkbox" id="Answer2"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">450 J
+          <input type="checkbox" id="Answer3"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">471 J
+          <input type="checkbox" id="Answer4"/>
+          <span className="checkmark"></span>
+        </label>
+    
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(7)}>Send Answer</button>
+      
+    </div>
+    <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(6)}>Previous page</button>
+    <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
+    
+    </div>
+    </div>)
+    }
 
+    function Page7Answered (){
+      return(
+        <div>
+        {AlertState.current === 1? <CorrectAlert/> : null}
+        {AlertState.current === 2? <IncorrectAlert/> : null}
+        <div className="split Index">
+      <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
+      <div div className="LabInfo">แรงซึ่งไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะการกระจัดจาก 20 เมตร
+        </div> 
+       <div div className="FooterSpace"></div>
+       <div className="Footer">Curious Project</div>
+       <div div className="FooterSpace"></div>
+      </div>
+      
+      <div className="split QuestionAnswer"> 
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="84" max="100"></progress></div>
+      <div className="Question"></div>
+      <div className="AnswerList">
+      <label className="container" >400 J
+          <input type="checkbox" id="Answer1"checked  disabled />
+          <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+        </label>
+        <label className="container">408.2 J
+          <input type="checkbox" id="Answer2" disabled/>
+          <span className="checkmark" ></span>
+        </label>
+        <label className="container">450 J
+          <input type="checkbox" id="Answer3" disabled/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">471 J
+          <input type="checkbox" id="Answer4" disabled/>
+          <span className="checkmark"></span>
+        </label>
+    
+        <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
+        
+        </div>
+        <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(6)}>Previous page</button>
+        <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(8)}>Next page</button></div>
+    </div>
+      </div>)
+      }
   function FinishPage (){
     sumScore()
     return(
@@ -684,8 +886,19 @@ else if (page === 5 && Answer5 === false) {
   else if (page === 5 && Answer5 === true) {
       return(<div><Page5Answered/></div>)
   }
-  
-else if (page === 6) {return(
+  else if (page === 6 && Answer6 === false) {
+    return(<div><Page6/></div>)
+  }
+  else if (page === 6 && Answer6 === true) {
+      return(<div><Page6Answered/></div>)
+  }
+  else if (page === 7 && Answer7 === false) {
+    return(<div><Page7/></div>)
+  }
+  else if (page === 7 && Answer7 === true) {
+      return(<div><Page7Answered/></div>)
+  }
+else if (page === 8) {return(
     <div><FinishPage/></div>)}
     
 
