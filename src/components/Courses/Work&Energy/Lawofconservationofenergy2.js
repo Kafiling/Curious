@@ -44,7 +44,7 @@ function resetAlert(){
 function handleUpvote(){
   if(Upvote === false){
     db.collection('feedback').doc('upvote').update({
-      LCE1 : firebase.firestore.FieldValue.increment(1)
+      LCE2 : firebase.firestore.FieldValue.increment(1)
     })
     setUpvote(true)
     AlertState.current = 3
@@ -57,7 +57,7 @@ function handleReport(){
   if(Report === false){
     ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
     db.collection('report').doc(currentUser.providerData[0]['uid']).set({
-      LCE1: ReportText.current
+      LCE2: ReportText.current
   }, { merge: true });
     setReport(true)
     AlertState.current = 4
