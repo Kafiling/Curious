@@ -2,6 +2,7 @@ import React ,{useState , useRef, useContext}from 'react'
 import {MathJax, MathJaxContext} from 'better-react-mathjax'
 import {Link } from 'react-router-dom'
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
+import {Scene as Scene1} from './Material/Work2Scene1';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 //ประกาศตัวแปรของ Firebase Service
@@ -363,8 +364,8 @@ return(
   <MathJax>\[W = -F \cdot S \]</MathJax>
   </MathJaxContext>
  <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง แต่เครื่องหมายบวกหรือลบของงานไม่ได้เป็นสิ่งที่แสดงทิศทางของงาน เพราะงานเป็นปริมาณสเกลาร์จึงไม่มีทิศทาง <mark>งานที่ติดลบมักจะพบได้เมื่อมีแรงต้าน ที่ไปต้านการเคลื่อนที่ของวัตถุ</mark>เช่น แรงต้านอากาศ แรงเสียดทาน แรงตึงผิว
-  </div> 
- 
+  <br/><br/></div> 
+  <Scene1/>
   <div div className="LabInfo"> ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
   </div> 
  <div div className="FooterSpace"></div>

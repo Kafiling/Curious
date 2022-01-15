@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useRef} from "react";
 import Matter from "matter-js";
 
 
@@ -6,6 +6,7 @@ export class Scene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    
   }
   componentDidMount() {
     var Engine = Matter.Engine,
@@ -17,7 +18,8 @@ export class Scene extends React.Component {
     Events = Matter.Events,
     MouseConstraint = Matter.MouseConstraint,
     Composite = Matter.Composite;
-    
+   
+
 
 // create an engine
 var engine = Engine.create(),
@@ -35,45 +37,37 @@ var render = Render.create({
 });
 
 // create boxe and a ground
-var boxA = Bodies.rectangle(70, 200, 80, 80);
-var pusher = Bodies.rectangle(-1000, 610, 900, 160, { isStatic: true }),counter = -1;;
-var ground = Bodies.rectangle(400, 610, 900, 60, { isStatic: true,  });
-var wallR = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
+var boxA = Bodies.rectangle(250, 100, 60, 60, { frictionAir: 0.001 });
+var boxB = Bodies.rectangle(500, 100, 60, 60, { frictionAir: 0.05 });
+var boxC = Bodies.rectangle(750, 100, 60, 60, { frictionAir: 0.1 });
+var ground = Bodies.rectangle(500, 610, 1000, 60, { isStatic: true,  });
+var wallR = Bodies.rectangle(1010, 300, 60, 600, { isStatic: true });
 var wallL = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
 var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
-var pointer = Bodies.rectangle(965, 128, 10, 200,{ isStatic: true , render: { fillStyle: '#FFFFFF' } });
+
 // add all of the bodies to the world
-Composite.add(engine.world, [boxA, pusher, ground, wallL ,wallR ,ceiling, pointer]);
- // body is static so must manually update velocity for friction to work
+Composite.add(engine.world, [boxA, boxB, boxC, ground, wallL ,wallR ,ceiling]);
 
- Events.on(engine, 'beforeUpdate', function(event) {
-        counter += 0.01;
+function resetPos(){
+  //A
+  Body.setVelocity(boxA, { x: 0, y: 0 });
+  Body.setAngle(boxA, 0)
+  Body.setAngularVelocity(boxA, 0)
+  Body.setPosition(boxA, { x: 250, y: 100 })
+  //B
+  Body.setVelocity(boxB, { x: 0, y: 0 });
+  Body.setAngle(boxB, 0)
+  Body.setAngularVelocity(boxB, 0)
+  Body.setPosition(boxB, { x: 500, y: 100 })
+  //C
+  Body.setVelocity(boxC, { x: 0, y: 0 });
+  Body.setAngle(boxC, 0)
+  Body.setAngularVelocity(boxC, 0)
+  Body.setPosition(boxC, { x: 750, y: 100 })
 
-        if (counter < 0) {
-            return;
-        }
-
-        var px = -450 + 850 * Math.sin(counter);
-
-        // body is static so must manually update velocity for friction to work
-        Body.setVelocity(pusher, { x: 0, y: 0 });
-        Body.setPosition(pusher, { x: px, y: pusher.position.y });
-    });
-    function setPointer(){
-
-      Body.setPosition(pointer, { x: (boxA.position.x/2) + 475, y : 128});
-    }
-     Matter.Events.on(engine, 'afterUpdate', function(event){
-    setPointer()
-     })
-     Matter.Events.on(engine, 'afterUpdate', function(event){
-      if(boxA.position.y >= 650){
-      Body.setVelocity(boxA, { x: 0, y: 0 });
-      Body.setAngle(boxA, 0)
-      Body.setAngularVelocity(boxA, 0)
-      Body.setPosition(boxA, { x: 70, y: 200 })
-      }
-    })
+  setTimeout(resetPos, 6000);
+}
+resetPos()
     
 
 // add mouse control
