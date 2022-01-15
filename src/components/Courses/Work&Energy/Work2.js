@@ -358,7 +358,7 @@ return(
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา จากสมการจะได้</div> 
-<img className='LabImg' id='img' alt ="LabImg"src="" />
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P5.gif?alt=media&token=9bc1d693-a7b7-4b13-9718-9b4fd5e1497c" />
 <MathJaxContext>
   <MathJax>\[W = F \cdot S \cdot cos180°   = F \cdot S \cdot (-1)\]</MathJax>
   <MathJax>\[W = -F \cdot S \]</MathJax>
@@ -366,6 +366,8 @@ return(
  <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง แต่เครื่องหมายบวกหรือลบของงานไม่ได้เป็นสิ่งที่แสดงทิศทางของงาน เพราะงานเป็นปริมาณสเกลาร์จึงไม่มีทิศทาง <mark>งานที่ติดลบมักจะพบได้เมื่อมีแรงต้าน ที่ไปต้านการเคลื่อนที่ของวัตถุ</mark>เช่น แรงต้านอากาศ แรงเสียดทาน แรงตึงผิว
   <br/><br/></div> 
   <Scene1/>
+  <div div className="LabInfo"> ด้านบนเป็น Simulation โดยกล่องทั้ง 3 มีสัมประสิทธิ์แรงต้านอากาศไม่เท่ากัน อันที่มีสัมประสิทธิ์น้อย(แรงต้านอากาศน้อย) จะตกเร็วกว่าอันที่มีสัมประสิทธิ์แรงต้านอากาศมาก เพราะมีงานต้านอากาศน้อยกว่านั้นเอง
+  </div>
   <div div className="LabInfo"> ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
   </div> 
  <div div className="FooterSpace"></div>
@@ -386,7 +388,7 @@ return(
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">งานจากการโยนของขึ้นชั้นบน
+    <label className="container">งานจากการถือกระเป๋าเดินบนพื้นราบ
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
@@ -409,18 +411,24 @@ function Page5Answered (){
       {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
-  <div className="LabName">งานทางฟิสิกส์</div>
-  <div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา ซึ่งจะได้ว่า</div> 
-  <img className='LabImg' id='img' alt ="LabImg"src="" />
-  <MathJaxContext>
-    <MathJax>\[W = F \cdot S \cdot cos180° = F \cdot S \cdot (-1)\]</MathJax>
-    </MathJaxContext>
-   <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง แต่เครื่องหมายบวกหรือลบของงานไม่ได้เป็นสิ่งที่แสดงทิศทางของงาน เพราะงานเป็นปริมาณสเกลาร์จึงไม่มีทิศทาง<br/> <br/> ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
-    </div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
+<div className="LabName">งานทางฟิสิกส์</div>
+<div div className="LabInfo">จากหลักการเบื้องต้นจะเห็นว่า เมื่อแรงกับการกระจัดอยู่ในทิศทางตรงข้ามกัน<br/>จะทำมุมกัน 180 องศา จากสมการจะได้</div> 
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P5.gif?alt=media&token=9bc1d693-a7b7-4b13-9718-9b4fd5e1497c" />
+<MathJaxContext>
+  <MathJax>\[W = F \cdot S \cdot cos180°   = F \cdot S \cdot (-1)\]</MathJax>
+  <MathJax>\[W = -F \cdot S \]</MathJax>
+  </MathJaxContext>
+ <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง แต่เครื่องหมายบวกหรือลบของงานไม่ได้เป็นสิ่งที่แสดงทิศทางของงาน เพราะงานเป็นปริมาณสเกลาร์จึงไม่มีทิศทาง <mark>งานที่ติดลบมักจะพบได้เมื่อมีแรงต้าน ที่ไปต้านการเคลื่อนที่ของวัตถุ</mark>เช่น แรงต้านอากาศ แรงเสียดทาน แรงตึงผิว
+  <br/><br/></div> 
+  <Scene1/>
+  <div div className="LabInfo"> ด้านบนเป็น Simulation โดยกล่องทั้ง 3 มีสัมประสิทธิ์แรงต้านอากาศไม่เท่ากัน อันที่มีสัมประสิทธิ์น้อย(แรงต้านอากาศน้อย) จะตกเร็วกว่าอันที่มีสัมประสิทธิ์แรงต้านอากาศมาก เพราะมีงานต้านอากาศน้อยกว่านั้นเอง
   </div>
+  <div div className="LabInfo"> ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
+  </div> 
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Playing with angles</div>
@@ -435,7 +443,7 @@ function Page5Answered (){
         <input type="checkbox" id="Answer2"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">งานจากการโยนของขึ้นชั้นบน
+      <label className="container">งานจากการถือกระเป๋าเดินบนพื้นราบ
         <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
@@ -463,7 +471,7 @@ return(
 <div className="LabInfo">เช่นเดียวกับงานที่มีหลายแรงกระทำกับวัตถุ ให้ทำการรวมแรงแล้วค่อยคิดคำนวณ<br/>
 โดยแรงที่สามารถรวมกันได้จะต้องแตกแรงให้อยู่ในทิศทางเดียวกันก่อน<br/>
 </div> 
-<img className='LabImg' id='img' alt ="LabImg"src="" />
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P6.gif?alt=media&token=82783dbe-3b91-4453-a9da-975f5ad9adec" />
  <div div className="LabInfo">เราลองเอาหลักการงานนี้ไปปรับใช้ทำโจทย์ด้านขวามือกันครับ<br/>
  <br/>ทบทวน : <MathJaxContext>
   <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
@@ -485,19 +493,19 @@ return(
   : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
   </div>
   <div className="AnswerList">
-  <label className="container">85 J
+  <label className="container">90 J
       <input type="checkbox" id="Answer1" />
       <span className="checkmark"></span>
     </label>
-    <label className="container">95 J
+    <label className="container">100 J
       <input type="checkbox" id="Answer2"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">105 J
+    <label className="container">120 J
       <input type="checkbox" id="Answer3"/>
       <span className="checkmark"></span>
     </label>
-    <label className="container">115 J
+    <label className="container">150 J
       <input type="checkbox" id="Answer4"/>
       <span className="checkmark"></span>
     </label>
@@ -522,7 +530,7 @@ function Page6Answered (){
   <div className="LabInfo">เช่นเดียวกับงานที่มีหลายแรงกระทำกับวัตถุ ให้ทำการรวมแรงแล้วค่อยคิดคำนวณ<br/>
   โดยแรงที่สามารถรวมกันได้จะต้องแตกแรงให้อยู่ในทิศทางเดียวกันก่อน<br/>
   </div> 
-  <img className='LabImg' id='img' alt ="LabImg"src="" />
+  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P6.gif?alt=media&token=82783dbe-3b91-4453-a9da-975f5ad9adec" />
    <div div className="LabInfo">เราลองเอาหลักการงานนี้ไปปรับใช้ทำโจทย์ด้านขวามือกันครับ<br/>
    <br/>ทบทวน : <MathJaxContext>
     <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
@@ -544,19 +552,19 @@ function Page6Answered (){
     : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
     </div>
     <div className="AnswerList">
-    <label className="container">85 J
+    <label className="container">90 J
         <input type="checkbox" id="Answer1" checked disabled/>
         <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">95 J
+      <label className="container">100 J
         <input type="checkbox" id="Answer2"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">105 J
+      <label className="container">120 J
         <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">115 J
+      <label className="container">150 J
         <input type="checkbox" id="Answer4"disabled/>
         <span className="checkmark"></span>
       </label>
