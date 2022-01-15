@@ -205,7 +205,7 @@ return(
 1) สามารถหาความเร็วที่จุด C เพราะพลังงานที่จุด A = พลังงานที่จุด C<br/>
 เราจะพบว่าที่จุด A มีพลังงานศักย์โน้มถ่วง (มีความสูง) และจุด C มีทั้งพลังงานศักย์โน้มถ่วง (มีความสูง) และ พลังงานจลน์ (มีความเร็ว)<br/>
 <MathJaxContext>
-      <MathJax>\[(m \cdot g \cdot h) ของ A = (m \cdot g \cdot h) ของ C + (\cfrac{1}{2} \cdot m \cdot v^2) \]
+      <MathJax>\[(m \cdot g \cdot h)_A = (m \cdot g \cdot h)_C + (\cfrac{1}{2} \cdot m \cdot v^2)_C \]
         \[(1 \cdot 10 \cdot 5) = (1 \cdot 10 \cdot 2) + (\cfrac{1}{2} \cdot 1 \cdot v^2)\]
         \[v^2 = (50-20) \cdot 2 \]
         \[v^2 = 60 \]
@@ -215,7 +215,7 @@ return(
       2) สามารถหาความเร็วที่จุด D เพราะพลังงานที่จุด A = พลังงานที่จุด D<br/>
       เราจะพบว่าที่จุด A มีพลังงานศักย์โน้มถ่วง (มีความสูง) และจุด D มีแค่พลังงานจลน์ (มีความเร็ว)<br/>
       <MathJaxContext>
-      <MathJax>\[(m \cdot g \cdot h) ของ A = (\cfrac{1}{2} \cdot m \cdot v^2) ของ D \]
+      <MathJax>\[(m \cdot g \cdot h)_A = (\cfrac{1}{2} \cdot m \cdot v^2)_D \]
         \[(1 \cdot 10 \cdot 5) = (\cfrac{1}{2} \cdot 1 \cdot v^2)\]
         \[v^2 = (50) \cdot 2 \]
         \[v^2 = 100 \]

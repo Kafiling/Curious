@@ -57,7 +57,7 @@ export default function Dashboard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+          Introducing Work
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -76,7 +76,7 @@ export default function Dashboard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+          Playing with angles
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Lizards are a widespread group of squamate reptiles, with over 6,000

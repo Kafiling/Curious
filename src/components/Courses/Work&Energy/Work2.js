@@ -164,7 +164,7 @@ return(
 <div div className="LabInfo">จะสังเกตได้ว่า จากข้อที่ผ่านๆมา แรงจะมีทิศทางไปทางเดียวกับการกระจัด จะเป็นอย่างไรหากแรงกับการกระจัดมีทิศทางต่างๆกันออกไป</div> 
 <br/><br/>
  <div div className="LabInfo">
- <img className='LabImg' id='img' alt ="LabImg"src="" />
+ <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P1.gif?alt=media&token=26321e6d-a316-491a-b10b-d837237a8dff" />
  
   </div> 
  <div div className="FooterSpace"></div>
@@ -173,7 +173,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Playing with angles</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -192,7 +192,7 @@ function Page2 (){
   <div div className="LabInfo">ในกรณีที่แรงไม่ได้มีทิศทางเดียวกับการกระจัด เราจะทำการแยกองค์ประกอบแรง (เรียกง่ายๆว่า “แตกแรง”) 2 แรงที่ตั้งฉากกัน (แตกออกเป็นแกน x และ y) โดยให้แรงหนึ่งแนวขนานกับการกระจัด</div> 
   <br/><br/>
    <div div className="LabInfo">
-   <img className='LabImg' id='img' alt ="LabImg"src="" />
+   <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P2.png?alt=media&token=df68d801-87a3-4b94-b4b0-4e8fa70d21d3" />
    <br/><br/>ในภาพนี้ Fx เป็นแรงองค์ประกอบของ F ในแนวระดับ 
   
   ส่วน Fy เป็นแรงองค์ประกอบของ F ในแนวตั้งฉากกับการกระจัด ซึ่งอยู่ในแนวดิ่ง ไม่ส่งผลต่อการเคลื่อนที่แนวระดับ จึงไม่มีผลกับการเกิดงาน (อธิบายอย่างละเอียดในเนื้อหาถัดไป) 
@@ -205,7 +205,7 @@ function Page2 (){
   </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Playing with angles</div>
     <div className="ProgessBar"><progress value="17" max="100"></progress></div>
     <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
     <div className="AnswerList">
@@ -225,7 +225,7 @@ function Page2 (){
   </div> 
   
      <div div className="LabInfo">
-     <img className='LabImg' id='img' alt ="LabImg"src="" />
+     <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P3.png?alt=media&token=f592b0b3-e591-4a1d-b6ae-f82f8b16bb4d" />
      <br/><br/>ดังนั้น งานจากแรง F ในภาพนี้ จะมีค่าเท่ากับ<br/>
      <MathJaxContext>
       <MathJax>\[W = F \cdot S \cdot cos \theta \]</MathJax>
@@ -233,7 +233,7 @@ function Page2 (){
         โดย<br/>W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
       F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
       S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
-      และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด องศา (°)
+      และ θ แทน มุมระหว่างทิศทางออกแรงกับการกระจัด มีหน่วยเป็น องศา (°)
   
       <br/><br/>ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
       </div> 
@@ -244,7 +244,7 @@ function Page2 (){
     
   
       <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Playing with angles</div>
     <div className="ProgessBar"><progress value="34" max="100"></progress></div>
     <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
     <div className="AnswerList"></div>
@@ -263,7 +263,7 @@ function Page4 (){
 </div> 
 
    <div div className="LabInfo">
-   <img className='LabImg' id='img' alt ="LabImg"src="" />
+   <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P4.png?alt=media&token=e824d974-dcd5-4290-ba83-c2b960aca2f5" />
   
     </div> 
    <div div className="FooterSpace"></div>
@@ -273,7 +273,7 @@ function Page4 (){
   
 
     <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Playing with angles</div>
   <div className="ProgessBar"><progress value="51" max="100"></progress></div>
   <div className="Question">จงหางานในการฉุดวัตถุนี้</div>
   <div className="AnswerList">
@@ -309,11 +309,11 @@ function Page4 (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
-  <div div className="LabInfo">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยความเร็วคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้
+  <div div className="LabInfo">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยแรงคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้
 </div> 
 
    <div div className="LabInfo">
-   <img className='LabImg' id='img' alt ="LabImg"src="" />
+   <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P4.png?alt=media&token=e824d974-dcd5-4290-ba83-c2b960aca2f5" />
   
     </div> 
    <div div className="FooterSpace"></div>
@@ -322,7 +322,7 @@ function Page4 (){
   </div>
   
       <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Playing with angles</div>
     <div className="ProgessBar"><progress value="51" max="100"></progress></div>
     <div className="Question">จงหางานในการฉุดวัตถุนี้</div>
     <div className="AnswerList">
@@ -360,8 +360,12 @@ return(
 <img className='LabImg' id='img' alt ="LabImg"src="" />
 <MathJaxContext>
   <MathJax>\[W = F \cdot S \cdot cos180°   = F \cdot S \cdot (-1)\]</MathJax>
+  <MathJax>\[W = -F \cdot S \]</MathJax>
   </MathJaxContext>
- <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง แต่เครื่องหมายบวกหรือลบของงานไม่ได้เป็นสิ่งที่แสดงทิศทางของงาน เพราะงานเป็นปริมาณสเกลาร์จึงไม่มีทิศทาง <br/> <br/> ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
+ <div div className="LabInfo">ซึ่งจะทำให้งานติดลบนั่นเอง แต่เครื่องหมายบวกหรือลบของงานไม่ได้เป็นสิ่งที่แสดงทิศทางของงาน เพราะงานเป็นปริมาณสเกลาร์จึงไม่มีทิศทาง <mark>งานที่ติดลบมักจะพบได้เมื่อมีแรงต้าน ที่ไปต้านการเคลื่อนที่ของวัตถุ</mark>เช่น แรงต้านอากาศ แรงเสียดทาน แรงตึงผิว
+  </div> 
+ 
+  <div div className="LabInfo"> ทดสอบความเข้าใจได้โดยทำโจทย์ด้านขวามือครับ 
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -369,7 +373,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Playing with angles</div>
   <div className="ProgessBar"><progress value="68" max="100"></progress></div>
   <div className="Question">งานในข้อใดมีค่าติดลบ</div>
   <div className="AnswerList">
@@ -418,7 +422,7 @@ function Page5Answered (){
   </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Playing with angles</div>
     <div className="ProgessBar"><progress value="68" max="100"></progress></div>
     <div className="Question">งานในข้อใดมีค่าติดลบ</div>
     <div className="AnswerList">
@@ -474,7 +478,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Playing with angles</div>
   <div className="ProgessBar"><progress value="85" max="100"></progress></div>
   <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
   : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
@@ -533,7 +537,7 @@ function Page6Answered (){
   </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Playing with angles</div>
     <div className="ProgessBar"><progress value="85" max="100"></progress></div>
     <div className="Question">จากภาพจะมีงานที่เกิดจากแรงลัพธ์เท่าไหร่<br/>
     : กำหนดให้ระยะทางหลังจากเกิดแรงลัพธ์คือ 3 เมตร
