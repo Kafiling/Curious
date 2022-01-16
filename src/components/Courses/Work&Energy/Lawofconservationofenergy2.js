@@ -44,7 +44,7 @@ function resetAlert(){
 function handleUpvote(){
   if(Upvote === false){
     db.collection('feedback').doc('upvote').update({
-      LCE2 : firebase.firestore.FieldValue.increment(1)
+      LCE1 : firebase.firestore.FieldValue.increment(1)
     })
     setUpvote(true)
     AlertState.current = 3
@@ -57,7 +57,7 @@ function handleReport(){
   if(Report === false){
     ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
     db.collection('report').doc(currentUser.providerData[0]['uid']).set({
-      LCE2: ReportText.current
+      LCE1: ReportText.current
   }, { merge: true });
     setReport(true)
     AlertState.current = 4
@@ -233,9 +233,17 @@ return(
 <div div className="LabInfo">
 แรงเสริมหรือแรงต้าน<br/><br/>
 เมื่อวัตถุถูกกระทำด้วยแรง ระหว่างเคลื่อนที่จากจุดหนึ่งไปอีกจุดหนึ่ง เราสามารถคิดเป็นงาน
-<br/>จากแรงเสริม/ต้าน เพิ่มเข้าไปในระบบได้เลย เช่น<br/> รถของเล่นมวล 2 kg เคลื่อนที่ด้วยความเร็ว 10 m/s ถูกผลักด้วยแรง 10N เป็นระยะทาง 10 m จงหาความเร็วของรถหลังถูกแรงกระทำ
-
-
+<br/>จากแรงเสริม/ต้าน เพิ่มเข้าไปในระบบได้เลย เช่น<br/><br/>รถของเล่นมวล 2 kg เคลื่อนที่ด้วยความเร็ว 10 m/s ถูกผลักด้วยแรง 10N เป็นระยะทาง 10 m จงหาความเร็วของรถหลังถูกแรงกระทำ
+<br/><br/>**********(ภาพ)***<br/><br/>
+<MathJaxContext>
+      <MathJax>\[E1 + W = E2 \]
+        \[(\cfrac{1}{2} \cdot m \cdot v^2)..1 + (F \cdot S) = (\cfrac{1}{2} \cdot m \cdot v^2)..2\]
+        \[(100) + (10 \cdot 10) = (\cfrac{1}{2} \cdot 2 \cdot v^2)..2\]
+        \[v^2 = 200 \]
+        \[v = 10\sqrt{2} m/s \]
+      </MathJax>
+      </MathJaxContext>
+     
 </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -260,31 +268,13 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-<div div className="LabInfo">ด้านล่างเป็นตัวอย่างเพื่อเพิ่มความเข้าใจครับ<br/><br/>
-จากรูปวัตถุมีมวล 1 kg  เคลื่อนที่จากจุด A ไป จุด E โดยทางพื้นผิวไม่มีแรงเสียดทาน จงหาความเร็ววัตถุที่จุด C และ D
+<div div className="LabInfo">สามารถทดสอบความเข้าใจได้จากโจทย์ต่อไปนี้ครับ<br/><br/>
+แอปเปิ้ลมวล 100 g ตกจากต้นที่สูง 5 m ระหว่างตกถูกแรงต้านอากาศขนาด 0.2 N กระทำ <br/>จงหาความเร็วของลูกแอปเปิ้ลก่อนถึงพื้น
+
 
 
 <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*<br/><br/><br/>
-1) สามารถหาความเร็วที่จุด C เพราะพลังงานที่จุด A = พลังงานที่จุด C<br/>
-เราจะพบว่าที่จุด A มีพลังงานศักย์โน้มถ่วง (มีความสูง) และจุด C มีทั้งพลังงานศักย์โน้มถ่วง (มีความสูง) และ พลังงานจลน์ (มีความเร็ว)<br/>
-<MathJaxContext>
-      <MathJax>\[(m \cdot g \cdot h) ของ A = (m \cdot g \cdot h) ของ C + (\cfrac{1}{2} \cdot m \cdot v^2) \]
-        \[(1 \cdot 10 \cdot 5) = (1 \cdot 10 \cdot 2) + (\cfrac{1}{2} \cdot 1 \cdot v^2)\]
-        \[v^2 = (50-20) \cdot 2 \]
-        \[v^2 = 60 \]
-        \[v = 2\sqrt{15} m/s \]
-      </MathJax>
-      </MathJaxContext>
-      2) สามารถหาความเร็วที่จุด D เพราะพลังงานที่จุด A = พลังงานที่จุด D<br/>
-      เราจะพบว่าที่จุด A มีพลังงานศักย์โน้มถ่วง (มีความสูง) และจุด D มีแค่พลังงานจลน์ (มีความเร็ว)<br/>
-      <MathJaxContext>
-      <MathJax>\[(m \cdot g \cdot h) ของ A = (\cfrac{1}{2} \cdot m \cdot v^2) ของ D \]
-        \[(1 \cdot 10 \cdot 5) = (\cfrac{1}{2} \cdot 1 \cdot v^2)\]
-        \[v^2 = (50) \cdot 2 \]
-        \[v^2 = 100 \]
-        \[v = 10 m/s \]
-      </MathJax>
-      </MathJaxContext>
+
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -292,14 +282,31 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
-  <div className="ProgessBar"><progress value="20" max="100"></progress></div>
-  <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
-  <div className="AnswerList">
-  
+      <div className="LabNumber">Introducing Work</div>
+      <div className="ProgessBar"><progress value="17" max="100"></progress></div>
+      <div className="Question"></div>
+      <div className="AnswerList">
+      <label className="container">4√2 m/s
+          <input type="checkbox" id="Answer1" />
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">4√5 m/s
+          <input type="checkbox" id="Answer2"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">5√2 m/s
+          <input type="checkbox" id="Answer3"/>
+          <span className="checkmark"></span>
+        </label>
+        <label className="container">5√3 m/s
+          <input type="checkbox" id="Answer4" />
+          <span className="checkmark" ></span>
+        </label>
+    
+        <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(2)}>Send Answer</button>
 </div>
 <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
-<button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
+<button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 </div>
 </div>)
 }
@@ -310,10 +317,12 @@ function Page2Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
   <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-  <div className="LabInfo">เรามาทดสอบความเข้าใจกันครับ <br/> <br/>จากรูปวัตถุมีมวล 1 kg  เคลื่อนที่จากจุด A ไป จุด E โดยทางพื้นผิวไม่มีแรงเสียดทาน <br/>จงหาความเร็ววัตถุที่จุด B และ E
+  <div className="LabInfo">สามารถทดสอบความเข้าใจได้จากโจทย์ต่อไปนี้ครับ<br/><br/>
+แอปเปิ้ลมวล 100 g ตกจากต้นที่สูง 5 m ระหว่างตกถูกแรงต้านอากาศขนาด 0.2 N กระทำ <br/>จงหาความเร็วของลูกแอปเปิ้ลก่อนถึงพื้น
 
 
-<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
+
+<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*<br/><br/><br/>
   </div> 
  
    <div div className="FooterSpace"></div>
@@ -323,31 +332,31 @@ function Page2Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="17" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
-    <label className="container">5 m/s , 5 m/s
+    <label className="container">4√2 m/s
         <input type="checkbox" id="Answer1" disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">5√12 m/s , 2√15 m/s
-        <input type="checkbox" id="Answer2"disabled/>
-        <span className="checkmark"></span>
+      <label className="container">4√5 m/s
+        <input type="checkbox" id="Answer2"disabled  checked />
+        <span className="checkmark"style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">2√15 m/s ,5√12 m/s
+      <label className="container">5√2 m/s
         <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">10 m/s , 10 m/s
-        <input type="checkbox" id="Answer4" disabled checked />
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">5√3 m/s
+        <input type="checkbox" id="Answer4" disabled/>
+        <span className="checkmark" ></span>
       </label>
   
       <button className = "btn btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
     
   </div>
-  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(2)}>Previous page</button>
-  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(4)}>Next page</button></div>
+  <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(1)}>Previous page</button>
+  <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(3)}>Next page</button></div>
   
   </div>
   </div>)
@@ -357,8 +366,7 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-<div className="LabInfo">เรามาทดสอบความเข้าใจกันครับ <br/> <br/>
-  จากรูปวัตถุมีมวล 1 kg  เคลื่อนที่จากจุด A ไป จุด E โดยทางพื้นผิวไม่มีแรงเสียดทาน <br/>จงหาความเร็ววัตถุที่จุด B และ E
+<div className="LabInfo">ลูกตุ้มมวล 10 kg เหล็กตกจากความสูง 5 m ลงบนพื้นทราย พบว่าลูกตุ้มจมลึก 20 cm <br/>จงหาแรงต้านเฉลี่ยของพื้นทราย
 <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
 
 </div> 
@@ -369,22 +377,22 @@ return(
 
 <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+      <div className="ProgessBar"><progress value="34" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
-      <label className="container">5 m/s , 5 m/s
+      <label className="container">2400 N
           <input type="checkbox" id="Answer1" />
           <span className="checkmark"></span>
         </label>
-        <label className="container">5√12 m/s , 2√15 m/s
+        <label className="container">2500 N
           <input type="checkbox" id="Answer2"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">2√15 m/s ,5√12 m/s
+        <label className="container">2600 N
           <input type="checkbox" id="Answer3"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">10 m/s , 10 m/s
+        <label className="container">3000 N
           <input type="checkbox" id="Answer4" />
           <span className="checkmark" ></span>
         </label>
@@ -404,7 +412,7 @@ function Page3Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
   <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-  <div className="LabInfo">เรามาทดสอบความเข้าใจกันครับ <br/> <br/>จากรูปวัตถุมีมวล 1 kg  เคลื่อนที่จากจุด A ไป จุด E โดยทางพื้นผิวไม่มีแรงเสียดทาน <br/>จงหาความเร็ววัตถุที่จุด B และ E
+  <div className="LabInfo">ลูกตุ้มมวล 10 kg เหล็กตกจากความสูง 5 m ลงบนพื้นทราย พบว่าลูกตุ้มจมลึก 20 cm <br/>จงหาแรงต้านเฉลี่ยของพื้นทราย
 
 
 <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
@@ -417,24 +425,24 @@ function Page3Answered (){
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
-    <div className="ProgessBar"><progress value="40" max="100"></progress></div>
+    <div className="ProgessBar"><progress value="34" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
-    <label className="container">5 m/s , 5 m/s
+    <label className="container">2400 N
         <input type="checkbox" id="Answer1" disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">5√12 m/s , 2√15 m/s
-        <input type="checkbox" id="Answer2"disabled/>
-        <span className="checkmark"></span>
+      <label className="container">2500 N
+        <input type="checkbox" id="Answer2"disabled checked />
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
-      <label className="container">2√15 m/s ,5√12 m/s
+      <label className="container">2600 N
         <input type="checkbox" id="Answer3"disabled/>
         <span className="checkmark"></span>
       </label>
-      <label className="container">10 m/s , 10 m/s
-        <input type="checkbox" id="Answer4" disabled checked />
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+      <label className="container">3000 N
+        <input type="checkbox" id="Answer4" disabled/>
+        <span className="checkmark"></span>
       </label>
   
       <button className = "btn btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -451,7 +459,8 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-    <div className="LabInfo">ยิงจรวดขวดน้ำขึ้นด้วยความเร็ว 100 m/s ขึ้นในแนวดิ่ง จงหาว่าจรวดขวดน้ำจะขึ้นไปสูงสุดเท่าไร(ที่จุดสูงสุดความเร็วแนวดิ่ง = 0 เสมอ )
+    <div className="LabInfo">จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมัสัมประสิทธิ์ความเสียดทาย 0.2 ยาว 4 m ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 m จงหาว่าวัตถุจะขึ้นไปถึง D สูงเท่าไร
+
 
     <br/><br/><br/>********ใส่รูปจ้า*
     </div> 
@@ -462,22 +471,22 @@ function Page3Answered (){
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Introducing Work</div>
-      <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+      <div className="ProgessBar"><progress value="51" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
-      <label className="container">300 m
+      <label className="container">100 cm
           <input type="checkbox" id="Answer1" />
           <span className="checkmark"></span>
         </label>
-        <label className="container">400 m
+        <label className="container">110 cm
           <input type="checkbox" id="Answer2"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">500 m
+        <label className="container">120 cm
           <input type="checkbox" id="Answer3"/>
           <span className="checkmark"></span>
         </label>
-        <label className="container">550 m
+        <label className="container">130 cm
           <input type="checkbox" id="Answer4" />
           <span className="checkmark" ></span>
         </label>
@@ -500,8 +509,18 @@ function Page3Answered (){
         <div className="split Index">
       <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
       <div className="LabInfo">
-      ยิงจรวดขวดน้ำขึ้นด้วยความเร็ว 100 m/s ขึ้นในแนวดิ่ง จงหาว่าจรวดขวดน้ำจะขึ้นไปสูงสุดเท่าไร(ที่จุดสูงสุดความเร็วแนวดิ่ง = 0 เสมอ )
-    <br/><br/><br/>********ใส่รูปจ้า*
+      จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมัสัมประสิทธิ์ความเสียดทาย 0.2 ยาว 4 m ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 m จงหาว่าวัตถุจะขึ้นไปถึง D สูงเท่าไร
+
+    <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
+    <mark className="Yellow">เฉลย</mark>
+    <MathJaxContext>
+      <MathJax>\[(m \cdot g \cdot h)..A - W = (m \cdot g \cdot h)..D \]
+        \[(m \cdot g \cdot h)..A - (µ \cdot m \cdot g \cdot S) = (m \cdot g \cdot h)..D\]
+        \[(m \cdot g )\cdot [(h)..A - (µ \cdot S)] = (m \cdot g) \cdot h..D\]
+        \[2 - (0.8) = h\]
+        \[h = 1.2 m \]
+      </MathJax>
+      </MathJaxContext>
       </div> 
      
        <div div className="FooterSpace"></div>
@@ -511,22 +530,22 @@ function Page3Answered (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="60" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="51" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">300 m
+        <label className="container">100 cm
             <input type="checkbox" id="Answer1" disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">400 m
+          <label className="container">110 cm
             <input type="checkbox" id="Answer2"disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">500 m
+          <label className="container">120 cm
             <input type="checkbox" id="Answer3"disabled checked/>
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
-          <label className="container">550 m
+          <label className="container">130 cm
             <input type="checkbox" id="Answer4" disabled />
             <span className="checkmark"></span>
           </label>
@@ -545,7 +564,8 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-        <div className="LabInfo">ยิงธนูที่มีค่านิจสปริง 400 N/m ดึงสายธนู 10 cm ยิงลูกธนู 10 g ออกไป จงหาความเร็วของลูกธนูตอนออกจากคันธนู
+        <div className="LabInfo">จากข้อ 4 วัตถุจะไปหยุดห่างจากจุด B กี่เมตร<br/><br/>
+จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมัสัมประสิทธิ์ความเสียดทาย 0.2 ยาว 4 m <br/>ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 m 
 
         <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
         </div> 
@@ -556,22 +576,22 @@ function Page5 (){
         
         <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="68" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">12.5 m/s
+        <label className="container">0.5 m
             <input type="checkbox" id="Answer1" />
             <span className="checkmark"></span>
           </label>
-          <label className="container">17.5 m/s
+          <label className="container">1.5 m
             <input type="checkbox" id="Answer2"/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">20 m/s
+          <label className="container">2.0 m
             <input type="checkbox" id="Answer3"/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">25 m/s
+          <label className="container">3.5 m
             <input type="checkbox" id="Answer4" />
             <span className="checkmark"></span>
           </label>
@@ -589,9 +609,20 @@ function Page5 (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-      <div className="LabInfo">ยิงธนูที่มีค่านิจสปริง 400 N/m ดึงสายธนู 10 cm ยิงลูกธนู 10 g ออกไป จงหาความเร็วของลูกธนูตอนออกจากคันธนู
+      <div className="LabInfo">จากข้อ 4 วัตถุจะไปหยุดห่างจากจุด B กี่เมตร<br/><br/>
+จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมัสัมประสิทธิ์ความเสียดทาย 0.2 ยาว 4 m <br/>ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 m 
 
-<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
+        <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*<br/><br/><br/>
+        <mark className="Yellow">เฉลย</mark>
+    <MathJaxContext>
+      <MathJax>\[(m \cdot g \cdot h) - W = 0 \]
+        \[(m \cdot g \cdot h) - (µ \cdot m \cdot g \cdot S) = 0\]
+        \[(m \cdot g )\cdot [(h) - (µ \cdot S)] = 0\]
+        \[2 - (0.2 \cdot S) = 0\]
+        \[S = 10 m \]
+      </MathJax>
+      </MathJaxContext>
+      วัตถุจะหยุดอยู่ตรงกลางของผิวโค้ง ทำให้ห่างจากจุด B เป็นระยะทาง 2 เมตร
       </div> 
      
        <div div className="FooterSpace"></div>
@@ -601,22 +632,22 @@ function Page5 (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="68" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">12.5 m/s
+        <label className="container">0.5 m
             <input type="checkbox" id="Answer1" disabled/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">17.5 m/s
+          <label className="container">1.5 m
             <input type="checkbox" id="Answer2"disabled/>
             <span className="checkmark" ></span>
           </label>
-          <label className="container">20 m/s
+          <label className="container">2.0 m
             <input type="checkbox" id="Answer3"disabled checked/>
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
-          <label className="container">25 m/s
+          <label className="container">3.5 m
             <input type="checkbox" id="Answer4" disabled />
             <span className="checkmark"></span>
           </label>
@@ -635,9 +666,10 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-        <div className="LabInfo">ยิงธนูที่มีค่านิจสปริง 400 N/m ดึงสายธนู 10 cm ยิงลูกธนู 10 g ออกไป จงหาความเร็วของลูกธนูตอนออกจากคันธนู
+        <div className="LabInfo"><br/>********ส่วนเนื้อหา ใส่สรุปเนื้อหา (เดี๋ยวไปทำภาพมาใส่)****************<br/><br/><br/><br/>
 
-        <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
+ ข้อใดถูกต้องเกี่ยวกับงาน กำลัง และ พลังงาน
+
         </div> 
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -646,28 +678,61 @@ function Page5 (){
         
         <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="85" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">12.5 m/s
+        <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
             <input type="checkbox" id="Answer1" />
             <span className="checkmark"></span>
           </label>
-          <label className="container">17.5 m/s
+          <label className="container">งานมีสูตรว่า W=F (dot product) S 
             <input type="checkbox" id="Answer2"/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">20 m/s
+          <label className="container">การที่แรงตั้งฉากกับการกระจัดจะทำให้เกิดงาน
             <input type="checkbox" id="Answer3"/>
             <span className="checkmark"></span>
           </label>
-          <label className="container">25 m/s
+          <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S หา งานได้จากความชันของกราฟ
             <input type="checkbox" id="Answer4" />
             <span className="checkmark"></span>
           </label>
-          <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(5)}>Send Answer</button>
+          <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S สามารถใช้หางานของแรง F ได้
+            <input type="checkbox" id="Answer5" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
+            <input type="checkbox" id="Answer6" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">กำลัง ใช้บอกความสามารถทำงานได้มาก-น้อยในช่วงเวลาหนึ่ง
+            <input type="checkbox" id="Answer7"/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">กำลัง มีหน่วยเป็น จูล (J)
+            <input type="checkbox" id="Answer8"/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">พลังงานรูปหนึ่งสามารถเปลี่ยนเป็นพลังงานรูปอื่นๆได้
+            <input type="checkbox" id="Answer9" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">พลังงานจลน์(Kinetic energy) เป็นพลังงานของวัตถุที่กำลังเคลื่อนที่
+            <input type="checkbox" id="Answer10" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">พลังงานมี 2 ชนิด ได้แก่ พลังงานศักย์ และ พลังงานจลน์
+            <input type="checkbox" id="Answer11" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">พลังงานศักย์ คือ พลังงานที่สะสมไว้ในวัตถุและพร้อมที่จะนำมาใช้
+            <input type="checkbox" id="Answer12" />
+            <span className="checkmark"></span>
+          </label>
+          
+          <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer12Choice(6)}>Send Answer</button>
 </div>
-<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
+<div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
 <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
 </div>
 </div>)
@@ -679,9 +744,9 @@ function Page5 (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-      <div className="LabInfo">ยิงธนูที่มีค่านิจสปริง 400 N/m ดึงสายธนู 10 cm ยิงลูกธนู 10 g ออกไป จงหาความเร็วของลูกธนูตอนออกจากคันธนู
+      <div className="LabInfo"><br/>********ส่วนเนื้อหา ใส่สรุปเนื้อหา (เดี๋ยวไปทำภาพมาใส่)****************<br/><br/><br/><br/>
 
-<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
+ข้อใดถูกต้องเกี่ยวกับงาน กำลัง และ พลังงาน
       </div> 
      
        <div div className="FooterSpace"></div>
@@ -691,31 +756,63 @@ function Page5 (){
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
-        <div className="ProgessBar"><progress value="80" max="100"></progress></div>
+        <div className="ProgessBar"><progress value="85" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
-        <label className="container">12.5 m/s
-            <input type="checkbox" id="Answer1" disabled/>
-            <span className="checkmark"></span>
-          </label>
-          <label className="container">17.5 m/s
-            <input type="checkbox" id="Answer2"disabled/>
-            <span className="checkmark" ></span>
-          </label>
-          <label className="container">20 m/s
-            <input type="checkbox" id="Answer3"disabled checked/>
+        <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
+            <input type="checkbox" id="Answer1"disabled checked />
             <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
-          <label className="container">25 m/s
-            <input type="checkbox" id="Answer4" disabled />
+          <label className="container">งานมีสูตรว่า W=F (dot product) S 
+            <input type="checkbox" id="Answer2"disabled checked/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">การที่แรงตั้งฉากกับการกระจัดจะทำให้เกิดงาน
+            <input type="checkbox" id="Answer3"disabled/>
             <span className="checkmark"></span>
+          </label>
+          <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S หา งานได้จากความชันของกราฟ
+            <input type="checkbox" id="Answer4" disabled/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S สามารถใช้หางานของแรง F ได้
+            <input type="checkbox" id="Answer5"disabled checked />
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
+            <input type="checkbox" id="Answer6"disabled checked />
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">กำลัง ใช้บอกความสามารถทำงานได้มาก-น้อยในช่วงเวลาหนึ่ง
+            <input type="checkbox" id="Answer7"disabled checked/>
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">กำลัง มีหน่วยเป็น จูล (J)
+            <input type="checkbox" id="Answer8"disabled/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">พลังงานรูปหนึ่งสามารถเปลี่ยนเป็นพลังงานรูปอื่นๆได้
+            <input type="checkbox" id="Answer9"disabled checked />
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">พลังงานจลน์(Kinetic energy) เป็นพลังงานของวัตถุที่กำลังเคลื่อนที่
+            <input type="checkbox" id="Answer10"disabled checked />
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
+          </label>
+          <label className="container">พลังงานมี 2 ชนิด ได้แก่ พลังงานศักย์ และ พลังงานจลน์
+            <input type="checkbox" id="Answer11" disabled/>
+            <span className="checkmark"></span>
+          </label>
+          <label className="container">พลังงานศักย์ คือ พลังงานที่สะสมไว้ในวัตถุและพร้อมที่จะนำมาใช้
+            <input type="checkbox" id="Answer12"disabled checked />
+            <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
           </label>
       
           <button className = "btn btn-answerSent" style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
         
       </div>
-      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(4)}>Previous page</button>
-      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(6)}>Next page</button></div>
+      <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(5)}>Previous page</button>
+      <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(7)}>Next page</button></div>
       
       </div>
       </div>)
