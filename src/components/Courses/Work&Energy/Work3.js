@@ -190,11 +190,9 @@ return(
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo">จากคอร์สเรียนที่เราได้เรียน “W = F • S • Cosθ” จะสังเกตว่า
 หาก แทน θ = 90° <br/>จะทำให้ Cosθ = 0 ส่งผลให้ งานนั้นกลายเป็น 0 ไปด้วย
-
-</div>  <br/> <br/> <br/>
-<img className='LabImg' id='img' alt ="LabImg"src="" />
- <div div className="LabInfo"> <br/> <br/>
-
+</div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P1.gif?alt=media&token=e2d431a9-c48b-48db-b87f-285154026093" />
+ <div div className="LabInfo"> <br/>คิดงานโดยการแตกแรงให้อยู่แกนเดียวกับการกระจัด : <br/>
  <MathJaxContext>
       <MathJax>\[W = F \cdot S \cdot Cosθ\]
       \[W = F \cdot S \cdot (0)\]
@@ -202,7 +200,8 @@ return(
 
       </MathJax>
       </MathJaxContext>
-
+<div div className="LabInfo"> จากภาพเนื่องจากแรงกระทำกับวัตถุในแนวแกนดิ่ง แต่กลับไม่มีการกระจัดในแนวดิ่งทำให้ไม่มีการเกิดงานนั้นเอง
+</div>
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -210,7 +209,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">No work is done</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -229,17 +228,16 @@ return(
 <div className="LabName">งานทางฟิสิกส์</div>
 <div div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
   ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
-<br/><br/><br/>รูปจ้า*********<br/><br/><br/>
 </div> 
-
-
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P2.png?alt=media&token=e53ca502-9285-4b52-8930-4d8554236a3d" />
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD6nx-Rhrc'> sketchify</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">No work is done</div>
   <div className="ProgessBar"><progress value="17" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
@@ -275,19 +273,20 @@ function Page2Answered (){
       {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
-  <div className="LabName">งานทางฟิสิกส์</div>
-  <div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/>
-  <br/>ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
-  <br/><br/><br/>รูปจ้า*********<br/><br/><br/>
-  </div>
+<div className="LabName">งานทางฟิสิกส์</div>
+<div div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
+  ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
+</div> 
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P2.png?alt=media&token=e53ca502-9285-4b52-8930-4d8554236a3d" />
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD6nx-Rhrc'> sketchify</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">No work is done</div>
     <div className="ProgessBar"><progress value="17" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
@@ -324,17 +323,19 @@ return(
 <div className="LabName">งานทางฟิสิกส์</div>
 <div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง
 <br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
-<br/><br/><br/>รูปจ้า*********<br/><br/><br/>
-  </div> 
+  </div>
+  
+  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P3.png?alt=media&token=748584fb-474a-4e9c-bf01-795842f13f6b " />
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD6nx-Rhrc'> sketchify</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">No work is done</div>
   <div className="ProgessBar"><progress value="34" max="100"></progress></div>
-  <div className="Question"></div>
+  <div className="Question">จงหางานที่เกิดจากการถือกระเป๋า</div>
   <div className="AnswerList">
   <label className="container">0 J
       <input type="checkbox" id="Answer1" />
@@ -369,18 +370,20 @@ function Page3Answered (){
       {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
-  <div className="LabName">งานทางฟิสิกส์</div>
-  <div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง 
-  <br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
-  <br/><br/><br/>รูปจ้า*********<br/><br/><br/>
-    </div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
+<div className="LabName">งานทางฟิสิกส์</div>
+<div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง
+<br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
   </div>
   
+  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P3.png?alt=media&token=748584fb-474a-4e9c-bf01-795842f13f6b " />
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD6nx-Rhrc'> sketchify</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
+  
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">No work is done</div>
     <div className="ProgessBar"><progress value="34" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
@@ -428,9 +431,9 @@ function Page3Answered (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">No work is done</div>
       <div className="ProgessBar"><progress value="51" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">จงหางานที่เกิดจากการถือกระเป๋า</div>
       <div className="AnswerList">
       <label className="container">10 kJ , -5 kJ
           <input type="checkbox" id="Answer1" />
@@ -479,7 +482,7 @@ function Page3Answered (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">No work is done</div>
         <div className="ProgessBar"><progress value="51" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
@@ -523,7 +526,7 @@ function Page5 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Introducing Work</div>
+          <div className="LabNumber">No work is done</div>
           <div className="ProgessBar"><progress value="68" max="100"></progress></div>
           <div className="Question"></div>
           <div className="AnswerList">
@@ -571,7 +574,7 @@ function Page5 (){
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Introducing Work</div>
+            <div className="LabNumber">No work is done</div>
             <div className="ProgessBar"><progress value="68" max="100"></progress></div>
             <div className="Question"></div>
             <div className="AnswerList">
@@ -614,7 +617,7 @@ function Page5 (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">No work is done</div>
       <div className="ProgessBar"><progress value="85" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
@@ -662,7 +665,7 @@ function Page5 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">No work is done</div>
         <div className="ProgessBar"><progress value="85" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
