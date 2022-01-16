@@ -374,7 +374,8 @@ function Page3Answered (){
 <div className="LabInfo">นายเอถือกระเป๋าน้ำหนัก 15 นิวตัน ต้องการเดินข้ามถนนเพื่อข้ามไปยังอีกฝั่ง
 <br/>โดยใช้สะพานลอยที่สูง 10 เมตร และยาว 30 เมตร จงหางานที่เกิดจากการถือกระเป๋าเท่าไหร่
   </div>
-  
+  <div className="LabInfo"><mark>เฉลย :<br/>จะพบว่านายเอเดินขึ้นและลงสะพานลอยจึงทำให้การกระจัดในแนวดิ่ง เป็น 0 ส่งผลให้งานเป็น 0 ไปด้วย</mark>
+  </div>
   <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P3.png?alt=media&token=748584fb-474a-4e9c-bf01-795842f13f6b " />
  <div div className="FooterSpace"></div>
  <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD6nx-Rhrc'> sketchify</a></div>
@@ -418,11 +419,11 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
-    <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/><br/>
+    <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/>
     ชายคนหนึ่งใช้เชือกลากกล่องไม้มวล 60 กิโลกรัม ด้วยอัตราเร็วสม่ำเสมอ เป็นระยะทาง 1 กิโลเมตร ถ้าสัมประสิทธิ์ความเสียดทานระหว่างพื้นกับกล่องไม้เท่ากับ 0.02
    จงหางานที่ชายคนนี้ทำและงานเนื่องจากแรงเสียดทานระหว่างพื้นกับกล่องไม้
     <br/><br/>
-
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P4.png?alt=media&token=3c27a772-7bad-4620-a48d-ec0db344d40a" />
     <br/><br/> <mark className="Yellow">Hint : </mark>ลากวัตถุด้วยความเร็วสม่ำเสมอหมายความว่า วัตถุไม่มีความเร่ง ผลรวมแรง = 0 (ΣF = 0)
       </div> 
      <div div className="FooterSpace"></div>
@@ -469,11 +470,12 @@ function Page3Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
-      <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/><br/>
+      <div className="LabInfo">เมื่อเราเรียนรู้การคำนวณงานในรูปแบบต่างๆ แล้วลองนำความรู้มาประยุกต์ทำโจทย์กันครับ<br/><br/>
     ชายคนหนึ่งใช้เชือกลากกล่องไม้มวล 60 กิโลกรัม ด้วยอัตราเร็วสม่ำเสมอ เป็นระยะทาง 1 กิโลเมตร ถ้าสัมประสิทธิ์ความเสียดทานระหว่างพื้นกับกล่องไม้เท่ากับ 0.02
    จงหางานที่ชายคนนี้ทำและงานเนื่องจากแรงเสียดทานระหว่างพื้นกับกล่องไม้
+    <br/><br/><mark>เนื่องจากกล่องไม้เคลื่อนที่ด้วยอัตราเร็วสม่ำเสมอ แรงที่ชายกระทำกับกล่องจึงมีค่าเท่ากับแรงเสียดทาน <br/>(กฏของนิวตันของที่ 1) เราจึงทำการหาปริมาณแรงที่กระทำจากแรงเสียดทาน แล้วค่อยมาหางานทีหลัง</mark>
     <br/><br/>
-
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P4.png?alt=media&token=3c27a772-7bad-4620-a48d-ec0db344d40a" />
     <br/><br/> <mark className="Yellow">Hint : </mark>ลากวัตถุด้วยความเร็วสม่ำเสมอหมายความว่า วัตถุไม่มีความเร่ง ผลรวมแรง = 0 (ΣF = 0)
         </div> 
        <div div className="FooterSpace"></div>
@@ -517,9 +519,9 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
-        <div className="LabInfo">ด.ช.ป๋องเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่ ด.ช.ป๋อง ทำได้ในการหิ้วกระเป๋า
- 
+        <div className="LabInfo">นายบีเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่นายบีทำในการหิ้วกระเป๋า
           </div> 
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P5.png?alt=media&token=7fc700c8-0c65-4a8c-8010-748280cb1681" />
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
@@ -564,10 +566,10 @@ function Page5 (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
-          <div className="LabInfo">ด.ช.ป๋องเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่ ด.ช.ป๋อง ทำได้ในการหิ้วกระเป๋า
-
-
+          <div className="LabInfo">นายบีเดินหิ้วกระเป๋าหนัก 30 นิวตัน เดินลงบันไดสูง 4 เมตร จงหางานที่นายบีทำในการหิ้วกระเป๋า
+          <br/><br/><mark>จะพบว่านายบีออกแรงยกกระเป๋าในแนวดิ่ง เดินลงบันไดทำให้เกิดระยะกระจัด 4 เมตรในแนวตรงข้าม ทำให้เกิดงานติดลบ</mark>
             </div> 
+            <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P5.png?alt=media&token=7fc700c8-0c65-4a8c-8010-748280cb1681" />
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
            <div div className="FooterSpace"></div>
@@ -609,8 +611,8 @@ function Page5 (){
       <div className="split Index">
     <div className="LabName">งานทางฟิสิกส์</div>
     <div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน
-
       </div> 
+      <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P6.jpg?alt=media&token=288b7e31-7396-4868-928a-ed94cd2892ea" />
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
@@ -619,7 +621,7 @@ function Page5 (){
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">No work is done</div>
       <div className="ProgessBar"><progress value="85" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน</div>
       <div className="AnswerList">
       <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
           <input type="checkbox" id="Answer1" />
@@ -656,9 +658,8 @@ function Page5 (){
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน
-
-
         </div> 
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P6.jpg?alt=media&token=288b7e31-7396-4868-928a-ed94cd2892ea" />
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
        <div div className="FooterSpace"></div>
@@ -667,7 +668,7 @@ function Page5 (){
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">No work is done</div>
         <div className="ProgessBar"><progress value="85" max="100"></progress></div>
-        <div className="Question"></div>
+        <div className="Question">ข้อใดกล่าวถูกต้องเกี่ยวกับงาน</div>
         <div className="AnswerList">
         <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
             <input type="checkbox" id="Answer1" disabled checked/>
