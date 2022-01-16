@@ -311,7 +311,7 @@ function Page4 (){
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div div className="LabInfo">วัตถุหนึ่งถูกฉุดด้วยแรง 20 N ซึ่งทำมุม 37 องศากับแนวระดับดังรูป ถ้าวัตถุเคลื่อนที่ด้วยแรงคงที่เป็นระยะทาง 100 เมตร จงหางานในการฉุดวัตถุนี้
-</div> 
+  <br/><mark>เฉลย :<br/>คิดงานโดยใช้แรง Fx ที่แตกออกมาให้ขนานกับการกระจัดเพื่อคิดงาน</mark></div> 
 
    <div div className="LabInfo">
    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork2%2FWork2P4.png?alt=media&token=e824d974-dcd5-4290-ba83-c2b960aca2f5" />

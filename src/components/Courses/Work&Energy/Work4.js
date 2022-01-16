@@ -230,7 +230,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Utilizing Graph</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -268,7 +268,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Utilizing Graph</div>
   <div className="ProgessBar"><progress value="14" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -313,7 +313,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Utilizing Graph</div>
   <div className="ProgessBar"><progress value="28" max="100"></progress></div>
   <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
   <div className="AnswerList">
@@ -377,7 +377,7 @@ function Page3Answered (){
   </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Utilizing Graph</div>
     <div className="ProgessBar"><progress value="28" max="100"></progress></div>
     <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดแสดงแรงไม่คงที่</div>
     <div className="AnswerList">
@@ -440,7 +440,7 @@ function Page3Answered (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="42" max="100"></progress></div>
       <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดเกิดงานน้อยที่สุด</div>
       <div className="AnswerList">
@@ -504,7 +504,7 @@ function Page3Answered (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Utilizing Graph</div>
         <div className="ProgessBar"><progress value="42" max="100"></progress></div>
         <div className="Question">จากกราฟ F - S ฝั่งซ้าย กราฟในข้อใดเกิดงานน้อยที่สุด</div>
         <div className="AnswerList">
@@ -567,7 +567,7 @@ function Page3Answered (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="56" max="100"></progress></div>
       <div className="Question">จากการทดลองดังกล่าว จงหางานที่ใช้ในการดึงสปริง 7 m </div>
       <div className="AnswerList">
@@ -632,7 +632,7 @@ function Page3Answered (){
       </div>
       
       <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="56" max="100"></progress></div>
       <div className="Question">จากการทดลองดังกล่าว จงหางานที่ใช้ในการดึงสปริง 7 m </div>
       <div className="AnswerList">
@@ -666,7 +666,7 @@ function Page6 (){
       <div>
       <div className="split Index">
     <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
-    <div div className="LabInfo">เมื่อมีแรงมากระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงโดยแรงทีี่กระทำสัมพันธ์กับการกระจัดดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ไปได้ไกล 20 เมตร
+    <div div className="LabInfo">เมื่อมีแรงมากระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงโดยแรงที่กระทำสัมพันธ์กับการกระจัดดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ไปได้ไกล 20 เมตร
       </div> 
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
@@ -674,7 +674,7 @@ function Page6 (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="70" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
@@ -719,7 +719,7 @@ function Page6 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="70" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
@@ -761,7 +761,7 @@ function Page6 (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="84" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
@@ -807,7 +807,7 @@ function Page6 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="84" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
