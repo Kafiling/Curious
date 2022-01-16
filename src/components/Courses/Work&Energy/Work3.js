@@ -226,7 +226,7 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
+<div div className="LabInfo">เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
   ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
 </div> 
 <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P2.png?alt=media&token=e53ca502-9285-4b52-8930-4d8554236a3d" />
@@ -274,7 +274,7 @@ function Page2Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
 <div className="LabName">งานทางฟิสิกส์</div>
-<div div className="LabInfo"><br/>เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
+<div div className="LabInfo">เรามาลองทดสอบความเข้าใจกันครับ<br/><br/>
   ชายคนหนึ่งยกกล่องน้ำหนัก 50 นิวตัน เดินไปบนทางราบ 20 เมตร จะเกิดงานกี่จูล
 </div> 
 <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FWork3%2FWork3P2.png?alt=media&token=e53ca502-9285-4b52-8930-4d8554236a3d" />
