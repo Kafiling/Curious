@@ -8,7 +8,7 @@ const state = {
       fill: false,
       lineTension: 0,
       backgroundColor: 'rgba(75,192,192,1)',
-      borderColor: 'rgba(0,0,0,1)',
+      borderColor: 'rgba(75,192,192,1)',
       borderWidth: 2,
       data: [0, 5 ,10,10]
     },{
@@ -16,7 +16,7 @@ const state = {
       fill: false,
       lineTension: 0,
       backgroundColor: 'rgba(255,122,51,1)',
-      borderColor: 'rgba(0,0,0,1)',
+      borderColor: 'rgba(255,122,51,1)',
       borderWidth: 2,
       data: [0, 2 ,4, 4]
     }
