@@ -226,12 +226,12 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo"><br/>ทำโจทย์เพื่อทดสอบความเข้าใจครับ<br/><br/>ปั้นจั่นยกของมวล 1500 กิโลกรัม ขึ้นสูง 10 เมตร ในเวลา 20 วินาที <br/>จงหากำลังของปั้นจั่นในการยกของนี้
-<br/><br/><br/>********ใส่รูปจ้า*
+<div className="LabInfo">ทำโจทย์เพื่อทดสอบความเข้าใจครับ<br/><br/>ปั้นจั่นยกของมวล 1500 กิโลกรัม ขึ้นสูง 10 เมตร ในเวลา 20 วินาที <br/>จงหากำลังของปั้นจั่นในการยกของนี้
 </div> 
-
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower1%2FPower1P3.png?alt=media&token=7bd9558b-4cc2-427d-ae9b-fd2bd26af4d3" />
  
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADoiVmEBYc'>iconsy</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
@@ -273,15 +273,17 @@ function Page3Answered (){
     <div>
       {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-    <div className="split Index">
+  <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo"><br/>ทำโจทย์เพื่อทดสอบความเข้าใจครับ<br/><br/>ปั้นจั่นยกของมวล 1500 กิโลกรัม ขึ้นสูง 10 เมตร ในเวลา 20 วินาที <br/>จงหากำลังของปั้นจั่นในการยกของนี้
-<br/><br/><br/>********ใส่รูปจ้า*
+<div className="LabInfo">ทำโจทย์เพื่อทดสอบความเข้าใจครับ<br/><br/>ปั้นจั่นยกของมวล 1500 กิโลกรัม ขึ้นสูง 10 เมตร ในเวลา 20 วินาที <br/>จงหากำลังของปั้นจั่นในการยกของนี้
 </div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower1%2FPower1P3.png?alt=media&token=7bd9558b-4cc2-427d-ae9b-fd2bd26af4d3" />
+ 
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADoiVmEBYc'>iconsy</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
@@ -320,12 +322,13 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">กำลัง</div>
-    <div className="LabInfo"><br/>จงหากำลังของเครื่องจักรเครื่องหนึ่ง ซึ่งกำลังยกวัตถุมวล 500 กิโลกรัม <br/>ขึ้นในแนวดิ่งด้วยความเร็วคงที่ 1.6 เมตรต่อวินาที
-    <br/><br/><br/>********ใส่รูปจ้า*
+    <div className="LabInfo">จงหากำลังของเครื่องจักรเครื่องหนึ่ง ซึ่งกำลังยกวัตถุมวล 500 กิโลกรัม <br/>ขึ้นในแนวดิ่งด้วยความเร็วคงที่ 1.6 เมตรต่อวินาที
     </div> 
-     <div div className="FooterSpace"></div>
-     <div className="Footer">Curious Project</div>
-     <div div className="FooterSpace"></div>
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower1%2FPower1P4.png?alt=media&token=0329ecf6-1046-4be4-a31c-878df63f64fe" />
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADoiVmEBYc'>iconsy</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
     </div>
     
     <div className="split QuestionAnswer"> 
@@ -367,12 +370,13 @@ function Page3Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
         <div className="split Index">
       <div className="LabName">กำลัง</div>
-      <div className="LabInfo"><br/>จงหากำลังของเครื่องจักรเครื่องหนึ่ง ซึ่งกำลังยกวัตถุมวล 500 กิโลกรัม <br/>ขึ้นในแนวดิ่งด้วยความเร็วคงที่ 1.6 เมตรต่อวินาที
-    <br/><br/><br/>********ใส่รูปจ้า*
+      <div className="LabInfo">จงหากำลังของเครื่องจักรเครื่องหนึ่ง ซึ่งกำลังยกวัตถุมวล 500 กิโลกรัม <br/>ขึ้นในแนวดิ่งด้วยความเร็วคงที่ 1.6 เมตรต่อวินาที
       </div> 
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
+      <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower1%2FPower1P4.png?alt=media&token=0329ecf6-1046-4be4-a31c-878df63f64fe" />
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADoiVmEBYc'>iconsy</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
       </div>
       
       <div className="split QuestionAnswer"> 
@@ -411,12 +415,13 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">กำลัง</div>
-        <div className="LabInfo"><br/>รถอีแต๋นคันหนึ่งใช้เครื่องยนต์ซึ่งมีกำลัง 5 กิโลวัตต์ <br/>สามารถแล่นได้เร็วสูงสุด 36 กิโลเมตรต่อชั่วโมง จงหาแรงฉุดสูงสุดของเครื่องยนต์
-        <br/><br/><br/>********ใส่รูปจ้า*
+        <div className="LabInfo">รถอีแต๋นคันหนึ่งใช้เครื่องยนต์ซึ่งมีกำลัง 5 กิโลวัตต์ <br/>สามารถแล่นได้เร็วสูงสุด 36 กิโลเมตรต่อชั่วโมง จงหาแรงฉุดสูงสุดของเครื่องยนต์
         </div> 
-         <div div className="FooterSpace"></div>
-         <div className="Footer">Curious Project</div>
-         <div div className="FooterSpace"></div>
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower1%2FPower1P5.png?alt=media&token=07c74411-3851-44cd-b2ff-52b1b909591b" />
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
         </div>
         
         <div className="split QuestionAnswer"> 
@@ -456,15 +461,16 @@ function Page5 (){
             <div>
               {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-            <div className="split Index">
-          <div className="LabName">กำลัง</div>
-          <div className="LabInfo"><br/>รถอีแต๋นคันหนึ่งใช้เครื่องยนต์ซึ่งมีกำลัง 5 กิโลวัตต์ <br/>สามารถแล่นได้เร็วสูงสุด 36 กิโลเมตรต่อชั่วโมง จงหาแรงฉุดสูงสุดของเครื่องยนต์
-        <br/><br/><br/>********ใส่รูปจ้า*
-          </div> 
-           <div div className="FooterSpace"></div>
-           <div className="Footer">Curious Project</div>
-           <div div className="FooterSpace"></div>
-          </div>
+    <div className="split Index">
+        <div className="LabName">กำลัง</div>
+        <div className="LabInfo">รถอีแต๋นคันหนึ่งใช้เครื่องยนต์ซึ่งมีกำลัง 5 กิโลวัตต์ <br/>สามารถแล่นได้เร็วสูงสุด 36 กิโลเมตรต่อชั่วโมง จงหาแรงฉุดสูงสุดของเครื่องยนต์
+        </div> 
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower1%2FPower1P5.png?alt=media&token=07c74411-3851-44cd-b2ff-52b1b909591b" />
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+        </div>
           
           <div className="split QuestionAnswer"> 
             <div className="LabNumber">Introducing Work</div>
