@@ -1032,6 +1032,7 @@ function Page9 (){
       <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg2.png?alt=media&token=a7abff26-88d5-4523-809f-04288e4bddf5" />
     </div>
        <div div className="FooterSpace"></div>
+       <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADohmFXfv0'> iconsy</a></div>
        <div className="Footer">Curious Project</div>
        <div div className="FooterSpace"></div>
       </div>
@@ -1078,6 +1079,7 @@ function Page9 (){
 
     </div>
          <div div className="FooterSpace"></div>
+         <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADohmFXfv0'> iconsy</a></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
         </div>
@@ -1118,10 +1120,11 @@ function Page10 (){
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-          <img className='LabImg' id='img' alt ="LabImg"src="" />
-          <div className="Labinfo">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง
-        </div>
+          <div className="LabInfo">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง</div>
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg1.png?alt=media&token=a3f3febd-e203-42e5-a018-7b7423a7a987" />
+          
            <div div className="FooterSpace"></div>
+           <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEcRLcslH4'>sketchify</a></div>
            <div className="Footer">Curious Project</div>
            <div div className="FooterSpace"></div>
           </div>
@@ -1178,10 +1181,11 @@ function Page10 (){
               <div className="split Index">
             <div className="LabName">งานทางฟิสิกส์</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-            <img className='LabImg' id='img' alt ="LabImg"src="" />
-            <div className="Labinfo">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง
+            <div className="LabInfo">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง
         </div>
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg1.png?alt=media&token=a3f3febd-e203-42e5-a018-7b7423a7a987" />
              <div div className="FooterSpace"></div>
+             <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEcRLcslH4'>sketchify</a></div>
              <div className="Footer">Curious Project</div>
              <div div className="FooterSpace"></div>
             </div>
