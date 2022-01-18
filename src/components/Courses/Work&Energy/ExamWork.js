@@ -844,10 +844,9 @@ function Page5 (){
                 <div className="split Index">
               <div className="LabName">งานทางฟิสิกส์</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-              <img className='LabImg' id='img' alt ="LabImg"src="" />
               <div className="LabInfo">เมื่อใช้แรง F ดึงวัตถุให้เคลื่อนไปในแนวระดับ กราฟ แรง F และแรงเสียดทาน f แสดงดังรูป เมื่อวัตถุเคลื่อนไปด้านขวาจงหา งานของแรง F งานของแรงเสียดทาน และงานของแรงลัพธ์ (Cos 37˚ = 4/5  Sin 37˚ = 3/5)
-
             </div>
+            <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP7.png?alt=media&token=dede91d7-ec36-40cd-99e3-838620288e24" />
                <div div className="FooterSpace"></div>
                <div className="Footer">Curious Project</div>
                <div div className="FooterSpace"></div>
