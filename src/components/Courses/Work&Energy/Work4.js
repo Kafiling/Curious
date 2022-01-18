@@ -7,6 +7,8 @@ import {MyChart as Chart1} from './Material/Work4Chart1';
 import {MyChart as Chart2} from './Material/Work4Chart2';
 import {MyChart1,MyChart2,MyChart3,MyChart4} from './Material/Work4Chart3';
 import {Chart5} from './Material/Work4Chart5';
+import {MyChart as Chart6} from './Material/Work4Chart6';
+import {MyChart as Chart7} from './Material/Work4Chart7';
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -668,6 +670,9 @@ function Page6 (){
     <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
     <div div className="LabInfo">เมื่อมีแรงมากระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงโดยแรงที่กระทำสัมพันธ์กับการกระจัดดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ไปได้ไกล 20 เมตร
       </div> 
+      <div className='SceneContainer'>
+  <Chart6/>
+</div>
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
@@ -676,7 +681,7 @@ function Page6 (){
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="70" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">จงหางานเมื่อวัตถุเคลื่อนที่ไปได้ไกล 20 เมตร</div>
       <div className="AnswerList">
       <label className="container">80 J
           <input type="checkbox" id="Answer1" />
@@ -713,6 +718,9 @@ function Page6 (){
       <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
       <div div className="LabInfo">เมื่อมีแรงมากระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงโดยแรงทีี่กระทำสัมพันธ์กับการกระจัดดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ไปได้ไกล 20 เมตร
         </div> 
+        <div className='SceneContainer'>
+  <Chart6/>
+</div>
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
        <div div className="FooterSpace"></div>
@@ -721,7 +729,7 @@ function Page6 (){
       <div className="split QuestionAnswer"> 
       <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="70" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">จงหางานเมื่อวัตถุเคลื่อนที่ไปได้ไกล 20 เมตร</div>
       <div className="AnswerList">
       <label className="container" >80 J
           <input type="checkbox" id="Answer1" disabled />
@@ -755,6 +763,9 @@ function Page6 (){
     <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
     <div div className="LabInfo">แรงซึ่งไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะการกระจัดจาก 20 เมตร
       </div> 
+      <div className='SceneContainer'>
+  <Chart7/>
+</div>
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
@@ -763,7 +774,7 @@ function Page6 (){
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="84" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะการกระจัดจาก 20 เมตร</div>
       <div className="AnswerList">
       <label className="container">400 J
           <input type="checkbox" id="Answer1" />
@@ -800,7 +811,10 @@ function Page6 (){
         <div className="split Index">
       <div className="LabName">งานเนื่องจากแรงไม่คงตัว</div>
       <div div className="LabInfo">แรงซึ่งไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะการกระจัดจาก 20 เมตร
-        </div> 
+       <br/> <mark>สังเกตว่าเราสามารถจัดพื้นที่ใหม่ให้เป็นรูปร่างสี่เหลี่ยมจตุรัส กว้าง 20 ยาว 20 แล้วหาพื้นที่ใต้กราฟ</mark></div> 
+        <div className='SceneContainer'>
+  <Chart7/>
+</div>
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
        <div div className="FooterSpace"></div>
@@ -809,7 +823,7 @@ function Page6 (){
       <div className="split QuestionAnswer"> 
       <div className="LabNumber">Utilizing Graph</div>
       <div className="ProgessBar"><progress value="84" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะการกระจัดจาก 20 เมตร</div>
       <div className="AnswerList">
       <label className="container" >400 J
           <input type="checkbox" id="Answer1"checked  disabled />

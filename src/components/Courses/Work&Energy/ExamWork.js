@@ -3,7 +3,8 @@ import {Link } from 'react-router-dom'
 import {AnswerSentAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-
+import {MyChart as Chart5} from './Material/Work4Chart7';
+import {MyChart as Chart6} from './Material/ExamWorkChart6';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
@@ -293,13 +294,12 @@ function allAnswerSummitCheck(){
 function Page1 (){
   return(
     <div>
-      {AlertState.current === 1? <AnswerSentAlert/> : null}
     <div className="split Index">
   <div className="LabName">งานทางฟิสิกส์</div>
   <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-  <img className='LabImg' id='img' alt ="LabImg"src="" />
   <div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
 </div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP1.png?alt=media&token=3852505d-e5b4-4e1a-bc8c-7f1071bb6132" />
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
    <div div className="FooterSpace"></div>
@@ -339,16 +339,16 @@ function Page1 (){
     return(
       <div>
         {AlertState.current === 1? <AnswerSentAlert/> : null}
-      <div className="split Index">
-    <div className="LabName">งานทางฟิสิกส์</div>
-    <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-    <img className='LabImg' id='img' alt ="LabImg"src="" />
-    <div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
+  <div className="split Index">
+  <div className="LabName">งานทางฟิสิกส์</div>
+  <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+  <div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
+</div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP1.png?alt=media&token=3852505d-e5b4-4e1a-bc8c-7f1071bb6132" />
+   <div div className="FooterSpace"></div>
+   <div className="Footer">Curious Project</div>
+   <div div className="FooterSpace"></div>
   </div>
-     <div div className="FooterSpace"></div>
-     <div className="Footer">Curious Project</div>
-     <div div className="FooterSpace"></div>
-    </div>
     
     <div className="split QuestionAnswer"> 
       <div className="LabNumber">Exam : Work (1/10)</div>
@@ -383,14 +383,14 @@ function Page1 (){
   function Page2 (){
       return(
         <div>
-          {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-      <img className='LabImg' id='img' alt ="LabImg"src="" />
       <div className="LabInfo">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
     </div>
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP2.png?alt=media&token=6e24fb48-bc0e-4c29-b382-840df03a2a88" />
        <div div className="FooterSpace"></div>
+       <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD6nx-Rhrc'> sketchify</a></div>
        <div className="Footer">Curious Project</div>
        <div div className="FooterSpace"></div>
       </div>
@@ -431,10 +431,11 @@ function Page1 (){
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-        <img className='LabImg' id='img' alt ="LabImg"src="" />
         <div className="LabInfo">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
     </div>
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP2.png?alt=media&token=6e24fb48-bc0e-4c29-b382-840df03a2a88" />
          <div div className="FooterSpace"></div>
+         <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD6nx-Rhrc'> sketchify</a></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
         </div>
@@ -475,13 +476,16 @@ function Page1 (){
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-          <img className='LabImg' id='img' alt ="LabImg"src="" />
-          <div className="Labinfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
+          <div className="LabInfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
           ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม 
           จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
         </div>
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP3.png?alt=media&token=9cbd7246-e4db-4c4b-b1a3-ae0f381f96f6" />
            <div div className="FooterSpace"></div>
+           <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADxz61GV1o'> sketchify</a></div>
            <div className="Footer">Curious Project</div>
+           
+           
            <div div className="FooterSpace"></div>
           </div>
           
@@ -522,10 +526,11 @@ function Page1 (){
               <div className="split Index">
             <div className="LabName">งานทางฟิสิกส์</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-            <img className='LabImg' id='img' alt ="LabImg"src="" />
             <div className="Labinfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
         </div>
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP3.png?alt=media&token=9cbd7246-e4db-4c4b-b1a3-ae0f381f96f6" />
              <div div className="FooterSpace"></div>
+             <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADxz61GV1o'> sketchify</a></div>
              <div className="Footer">Curious Project</div>
              <div div className="FooterSpace"></div>
             </div>
@@ -562,15 +567,14 @@ function Page1 (){
     function Page4 (){
               return(
                 <div>
-                  {AlertState.current === 1? <AnswerSentAlert/> : null}
                 <div className="split Index">
               <div className="LabName">งานทางฟิสิกส์</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-              <img className='LabImg' id='img' alt ="LabImg"src="" />
-              <div className="Labinfo">วัตถุหนัก 20 นิวตัน วางอยู่บนพื้นที่จุด A จุด B อยู่เหนือจุด A และสูงจาก A เท่ากับ 4 เมตร  จุด C อยู่ในแนวระดับเดียวกันกับจุด B และห่างจาก B เป็นระยะ 3 เมตร จงหางานที่ทำในการยกวัตถุจาก A ไป B แล้วไป C
-
+              <div className="LabInfo">วัตถุหนัก 20 นิวตัน วางอยู่บนพื้นที่จุด A จุด B อยู่เหนือจุด A และสูงจาก A เท่ากับ 4 เมตร  จุด C อยู่ในแนวระดับเดียวกันกับจุด B และห่างจาก B เป็นระยะ 3 เมตร จงหางานที่ทำในการยกวัตถุจาก A ไป B แล้วไป C
             </div>
+            <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg4.png?alt=media&token=ac33f6a5-aab3-47e4-a533-bff1ba91c84d" />
                <div div className="FooterSpace"></div>
+               <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD1F0snXpo'> sketchify</a></div>
                <div className="Footer">Curious Project</div>
                <div div className="FooterSpace"></div>
               </div>
@@ -612,10 +616,11 @@ function Page1 (){
                   <div className="split Index">
                 <div className="LabName">งานทางฟิสิกส์</div>
                 <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-                <img className='LabImg' id='img' alt ="LabImg"src="" />
-                <div className="Labinfo">วัตถุหนัก 20 นิวตัน วางอยู่บนพื้นที่จุด A จุด B อยู่เหนือจุด A และสูงจาก A เท่ากับ 4 เมตร  จุด C อยู่ในแนวระดับเดียวกันกับจุด B และห่างจาก B เป็นระยะ 3 เมตร จงหางานที่ทำในการยกวัตถุจาก A ไป B แล้วไป C
+                <div className="LabInfo">วัตถุหนัก 20 นิวตัน วางอยู่บนพื้นที่จุด A จุด B อยู่เหนือจุด A และสูงจาก A เท่ากับ 4 เมตร  จุด C อยู่ในแนวระดับเดียวกันกับจุด B และห่างจาก B เป็นระยะ 3 เมตร จงหางานที่ทำในการยกวัตถุจาก A ไป B แล้วไป C
             </div>
+            <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg4.png?alt=media&token=ac33f6a5-aab3-47e4-a533-bff1ba91c84d" />
                  <div div className="FooterSpace"></div>
+                 <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD1F0snXpo'> sketchify</a></div>
                  <div className="Footer">Curious Project</div>
                  <div div className="FooterSpace"></div>
                 </div>
@@ -652,14 +657,14 @@ function Page1 (){
 function Page5 (){
       return(
         <div>
-          {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
       <div className="LabName">งานทางฟิสิกส์</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-      <img className='LabImg' id='img' alt ="LabImg"src="" />
       <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะกระจัด 20 เมตร
-
     </div>
+    <div className='SceneContainer'>
+  <Chart5/>
+</div>
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
        <div div className="FooterSpace"></div>
@@ -701,10 +706,11 @@ function Page5 (){
           <div className="split Index">
         <div className="LabName">งานทางฟิสิกส์</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-        <img className='LabImg' id='img' alt ="LabImg"src="" />
         <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะกระจัด 20 เมตร
-
     </div>
+    <div className='SceneContainer'>
+  <Chart5/>
+</div>
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
@@ -746,9 +752,10 @@ function Page5 (){
             <div className="split Index">
           <div className="LabName">งานทางฟิสิกส์</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-          <img className='LabImg' id='img' alt ="LabImg"src="" />
-          <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุหนึ่ง นำค่าแรงในแนวขนานกับการกระจัดมาเขียนความสัมพันธ์ได้ดังกราฟ จงหางานลัพธ์ ที่ทำให้วัตถุเคลื่อนได้ระยะทาง 30 เมตร (เปลี่ยน x ในกราฟเป็น 20 m)
-
+          <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุหนึ่ง นำค่าแรงในแนวขนานกับการกระจัดมาเขียนความสัมพันธ์ได้ดังกราฟ จงหางานลัพธ์ ที่ทำให้วัตถุเคลื่อนได้ระยะทาง 30 เมตร
+          <div className='SceneContainer'>
+  <Chart6/>
+</div>
         </div>
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
@@ -791,9 +798,10 @@ function Page5 (){
               <div className="split Index">
             <div className="LabName">งานทางฟิสิกส์</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
-            <img className='LabImg' id='img' alt ="LabImg"src="" />
-            <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุหนึ่ง นำค่าแรงในแนวขนานกับการกระจัดมาเขียนความสัมพันธ์ได้ดังกราฟ จงหางานลัพธ์ ที่ทำให้วัตถุเคลื่อนได้ระยะทาง 30 เมตร (เปลี่ยน x ในกราฟเป็น 20 m)
-
+            <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุหนึ่ง นำค่าแรงในแนวขนานกับการกระจัดมาเขียนความสัมพันธ์ได้ดังกราฟ จงหางานลัพธ์ ที่ทำให้วัตถุเคลื่อนได้ระยะทาง 30 เมตร
+            <div className='SceneContainer'>
+  <Chart6/>
+</div>
         </div>
              <div div className="FooterSpace"></div>
              <div className="Footer">Curious Project</div>
