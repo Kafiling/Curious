@@ -163,13 +163,10 @@ return(
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo">กำลัง (Power) คือ อัตราการทำงานหรืองานที่เกิดขึ้นในหนึ่งหน่วยเวลา<br/><br/>
 “กำลัง” ใช้บอกความสามารถทำงานได้มาก-น้อยในช่วงเวลาหนึ่ง เช่น ปั้นจั่นดึงวัตถุ มีกำลัง 10000 W หมายความว่า ใน 1 วินาที ปั่นจั่น สามารถออกงานได้ 10000 J
-
 </div> 
- <div div className="LabInfo"><br/><br/>********ใส่รูปจ้า*
- 
-  
-  </div> 
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower1%2FPower1P1.png?alt=media&token=ff218331-6949-462a-9dae-5e72c347f0ef" />
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADoiVmEBYc'>iconsy</a>&nbsp; and &nbsp;<a href='https://www.canva.com/media/MAEPygH4D60'>pixabay</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
@@ -193,9 +190,16 @@ return(
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo">โดยทั่วไป กำลังที่ใช้บอกความสามารถของอุปกรณ์ จะหมายถึง กำลังเฉลี่ย
-<br/><br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/><br/>
 </div> 
-
+<div div className="LabInfo">เขียนเป็นสมการได้ดังนี้
+ <MathJaxContext>
+  <MathJax style={{textAlign: 'center'}}>{"\\(P = \\frac{W}{t} \\)"}</MathJax>
+  </MathJaxContext>
+  โดย<br/>
+  P แทน กำลัง มีหน่วยเป็น จูลต่อวินาที หรือ วัตต์ (J/s / W)<br/>
+  W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
+  t แทน เวลา มีหน่วยเป็น วินาที (s)
+  </div> 
  <div div className="LabInfo">เนื่องจากงานและช่วงเวลาเป็นปริมาณสเกลาร์ กำลังจึงเป็นปริมารสเกลาร์ด้วย
   </div> 
  <div div className="FooterSpace"></div>
