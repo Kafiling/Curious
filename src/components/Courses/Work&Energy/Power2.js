@@ -175,10 +175,11 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div div className="LabInfo"><br/>ในบางครั้งพวกเราจะเห็นการบอกกำลังในหน่วยของ กำลังม้า (Horse Power : hp) หรือที่เรียกโดยทั่วไปว่า “แรงม้า” โดย 1 hp = 746 watt
-<br/><br/><br/>********ใส่รูปจ้า*
+<div div className="LabInfo">ในบางครั้งพวกเราจะเห็นการบอกกำลังในหน่วยของ กำลังม้า (Horse Power : hp) หรือที่เรียกโดยทั่วไปว่า “แรงม้า” โดย 1 hp = 746 watt
 </div> 
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower2%2FPower2P1.png?alt=media&token=1fbc10d2-a290-4883-9262-ee5981d14979" />
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a>&nbsp; and &nbsp;<a href='https://www.canva.com/media/MAEPygH4D60'>pixabay</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
@@ -201,11 +202,12 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div div className="LabInfo"><br/>
+<div div className="LabInfo">
 เครื่องยนต์รถ สามารถส่งแรง 2000 N ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr  เครื่องยนต์นี้มีกำลังกี่ kW
-<br/><br/><br/>********ใส่รูปจ้า*
   </div> 
+  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower2%2FPower2P2.png?alt=media&token=4333be2f-f5b6-4291-829a-300bc57e46c5" />  
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
@@ -249,14 +251,15 @@ function Page2Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo"><br/>
+<div div className="LabInfo">
 เครื่องยนต์รถ สามารถส่งแรง 2000 N ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr  เครื่องยนต์นี้มีกำลังกี่ kW
-<br/><br/><br/>********ใส่รูปจ้า*
-</div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
+  </div> 
+  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower2%2FPower2P2.png?alt=media&token=4333be2f-f5b6-4291-829a-300bc57e46c5" />  
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
@@ -294,13 +297,13 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo"> <br/>จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
-เครื่องยนต์รถ สามารถส่งแรง 2000 N <br/>ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr
-<br/><br/><br/>********ใส่รูปจ้า*
+<div className="LabInfo"> จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
+เครื่องยนต์รถ สามารถส่งแรง 2000 N ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr
 </div> 
-
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower2%2FPower2P2.png?alt=media&token=4333be2f-f5b6-4291-829a-300bc57e46c5" />  
  
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
@@ -344,14 +347,16 @@ function Page3Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
 <div className="LabName">กำลัง</div>
-<div className="LabInfo"><br/>จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
-เครื่องยนต์รถ สามารถส่งแรง 2000 N <br/>ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr
-<br/><br/><br/>********ใส่รูปจ้า*
+<div className="LabInfo"> จากข้อ 2 เครื่องยนต์นี้มีกำลังกี่แรงม้า
+เครื่องยนต์รถ สามารถส่งแรง 2000 N ทำให้รถเคลื่อนที่ไปด้วยความเร็ว 72 km/hr
 </div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower2%2FPower2P2.png?alt=media&token=4333be2f-f5b6-4291-829a-300bc57e46c5" />  
+ 
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
@@ -391,10 +396,11 @@ function Page3Answered (){
       <div>
       <div className="split Index">
     <div className="LabName">กำลัง</div>
-    <div className="LabInfo"><br/>นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
-    <br/><br/><br/>********ใส่รูปจ้า*
+    <div className="LabInfo">นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
     </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower2%2FPower2P4.png?alt=media&token=62b6a995-8d8c-409e-b9e6-b72ea2aa4e6f" />  
      <div div className="FooterSpace"></div>
+     <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MABOVU_rzok'>Canva Layouts</a></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
     </div>
@@ -436,16 +442,16 @@ function Page3Answered (){
         <div>
             {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">กำลัง</div>
-      <div className="LabInfo"><br/>นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
-    <br/><br/><br/>********ใส่รูปจ้า*
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    <div className="split Index">
+    <div className="LabName">กำลัง</div>
+    <div className="LabInfo">นักวิ่งคนหนึ่งมีมวล 60 กิโลกรัม วิ่งขึ้นอาคาร 25 ชั้น ด้วยอัตราเร็วคงตัว โดยใช้เวลา 10 นาที <br/>แต่ละชั้นสูง 3.2 เมตร จงหากำลังเฉลี่ยของนักวิ่ง
+    </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower2%2FPower2P4.png?alt=media&token=62b6a995-8d8c-409e-b9e6-b72ea2aa4e6f" />  
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MABOVU_rzok'>Canva Layouts</a></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
@@ -483,10 +489,11 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">กำลัง</div>
-        <div className="LabInfo"><br/>กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 
-        <br/><br/><br/>********ใส่รูปจ้า*
+        <div className="LabInfo">กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 
         </div> 
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg1.png?alt=media&token=a3f3febd-e203-42e5-a018-7b7423a7a987" />
          <div div className="FooterSpace"></div>
+         <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEcRLcslH4'>sketchify</a></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
         </div>
@@ -528,16 +535,16 @@ function Page5 (){
             <div>
                 {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-            <div className="split Index">
-          <div className="LabName">กำลัง</div>
-          <div className="LabInfo"><br/>กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 
-        <br/><br/><br/>********ใส่รูปจ้า*
-          </div> 
-    
-           <div div className="FooterSpace"></div>
-           <div className="Footer">Curious Project</div>
-           <div div className="FooterSpace"></div>
-          </div>
+    <div className="split Index">
+        <div className="LabName">กำลัง</div>
+        <div className="LabInfo">กำลังเฉลี่ยเกี่ยวข้องกับปริมาณใดบ้าง 
+        </div> 
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg1.png?alt=media&token=a3f3febd-e203-42e5-a018-7b7423a7a987" />
+         <div div className="FooterSpace"></div>
+         <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEcRLcslH4'>sketchify</a></div>
+         <div className="Footer">Curious Project</div>
+         <div div className="FooterSpace"></div>
+        </div>
           
           <div className="split QuestionAnswer"> 
             <div className="LabNumber">Introducing Work</div>
