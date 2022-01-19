@@ -4,7 +4,7 @@ import {Link } from 'react-router-dom'
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-
+import {Scene as Scene2} from './Material/Ek1Scene1';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
@@ -149,15 +149,16 @@ return(
 <div className="LabName">พลังงานจลน์</div>
 <div div className="LabInfo">พลังงานคืออะไร พลังงานนั้นเป็นปริมาณที่ไม่สามารถมองเห็นหรือจับต้องได้ แต่สามารถรับรู้จากผลของพลังงานนั้นได้ 
 เช่น พลังงานจากแสงอาทิตย์ที่ทำให้รู้สึกร้อน พลังงานเสียงที่มากไปทำให้เราปวดหู หรือพลังงานไฟฟ้านำไปใช้ในเครื่องใช้ไฟฟ้าต่างๆ
-<br/><br/><br/>********ภาพพลังงานชนิดต่างๆ*<br/><br/><br/>
-
+</div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEk1%2FEkP1.png?alt=media&token=5d59369b-c46d-4d22-a357-31d73fab4e5a" />
+<div div className="LabInfo">
 พลังงานมีหลากหลายชนิดเช่น พลังงานแสง พลังงานเสียง พลังงานความร้อน พลังงานเคมี จนไปถึง พลังงานนิวเคลียร์ โดยในบทเรียนนี้จะหยิบ พลังงานทางกลศาสตร์ 2 ชนิด มาทำการเรียนรู้กัน ได้แก่ พลังงานศักย์ (Potential energy) และ พลังงานจลน์ (Kinetic energy)
 <br/><br/>
 พลังงานมีหน่วยเป็น จูล (Joules : J)
-
-
 </div> 
+
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADpjrSOZOI'>iconsy</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
@@ -182,18 +183,17 @@ return(
 <div className="LabName">พลังงานจลน์</div>
 <div div className="LabInfo">
 เริ่มจากพลังงานจลน์(Kinetic energy) เป็นพลังงานของวัตถุที่กำลังเคลื่อนที่ (มีความเร็ว) 
-<br/><br/><br/>********ภาพ or Matter.js*<br/><br/><br/>
-โดยพิสูจน์จาก <br/>
-(งานจากแรง) 			
+<br/>
+โดยพิสูจน์จาก งานจากแรง			
 <MathJaxContext>
       <MathJax>\[W = F \cdot S \]
         \[W = m \cdot a \cdot S....(1) \]
-        จาก  \[S = ut+ \cfrac{1}{2} \cdot at^2		\]
-        \[S = \cfrac{1}{2}at^2 ; u = 0 ....(2)		\]
+        จากสมการการเคลื่อนที่แนวตรง  \[S = ut+ \cfrac{1}{2} \cdot at^2		\]
+        แทนค่า u = 0 \[S = \cfrac{1}{2}at^2 ....(2)		\]
         แทนค่า S ใน (1)
         \[W = m \cdot a \cdot \cfrac{1}{2} \cdot at^2\]
         \[W = \cfrac{1}{2} \cdot m \cdot (at) ^2\]
-        \[W = \cfrac{1}{2} \cdot m \cdot v^2; u = 0\]
+        \[W = \cfrac{1}{2} \cdot m \cdot v^2\]
         \[Ek = \cfrac{1}{2} \cdot m \cdot v^2\]
       </MathJax>
       </MathJaxContext>
@@ -223,11 +223,11 @@ return(
 <div className="LabName">พลังงานจลน์</div>
 <div className="LabInfo">เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
 วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
-<br/><br/><br/>********ใส่รูปจ้า*
 </div> 
-
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEk1%2FEkP3.png?alt=media&token=042abf49-cb96-44fc-90d4-390964ca080c" />
  
  <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADk9yVjvJU'>sketchify</a></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
@@ -273,12 +273,14 @@ function Page3Answered (){
 <div className="LabName">พลังงานจลน์</div>
 <div className="LabInfo">เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
 วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
-<br/><br/><br/>********ใส่รูปจ้า*
 </div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEk1%2FEkP3.png?alt=media&token=042abf49-cb96-44fc-90d4-390964ca080c" />
+ 
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADk9yVjvJU'>sketchify</a></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
@@ -358,9 +360,9 @@ function Page5 (){
           <div className="split Index">
         <div className="LabName">พลังงานจลน์</div>
         <div className="LabInfo">จะกล่าวได้ว่าพลังงานจลน์ของจะเพิ่มหรือลดได้หากมีงานเนื่องจากแรงเข้ามากกระทำกับกับวัตถุ 
-        เช่น วัตถุกำลังเคลื่อนที่แล้วเราเอามือไปกั้นทำให้วัตถุหยุดเคลื่อนที่ หรือ ลูกบอลกำลังกลิ้งด้วยความเร็ว 5 m/s แล้วเราไปเตะลูกบอลทำให้ ความเร็วลูกบอลเพิ่มขึ้น
-        <br/><br/><br/>********Matter js Again?*
+        เช่น วัตถุกำลังเคลื่อนที่แล้วเราเอามือไปกั้นทำให้วัตถุหยุดเคลื่อนที่ หรือ ลูกบอลกำลังกลิ้งด้วยความเร็ว แล้วเราไปเตะลูกบอลทำให้ ความเร็วลูกบอลเพิ่มขึ้น
         </div> 
+
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
@@ -384,10 +386,10 @@ function Page6 (){
             <div className="split Index">
           <div className="LabName">พลังงานจลน์</div>
           <div className="LabInfo">รถมวล 800 kg แล่นด้วยความเร็ว 20 m/s คนขับเบรกรถ เมื่อเริ่มเบรกรถเคลื่อนไปได้อีก 10 m ก่อนจะหยุดนิ่ง จงหางานในการเบรกรถ
-
-          <br/><br/><br/>********ใส่รูปจ้า*
           </div> 
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEk1%2FEkP5.png?alt=media&token=ae79bb3a-d0cf-4d38-a717-9dc9a82db3af" />
            <div div className="FooterSpace"></div>
+           <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a></div>
            <div className="Footer">Curious Project</div>
            <div div className="FooterSpace"></div>
           </div>
