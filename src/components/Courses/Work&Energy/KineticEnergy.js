@@ -321,8 +321,7 @@ function Page3Answered (){
     <div className="LabName">พลังงานจลน์</div>
     <div className="LabInfo">งานกับการเปลี่ยนพลังงานจลน์<br/><br/>
 เราได้ค้นพบแล้วว่างานจากแรงสามารถทำให้วัตถุที่อยู่นิ่ง เคลื่อนที่ได้ (มีพลังงานจลน์) แล้วหากวัตถุมีพลังงานจลน์อยู่แล้ว มีงานจากแรงเข้าไปกระทำเพิ่มอีกจะส่งผลอย่างไร
-
-    <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
+<br/>
     เนื่องจากแรงลัพธ์เป็นแรงคงตัว ดังนั้นความเร่งจึงมีค่าคงตัวด้วย จากสมการ
     <MathJaxContext>
       <MathJax>\[v^2 = u^2 + 2 \cdot a \cdot \Delta x\]
@@ -362,6 +361,9 @@ function Page5 (){
         <div className="LabInfo">จะกล่าวได้ว่าพลังงานจลน์ของจะเพิ่มหรือลดได้หากมีงานเนื่องจากแรงเข้ามากกระทำกับกับวัตถุ 
         เช่น วัตถุกำลังเคลื่อนที่แล้วเราเอามือไปกั้นทำให้วัตถุหยุดเคลื่อนที่ หรือ ลูกบอลกำลังกลิ้งด้วยความเร็ว แล้วเราไปเตะลูกบอลทำให้ ความเร็วลูกบอลเพิ่มขึ้น
         </div> 
+        <div className='SceneContainer'>
+      <Scene2/>
+    </div>
 
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -431,15 +433,15 @@ function Page6 (){
       {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
-<div className="LabName">พลังงานจลน์</div>
-<div className="LabInfo">เรามาลองคำนวณพลังงานจลน์ในข้อนี้ดูนะครับ<br/><br/>
-วัตถุก้อนหนึ่งมีมวล 0.5 kg กำลังเคลื่อนที่ด้วย ความเร็ว 10 m/s จะมีพลังงานจลน์เท่าไร
-<br/><br/><br/>********ใส่รูปจ้า*
-</div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
+          <div className="LabName">พลังงานจลน์</div>
+          <div className="LabInfo">รถมวล 800 kg แล่นด้วยความเร็ว 20 m/s คนขับเบรกรถ เมื่อเริ่มเบรกรถเคลื่อนไปได้อีก 10 m ก่อนจะหยุดนิ่ง จงหางานในการเบรกรถ
+          </div> 
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEk1%2FEkP5.png?alt=media&token=ae79bb3a-d0cf-4d38-a717-9dc9a82db3af" />
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAEaNirpHr0'>sketchify</a></div>
+           <div className="Footer">Curious Project</div>
+           <div div className="FooterSpace"></div>
+          </div>
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>

@@ -68,9 +68,6 @@ Composite.add(world, [constraint]);
 function setPointer(){
   var Distance = (( 60 - boxA.position.x)**2+(540 - boxA.position.y)**2)**(1/2)
   Body.setPosition(pointer, { x: (Distance/2) + 505, y : 128});
-  console.log (Distance)
-  console.log ("x" + boxA.position.x)
-  console.log ("y" + boxA.position.y)
 }
  Matter.Events.on(engine, 'afterUpdate', function(event){
 setPointer()
