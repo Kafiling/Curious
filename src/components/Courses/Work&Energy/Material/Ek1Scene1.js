@@ -1,11 +1,19 @@
-import React,{useState} from "react";
+import React from "react";
 import Matter from "matter-js";
 
 
 export class Scene extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {IsButtonClick: false};
+
+  }
+  
+  handleClick() {
+    this.setState({IsButtonClick: true});
+    console.log('that is:', this);
+   console.log(this.state.IsButtonClick)
+    setTimeout(this.setState({IsButtonClick: true}), 100)
   }
   componentDidMount() {
     var Engine = Matter.Engine,
@@ -18,7 +26,8 @@ export class Scene extends React.Component {
     MouseConstraint = Matter.MouseConstraint,
     Constraint = Matter.Constraint,
     Composite = Matter.Composite;
-    
+
+  
 
 // create an engine
 var engine = Engine.create(),
@@ -36,23 +45,15 @@ var render = Render.create({
 });
 
 // create box and a ground
-var boxA = Bodies.rectangle(10, 560, 80, 80);
+var boxA = Bodies.circle(40, 550, 40);
 var ground = Bodies.rectangle(500, 610, 1000, 60, { isStatic: true,  });
-var wallL = Bodies.rectangle(-10, 300, 60, 600, { isStatic: true });
-var wallR = Bodies.rectangle(1010, 300, 60, 600, { isStatic: true });
+var wallL = Bodies.rectangle(-10, 170, 60, 600, { isStatic: true });
+var wallR = Bodies.rectangle(1010, 170, 60, 600, { isStatic: true });
 var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
-var pointer = Bodies.rectangle(965, 128, 10, 200,{ isStatic: true , render: { fillStyle: '#FFFFFF' } });
+
 // add all of the bodies to the world
-Composite.add(engine.world, [boxA, ground, wallL ,wallR ,ceiling,pointer]);
-var constraint = Constraint.create({
-  bodyA: boxA,
-  bodyB: wallL,
-  pointB: { x: 20, y: 240 },
-  stiffness: 0.01,
-  damping: 0.05
-  
-});
-Composite.add(world, [constraint]);
+Composite.add(engine.world, [boxA, ground, wallL ,wallR ,ceiling]);
+
 // add mouse control
     var mouse = Mouse.create(render.canvas),
         mouseConstraint = MouseConstraint.create(engine, {
@@ -64,18 +65,29 @@ Composite.add(world, [constraint]);
                 }
             }
         });
-
-function setPointer(){
-  var Distance = (( 60 - boxA.position.x)**2+(540 - boxA.position.y)**2)**(1/2)
-  Body.setPosition(pointer, { x: (Distance/2) + 505, y : 128});
-  console.log (Distance)
-  console.log ("x" + boxA.position.x)
-  console.log ("y" + boxA.position.y)
+        
+        
+function setVelocity(){
+  Body.setVelocity(boxA, { x: 5, y: 0 });
+  
 }
+
  Matter.Events.on(engine, 'afterUpdate', function(event){
-setPointer()
+  setVelocity()
  })
 
+ 
+ Matter.Events.on(engine, 'afterUpdate', function(event){
+  if(boxA.position.x >= 1040){
+  Body.setAngle(boxA, 0)
+  Body.setAngularVelocity(boxA, 0)
+  Body.setPosition(boxA, { x: 0, y: 550 })
+  ;
+  }
+})
+if (this.state.IsButtonClick){
+  setTimeout(Body.applyForce(boxA, boxA.position, {x: 1, y: 0}), 1)
+}
 
     Composite.add(world, mouseConstraint);
 
@@ -96,6 +108,10 @@ Runner.run(runner, engine);
 
   render() {
     return(<div>
+       <button onClick={() => this.handleClick()}>
+        Click me
+        
+      </button>
     <div ref="scene" />
     </div> 
     )
