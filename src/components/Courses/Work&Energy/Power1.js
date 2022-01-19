@@ -172,7 +172,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Work by time</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -211,7 +211,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Work by time</div>
   <div className="ProgessBar"><progress value="20" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -240,7 +240,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Work by time</div>
   <div className="ProgessBar"><progress value="40" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
@@ -289,7 +289,7 @@ function Page3Answered (){
 </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Work by time</div>
     <div className="ProgessBar"><progress value="40" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
@@ -335,7 +335,7 @@ function Page3Answered (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Work by time</div>
       <div className="ProgessBar"><progress value="60" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
@@ -383,7 +383,7 @@ function Page3Answered (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Work by time</div>
         <div className="ProgessBar"><progress value="60" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
@@ -428,7 +428,7 @@ function Page5 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Introducing Work</div>
+          <div className="LabNumber">Work by time</div>
           <div className="ProgessBar"><progress value="80" max="100"></progress></div>
           <div className="Question"></div>
           <div className="AnswerList">
@@ -476,7 +476,7 @@ function Page5 (){
         </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Introducing Work</div>
+            <div className="LabNumber">Work by time</div>
             <div className="ProgessBar"><progress value="80" max="100"></progress></div>
             <div className="Question"></div>
             <div className="AnswerList">
