@@ -191,14 +191,17 @@ return(
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo">โดยทั่วไป กำลังที่ใช้บอกความสามารถของอุปกรณ์ จะหมายถึง กำลังเฉลี่ย
 </div> 
-<div div className="LabInfo">เขียนเป็นสมการได้ดังนี้
+<div div className="LabInfo">เนื่องจากกำลังเป็นอัตราการทำงานต่อเวลา จึงเขียนเป็นสมการได้ดังนี้<br/><br/>
  <MathJaxContext>
-  <MathJax style={{textAlign: 'center'}}>{"\\(P = \\frac{W}{t} \\)"}</MathJax>
+  <MathJax style={{textAlign: 'center'}}>{"\\(P = \\frac{W}{t} =\\frac{F\\cdot S}{t} =F\\cdot V \\)"}</MathJax>
   </MathJaxContext>
   โดย<br/>
   P แทน กำลัง มีหน่วยเป็น จูลต่อวินาที หรือ วัตต์ (J/s / W)<br/>
   W แทน งาน มีหน่วยเป็น นิวตัน-เมตร หรือ จูล (N⋅m / J)<br/>
-  t แทน เวลา มีหน่วยเป็น วินาที (s)
+  t แทน เวลา มีหน่วยเป็น วินาที (s) <br/>
+  F แทน แรง มีหน่วยเป็น นิวตัน (N)<br/>
+  S แทน การกระจัด มีหน่วยเป็น เมตร (m)<br/>
+  V แทน ความเร็ว มีหน่วยเป็น เมตรต่อวินาที (m/s)
   </div> 
  <div div className="LabInfo">เนื่องจากงานและช่วงเวลาเป็นปริมาณสเกลาร์ กำลังจึงเป็นปริมารสเกลาร์ด้วย
   </div> 
