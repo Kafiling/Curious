@@ -4,7 +4,7 @@ import {Link } from 'react-router-dom'
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-
+import {Scene as Scene1} from './Material/Ep1Scene1';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
@@ -176,12 +176,14 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
-<div div className="LabInfo"><br/>จากทฤษฎีบทงาน-พลังงานจลน์ ในตอนที่แล้ว อาจจะทำให้สงสัยได้ 
+<div div className="LabInfo">จากทฤษฎีบทงาน-พลังงานจลน์ ในตอนที่แล้ว อาจจะทำให้สงสัยได้ 
 <br/> ลองพิจารณาลูกแอปเปิ้ลที่อยู่บนต้นไม้ จะพบได้ว่าลูกแอปเปิ้ลนั้นไม่มีพลังงานจลน์
 <br/> แต่เมื่อลูกแอปเปิ้ลหลุดลงมาจะพบว่า ลูกแอปเปิ้ลมีความเร็วเพิ่มขึ้นเรื่อยๆ (พลังงานจลน์เพิ่มขึ้นเรื่อยๆ) 
 ตามระยะทางที่เคลื่อนลงมา พลังงานนี้มาจากไหนกัน?
-<br/><br/><br/>********ใส่รูปจ้า*
 </div> 
+<div className='SceneContainer'>
+      <Scene1/>
+    </div>
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
