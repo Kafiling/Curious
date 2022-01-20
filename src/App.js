@@ -30,6 +30,7 @@ import PotentialEnergy2 from './components/Courses/Work&Energy/PotentialEnergy2'
 import Lawofconservationofenergy1 from './components/Courses/Work&Energy/Lawofconservationofenergy1'
 import Lawofconservationofenergy2 from './components/Courses/Work&Energy/Lawofconservationofenergy2'
 import ExamWork from './components/Courses/Work&Energy/ExamWork'
+import FinalExam from './components/Courses/Work&Energy/FinalExam'
 
 import PhysicEngTest from './components/Courses/Work&Energy/PhysicEngTest'
 
@@ -70,6 +71,7 @@ function App() {
           <Route exact path="/courses/work_energy/lawofconservationofenergy1"  ><Lawofconservationofenergy1/></Route>
           <Route exact path="/courses/work_energy/lawofconservationofenergy2"  ><Lawofconservationofenergy2/></Route>
           <Route exact path="/courses/work_energy/exam_work"  ><ExamWork/></Route>
+          <Route exact path="/courses/work_energy/final_exam"  ><FinalExam/></Route>
           <Route exact path="/courses/work_energy/physic_eng"  ><PhysicEngTest/></Route>
 
           {/* Playgrounds*/}

@@ -18,6 +18,7 @@ export default function Course() {
             <li ><Link to = "/courses/work_energy/lawofconservationofenergy2" className = "Course">Law of conservation of energy 2</Link></li>
             <li ><Link to = "/" className = "Course">Activties : Work</Link></li>
             <li ><Link to = "/courses/work_energy/exam_work" className = "Course">Exam : Work</Link></li>
+            <li ><Link to = "/courses/work_energy/final_exam" className = "Course">Final Exam</Link></li>
             <li ><Link to = "/courses/work_energy/physic_eng" className = "Course">Test: PhysicEngTest</Link></li>
         </div>
     )
