@@ -296,7 +296,7 @@ function Page1 (){
   return(
     <div>
     <div className="split Index">
-  <div className="LabName">งานทางฟิสิกส์</div>
+  <div className="LabName">Exam : Work</div>
   <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
   <div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
 </div>
@@ -341,7 +341,7 @@ function Page1 (){
       <div>
         {AlertState.current === 1? <AnswerSentAlert/> : null}
   <div className="split Index">
-  <div className="LabName">งานทางฟิสิกส์</div>
+  <div className="LabName">Exam : Work</div>
   <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
   <div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตรยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
 </div>
@@ -385,7 +385,7 @@ function Page1 (){
       return(
         <div>
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabName">Exam : Work</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
       <div className="LabInfo">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
     </div>
@@ -430,7 +430,7 @@ function Page1 (){
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
+        <div className="LabName">Exam : Work</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
         <div className="LabInfo">ชายคนหนึ่งยกวัตถุมวล 5 กิโลกรัม ขึ้นสูง 2 เมตร จงหางานของแรงยก
     </div>
@@ -475,7 +475,7 @@ function Page1 (){
             <div>
               {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
+          <div className="LabName">Exam : Work</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
           <div className="LabInfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
           ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม 
@@ -525,7 +525,7 @@ function Page1 (){
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
-            <div className="LabName">งานทางฟิสิกส์</div>
+            <div className="LabName">Exam : Work</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
             <div className="Labinfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
         </div>
@@ -569,7 +569,7 @@ function Page1 (){
               return(
                 <div>
                 <div className="split Index">
-              <div className="LabName">งานทางฟิสิกส์</div>
+              <div className="LabName">Exam : Work</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
               <div className="LabInfo">วัตถุหนัก 20 นิวตัน วางอยู่บนพื้นที่จุด A จุด B อยู่เหนือจุด A และสูงจาก A เท่ากับ 4 เมตร  จุด C อยู่ในแนวระดับเดียวกันกับจุด B และห่างจาก B เป็นระยะ 3 เมตร จงหางานที่ทำในการยกวัตถุจาก A ไป B แล้วไป C
             </div>
@@ -615,7 +615,7 @@ function Page1 (){
                   <div>
                     {AlertState.current === 1? <AnswerSentAlert/> : null}
                   <div className="split Index">
-                <div className="LabName">งานทางฟิสิกส์</div>
+                <div className="LabName">Exam : Work</div>
                 <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
                 <div className="LabInfo">วัตถุหนัก 20 นิวตัน วางอยู่บนพื้นที่จุด A จุด B อยู่เหนือจุด A และสูงจาก A เท่ากับ 4 เมตร  จุด C อยู่ในแนวระดับเดียวกันกับจุด B และห่างจาก B เป็นระยะ 3 เมตร จงหางานที่ทำในการยกวัตถุจาก A ไป B แล้วไป C
             </div>
@@ -659,7 +659,7 @@ function Page5 (){
       return(
         <div>
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabName">Exam : Work</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
       <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะกระจัด 20 เมตร
     </div>
@@ -705,7 +705,7 @@ function Page5 (){
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
+        <div className="LabName">Exam : Work</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
         <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุให้เคลื่อนที่ตามแนวแรงได้ความสัมพันธ์ดังกราฟ จงหางานเมื่อวัตถุเคลื่อนที่ได้ระยะกระจัด 20 เมตร
     </div>
@@ -751,7 +751,7 @@ function Page5 (){
             <div>
               {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
+          <div className="LabName">Exam : Work</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
           <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุหนึ่ง นำค่าแรงในแนวขนานกับการกระจัดมาเขียนความสัมพันธ์ได้ดังกราฟ จงหางานลัพธ์ ที่ทำให้วัตถุเคลื่อนได้ระยะทาง 30 เมตร
           <div className='SceneContainer'>
@@ -797,7 +797,7 @@ function Page5 (){
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
-            <div className="LabName">งานทางฟิสิกส์</div>
+            <div className="LabName">Exam : Work</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
             <div className="LabInfo">แรงไม่คงที่กระทำต่อวัตถุหนึ่ง นำค่าแรงในแนวขนานกับการกระจัดมาเขียนความสัมพันธ์ได้ดังกราฟ จงหางานลัพธ์ ที่ทำให้วัตถุเคลื่อนได้ระยะทาง 30 เมตร
             <div className='SceneContainer'>
@@ -842,7 +842,7 @@ function Page5 (){
               return(
                 <div>
                 <div className="split Index">
-              <div className="LabName">งานทางฟิสิกส์</div>
+              <div className="LabName">Exam : Work</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
               <div className="LabInfo">เมื่อใช้แรง F ดึงวัตถุให้เคลื่อนไปในแนวระดับ กราฟด้านล่าง แรง F และแรงเสียดทาน f แสดงดังรูป เมื่อวัตถุเคลื่อนไปด้านขวาจงหา งานของแรง F งานของแรงเสียดทาน และงานของแรงลัพธ์ (Cos 37˚ = 4/5  Sin 37˚ = 3/5)
             </div>
@@ -889,7 +889,7 @@ function Page5 (){
                   <div>
                     {AlertState.current === 1? <AnswerSentAlert/> : null}
                     <div className="split Index">
-              <div className="LabName">งานทางฟิสิกส์</div>
+              <div className="LabName">Exam : Work</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
               <div className="LabInfo">เมื่อใช้แรง F ดึงวัตถุให้เคลื่อนไปในแนวระดับ กราฟด้านล่าง แรง F และแรงเสียดทาน f แสดงดังรูป เมื่อวัตถุเคลื่อนไปด้านขวาจงหา งานของแรง F งานของแรงเสียดทาน และงานของแรงลัพธ์ (Cos 37˚ = 4/5  Sin 37˚ = 3/5)
             </div>
@@ -935,7 +935,7 @@ function Page5 (){
       return(
         <div>
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabName">Exam : Work</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
       <div className="LabInfo">จงหางานอย่างน้อยที่กรรมกรคนหนึ่งต้องทำในการดันกล่องสินค้ามวล 50 กิโลกรัมขึ้นไปตามพื้นเอียงทำมุม 53 องศากับพื้นราบ ถึงจุดสูงสุดจากพื้นราบ 4 เมตร ถ้าแรงเสียดทานระหว่างพื้นเอียงกับกล่องเป็น 80 นิวตัน (กำหนด Sin 53 = 4/5)
       <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg3.png?alt=media&token=745b2355-f8ce-46d2-9fad-6286dad2111d" />
@@ -980,7 +980,7 @@ function Page5 (){
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
+        <div className="LabName">Exam : Work</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
         <div className="LabInfo">จงหางานอย่างน้อยที่กรรมกรคนหนึ่งต้องทำในการดันกล่องสินค้ามวล 50 กิโลกรัมขึ้นไปตามพื้นเอียงทำมุม 53 องศากับพื้นราบ ถึงจุดสูงสุดจากพื้นราบ 4 เมตร ถ้าแรงเสียดทานระหว่างพื้นเอียงกับกล่องเป็น 80 นิวตัน (กำหนด Sin 53 = 4/5)
         <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg3.png?alt=media&token=745b2355-f8ce-46d2-9fad-6286dad2111d" />
@@ -1025,7 +1025,7 @@ function Page9 (){
       return(
         <div>
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabName">Exam : Work</div>
       <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
       
       <div className="LabInfo">กรณีในข้อใดต่อไปนี้ไม่เกิดงานในความหมายทางฟิสิกส์
@@ -1072,7 +1072,7 @@ function Page9 (){
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
+        <div className="LabName">Exam : Work</div>
         <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
         <div className="LabInfo">กรณีในข้อใดต่อไปนี้ไม่เกิดงานในความหมายทางฟิสิกส์
         <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg2.png?alt=media&token=a7abff26-88d5-4523-809f-04288e4bddf5" />
@@ -1118,7 +1118,7 @@ function Page10 (){
             <div>
               {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
+          <div className="LabName">Exam : Work</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
           <div className="LabInfo">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง</div>
           <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg1.png?alt=media&token=a3f3febd-e203-42e5-a018-7b7423a7a987" />
@@ -1179,7 +1179,7 @@ function Page10 (){
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
-            <div className="LabName">งานทางฟิสิกส์</div>
+            <div className="LabName">Exam : Work</div>
             <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
             <div className="LabInfo">ข้อใดต่อไปนี้กล่าวได้ถูกต้อง
         </div>

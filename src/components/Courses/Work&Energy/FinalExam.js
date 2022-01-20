@@ -282,7 +282,7 @@ function Page1 (){
     <div>
       {AlertState.current === 1? <AnswerSentAlert/> : null}
     <div className="split Index">
-  <div className="LabName">งานทางฟิสิกส์</div>
+  <div className="LabName">Final Exam</div>
   <div div className="LabInfo">วัตถุก้อนหนึ่งมีมวล 0.5 กิโลกรัม กำลังเคลื่อนที่ด้วยอัตราเร็ว 10 เมตรต่อวินาที <br/>จะมีพลังงานจลย์เท่าไหร่
   <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
 </div>
@@ -326,7 +326,7 @@ function Page1 (){
       <div>
         {AlertState.current === 1? <AnswerSentAlert/> : null}
       <div className="split Index">
-    <div className="LabName">งานทางฟิสิกส์</div>
+    <div className="LabName">Final Exam</div>
     <div div className="LabInfo">วัตถุก้อนหนึ่งมีมวล 0.5 กิโลกรัม กำลังเคลื่อนที่ด้วยอัตราเร็ว 10 เมตรต่อวินาที <br/>จะมีพลังงานจลย์เท่าไหร่
   <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
   </div>
@@ -370,7 +370,7 @@ function Page1 (){
         <div>
           {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabName">Final Exam</div>
       <div div className="LabInfo">วัตถุวางอยู่บนพื้นระดับลื่น ด้านหนึ่งของววัตถุติดกับสปริงซึ่งมีค่านิจสปริง 400 นิวตันต่อเมตร <br/>อีกด้านหนึ่งมีแรงมากระทำค่อยค่อยเพิ่มขึ้นดังรูป เมื่อวัตถุเคลื่อนที่ไปได้ 30 เซนติเมตร <br/>จงหาพลังงานศักย์ยืดหยุ่นในสปริง
       <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
     </div>
@@ -413,7 +413,7 @@ function Page1 (){
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
+        <div className="LabName">Final Exam</div>
         <div div className="LabInfo">วัตถุวางอยู่บนพื้นระดับลื่น ด้านหนึ่งของววัตถุติดกับสปริงซึ่งมีค่านิจสปริง 400 นิวตันต่อเมตร <br/>อีกด้านหนึ่งมีแรงมากระทำค่อยค่อยเพิ่มขึ้นดังรูป เมื่อวัตถุเคลื่อนที่ไปได้ 30 เซนติเมตร <br/>จงหาพลังงานศักย์ยืดหยุ่นในสปริง
       <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
     </div>
@@ -456,7 +456,7 @@ function Page1 (){
             <div>
               {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
+          <div className="LabName">Final Exam</div>
           <div div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตร<br/>ยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
           <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
         </div>
@@ -500,7 +500,7 @@ function Page1 (){
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
-            <div className="LabName">งานทางฟิสิกส์</div>
+            <div className="LabName">Final Exam</div>
             <div div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตร<br/>ยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
           <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
         </div>
@@ -543,7 +543,7 @@ function Page1 (){
                 <div>
                   {AlertState.current === 1? <AnswerSentAlert/> : null}
                 <div className="split Index">
-              <div className="LabName">งานทางฟิสิกส์</div>
+              <div className="LabName">Final Exam</div>
               <div div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงานและกำลัง
               <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
             </div>
@@ -587,7 +587,7 @@ function Page1 (){
                   <div>
                     {AlertState.current === 1? <AnswerSentAlert/> : null}
                   <div className="split Index">
-                <div className="LabName">งานทางฟิสิกส์</div>
+                <div className="LabName">Final Exam</div>
                 <div div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงานและกำลัง
                 <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
             </div>
@@ -630,7 +630,7 @@ function Page5 (){
         <div>
           {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabName">Final Exam</div>
       <div div className="LabInfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
       <br/> ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม<br/> จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
 
@@ -675,7 +675,7 @@ function Page5 (){
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
+        <div className="LabName">Final Exam</div>
         <div div className="LabInfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
       <br/> ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม<br/> จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
 
@@ -720,7 +720,7 @@ function Page5 (){
             <div>
               {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
+          <div className="LabName">Final Exam</div>
           <div div className="LabInfo">จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน <br/>ข้อใดกล่าวถูกต้อง
           <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
 
@@ -764,7 +764,7 @@ function Page5 (){
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
-            <div className="LabName">งานทางฟิสิกส์</div>
+            <div className="LabName">Final Exam</div>
             <div div className="LabInfo">จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน <br/>ข้อใดกล่าวถูกต้อง
           <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
 
@@ -808,7 +808,7 @@ function Page5 (){
                 <div>
                   {AlertState.current === 1? <AnswerSentAlert/> : null}
                 <div className="split Index">
-              <div className="LabName">งานทางฟิสิกส์</div>
+              <div className="LabName">Final Exam</div>
               <div div className="LabInfo">จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมีสัมประสิทธิ์ความเสียดทาน 0.2 ยาว 4 เมตร <br/>ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 เมตร
               วัตถุขึ้นไปถึง D สูงเท่าใด
               <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
@@ -852,7 +852,7 @@ function Page5 (){
                   <div>
                     {AlertState.current === 1? <AnswerSentAlert/> : null}
                   <div className="split Index">
-                <div className="LabName">งานทางฟิสิกส์</div>
+                <div className="LabName">Final Exam</div>
                 <div div className="LabInfo">จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมีสัมประสิทธิ์ความเสียดทาน 0.2 ยาว 4 เมตร <br/>ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 เมตร
               วัตถุขึ้นไปถึง D สูงเท่าใด
               <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
@@ -896,7 +896,7 @@ function Page5 (){
         <div>
           {AlertState.current === 1? <AnswerSentAlert/> : null}
         <div className="split Index">
-      <div className="LabName">งานทางฟิสิกส์</div>
+      <div className="LabName">Final Exam</div>
       <div div className="LabInfo">มวล 1 กิโลกรัม ผูกด้วยเชือกยาว 2 เมตร เดิมอยู่นิ่ง แนวเส้นเชือกอยู่ในแนวระดับ 
       <br/> แล้วปล่อยลงมาชนสปริงที่วางตั้งไว้ในแนวระดับที่จุดต่ำสุดของเชือกดังรูป <br/>สปริงหดสั้นที่สุดเท่าไหร่ กำหนดให้ค่านิจสปริง 1000 นิวตันต่อเมตร
       <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
@@ -940,7 +940,7 @@ function Page5 (){
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
           <div className="split Index">
-        <div className="LabName">งานทางฟิสิกส์</div>
+        <div className="LabName">Final Exam</div>
         <div div className="LabInfo">มวล 1 กิโลกรัม ผูกด้วยเชือกยาว 2 เมตร เดิมอยู่นิ่ง แนวเส้นเชือกอยู่ในแนวระดับ 
       <br/> แล้วปล่อยลงมาชนสปริงที่วางตั้งไว้ในแนวระดับที่จุดต่ำสุดของเชือกดังรูป <br/>สปริงหดสั้นที่สุดเท่าไหร่ กำหนดให้ค่านิจสปริง 1000 นิวตันต่อเมตร
       <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
@@ -984,7 +984,7 @@ function Page5 (){
             <div>
               {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
+          <div className="LabName">Final Exam</div>
           <div div className="LabInfo">วัตถุก้อนหนึ่งผูกเชือกยาว 2.5 เมตร ปลายเชือกข้างหนึ่ง ผูกติดกับเพดาน 
           ดึงวัตถุจนแนวเส้นเชือกทำมุม 60 องศากับแนวดิ่ง แล้วปล่อยให้วัตถุเคลื่อนที่ ขณะผ่านจุดต่ำสุดวัตถุนี้มีอัตราเร็วเท่าใด
 
@@ -1030,7 +1030,7 @@ function Page5 (){
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
-            <div className="LabName">งานทางฟิสิกส์</div>
+            <div className="LabName">Final Exam</div>
             <div div className="LabInfo">วัตถุก้อนหนึ่งผูกเชือกยาว 2.5 เมตร ปลายเชือกข้างหนึ่ง ผูกติดกับเพดาน 
           ดึงวัตถุจนแนวเส้นเชือกทำมุม 60 องศากับแนวดิ่ง แล้วปล่อยให้วัตถุเคลื่อนที่ ขณะผ่านจุดต่ำสุดวัตถุนี้มีอัตราเร็วเท่าใด
           <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
@@ -1075,7 +1075,7 @@ function Page5 (){
                 <div>
                   {AlertState.current === 1? <AnswerSentAlert/> : null}
                 <div className="split Index">
-              <div className="LabName">งานทางฟิสิกส์</div>
+              <div className="LabName">Final Exam</div>
               <div div className="LabInfo">ปล่อยวัตถุ 0.4 กิโลกรัม บนพื้นเอียงลื่นทำมุม 30 องศา ที่ปลายด้านล่างมีสปริง 
               <br/> ซึ่งมีค่านิจ 100 นิวตันต่อเมตร วางห่าง 0.8 เมตร ดังรูป จงหาว่าสปริงจะหดเข้าไปมากที่สุดเท่าไร
 
@@ -1120,7 +1120,7 @@ function Page5 (){
                   <div>
                     {AlertState.current === 1? <AnswerSentAlert/> : null}
                   <div className="split Index">
-                <div className="LabName">งานทางฟิสิกส์</div>
+                <div className="LabName">Final Exam</div>
                 <div div className="LabInfo">ปล่อยวัตถุ 0.4 กิโลกรัม บนพื้นเอียงลื่นทำมุม 30 องศา ที่ปลายด้านล่างมีสปริง 
               <br/> ซึ่งมีค่านิจ 100 นิวตันต่อเมตร วางห่าง 0.8 เมตร ดังรูป จงหาว่าสปริงจะหดเข้าไปมากที่สุดเท่าไร
               <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
@@ -1164,7 +1164,7 @@ function Page5 (){
             <div>
               {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
-          <div className="LabName">งานทางฟิสิกส์</div>
+          <div className="LabName">Final Exam</div>
           <div div className="LabInfo">รถทดลองมวล 0.5 กิโลกรัม วิ่งเข้าชนสปริงที่มีค่านิจ 200 นิวตันต่อเมตร <br/>ด้วยอัตราเร็ว 10 เมตรต่อวินาที ขณะที่รถทดลองมีอัตราเร็วเป็นศูนย์ ขนาดของแรงดันในสปริง<br/>มีค่ากี่นิวตัน
           <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
 </div>
@@ -1209,7 +1209,7 @@ function Page5 (){
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
               <div className="split Index">
-            <div className="LabName">งานทางฟิสิกส์</div>
+            <div className="LabName">Final Exam</div>
             <div div className="LabInfo">รถทดลองมวล 0.5 กิโลกรัม วิ่งเข้าชนสปริงที่มีค่านิจ 200 นิวตันต่อเมตร <br/>ด้วยอัตราเร็ว 10 เมตรต่อวินาที ขณะที่รถทดลองมีอัตราเร็วเป็นศูนย์ ขนาดของแรงดันในสปริง<br/>มีค่ากี่นิวตัน
           <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
 </div>
