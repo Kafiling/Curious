@@ -1,5 +1,5 @@
 import {Line} from 'react-chartjs-2';
-import { Chart } from 'chart.js/auto'
+
 const state1 = {
   labels: ['0m','1m', '2m', '3m','4m','5m','6m','7m','8m','9m','10m'],
   datasets: [

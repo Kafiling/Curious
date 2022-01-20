@@ -20,7 +20,6 @@ export class Scene extends React.Component {
     Mouse = Matter.Mouse,
     Events = Matter.Events,
     MouseConstraint = Matter.MouseConstraint,
-    Constraint = Matter.Constraint,
     Composite = Matter.Composite;
 
   
@@ -81,8 +80,8 @@ setVelocity()
   }
 })
 setInterval(() => {this.setState(
-  { PosXBoxA : Math.round(boxA.velocity.x) ,
-  PosYBoxA : Math.round(boxA.velocity.y)}
+  { PosXBoxA : boxA.velocity.x.toFixed(2) ,
+  PosYBoxA : boxA.velocity.y.toFixed(2)}
   )
 
 }, 100);
@@ -112,9 +111,13 @@ Runner.run(runner, engine);
 }
 
   render() {
+ 
     return(<div>
-      <p>ความเร็วแกน X = {this.state.PosXBoxA}</p>
-      <p>ความเร็วแกน Y = {this.state.PosYBoxA}</p>
+      <div className="MatterUICon">
+      <p className="MatterUIText">ความเร็วแกน X = {this.state.PosXBoxA}</p>
+      <p className="MatterUIText">ความเร็วแกน Y = {this.state.PosYBoxA}</p>
+      </div>
+    
     <div ref="scene" />
     </div> 
     )

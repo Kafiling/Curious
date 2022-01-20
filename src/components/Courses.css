@@ -65,6 +65,16 @@ color: rgb(var(--text-color)) ;
   position: absolute;
   top: 80%;
 }
+.MatterUICon{
+  position: absolute;
+  left: 25px;
+  top: 15px;
+}
+.MatterUICon{
+  color: rgb(var(--text-color));
+  font-size: 20px;
+  font-family: 'Sarabun', sans-serif;
+}
 .form-range{
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
