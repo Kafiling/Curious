@@ -4,7 +4,7 @@ import {Link } from 'react-router-dom'
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-import {Scene as Scene2} from './Material/Ek1Scene1';
+import {Scene as Scene1} from './Material/Ek1Scene1';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
@@ -164,7 +164,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Velocity is Energy</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -205,7 +205,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Velocity is Energy</div>
   <div className="ProgessBar"><progress value="17" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -233,7 +233,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Velocity is Energy</div>
   <div className="ProgessBar"><progress value="34" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
@@ -283,7 +283,7 @@ function Page3Answered (){
 </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Velocity is Energy</div>
     <div className="ProgessBar"><progress value="34" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">
@@ -342,7 +342,7 @@ function Page3Answered (){
     </div>
     
     <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Velocity is Energy</div>
   <div className="ProgessBar"><progress value="51" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -360,18 +360,26 @@ function Page5 (){
         <div className="LabName">พลังงานจลน์</div>
         <div className="LabInfo">จะกล่าวได้ว่าพลังงานจลน์ของจะเพิ่มหรือลดได้หากมีงานเนื่องจากแรงเข้ามากกระทำกับกับวัตถุ 
         เช่น วัตถุกำลังเคลื่อนที่แล้วเราเอามือไปกั้นทำให้วัตถุหยุดเคลื่อนที่ หรือ ลูกบอลกำลังกลิ้งด้วยความเร็ว แล้วเราไปเตะลูกบอลทำให้ ความเร็วลูกบอลเพิ่มขึ้น
+        </div>
+        <div className="LabInfo">การทดลอง การเพื่มพลังงานจลน์ด้วยการออกงาน <br/>
+        เมื่อผู้เรียนกดคลิกใน Simulation จะทำการออกแรงผลักลูกบอลออกไป
+        ให้สังเกตการเปลี่ยนแปลงของลูกบอลหลังโดนผลัก
+        <li>เมื่อผลักขณะลูกบอลหยุดนิ่ง</li>
+        <li>เมื่อผลักขณะลูกบอลกำลังวิ่ง</li>
+        <li>เมื่อผลักขณะลูกบอลถูกผลัก</li>
         </div> 
         <div className='SceneContainer'>
-      <Scene2/>
+      <Scene1/>
     </div>
-
+    <div className="LabInfo">สังเกตได้ว่าหลังจากผลักแนงเสริมลูกบอลทั้งขณะที่ลูกบอลกำลังวิ่งหรือหยุดอยู่กับที่ จะทำให้ลูกมีความเร็วมากขึ้น หมายถึง <mark>การออกงานจะส่งผลให้มีพลังงานจลน์เพิ่มขึ้นนั้นเอง</mark>
+        </div>
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
         </div>
         
         <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Velocity is Energy</div>
   <div className="ProgessBar"><progress value="68" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -397,7 +405,7 @@ function Page6 (){
           </div>
           
           <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Velocity is Energy</div>
   <div className="ProgessBar"><progress value="85" max="100"></progress></div>
   <div className="Question"></div>
   <div className="AnswerList">
@@ -444,7 +452,7 @@ function Page6 (){
           </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Velocity is Energy</div>
     <div className="ProgessBar"><progress value="85" max="100"></progress></div>
     <div className="Question"></div>
     <div className="AnswerList">

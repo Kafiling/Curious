@@ -1,15 +1,14 @@
 import React from "react";
 import Matter from "matter-js";
 
-{
-  {}
-}
 
 export class Scene extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-
+    this.state = {
+      PosXBoxA : '',
+      PosYBoxA : ''
+    };
   }
   
   componentDidMount() {
@@ -81,14 +80,24 @@ setVelocity()
   Body.setPosition(boxA, { x: 0, y: 550 })
   }
 })
+setInterval(() => {this.setState(
+  { PosXBoxA : Math.round(boxA.velocity.x) ,
+  PosYBoxA : Math.round(boxA.velocity.y)}
+  )
 
- 
+}, 100);
 
 
-    Composite.add(world, mouseConstraint);
 
-    // keep the mouse in sync with rendering
-    render.mouse = mouse;
+
+
+
+
+  
+Composite.add(world, mouseConstraint);
+
+ // keep the mouse in sync with rendering
+render.mouse = mouse;
 
 // run the renderer
 Render.run(render);
@@ -104,6 +113,8 @@ Runner.run(runner, engine);
 
   render() {
     return(<div>
+      <p>ความเร็วแกน X = {this.state.PosXBoxA}</p>
+      <p>ความเร็วแกน Y = {this.state.PosYBoxA}</p>
     <div ref="scene" />
     </div> 
     )
