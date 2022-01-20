@@ -1,20 +1,17 @@
 import React from "react";
 import Matter from "matter-js";
 
+{
+  {}
+}
 
 export class Scene extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {IsButtonClick: false};
+    this.state = {};
 
   }
   
-  handleClick() {
-    this.setState({IsButtonClick: true});
-    console.log('that is:', this);
-   console.log(this.state.IsButtonClick)
-    setTimeout(this.setState({IsButtonClick: true}), 100)
-  }
   componentDidMount() {
     var Engine = Matter.Engine,
     Render = Matter.Render,
@@ -51,12 +48,14 @@ var wallL = Bodies.rectangle(-10, 170, 60, 600, { isStatic: true });
 var wallR = Bodies.rectangle(1010, 170, 60, 600, { isStatic: true });
 var ceiling = Bodies.rectangle(500, -10, 1000, 60, { isStatic: true });
 
+ground.friction = 0
+boxA.friction = 0
 // add all of the bodies to the world
 Composite.add(engine.world, [boxA, ground, wallL ,wallR ,ceiling]);
 
 // add mouse control
     var mouse = Mouse.create(render.canvas),
-        mouseConstraint = MouseConstraint.create(engine, {
+    mouseConstraint = MouseConstraint.create(engine, {
             mouse: mouse,
             constraint: {
                 stiffness: 0.2,
@@ -66,28 +65,25 @@ Composite.add(engine.world, [boxA, ground, wallL ,wallR ,ceiling]);
             }
         });
         
+  Events.on(mouseConstraint, "mousedown", function(event){
+    setTimeout(Body.applyForce(boxA, boxA.position, {x: 0.2, y: 0}), 1)
+         })
         
 function setVelocity(){
-  Body.setVelocity(boxA, { x: 5, y: 0 });
-  
+  Body.setVelocity(boxA, { x: 10, y: 0 });
 }
+setVelocity()
 
- Matter.Events.on(engine, 'afterUpdate', function(event){
-  setVelocity()
- })
 
  
  Matter.Events.on(engine, 'afterUpdate', function(event){
   if(boxA.position.x >= 1040){
-  Body.setAngle(boxA, 0)
-  Body.setAngularVelocity(boxA, 0)
   Body.setPosition(boxA, { x: 0, y: 550 })
-  ;
   }
 })
-if (this.state.IsButtonClick){
-  setTimeout(Body.applyForce(boxA, boxA.position, {x: 1, y: 0}), 1)
-}
+
+ 
+
 
     Composite.add(world, mouseConstraint);
 
@@ -108,10 +104,6 @@ Runner.run(runner, engine);
 
   render() {
     return(<div>
-       <button onClick={() => this.handleClick()}>
-        Click me
-        
-      </button>
     <div ref="scene" />
     </div> 
     )
