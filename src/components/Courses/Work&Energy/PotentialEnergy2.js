@@ -207,7 +207,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Springy Trouble</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -241,7 +241,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Springy Trouble</div>
   <div className="ProgessBar"><progress value="14" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -276,7 +276,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Springy Trouble</div>
   <div className="ProgessBar"><progress value="28" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -302,9 +302,9 @@ return(
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Springy Trouble</div>
       <div className="ProgessBar"><progress value="42" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">จงหาว่าสปริงหดจากเดิมกี่ cm</div>
       <div className="AnswerList">
       <label className="container">0.1 cm
           <input type="checkbox" id="Answer1" />
@@ -350,9 +350,9 @@ return(
     </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Springy Trouble</div>
         <div className="ProgessBar"><progress value="42" max="100"></progress></div>
-        <div className="Question"></div>
+        <div className="Question">จงหาว่าสปริงหดจากเดิมกี่ cm</div>
         <div className="AnswerList">
         <label className="container">0.1 cm
             <input type="checkbox" id="Answer1" disabled/>
@@ -394,9 +394,9 @@ function Page5 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Springy Trouble</div>
         <div className="ProgessBar"><progress value="56" max="100"></progress></div>
-        <div className="Question"></div>
+        <div className="Question">จงหาค่านิจสปริง</div>
         <div className="AnswerList">
         <label className="container">40 N/m
             <input type="checkbox" id="Answer1" />
@@ -438,9 +438,9 @@ function Page5 (){
         
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Springy Trouble</div>
         <div className="ProgessBar"><progress value="56" max="100"></progress></div>
-        <div className="Question"></div>
+        <div className="Question">จงหาค่านิจสปริง</div>
         <div className="AnswerList">
         <label className="container">40 N/m
             <input type="checkbox" id="Answer1" disabled/>
@@ -473,7 +473,7 @@ function Page6 (){
       <div>
       <div className="split Index">
     <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-    <div className="LabInfo">จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
+    <div className="LabInfo">จากข้อ 5 จงหาแรงและงานที่ใช้ยืดสปริงออก 2 m
     </div> 
     <Chart5/>
      <div div className="FooterSpace"></div>
@@ -482,9 +482,9 @@ function Page6 (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Springy Trouble</div>
       <div className="ProgessBar"><progress value="70" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">จงหาแรงและงานที่ใช้ยืดสปริงออก 2 m</div>
       <div className="AnswerList">
       <label className="container">160 N, 160J
           <input type="checkbox" id="Answer1" />
@@ -520,7 +520,7 @@ function Page6 (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
     <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-    <div className="LabInfo">จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
+    <div className="LabInfo">จากข้อ 5 จงหาแรงและงานที่ใช้ยืดสปริงออก 2 m
     </div> 
     <Chart5/>
      <div div className="FooterSpace"></div>
@@ -529,9 +529,9 @@ function Page6 (){
     </div>  
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Springy Trouble</div>
         <div className="ProgessBar"><progress value="70" max="100"></progress></div>
-        <div className="Question"></div>
+        <div className="Question">จงหาแรงและงานที่ใช้ยืดสปริงออก 2 m</div>
         <div className="AnswerList">
         <label className="container">160 N, 160 J
             <input type="checkbox" id="Answer1" disabled checked/>
@@ -574,9 +574,9 @@ function Page6 (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Springy Trouble</div>
       <div className="ProgessBar"><progress value="84" max="100"></progress></div>
-      <div className="Question"></div>
+      <div className="Question">จงหาว่าสปริงยืดจากเดิมกี่ cm</div>
       <div className="AnswerList">
       <label className="container">25 cm
           <input type="checkbox" id="Answer1" />
@@ -622,9 +622,9 @@ function Page6 (){
     </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Springy Trouble</div>
         <div className="ProgessBar"><progress value="84" max="100"></progress></div>
-        <div className="Question"></div>
+        <div className="Question">จงหาว่าสปริงยืดจากเดิมกี่ cm</div>
         <div className="AnswerList">
         <label className="container">25 cm
             <input type="checkbox" id="Answer1" disabled />
