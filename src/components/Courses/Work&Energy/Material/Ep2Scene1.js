@@ -13,7 +13,6 @@ export class Scene extends React.Component {
     var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
-    Body = Matter.Body,
     Bodies = Matter.Bodies,
     Mouse = Matter.Mouse,
     MouseConstraint = Matter.MouseConstraint,

@@ -7,6 +7,7 @@ import 'firebase/compat/firestore';
 import {Scene as Scene1} from './Material/Ep2Scene1';
 import {Scene as Scene2} from './Material/Ep2Scene2';
 import {MyChart as Chart1} from './Material/Ep2Chart1';
+import {MyChart as Chart5} from './Material/Ep2Chart5';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
@@ -256,10 +257,11 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-<div className="LabInfo"> <br/>เมื่อเราสามารถหาแรงจากสปริงได้แล้ว เราก็สามารถหางานจากพื้นที่ใต้กราฟ F-S
-<br/><br/><br/>********Chart.js แบบเบิ้มๆ*<br/><br/><br/>
+<div className="LabInfo">เมื่อเราสามารถหาแรงจากสปริงได้แล้ว เราก็สามารถหางานจากพื้นที่ใต้กราฟ F-S
+<br/><Chart1/>
 <MathJaxContext>
       <MathJax>\[W = พื้นที่ใต้กราฟ\]
+      \[W = \cfrac{1}{2} \cdot F \cdot S\]
         \[W = \cfrac{1}{2} \cdot k \cdot x \cdot x\]
         \[W = \cfrac{1}{2} \cdot k \cdot x^2\]
       </MathJax>
@@ -290,10 +292,10 @@ return(
       <div>
       <div className="split Index">
     <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-    <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
-    <br/> <br/><br/>ถ้าออกแรง 5 N กดสปริงที่มีค่านิจ 50 N/m จงหาว่าสปริงหดจากเดิมกี่ cm
-    <br/><br/><br/>********ใส่รูปจ้า*
+    <div className="LabInfo">เรามาทดสอบความเข้าใจกันครับ
+    <br/><br/>ถ้าออกแรง 5 N กดสปริงที่มีค่านิจ 50 N/m จงหาว่าสปริงหดจากเดิมกี่ cm
     </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp2%2FEp2P4.png?alt=media&token=32a7080f-5823-4506-bddd-2ee296b434c1" />
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
@@ -336,17 +338,16 @@ return(
         <div>
            {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-      <div className="LabInfo"><br/>เรามาทดสอบความเข้าใจกันครับ
-    <br/> <br/><br/>ถ้าออกแรง 5 N กดสปริงที่มีค่านิจ 50 N/m จงหาว่าสปริงหดจากเดิมกี่ cm
-    <br/><br/><br/>********ใส่รูปจ้า*
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    <div className="split Index">
+    <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
+    <div className="LabInfo">เรามาทดสอบความเข้าใจกันครับ
+    <br/><br/>ถ้าออกแรง 5 N กดสปริงที่มีค่านิจ 50 N/m จงหาว่าสปริงหดจากเดิมกี่ cm
+    </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp2%2FEp2P4.png?alt=media&token=32a7080f-5823-4506-bddd-2ee296b434c1" />
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
@@ -384,10 +385,9 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-        <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
-
-        <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
+        <div className="LabInfo">จากกราฟจงหาค่านิจสปริง 
         </div> 
+        <Chart5/>
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
          <div div className="FooterSpace"></div>
@@ -426,17 +426,16 @@ function Page5 (){
         <div>
            {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-      <div className="LabInfo"><br/>จากกราฟจงหาค่านิจสปริง 
-
-<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    <div className="split Index">
+        <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
+        <div className="LabInfo">จากกราฟจงหาค่านิจสปริง 
+        </div> 
+        <Chart5/>
+         <div div className="FooterSpace"></div>
+         <div className="Footer">Curious Project</div>
+         <div div className="FooterSpace"></div>
+        </div>
+        
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
@@ -474,11 +473,9 @@ function Page6 (){
       <div>
       <div className="split Index">
     <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-    <div className="LabInfo"><br/>จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
-    <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
-
-
+    <div className="LabInfo">จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
     </div> 
+    <Chart5/>
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
@@ -521,16 +518,15 @@ function Page6 (){
         <div>
            {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-      <div className="LabInfo"><br/>จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
-    <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    <div className="split Index">
+    <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
+    <div className="LabInfo">จากข้อ 5 จงหา แรงและงานที่ใช้ยืดสปริงออก 2 m
+    </div> 
+    <Chart5/>
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>  
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
@@ -568,12 +564,10 @@ function Page6 (){
       <div>
       <div className="split Index">
     <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-    <div className="LabInfo"><br/>มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm
+    <div className="LabInfo">มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm
 จากนั้นนำมวลใหม่เข้าไปผูกทำให้ในสปริงเกิดพลังงานศักย์ยืดหยุ่น 250 J จงหาว่าสปริงยืดจากเดิมกี่ cm
-
-
-    <br/><br/><br/>********ใส่รูปจ้า*
     </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp2%2FEp2P7.png?alt=media&token=0adc8522-a060-49a8-8a47-11f358fdf53d" />
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
@@ -616,18 +610,16 @@ function Page6 (){
         <div>
            {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
-      <div className="LabInfo"><br/>มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm
+    <div className="split Index">
+    <div className="LabName">พลังงานศักย์ยืดหยุ่น</div>
+    <div className="LabInfo">มวล 5 kg ผูกติดกับสปริงที่ผูกไว้ติดกับผนัง ปรากฎว่าสปริงยืดออก 10 cm
 จากนั้นนำมวลใหม่เข้าไปผูกทำให้ในสปริงเกิดพลังงานศักย์ยืดหยุ่น 250 J จงหาว่าสปริงยืดจากเดิมกี่ cm
-
-    <br/><br/><br/>********ใส่รูปจ้า*
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp2%2FEp2P7.png?alt=media&token=0adc8522-a060-49a8-8a47-11f358fdf53d" />
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
