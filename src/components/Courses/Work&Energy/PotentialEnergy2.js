@@ -4,7 +4,9 @@ import {Link } from 'react-router-dom'
 import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-
+import {Scene as Scene1} from './Material/Ep2Scene1';
+import {Scene as Scene2} from './Material/Ep2Scene2';
+import {MyChart as Chart1} from './Material/Ep2Chart1';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
@@ -179,11 +181,14 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
-<div div className="LabInfo"><br/>
+<div div className="LabInfo">
 ถ้าเราออกแรงดึงสปริงออกจากตำแหน่งเริ่มต้นเราจะรู้สึกว่ายิ่งเรายืดสปริงมากขึ้นเท่าไร <br/>แรงที่สปริงดึงกลับก็มากตามไปด้วย 
-และหากเราผลักสปริงให้หดเข้าไป ก็จะพบว่าสปริงก็จะผลักเราเช่นกัน
-<br/><br/><br/>********Matter.js แน่ๆ*<br/><br/><br/>
-จากความสัมพันธ์นี้เราจะพบว่าแรงที่สปริงออกมาเป็นสมการเส้นตรง<br/><br/>
+และหากเราผลักสปริงให้หดเข้าไป ก็จะพบว่าสปริงก็จะผลักเราเช่นกัน<br/><br/></div>
+<div className='SceneContainer'>
+      <Scene1/>
+    </div>
+    
+<div div className="LabInfo">จากความสัมพันธ์นี้เราจะพบว่าแรงที่สปริงออกมาเป็นสมการเส้นตรง<br/><br/><Chart1/><br/>
 จาก
 <MathJaxContext>
       <MathJax>\[y = m \cdot x +c\]
@@ -193,10 +198,8 @@ return(
       </MathJaxContext>
       โดยที่ <br/>Fs แทน แรงจากสปริง (N)<br/>
 	x แทน ระยะที่สปริงยืด - หด จากระยะเริ่มต้น (m)<br/>
-	k แทน ค่านิจสปริง (ความแข็งของสปริง) (N/m)
+	k แทน ค่านิจสปริง (ความแข็งของสปริง) (N/m)</div>
 
-
-</div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
@@ -220,16 +223,17 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
-<div div className="LabInfo"><br/>
+<div div className="LabInfo">
 ค่านิจสปริง เป็นค่าคงตัวที่แสดงความแข็งของสปริง มีหน่วยเป็น N/m 
 เช่น สปริงในปากกามี<br/>ค่านิจสปริง 20 N/m หมายความว่า ต้องออกแรง 20 N ถึงจะหดสปริงได้ 1 m ในขณะที่สปริงของโช๊คมอเตอร์ไซค์ จะมีค่านิจสปริงอยู่ที่ 5000 N/m 
-
-
-<br/><br/><br/>********Matter.js เปลี่ยน ค่า K*<br/><br/><br/>
+</div> 
+<div className='SceneContainer'>
+      <Scene2/>
+    </div>
+<div div className="LabInfo">
 ค่านิจสปริงจะมีส่วนสำคัญ เช่น สปริงปากกา ต้องการความสะดวกสะบาย ก็จะมีค่านิจสปริงน้อย เพื่อกดง่ายๆ 
-แต่สปริงของโช๊คมอเตอร์ไซค์จะมีค่านิจสปริงสูงเพื่อรับแรงกระแทก แต่ก็ไม่มาก<br/>เกินไปเพื่อความนิ่มนวลในการขับขี่
-
-  </div> 
+แต่สปริงของโช๊คมอเตอร์ไซค์จะมีค่านิจสปริงสูงเพื่อรับแรงกระแทก แต่ก็ไม่มากเกินไปเพื่อความนิ่มนวลในการขับขี่
+</div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
