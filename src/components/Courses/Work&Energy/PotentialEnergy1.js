@@ -136,10 +136,10 @@ function retry(){
   
   else{ 
     switch(QuestionNumber){
-    case 2 : if(Answer1.checked === false && 
-        Answer2.checked === false && 
-        Answer3.checked === false && 
-        Answer4.checked === true ) {correct(2)}
+    case 2 : if(Answer1.checked === true && 
+        Answer2.checked === true && 
+        Answer3.checked === true&& 
+        Answer4.checked === false ) {correct(2)}
     else{incorrect(2)}
     break;
   case 4 :
@@ -190,7 +190,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Contained Energy</div>
   <div className="ProgessBar"><progress value="0" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -207,23 +207,21 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
-<div div className="LabInfo"><br/>
+<div div className="LabInfo">
 นักฟิสิกส์นิยามพลังงานที่สะสมไว้ในวัตถุและพร้อมที่จะนำมาใช้ว่า พลังงานศักย์ (Potential Energy) 
 โดยพลังงานศักย์มีหลายประเภทเช่น พลังงานศักย์โน้มถ่วง (พลังงานศักย์เนื่องจากแรงโน้มถ่วง) พลังงานศักย์ยืดหยุ่น (พลังงานศักย์เนื่องจากแรงยืดหยุ่นจากสปริง/สายธนู) 
 <br/>พลังงานเคมี พลังงานนิวเคลียร์ และอื่นๆอีกมากมาย แต่ในบทนี้จะหยิบยก 2 ชนิดมาทำการศึกษาคือ พลังงานศักย์โน้มถ่วง และ พลังงานศักย์ยืดหยุ่น 
-
-<br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
-สามารถทดสอบความเข้าใจได้จากโจทย์ด้านขวามือครับ
-  </div> 
+</div> 
+  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P2.png?alt=media&token=cfb3ec4c-6c2d-4b9c-8128-74da1f0b982a" />
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
  <div div className="FooterSpace"></div>
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Contained Energy</div>
   <div className="ProgessBar"><progress value="14" max="100"></progress></div>
-  <div className="Question">ข้อใดผิดเกี่ยวกับพลังงานศักย์</div>
+  <div className="Question">ข้อใดถูกเกี่ยวกับพลังงานศักย์</div>
   <div className="AnswerList">
   <label className="container">พลังงานที่สะสมไว้ในวัตถุและพร้อมที่จะนำมาใช้
       <input type="checkbox" id="Answer1" />
@@ -259,38 +257,37 @@ function Page2Answered (){
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
-<div className="LabInfo"><br/>
+<div div className="LabInfo">
 นักฟิสิกส์นิยามพลังงานที่สะสมไว้ในวัตถุและพร้อมที่จะนำมาใช้ว่า พลังงานศักย์ (Potential Energy) 
 โดยพลังงานศักย์มีหลายประเภทเช่น พลังงานศักย์โน้มถ่วง (พลังงานศักย์เนื่องจากแรงโน้มถ่วง) พลังงานศักย์ยืดหยุ่น (พลังงานศักย์เนื่องจากแรงยืดหยุ่นจากสปริง/สายธนู) 
 <br/>พลังงานเคมี พลังงานนิวเคลียร์ และอื่นๆอีกมากมาย แต่ในบทนี้จะหยิบยก 2 ชนิดมาทำการศึกษาคือ พลังงานศักย์โน้มถ่วง และ พลังงานศักย์ยืดหยุ่น 
-<br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
-สามารถทดสอบความเข้าใจได้จากโจทย์ด้านขวามือครับ
 </div> 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
+  <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P2.png?alt=media&token=cfb3ec4c-6c2d-4b9c-8128-74da1f0b982a" />
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Introducing Work</div>
+    <div className="LabNumber">Contained Energy</div>
     <div className="ProgessBar"><progress value="14" max="100"></progress></div>
-    <div className="Question">ข้อใดผิดเกี่ยวกับพลังงานศักย์</div>
+    <div className="Question">ข้อใดถูกเกี่ยวกับพลังงานศักย์</div>
     <div className="AnswerList">
     <label className="container">พลังงานที่สะสมไว้ในวัตถุและพร้อมที่จะนำมาใช้
-        <input type="checkbox" id="Answer1" disabled  />
-        <span className="checkmark" ></span>
+        <input type="checkbox" id="Answer1" checked disabled  />
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
       <label className="container">พลังงานศักย์โน้มถ่วง เป็นพลังงานศักย์เนื่องจากแรงโน้มถ่วง
-        <input type="checkbox" id="Answer2"disabled/>
-        <span className="checkmark" ></span>
+        <input type="checkbox" id="Answer2"checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
       <label className="container">ลูกแอปเปิ้ลที่อยู่บนต้นไม้มีพลังงานศักย์โน้มถ่วง
-        <input type="checkbox" id="Answer3"disabled/>
-        <span className="checkmark"></span>
+        <input type="checkbox" id="Answer3"checked disabled/>
+        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}}></span>
       </label>
       <label className="container">พลังงานศักย์ เป็นพลังงานของวัตถุที่กำลังเคลื่อนที่
-        <input type="checkbox" id="Answer4" checked disabled/>
-        <span className="checkmark" style={{backgroundColor : "rgb(var(--primary-color))"}} ></span>
+        <input type="checkbox" id="Answer4" disabled/>
+        <span className="checkmark"></span>
       </label>
   
       <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -307,9 +304,12 @@ return(
   <div>
   <div className="split Index">
 <div className="LabName">พลังงานศักย์</div>
-<div className="LabInfo"> <br/>พลังงานศักย์โน้มถ่วงคือพลังงานที่สะสมอยู่ในวัตถุ เกิดจากแรงโน้มถ่วงและตำแหน่ง<br/>ความสูงของวัตถุ 
-<br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
-โดยทำเมื่อเราทำการปล่อยมวล m ลงจากความสูง h จะพบว่า
+<div className="LabInfo">พลังงานศักย์โน้มถ่วงคือพลังงานที่สะสมอยู่ในวัตถุ เกิดจากแรงโน้มถ่วงและตำแหน่ง<br/>ความสูงของวัตถุ 
+โดยทำเมื่อเราทำการปล่อยมวล m ลงจากความสูง h จะพบว่า<div/>
+<div className='SceneContainer'>
+      <Scene1/>
+    </div>
+<div className="LabInfo">
 <br/>เกิดงานเนื่องจากแรงโน้มถ่วง จาก  
 
 <MathJaxContext>
@@ -319,7 +319,7 @@ return(
        
       </MathJax>
       </MathJaxContext>
-      <br/>ทำให้สามารถทราบพลังงานศักย์โน้มถ่วงมีค่าเท่ากับ mgh นั่นเอง
+      <br/>ทำให้สามารถทราบพลังงานศักย์โน้มถ่วงมีค่าเท่ากับ mgh นั่นเอง</div>
 </div> 
 
  
@@ -329,7 +329,7 @@ return(
 </div>
 
 <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Contained Energy</div>
   <div className="ProgessBar"><progress value="28" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -345,17 +345,17 @@ return(
       <div>
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
-    <div className="LabInfo"><br/>มาทดสอบความเข้าใจกันครับ
-      <br/><br/>กล่องใบหนึ่ง มวล 10 kg ปล่อยจากความสูง 10 m ในแนวดิ่ง จงหาพลังงานศักย์โน้มถ่วง<br/>ตอนเริ่มปล่อย
-    <br/><br/><br/>********ใส่รูปจ้า*
+    <div className="LabInfo">มาทดสอบความเข้าใจกันครับ
+      <br/><br/>ก้อนหิน มวล 10 kg ปล่อยจากความสูง 10 m ในแนวดิ่ง จงหาพลังงานศักย์โน้มถ่วง<br/>ตอนเริ่มปล่อย
     </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P3.png?alt=media&token=79020c1b-f699-43e2-915a-6cc84b66c9c2" />
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Contained Energy</div>
       <div className="ProgessBar"><progress value="42" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
@@ -391,20 +391,19 @@ return(
         <div>
           {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">พลังงานศักย์</div>
-      <div className="LabInfo"><br/>มาทดสอบความเข้าใจกันครับ
-      <br/><br/>กล่องใบหนึ่ง มวล 10 kg ปล่อยจากความสูง 10 m ในแนวดิ่ง จงหาพลังงานศักย์โน้มถ่วง<br/>ตอนเริ่มปล่อย
-    <br/><br/><br/>********ใส่รูปจ้า*
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    <div className="split Index">
+    <div className="LabName">พลังงานศักย์</div>
+    <div className="LabInfo">มาทดสอบความเข้าใจกันครับ
+      <br/><br/>ก้อนหิน มวล 10 kg ปล่อยจากความสูง 10 m ในแนวดิ่ง จงหาพลังงานศักย์โน้มถ่วง<br/>ตอนเริ่มปล่อย
+    </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P3.png?alt=media&token=79020c1b-f699-43e2-915a-6cc84b66c9c2" />
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Contained Energy</div>
         <div className="ProgessBar"><progress value="42" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
@@ -439,11 +438,20 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">พลังงานศักย์</div>
-        <div className="LabInfo"><br/>ในการทำโจทย์เกี่ยวกับพลังงานศักย์โน้มถ่วง เรามักจะมีการตั้ง “ระดับอ้างอิง” 
-        <br/>โดยเรามักจะกำหนดให้ระดับที่เราสนใจเป็นระดับอ้างอิง (h = 0) เพื่อความสะดวกในการคำนวณ
-
-
-        <br/><br/><br/>********(ภาพ + แสดงวิธีเต็ม + แสดงวิธีย่อ)*
+        <div className="LabInfo">ในการทำโจทย์เกี่ยวกับพลังงานศักย์โน้มถ่วง เรามักจะมีการตั้ง “ระดับอ้างอิง” 
+        <br/>โดยเรามักจะกำหนดให้ระดับที่เราสนใจเป็นระดับอ้างอิง (h = 0) เพื่อความสะดวกในการคำนวณ<br/><br/>
+        นกตัวหนึ่งบินสูงจากระดับน้ำทะเล 10 m คาบกิ่งไม้แล้วปล่อยกิ่งไม้กลางอากาศให้ตกลงบนภูเขาซึ่งสูงจากระดับน้ำทะเล 6 m จงหางานที่เกิดในการปล่อยกิ่งไม้(กำหนดกิ่งไม้หนัก 100 g)
+        </div> 
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P4.png?alt=media&token=d893d1c1-fb51-4b22-b0f1-7c1cb322621b" />
+        <div className="LabInfo">เนื่องจากนกปล่อยกิ่งไม้จากความสูง 10 m {'-->'} ความสูง 6 m เราจึงสามารถตั้งระดับอ้างอิงที่จุดต่ำสุด (6 m) ได้<br/>
+        ดังนั้นเราจะถือว่า ที่สูงกว่าระดับน้ำทะเล 6 m จะอยู่ที่ความสูง 0 m และ สูงกว่าระดับน้ำทะเล 10 m จะอยู่ที่ความสูง 4 m<br/>
+        <MathJaxContext>
+      <MathJax>
+        \[W = m \cdot g \cdot h \]
+        \[W = 0.1 \cdot 10 \cdot 4 \]
+        \[W = 4J\]
+      </MathJax>
+      </MathJaxContext>
         </div> 
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -451,7 +459,7 @@ function Page5 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-  <div className="LabNumber">Introducing Work</div>
+  <div className="LabNumber">Contained Energy</div>
   <div className="ProgessBar"><progress value="56" max="100"></progress></div>
   <div className="Question">กดปุ่มสีเขียว เพื่อไปหน้าต่อไป</div>
   <div className="AnswerList">
@@ -468,18 +476,17 @@ function Page6 (){
       <div>
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
-    <div className="LabInfo"><br/>จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน
-    <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
+    <div className="LabInfo">จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน<br/>
     จงหาผลต่างพลังงานศักย์ ของจุด A และ จุด C
-
     </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P5.png?alt=media&token=44b39353-448b-4eb0-8655-3277af1ecc80" />
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Contained Energy</div>
       <div className="ProgessBar"><progress value="70" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
@@ -515,20 +522,19 @@ function Page6 (){
         <div>
           {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">พลังงานศักย์</div>
-      <div className="LabInfo"><br/>จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน
-    <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
+    <div className="split Index">
+    <div className="LabName">พลังงานศักย์</div>
+    <div className="LabInfo">จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน<br/>
     จงหาผลต่างพลังงานศักย์ ของจุด A และ จุด C
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P5.png?alt=media&token=44b39353-448b-4eb0-8655-3277af1ecc80" />
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Contained Energy</div>
         <div className="ProgessBar"><progress value="70" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
@@ -563,17 +569,16 @@ function Page6 (){
       <div>
       <div className="split Index">
     <div className="LabName">พลังงานศักย์</div>
-    <div className="LabInfo"><br/>ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
-
-    <br/><br/><br/>********ใส่รูปจ้า*
+    <div className="LabInfo">ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
     </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P6.png?alt=media&token=cdec28f1-f1a4-49ed-be7a-ed51925e3604" />
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Introducing Work</div>
+      <div className="LabNumber">Contained Energy</div>
       <div className="ProgessBar"><progress value="84" max="100"></progress></div>
       <div className="Question"></div>
       <div className="AnswerList">
@@ -609,19 +614,18 @@ function Page6 (){
         <div>
           {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">พลังงานศักย์</div>
-      <div className="LabInfo"><br/>ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
-    <br/><br/><br/>********ใส่รูปจ้า*
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    <div className="split Index">
+    <div className="LabName">พลังงานศักย์</div>
+    <div className="LabInfo">ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
+    </div> 
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P6.png?alt=media&token=cdec28f1-f1a4-49ed-be7a-ed51925e3604" />
+     <div div className="FooterSpace"></div>
+     <div className="Footer">Curious Project</div>
+     <div div className="FooterSpace"></div>
+    </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Introducing Work</div>
+        <div className="LabNumber">Contained Energy</div>
         <div className="ProgessBar"><progress value="84" max="100"></progress></div>
         <div className="Question"></div>
         <div className="AnswerList">
