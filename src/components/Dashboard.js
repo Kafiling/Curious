@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
+
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
@@ -29,7 +30,7 @@ export default function Dashboard() {
           <Item><h2>Course</h2><br/>12</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item><h2>Question</h2><br/>103</Item>
+          <Item><h2>Page/Lab/Chart/Img</h2><br/>85 / 9 / 16 / 84</Item>
         </Grid>
         <Grid item xs={4}>
           <Item><h2>Time estimate</h2><br/>4.5 hr</Item>
@@ -48,12 +49,12 @@ export default function Dashboard() {
                 <div className='Fragment-Sub'>Introducing Work</div>
             <ul className='Fragment-List'>
             <li id = 'CourseCard'><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/work1'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="Work1"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -67,12 +68,12 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/work2'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="Work2"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -86,12 +87,12 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/work3'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="Work3"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -105,12 +106,12 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/work4'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="Work4"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -132,12 +133,12 @@ export default function Dashboard() {
                 <div className='Fragment-Sub'>Introducing Power</div>
             <ul className='Fragment-List'>
             <li id = 'CourseCard'><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/power1'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="Power1"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -151,12 +152,12 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/power2'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="Power2"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -170,7 +171,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/exam_work'>
         <CardMedia
           component="img"
           height="140"
@@ -196,12 +197,12 @@ export default function Dashboard() {
                 <div className='Fragment-Sub'>Introducing Energy</div>
             <ul className='Fragment-List'>
             <li id = 'CourseCard'><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/kineticenergy'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="kineticenergy"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -215,12 +216,12 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/potentialenergy1'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="potentialenergy1"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -234,12 +235,12 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/potentialenergy2'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="potentialenergy2"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -260,12 +261,12 @@ export default function Dashboard() {
                 <div className='Fragment-Sub'>Law of conservation of energy</div>
             <ul className='Fragment-List'>
             <li id = 'CourseCard'><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/lawofconservationofenergy1'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="LOCE1"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -279,12 +280,12 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/lawofconservationofenergy2'>
         <CardMedia
           component="img"
           height="140"
           image="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg"
-          alt="green iguana"
+          alt="LOCE2"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -298,7 +299,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea href='/courses/work_energy/final_exam'>
         <CardMedia
           component="img"
           height="140"

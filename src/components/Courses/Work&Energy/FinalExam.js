@@ -341,20 +341,16 @@ function Page1 (){
       
       <div className="AnswerList">
       <label className="container">35 J
-          <input type="checkbox" id="Answer1"disabled/>
-          <span className="checkmark"></span>
+
         </label>
         <label className="container">20 J
-          <input type="checkbox" id="Answer2"disabled/>
-          <span className="checkmark"></span>
+
         </label>
         <label className="container">0.025 kJ
-          <input type="checkbox" id="Answer3"disabled/>
-          <span className="checkmark"></span>
+
         </label>
         <label className="container">0.015 kJ
-          <input type="checkbox" id="Answer4"disabled/>
-          <span className="checkmark"></span>
+
         </label>
     
         <button className = "btn btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -427,20 +423,16 @@ function Page1 (){
           <div className="ProgessBar"><progress value="10" max="110"></progress></div>
           <div className="AnswerList">
           <label className="container">18 J
-              <input type="checkbox" id="Answer1" disabled />
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">26 J
-              <input type="checkbox" id="Answer2"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">0.03 kJ
-              <input type="checkbox" id="Answer3"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">0.045 kJ
-              <input type="checkbox" id="Answer4"disabled/>
-              <span className="checkmark"></span>
+
             </label>
         
             <button className = "btn btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -516,20 +508,16 @@ function Page1 (){
               <div className="ProgessBar"><progress value="20" max="110"></progress></div>
               <div className="AnswerList">
               <label className="container">0 J
-                  <input type="checkbox" id="Answer1" disabled />
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">150 J
-                  <input type="checkbox" id="Answer2"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">500 J
-                  <input type="checkbox" id="Answer3"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">3000 J
-                  <input type="checkbox" id="Answer4"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
             
                 <button className = "btn btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -605,20 +593,16 @@ function Page1 (){
                   <div className="ProgessBar"><progress value="30" max="110"></progress></div>
                   <div className="AnswerList">
                   <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
-                      <input type="checkbox" id="Answer1" disabled />
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">การที่แรงตั้งฉากกับการกระจัดจะทำให้เกิดงาน
-                      <input type="checkbox" id="Answer2"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S หา งานได้จากความชันของกราฟ
-                      <input type="checkbox" id="Answer3"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">กำลังแสดงอัตราการออกแรงต่อเวลา
-                      <input type="checkbox" id="Answer4"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                 
                     <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -703,20 +687,16 @@ function Page5 (){
           <div className="ProgessBar"><progress value="40" max="110"></progress></div>
           <div className="AnswerList">
           <label className="container">20.8 kJ
-              <input type="checkbox" id="Answer1" disabled />
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">104 kJ
-              <input type="checkbox" id="Answer2"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">2080 kJ
-              <input type="checkbox" id="Answer3"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">10400 kJ
-              <input type="checkbox" id="Answer4"disabled/>
-              <span className="checkmark"></span>
+
             </label>
         
             <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -789,20 +769,16 @@ function Page5 (){
               <div className="ProgessBar"><progress value="50" max="110"></progress></div>
               <div className="AnswerList">
               <label className="container">ความเร็วที่จุด B มีค่าเท่ากับ ความเร็วที่จุด D
-                  <input type="checkbox" id="Answer1" disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">ความเร็วที่จุด D มีค่าเท่ากับ ความเร็วที่จุด E
-                  <input type="checkbox" id="Answer2"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">วัตถุเคลื่อนที่จากจุด A ไป E ไม่มีการสูญเสียพลังงานให้สิ่งแวดล้อม
-                  <input type="checkbox" id="Answer3"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">ความเร็วที่จุด E มากกว่า ความเร็วที่จุด B
-                  <input type="checkbox" id="Answer4"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
             
                 <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -877,20 +853,16 @@ function Page5 (){
                   <div className="ProgessBar"><progress value="60" max="110"></progress></div>
                   <div className="AnswerList">
                   <label className="container">75 cm
-                      <input type="checkbox" id="Answer1" disabled />
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">80 cm
-                      <input type="checkbox" id="Answer2"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">95 cm
-                      <input type="checkbox" id="Answer3"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">120 cm
-                      <input type="checkbox" id="Answer4"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                 
                     <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -965,20 +937,16 @@ function Page5 (){
           <div className="ProgessBar"><progress value="70" max="110"></progress></div>
           <div className="AnswerList">
           <label className="container">5 cm
-              <input type="checkbox" id="Answer1" disabled />
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">10 cm
-              <input type="checkbox" id="Answer2"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">20 cm
-              <input type="checkbox" id="Answer3"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">50 cm
-              <input type="checkbox" id="Answer4"disabled/>
-              <span className="checkmark"></span>
+
             </label>
         
             <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -1053,20 +1021,16 @@ function Page5 (){
               <div className="ProgessBar"><progress value="80" max="110"></progress></div>
               <div className="AnswerList">
               <label className="container">2.5 m/s
-                  <input type="checkbox" id="Answer1" disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">5.0 m/s
-                  <input type="checkbox" id="Answer2"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">7.5 m/s
-                  <input type="checkbox" id="Answer3"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">0 m/s
-                  <input type="checkbox" id="Answer4"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
             
                 <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -1141,20 +1105,16 @@ function Page5 (){
               <div className="ProgessBar"><progress value="90" max="110"></progress></div>
               <div className="AnswerList">
               <label className="container">50 N
-                <input type="checkbox" id="Answer1" disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">100 N
-                <input type="checkbox" id="Answer2"disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">175 N
-                <input type="checkbox" id="Answer3"disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">200 N
-                <input type="checkbox" id="Answer4"disabled/>
-                <span className="checkmark"></span>
+
               </label>
              
                 <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>

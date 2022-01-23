@@ -136,7 +136,7 @@ color: rgb(var(--theme-color)) ;
     padding-left: 5%;
     padding-right: 5%;
     top: 60px;
-
+    overflow-y: auto;
     background: rgb(var(--bg-color));
    }
 .LabNumber{

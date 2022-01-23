@@ -357,20 +357,12 @@ function Page1 (){
       
       <div className="AnswerList">
       <label className="container">0 J
-          <input type="checkbox" id="Answer1"disabled/>
-          <span className="checkmark"></span>
         </label>
         <label className="container">150 J
-          <input type="checkbox" id="Answer2"disabled/>
-          <span className="checkmark"></span>
         </label>
         <label className="container">500 J
-          <input type="checkbox" id="Answer3"disabled/>
-          <span className="checkmark"></span>
         </label>
         <label className="container">3000 J
-          <input type="checkbox" id="Answer4"disabled/>
-          <span className="checkmark"></span>
         </label>
     
         <button className = "btn btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -446,20 +438,16 @@ function Page1 (){
           <div className="ProgessBar"><progress value="10" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">0 J
-              <input type="checkbox" id="Answer1" disabled />
-              <span className="checkmark"></span>
+              
             </label>
             <label className="container">10 J
-              <input type="checkbox" id="Answer2"disabled/>
-              <span className="checkmark"></span>
+             
             </label>
             <label className="container">50 J
-              <input type="checkbox" id="Answer3"disabled/>
-              <span className="checkmark"></span>
+              
             </label>
             <label className="container">100 J
-              <input type="checkbox" id="Answer4"disabled/>
-              <span className="checkmark"></span>
+              
             </label>
         
             <button className = "btn btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -473,7 +461,6 @@ function Page1 (){
   function Page3 (){
           return(
             <div>
-              {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
           <div className="LabName">Exam : Work</div>
           <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
@@ -541,20 +528,15 @@ function Page1 (){
               <div className="ProgessBar"><progress value="20" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">20.8 kJ
-                  <input type="checkbox" id="Answer1" disabled />
-                  <span className="checkmark"></span>
                 </label>
                 <label className="container">104 kJ
-                  <input type="checkbox" id="Answer2"disabled/>
-                  <span className="checkmark"></span>
+                  
                 </label>
                 <label className="container">2080 kJ
-                  <input type="checkbox" id="Answer3"disabled/>
-                  <span className="checkmark"></span>
+                  
                 </label>
                 <label className="container">10400 kJ
-                  <input type="checkbox" id="Answer4"disabled/>
-                  <span className="checkmark"></span>
+                  
                 </label>
             
                 <button className = "btn btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -631,20 +613,16 @@ function Page1 (){
                   <div className="ProgessBar"><progress value="30" max="100"></progress></div>
                   <div className="AnswerList">
                   <label className="container">0 J
-                      <input type="checkbox" id="Answer1" disabled />
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">50√2 J
-                      <input type="checkbox" id="Answer2"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">80 J
-                      <input type="checkbox" id="Answer3"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">140 J
-                      <input type="checkbox" id="Answer4"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                 
                     <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -722,20 +700,16 @@ function Page5 (){
           <div className="ProgessBar"><progress value="40" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">200 J
-              <input type="checkbox" id="Answer1" disabled />
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">350 J
-              <input type="checkbox" id="Answer2"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">400 J 
-              <input type="checkbox" id="Answer3"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">450 J 
-              <input type="checkbox" id="Answer4"disabled/>
-              <span className="checkmark"></span>
+
             </label>
         
             <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -814,20 +788,16 @@ function Page5 (){
               <div className="ProgessBar"><progress value="50" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">300 J
-                  <input type="checkbox" id="Answer1" disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">400 J
-                  <input type="checkbox" id="Answer2"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">600 J
-                  <input type="checkbox" id="Answer3"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
                 <label className="container">800 J
-                  <input type="checkbox" id="Answer4"disabled/>
-                  <span className="checkmark"></span>
+
                 </label>
             
                 <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -845,6 +815,7 @@ function Page5 (){
               <div className="LabName">Exam : Work</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
               <div className="LabInfo">เมื่อใช้แรง F ดึงวัตถุให้เคลื่อนไปในแนวระดับ กราฟด้านล่าง แรง F และแรงเสียดทาน f แสดงดังรูป เมื่อวัตถุเคลื่อนไปด้านขวาจงหา งานของแรง F งานของแรงเสียดทาน และงานของแรงลัพธ์ (Cos 37˚ = 4/5  Sin 37˚ = 3/5)
+              <br/><br/><mark>มีกราฟด้านล่าง</mark>
             </div>
             <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP7.png?alt=media&token=dede91d7-ec36-40cd-99e3-838620288e24" />
             <div className='SceneContainer'>
@@ -892,7 +863,7 @@ function Page5 (){
               <div className="LabName">Exam : Work</div>
               <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
               <div className="LabInfo">เมื่อใช้แรง F ดึงวัตถุให้เคลื่อนไปในแนวระดับ กราฟด้านล่าง แรง F และแรงเสียดทาน f แสดงดังรูป เมื่อวัตถุเคลื่อนไปด้านขวาจงหา งานของแรง F งานของแรงเสียดทาน และงานของแรงลัพธ์ (Cos 37˚ = 4/5  Sin 37˚ = 3/5)
-            </div>
+              <br/><br/><mark>มีกราฟด้านล่าง</mark></div>
             <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP7.png?alt=media&token=dede91d7-ec36-40cd-99e3-838620288e24" />
             <div className='SceneContainer'>
   <Chart7/>
@@ -907,20 +878,16 @@ function Page5 (){
                   <div className="ProgessBar"><progress value="60" max="100"></progress></div>
                   <div className="AnswerList">
                   <label className="container">100 J , 50 J , 50 J
-                      <input type="checkbox" id="Answer1" disabled />
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">90 J , 40 J , 50 J
-                      <input type="checkbox" id="Answer2"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">80 J , 40 J , 40 J
-                      <input type="checkbox" id="Answer3"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                     <label className="container">70 J, 30 J , 40 J
-                      <input type="checkbox" id="Answer4"disabled/>
-                      <span className="checkmark"></span>
+
                     </label>
                 
                     <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -997,20 +964,16 @@ function Page5 (){
           <div className="ProgessBar"><progress value="70" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">400 J
-              <input type="checkbox" id="Answer1" disabled />
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">520 J
-              <input type="checkbox" id="Answer2"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">2000 J 
-              <input type="checkbox" id="Answer3"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">2400 J 
-              <input type="checkbox" id="Answer4"disabled/>
-              <span className="checkmark"></span>
+
             </label>
         
             <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -1089,20 +1052,16 @@ function Page9 (){
           <div className="ProgessBar"><progress value="80" max="100"></progress></div>
           <div className="AnswerList">
           <label className="container">ยกของจากพื้นขึ้นไปไว้บนโต๊ะ
-              <input type="checkbox" id="Answer1" disabled />
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">เดินจากชั้นล่างขึ้นบน
-              <input type="checkbox" id="Answer2"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">เข็นรถให้เคลื่อนที่
-              <input type="checkbox" id="Answer3"disabled/>
-              <span className="checkmark"></span>
+
             </label>
             <label className="container">กรรมกรเดินแบกกระสอบข้าวสารไปตามถนนราบ
-              <input type="checkbox" id="Answer4"disabled/>
-              <span className="checkmark"></span>
+
             </label>
         
             <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
@@ -1195,36 +1154,28 @@ function Page10 (){
               <div className="ProgessBar"><progress value="90" max="100"></progress></div>
               <div className="AnswerList">
               <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
-                <input type="checkbox" id="Answer1" disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">เมื่อมีหลายแรงกระทำ ให้ทำการรวมแรงแล้วค่อยคำนวณ
-                <input type="checkbox" id="Answer2"disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">เมื่อแรงทำมุมกับการกระจัดให้แตกแรงแล้วคำนวณ
-                <input type="checkbox" id="Answer3"disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">งานมีสูตรว่า W = F ⋅ S
-                <input type="checkbox" id="Answer4"disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">การที่แรงตั้งฉากกับการกระจัดจะทำให้เกิดงาน
-                <input type="checkbox" id="Answer5"disabled />
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">หน่วย J ใช้บอกปริมาณงานที่ทำหรือพลังงานที่ต้องการออกแรง จำนวน 1 นิวตัน เป็นระยะทาง 1 เมตร
-                <input type="checkbox" id="Answer6"disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S สามารถใช้หางานของแรง F ได้
-                <input type="checkbox" id="Answer7"disabled/>
-                <span className="checkmark"></span>
+
               </label>
               <label className="container">กราฟความสัมพันธ์ระหว่าง F กับ S หา งานได้จากความชันของกราฟ
-                <input type="checkbox" id="Answer8"disabled/>
-                <span className="checkmark"></span>
+
               </label>
             
                 <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
