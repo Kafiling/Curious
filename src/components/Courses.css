@@ -407,6 +407,19 @@ justify-content: center;
   font-size: 16px;
 }
 
+.LoginButton {
+  position: relative;
+  background-color: rgb(var(--tertiary-color)); 
+  border: none;
+  color: rgb(var(--text-color));
+  margin: 0% 3%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .split {

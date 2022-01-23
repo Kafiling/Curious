@@ -31,9 +31,13 @@ export default function Header(){
     const  signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
-
-    
   }
+
+  function signOut(){
+    auth.signOut()
+    window.location.replace("/");
+  }
+  
     if (auth.currentUser == null) {
       return(<div className = "Header">
       <li></li>
@@ -61,7 +65,7 @@ export default function Header(){
       <li><Link to = "/courses">Courses</Link></li>
       <li><Link to = "/about_us">About Us</Link></li>
       <li></li>
-      <li onClick = {() => auth.signOut()} >Sign Out</li>
+      <li onClick = {() => signOut()} >Sign Out</li>
       <li></li>
       </div>
     )}

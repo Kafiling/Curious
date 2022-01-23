@@ -7,7 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 //Import Firebase SDK
-import { AuthProvider, firebaseApp } from 'Firebase';
+import { AuthProvider, firebaseApp, auth } from 'Firebase';
 
 //Import Component
 import Homepage from './components/Homepage';
@@ -40,6 +40,7 @@ import './components/Courses.css'
 import './components/CoursesPage.css'
 
 function App() {
+
     return (
       <AuthProvider>
       <div className = "Container">
@@ -49,13 +50,12 @@ function App() {
         <div className = "Header"> 
         <Header/>
         </div>
-  
         <div className = "Page">
           <Switch>
           {/* Main Page*/}
           <Route exact path="/"  ><Homepage/></Route>
           <Route exact path="/dashboard"  ><Dashboard/></Route>
-          <Route exact path="/courses"  ><Courses/></Route>
+          <Route exact path="/courses"  ><Dashboard/></Route>
           <Route exact path="/about_us"  ><AboutUs/></Route>
           
           {/* Courses*/}

@@ -1,11 +1,58 @@
 import React from 'react'
-
+import { AuthProvider, firebaseApp } from 'Firebase';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth';
+//initialize Firebase
+firebase.initializeApp({
+  apiKey: "AIzaSyCLzwwu-Ag4jcnkxWNl_kQ41kziCCFRFVs",
+  authDomain: "keep-curious.firebaseapp.com",
+  projectId: "keep-curious",
+  storageBucket: "keep-curious.appspot.com",
+  messagingSenderId: "968580312590",
+  appId: "1:968580312590:web:731281b07985cd799ed65f",
+  measurementId: "G-D2NMVZ97XT"
+  })
+  //ประกาศตัวแปรของ Firebase Service
+export const auth = firebase.auth();
+export const db = firebase.firestore();
 
 export default function Homepage() {
-    
+    function reDirect(){
+        if(auth.currentUser){
+        window.location.replace("/courses");
+        } 
+        setTimeout(reDirect, 200)
+    }
+    const  signInWithGoogle = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider);
+      }
+    const  signInWithFacebook = () => {
+        const provider = new firebase.auth.FacebookAuthProvider();
+        auth.signInWithPopup(provider);
+      }
+    const  signInWithAnonymous = () => {
+        firebase.auth().signInAnonymously()
+      }
+      
+      reDirect()
+
     return (
         <div>
-            <h1>Curious</h1>
+
+            <div className = 'FinishContainer'>
+      <img className='FinishImg' id='img' alt ="Check.png"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/check.png?alt=media&token=10d8a285-0a16-4009-a4fa-5725aeba2cef" />
+    </div>
+    <div className = 'FinishContainer'>
+    <div className="FinishInfo">ยินดีต้อนรับเข้าสู่ Curious!<br/><br/>กรุณา login เพื่อเข้าใช้งาน</div>
+    </div>
+
+    < div className = 'FinishContainer'>
+      <button className = "LoginButton" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithGoogle()}>Sign in with Google</button>
+      <button className = "LoginButton" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithFacebook()}>Sign in with Facebook</button>
+      <button className = "LoginButton" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithAnonymous()}>Sign in Anonymously</button>
+    </div>
         </div>
     )
 }
