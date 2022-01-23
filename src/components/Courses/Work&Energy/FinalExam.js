@@ -55,7 +55,7 @@ function resetAlert(){
 function handleUpvote(){
   if(Upvote === false){
     db.collection('feedback').doc('upvote').update({
-      FinalExam : firebase.firestore.FieldValue.increment(1)
+      FinalLCE : firebase.firestore.FieldValue.increment(1)
     })
     setUpvote(true)
     AlertState.current = 3
@@ -68,7 +68,7 @@ function handleReport(){
   if(Report === false){
     ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
     db.collection('report').doc(currentUser.providerData[0]['uid']).set({
-      FinalExam: ReportText.current
+      ExamLCE: ReportText.current
   }, { merge: true });
     setReport(true)
     AlertState.current = 4
@@ -84,7 +84,7 @@ function sumScore(){
   BayesScore.current = "Not Implemented"
 
   db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-    FinalExam: CompletionScore.current
+    ExamLCE: CompletionScore.current
 }, { merge: true });
   
 
@@ -265,10 +265,10 @@ default :
 }}
 
 function allAnswerSummitCheck(){
-  let arr = [Answer1,Answer2,Answer3,Answer4,Answer5,Answer6,Answer7,Answer8,Answer9,Answer10,Answer11]
+  let arr = [Answer1,Answer2,Answer3,Answer4,Answer5,Answer6,Answer7,Answer8,Answer9,Answer11]
   let filtered = arr.filter(Boolean);
-  let NumQuestionNotAnswered = 11 - filtered.length 
-  if(Answer1 && Answer2 && Answer3 && Answer4 && Answer5 && Answer6 && Answer7 && Answer8 && Answer9 && Answer10 && Answer11){
+  let NumQuestionNotAnswered = 10 - filtered.length 
+  if(Answer1 && Answer2 && Answer3 && Answer4 && Answer5 && Answer6 && Answer7 && Answer8 && Answer9 && Answer11){
     setPage(12)
   }
   else {
@@ -283,8 +283,8 @@ function Page1 (){
       {AlertState.current === 1? <AnswerSentAlert/> : null}
     <div className="split Index">
   <div className="LabName">Final Exam</div>
-  <div div className="LabInfo">วัตถุก้อนหนึ่งมีมวล 0.5 กิโลกรัม กำลังเคลื่อนที่ด้วยอัตราเร็ว 10 เมตรต่อวินาที <br/>จะมีพลังงานจลย์เท่าไหร่
-  <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+  <div div className="LabInfo">วัตถุก้อนหนึ่งมีมวล 0.5 กิโลกรัม กำลังเคลื่อนที่ด้วยอัตราเร็ว 10 เมตรต่อวินาที <br/>จะมีพลังงานจลน์เท่าไหร่
+ <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FFinal%2FFinalP1.png?alt=media&token=b5dd797a-8800-45c1-ada5-5e802875b8db" />
 </div>
    <div div className="FooterSpace"></div>
    <div className="Footer">Curious Project</div>
@@ -292,7 +292,7 @@ function Page1 (){
   </div>
   
   <div className="split QuestionAnswer"> 
-    <div className="LabNumber">Final Exam (1/11)</div>
+    <div className="LabNumber">Final Exam (1/10)</div>
     <div className="ProgessBar"><progress value="0" max="110"></progress></div>
     
     <div className="AnswerList">
@@ -328,7 +328,7 @@ function Page1 (){
       <div className="split Index">
     <div className="LabName">Final Exam</div>
     <div div className="LabInfo">วัตถุก้อนหนึ่งมีมวล 0.5 กิโลกรัม กำลังเคลื่อนที่ด้วยอัตราเร็ว 10 เมตรต่อวินาที <br/>จะมีพลังงานจลย์เท่าไหร่
-  <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FFinal%2FFinalP1.png?alt=media&token=b5dd797a-8800-45c1-ada5-5e802875b8db" />
   </div>
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
@@ -336,7 +336,7 @@ function Page1 (){
     </div>
     
     <div className="split QuestionAnswer"> 
-      <div className="LabNumber">Final Exam (1/11)</div>
+      <div className="LabNumber">Final Exam (1/10)</div>
       <div className="ProgessBar"><progress value="0" max="110"></progress></div>
       
       <div className="AnswerList">
@@ -372,7 +372,7 @@ function Page1 (){
         <div className="split Index">
       <div className="LabName">Final Exam</div>
       <div div className="LabInfo">วัตถุวางอยู่บนพื้นระดับลื่น ด้านหนึ่งของววัตถุติดกับสปริงซึ่งมีค่านิจสปริง 400 นิวตันต่อเมตร <br/>อีกด้านหนึ่งมีแรงมากระทำค่อยค่อยเพิ่มขึ้นดังรูป เมื่อวัตถุเคลื่อนที่ไปได้ 30 เซนติเมตร <br/>จงหาพลังงานศักย์ยืดหยุ่นในสปริง
-      <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+      <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FFinal%2FFinalP2.png?alt=media&token=b2e329a6-2abc-4335-b023-e7ca81acb750" />
     </div>
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
@@ -380,7 +380,7 @@ function Page1 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Final Exam (2/11)</div>
+        <div className="LabNumber">Final Exam (2/10)</div>
         <div className="ProgessBar"><progress value="10" max="110"></progress></div>ื
         <div className="AnswerList">
         <label className="container">18 J
@@ -415,7 +415,7 @@ function Page1 (){
           <div className="split Index">
         <div className="LabName">Final Exam</div>
         <div div className="LabInfo">วัตถุวางอยู่บนพื้นระดับลื่น ด้านหนึ่งของววัตถุติดกับสปริงซึ่งมีค่านิจสปริง 400 นิวตันต่อเมตร <br/>อีกด้านหนึ่งมีแรงมากระทำค่อยค่อยเพิ่มขึ้นดังรูป เมื่อวัตถุเคลื่อนที่ไปได้ 30 เซนติเมตร <br/>จงหาพลังงานศักย์ยืดหยุ่นในสปริง
-      <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FFinal%2FFinalP2.png?alt=media&token=b2e329a6-2abc-4335-b023-e7ca81acb750" />
     </div>
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -423,7 +423,7 @@ function Page1 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Final Exam (2/11)</div>
+          <div className="LabNumber">Final Exam (2/10)</div>
           <div className="ProgessBar"><progress value="10" max="110"></progress></div>
           <div className="AnswerList">
           <label className="container">18 J
@@ -458,15 +458,16 @@ function Page1 (){
             <div className="split Index">
           <div className="LabName">Final Exam</div>
           <div div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตร<br/>ยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
-          <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg2.png?alt=media&token=a7abff26-88d5-4523-809f-04288e4bddf5" />
         </div>
            <div div className="FooterSpace"></div>
+           <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADohmFXfv0'> iconsy</a></div>
            <div className="Footer">Curious Project</div>
            <div div className="FooterSpace"></div>
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Final Exam (3/11)</div>
+            <div className="LabNumber">Final Exam (3/10)</div>
             <div className="ProgessBar"><progress value="20" max="110"></progress></div>
             
             <div className="AnswerList">
@@ -499,18 +500,19 @@ function Page1 (){
             return(
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
-              <div className="split Index">
-            <div className="LabName">Final Exam</div>
-            <div div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตร<br/>ยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
-          <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+                <div className="split Index">
+          <div className="LabName">Final Exam</div>
+          <div div className="LabInfo">ชายคนหนึ่งแบกวัตถุมวล 10 กิโลกรัม ไว้บนบ่าเดินขึ้นสะพานลอยข้ามถนนซึ่งสูง 5 เมตร<br/>ยาว 30 เมตร จงหางานของชายคนนั้นที่กระทำต่อวัตถุ
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg2.png?alt=media&token=a7abff26-88d5-4523-809f-04288e4bddf5" />
         </div>
-             <div div className="FooterSpace"></div>
-             <div className="Footer">Curious Project</div>
-             <div div className="FooterSpace"></div>
-            </div>
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADohmFXfv0'> iconsy</a></div>
+           <div className="Footer">Curious Project</div>
+           <div div className="FooterSpace"></div>
+          </div>
             
             <div className="split QuestionAnswer"> 
-              <div className="LabNumber">Final Exam (3/11)</div>
+              <div className="LabNumber">Final Exam (3/10)</div>
               <div className="ProgessBar"><progress value="20" max="110"></progress></div>
               <div className="AnswerList">
               <label className="container">0 J
@@ -545,15 +547,16 @@ function Page1 (){
                 <div className="split Index">
               <div className="LabName">Final Exam</div>
               <div div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงานและกำลัง
-              <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+              <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg3.png?alt=media&token=745b2355-f8ce-46d2-9fad-6286dad2111d" />
             </div>
                <div div className="FooterSpace"></div>
+               <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADoO6srWSU'> sketchify</a></div>
                <div className="Footer">Curious Project</div>
                <div div className="FooterSpace"></div>
               </div>
               
               <div className="split QuestionAnswer"> 
-                <div className="LabNumber">Final Exam (4/11)</div>
+                <div className="LabNumber">Final Exam (4/10)</div>
                 <div className="ProgessBar"><progress value="30" max="110"></progress></div>ื
                 
                 <div className="AnswerList">
@@ -586,18 +589,19 @@ function Page1 (){
                 return(
                   <div>
                     {AlertState.current === 1? <AnswerSentAlert/> : null}
-                  <div className="split Index">
-                <div className="LabName">Final Exam</div>
-                <div div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงานและกำลัง
-                <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+                    <div className="split Index">
+              <div className="LabName">Final Exam</div>
+              <div div className="LabInfo">ข้อใดกล่าวถูกต้องเกี่ยวกับงานและกำลัง
+              <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg3.png?alt=media&token=745b2355-f8ce-46d2-9fad-6286dad2111d" />
             </div>
-                 <div div className="FooterSpace"></div>
-                 <div className="Footer">Curious Project</div>
-                 <div div className="FooterSpace"></div>
-                </div>
+               <div div className="FooterSpace"></div>
+               <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADoO6srWSU'> sketchify</a></div>
+               <div className="Footer">Curious Project</div>
+               <div div className="FooterSpace"></div>
+              </div>
                 
                 <div className="split QuestionAnswer"> 
-                  <div className="LabNumber">Final Exam (4/11)</div>
+                  <div className="LabNumber">Final Exam (4/10)</div>
                   <div className="ProgessBar"><progress value="30" max="110"></progress></div>
                   <div className="AnswerList">
                   <label className="container">เมื่อแรงมีทิศตรงข้ามกับการกระจัด จะได้งานเป็นลบ
@@ -629,20 +633,24 @@ function Page5 (){
       return(
         <div>
           {AlertState.current === 1? <AnswerSentAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">Final Exam</div>
-      <div div className="LabInfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
-      <br/> ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม<br/> จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
-
-      <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
-    </div>
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+          <div className="split Index">
+          <div className="LabName">Final Exam</div>
+          <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+          <div className="LabInfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
+          ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม 
+          จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
+        </div>
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP3.png?alt=media&token=9cbd7246-e4db-4c4b-b1a3-ae0f381f96f6" />
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADxz61GV1o'> sketchify</a></div>
+           <div className="Footer">Curious Project</div>
+           
+           
+           <div div className="FooterSpace"></div>
+          </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Final Exam (5/11)</div>
+        <div className="LabNumber">Final Exam (5/10)</div>
         <div className="ProgessBar"><progress value="40" max="110"></progress></div>ื
         <div className="AnswerList">
         <label className="container">20.8 kJ
@@ -674,20 +682,24 @@ function Page5 (){
         return(
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
-          <div className="split Index">
-        <div className="LabName">Final Exam</div>
-        <div div className="LabInfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
-      <br/> ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม<br/> จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
-
-      <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
-    </div>
-         <div div className="FooterSpace"></div>
-         <div className="Footer">Curious Project</div>
-         <div div className="FooterSpace"></div>
+            <div className="split Index">
+          <div className="LabName">Final Exam</div>
+          <div div className="LabInfo">จากนี้จะเป็นโจทย์เพื่อทำความเข้าใจกับเนื้อหาที่เรียนได้มากขึ้น</div> 
+          <div className="LabInfo">ปรีดาซ้อมขี่จักรยานขึ้นไปตามถนนราบเอียงยาว 5 km ทำมุม 15˚ กับแนวระดับ 
+          ด้วยความเร็วคงที่ 36 กิโลเมตร/ชั่วโมงปรีดาและจักรยานมีมวลรวม 8 กิโลกรัม 
+          จงหางานของปรีดาที่ใช้ขี่จักรยาน ( sin15˚ = 0.26, cos15˚ = 0.97)
         </div>
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FExamWork%2FExamWorkP3.png?alt=media&token=9cbd7246-e4db-4c4b-b1a3-ae0f381f96f6" />
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MADxz61GV1o'> sketchify</a></div>
+           <div className="Footer">Curious Project</div>
+           
+           
+           <div div className="FooterSpace"></div>
+          </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Final Exam (5/11)</div>
+          <div className="LabNumber">Final Exam (5/10)</div>
           <div className="ProgessBar"><progress value="40" max="110"></progress></div>
           <div className="AnswerList">
           <label className="container">20.8 kJ
@@ -722,8 +734,7 @@ function Page5 (){
             <div className="split Index">
           <div className="LabName">Final Exam</div>
           <div div className="LabInfo">จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน <br/>ข้อใดกล่าวถูกต้อง
-          <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
-
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P5.png?alt=media&token=44b39353-448b-4eb0-8655-3277af1ecc80" />
         </div>
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
@@ -731,7 +742,7 @@ function Page5 (){
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Final Exam (6/11)</div>
+            <div className="LabNumber">Final Exam (6/10)</div>
             <div className="ProgessBar"><progress value="50" max="110"></progress></div>ื
             <div className="AnswerList">
             <label className="container">ความเร็วที่จุด B มีค่าเท่ากับ ความเร็วที่จุด D
@@ -763,19 +774,18 @@ function Page5 (){
             return(
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
-              <div className="split Index">
-            <div className="LabName">Final Exam</div>
-            <div div className="LabInfo">จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน <br/>ข้อใดกล่าวถูกต้อง
-          <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
-
+                <div className="split Index">
+          <div className="LabName">Final Exam</div>
+          <div div className="LabInfo">จากรูปวัตถุมีมวล 1 กิโลกรัมเคลื่อนที่จากจุด A ไปอยู่ที่จุด E โดยทางโค้งไม่มีแรงเสียดทาน <br/>ข้อใดกล่าวถูกต้อง
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P5.png?alt=media&token=44b39353-448b-4eb0-8655-3277af1ecc80" />
         </div>
-             <div div className="FooterSpace"></div>
-             <div className="Footer">Curious Project</div>
-             <div div className="FooterSpace"></div>
-            </div>
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Curious Project</div>
+           <div div className="FooterSpace"></div>
+          </div>
             
             <div className="split QuestionAnswer"> 
-              <div className="LabNumber">Final Exam (6/11)</div>
+              <div className="LabNumber">Final Exam (6/10)</div>
               <div className="ProgessBar"><progress value="50" max="110"></progress></div>
               <div className="AnswerList">
               <label className="container">ความเร็วที่จุด B มีค่าเท่ากับ ความเร็วที่จุด D
@@ -811,7 +821,7 @@ function Page5 (){
               <div className="LabName">Final Exam</div>
               <div div className="LabInfo">จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมีสัมประสิทธิ์ความเสียดทาน 0.2 ยาว 4 เมตร <br/>ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 เมตร
               วัตถุขึ้นไปถึง D สูงเท่าใด
-              <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+              <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P4.png?alt=media&token=39df6c01-8285-4631-a72b-af9736fd5873" />
             </div>
                <div div className="FooterSpace"></div>
                <div className="Footer">Curious Project</div>
@@ -819,7 +829,7 @@ function Page5 (){
               </div>
               
               <div className="split QuestionAnswer"> 
-                <div className="LabNumber">Final Exam (7/11)</div>
+                <div className="LabNumber">Final Exam (7/10)</div>
                 <div className="ProgessBar"><progress value="60" max="110"></progress></div>ื
                 <div className="AnswerList">
                 <label className="container">75 cm
@@ -855,7 +865,7 @@ function Page5 (){
                 <div className="LabName">Final Exam</div>
                 <div div className="LabInfo">จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมีสัมประสิทธิ์ความเสียดทาน 0.2 ยาว 4 เมตร <br/>ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 เมตร
               วัตถุขึ้นไปถึง D สูงเท่าใด
-              <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+              <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P4.png?alt=media&token=39df6c01-8285-4631-a72b-af9736fd5873" />
             </div>
                  <div div className="FooterSpace"></div>
                  <div className="Footer">Curious Project</div>
@@ -863,7 +873,7 @@ function Page5 (){
                 </div>
                 
                 <div className="split QuestionAnswer"> 
-                  <div className="LabNumber">Final Exam (7/11)</div>
+                  <div className="LabNumber">Final Exam (7/10)</div>
                   <div className="ProgessBar"><progress value="60" max="110"></progress></div>
                   <div className="AnswerList">
                   <label className="container">75 cm
@@ -899,7 +909,7 @@ function Page5 (){
       <div className="LabName">Final Exam</div>
       <div div className="LabInfo">มวล 1 กิโลกรัม ผูกด้วยเชือกยาว 2 เมตร เดิมอยู่นิ่ง แนวเส้นเชือกอยู่ในแนวระดับ 
       <br/> แล้วปล่อยลงมาชนสปริงที่วางตั้งไว้ในแนวระดับที่จุดต่ำสุดของเชือกดังรูป <br/>สปริงหดสั้นที่สุดเท่าไหร่ กำหนดให้ค่านิจสปริง 1000 นิวตันต่อเมตร
-      <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+      <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FFinal%2FFinalP8.png?alt=media&token=281bea01-48d8-4162-b72f-4afd02e51a94" />
     </div>
        <div div className="FooterSpace"></div>
        <div className="Footer">Curious Project</div>
@@ -907,7 +917,7 @@ function Page5 (){
       </div>
       
       <div className="split QuestionAnswer"> 
-        <div className="LabNumber">Final Exam (8/11)</div>
+        <div className="LabNumber">Final Exam (8/10)</div>
         <div className="ProgessBar"><progress value="70" max="110"></progress></div>ื
         <div className="AnswerList">
         <label className="container">5 cm
@@ -939,11 +949,11 @@ function Page5 (){
         return(
           <div>
             {AlertState.current === 1? <AnswerSentAlert/> : null}
-          <div className="split Index">
-        <div className="LabName">Final Exam</div>
-        <div div className="LabInfo">มวล 1 กิโลกรัม ผูกด้วยเชือกยาว 2 เมตร เดิมอยู่นิ่ง แนวเส้นเชือกอยู่ในแนวระดับ 
+            <div className="split Index">
+      <div className="LabName">Final Exam</div>
+      <div div className="LabInfo">มวล 1 กิโลกรัม ผูกด้วยเชือกยาว 2 เมตร เดิมอยู่นิ่ง แนวเส้นเชือกอยู่ในแนวระดับ 
       <br/> แล้วปล่อยลงมาชนสปริงที่วางตั้งไว้ในแนวระดับที่จุดต่ำสุดของเชือกดังรูป <br/>สปริงหดสั้นที่สุดเท่าไหร่ กำหนดให้ค่านิจสปริง 1000 นิวตันต่อเมตร
-      <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+      <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FFinal%2FFinalP8.png?alt=media&token=281bea01-48d8-4162-b72f-4afd02e51a94" />
     </div>
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -951,7 +961,7 @@ function Page5 (){
         </div>
         
         <div className="split QuestionAnswer"> 
-          <div className="LabNumber">Final Exam (8/11)</div>
+          <div className="LabNumber">Final Exam (8/10)</div>
           <div className="ProgessBar"><progress value="70" max="110"></progress></div>
           <div className="AnswerList">
           <label className="container">5 cm
@@ -987,9 +997,7 @@ function Page5 (){
           <div className="LabName">Final Exam</div>
           <div div className="LabInfo">วัตถุก้อนหนึ่งผูกเชือกยาว 2.5 เมตร ปลายเชือกข้างหนึ่ง ผูกติดกับเพดาน 
           ดึงวัตถุจนแนวเส้นเชือกทำมุม 60 องศากับแนวดิ่ง แล้วปล่อยให้วัตถุเคลื่อนที่ ขณะผ่านจุดต่ำสุดวัตถุนี้มีอัตราเร็วเท่าใด
-
-          <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
-
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FFinal%2FFinalP9.png?alt=media&token=d13709b1-fec6-4e69-b64a-d6928d5b77d8" />
         </div>
            <div div className="FooterSpace"></div>
            <div className="Footer">Curious Project</div>
@@ -997,7 +1005,7 @@ function Page5 (){
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Final Exam (9/11)</div>
+            <div className="LabNumber">Final Exam (9/10)</div>
             <div className="ProgessBar"><progress value="80" max="110"></progress></div>ื
             <div className="AnswerList">
             <label className="container">2.5 m/s
@@ -1029,20 +1037,19 @@ function Page5 (){
             return(
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
-              <div className="split Index">
-            <div className="LabName">Final Exam</div>
-            <div div className="LabInfo">วัตถุก้อนหนึ่งผูกเชือกยาว 2.5 เมตร ปลายเชือกข้างหนึ่ง ผูกติดกับเพดาน 
+                <div className="split Index">
+          <div className="LabName">Final Exam</div>
+          <div div className="LabInfo">วัตถุก้อนหนึ่งผูกเชือกยาว 2.5 เมตร ปลายเชือกข้างหนึ่ง ผูกติดกับเพดาน 
           ดึงวัตถุจนแนวเส้นเชือกทำมุม 60 องศากับแนวดิ่ง แล้วปล่อยให้วัตถุเคลื่อนที่ ขณะผ่านจุดต่ำสุดวัตถุนี้มีอัตราเร็วเท่าใด
-          <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
-
+          <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FFinal%2FFinalP9.png?alt=media&token=d13709b1-fec6-4e69-b64a-d6928d5b77d8" />
         </div>
-             <div div className="FooterSpace"></div>
-             <div className="Footer">Curious Project</div>
-             <div div className="FooterSpace"></div>
-            </div>
+           <div div className="FooterSpace"></div>
+           <div className="Footer">Curious Project</div>
+           <div div className="FooterSpace"></div>
+          </div>
             
             <div className="split QuestionAnswer"> 
-              <div className="LabNumber">Final Exam (9/11)</div>
+              <div className="LabNumber">Final Exam (9/10)</div>
               <div className="ProgessBar"><progress value="80" max="110"></progress></div>
               <div className="AnswerList">
               <label className="container">2.5 m/s
@@ -1070,114 +1077,24 @@ function Page5 (){
             </div>
             </div>)
             }
-        function Page10 (){
-              return(
-                <div>
-                  {AlertState.current === 1? <AnswerSentAlert/> : null}
-                <div className="split Index">
-              <div className="LabName">Final Exam</div>
-              <div div className="LabInfo">ปล่อยวัตถุ 0.4 กิโลกรัม บนพื้นเอียงลื่นทำมุม 30 องศา ที่ปลายด้านล่างมีสปริง 
-              <br/> ซึ่งมีค่านิจ 100 นิวตันต่อเมตร วางห่าง 0.8 เมตร ดังรูป จงหาว่าสปริงจะหดเข้าไปมากที่สุดเท่าไร
-
-              <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
-            </div>
-               <div div className="FooterSpace"></div>
-               <div className="Footer">Curious Project</div>
-               <div div className="FooterSpace"></div>
-              </div>
-              
-              <div className="split QuestionAnswer"> 
-                <div className="LabNumber">Final Exam (10/11)</div>
-                <div className="ProgessBar"><progress value="90" max="110"></progress></div>ื
-                <div className="AnswerList">
-                <label className="container">5 cm
-                    <input type="checkbox" id="Answer1" />
-                    <span className="checkmark"></span>
-                  </label>
-                  <label className="container">20 cm
-                    <input type="checkbox" id="Answer2"/>
-                    <span className="checkmark"></span>
-                  </label>
-                  <label className="container">25 cm
-                    <input type="checkbox" id="Answer3"/>
-                    <span className="checkmark"></span>
-                  </label>
-                  <label className="container">80 cm
-                    <input type="checkbox" id="Answer4"/>
-                    <span className="checkmark"></span>
-                  </label>
-              
-                  <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(10)}>Send Answer</button>
-                
-              </div>
-              <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(9)}>Previous page</button>
-              <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(11)} >Next page</button></div>
-              </div>
-              </div>)
-              }
-          function Page10Answered (){
-                return(
-                  <div>
-                    {AlertState.current === 1? <AnswerSentAlert/> : null}
-                  <div className="split Index">
-                <div className="LabName">Final Exam</div>
-                <div div className="LabInfo">ปล่อยวัตถุ 0.4 กิโลกรัม บนพื้นเอียงลื่นทำมุม 30 องศา ที่ปลายด้านล่างมีสปริง 
-              <br/> ซึ่งมีค่านิจ 100 นิวตันต่อเมตร วางห่าง 0.8 เมตร ดังรูป จงหาว่าสปริงจะหดเข้าไปมากที่สุดเท่าไร
-              <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
-            </div>
-                 <div div className="FooterSpace"></div>
-                 <div className="Footer">Curious Project</div>
-                 <div div className="FooterSpace"></div>
-                </div>
-                
-                <div className="split QuestionAnswer"> 
-                  <div className="LabNumber">Final Exam (10/11)</div>
-                  <div className="ProgessBar"><progress value="90" max="110"></progress></div>
-                  <div className="AnswerList">
-                  <label className="container">5 cm
-                      <input type="checkbox" id="Answer1" disabled />
-                      <span className="checkmark"></span>
-                    </label>
-                    <label className="container">20 cm
-                      <input type="checkbox" id="Answer2"disabled/>
-                      <span className="checkmark"></span>
-                    </label>
-                    <label className="container">25 cm
-                      <input type="checkbox" id="Answer3"disabled/>
-                      <span className="checkmark"></span>
-                    </label>
-                    <label className="container">80 cm
-                      <input type="checkbox" id="Answer4"disabled/>
-                      <span className="checkmark"></span>
-                    </label>
-                
-                    <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
-                  
-                </div>
-                <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(9)}>Previous page</button>
-              <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => setPage(11)}>Next page</button></div>
-                </div>
-                </div>)
-                }
- function Page11 (){
+        
+ function Page10 (){
           return(
             <div>
-              {AlertState.current === 1? <AnswerSentAlert/> : null}
             <div className="split Index">
           <div className="LabName">Final Exam</div>
           <div div className="LabInfo">รถทดลองมวล 0.5 กิโลกรัม วิ่งเข้าชนสปริงที่มีค่านิจ 200 นิวตันต่อเมตร <br/>ด้วยอัตราเร็ว 10 เมตรต่อวินาที ขณะที่รถทดลองมีอัตราเร็วเป็นศูนย์ ขนาดของแรงดันในสปริง<br/>มีค่ากี่นิวตัน
-          <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
 </div>
-          
-          
-           <div div className="FooterSpace"></div>
-           <div className="Footer">Curious Project</div>
-           <div div className="FooterSpace"></div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg4.png?alt=media&token=ac33f6a5-aab3-47e4-a533-bff1ba91c84d" />
+               <div div className="FooterSpace"></div>
+               <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD1F0snXpo'> sketchify</a></div>
+               <div className="Footer">Curious Project</div>
+               <div div className="FooterSpace"></div>
           </div>
           
           <div className="split QuestionAnswer"> 
-            <div className="LabNumber">Final Exam (11/11)</div>
-            <div className="ProgessBar"><progress value="100" max="110"></progress></div>ื
+            <div className="LabNumber">Final Exam (10/10)</div>
+            <div className="ProgessBar"><progress value="90" max="110"></progress></div>ื
             
             <div className="AnswerList">
             <label className="container">50 N
@@ -1199,29 +1116,29 @@ function Page5 (){
               <button className = "btn btn-glow btn-primary" onClick={() =>checkAnswer(11)}>Send Answer</button>
             
           </div>
-          <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(10)}>Previous page</button>
+          <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(9)}>Previous page</button>
           <button className = "btn btn-glow btn-primary btn-nextPage" style={{visibility: "hidden"}}>Next page</button></div>
           </div>
           </div>)
           }
-  function Page11Answered (){
+  function Page10Answered (){
             return(
               <div>
                 {AlertState.current === 1? <AnswerSentAlert/> : null}
-              <div className="split Index">
-            <div className="LabName">Final Exam</div>
-            <div div className="LabInfo">รถทดลองมวล 0.5 กิโลกรัม วิ่งเข้าชนสปริงที่มีค่านิจ 200 นิวตันต่อเมตร <br/>ด้วยอัตราเร็ว 10 เมตรต่อวินาที ขณะที่รถทดลองมีอัตราเร็วเป็นศูนย์ ขนาดของแรงดันในสปริง<br/>มีค่ากี่นิวตัน
-          <br/><br/><br/>**รูปรูปรูปรูปรูปรูป********<br/><br/><br/>
+                <div className="split Index">
+          <div className="LabName">Final Exam</div>
+          <div div className="LabInfo">รถทดลองมวล 0.5 กิโลกรัม วิ่งเข้าชนสปริงที่มีค่านิจ 200 นิวตันต่อเมตร <br/>ด้วยอัตราเร็ว 10 เมตรต่อวินาที ขณะที่รถทดลองมีอัตราเร็วเป็นศูนย์ ขนาดของแรงดันในสปริง<br/>มีค่ากี่นิวตัน
 </div>
-          
-             <div div className="FooterSpace"></div>
-             <div className="Footer">Curious Project</div>
-             <div div className="FooterSpace"></div>
-            </div>
+<img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/NoImg4.png?alt=media&token=ac33f6a5-aab3-47e4-a533-bff1ba91c84d" />
+               <div div className="FooterSpace"></div>
+               <div className="Footer">Image by &nbsp;<a href='https://www.canva.com/media/MAD1F0snXpo'> sketchify</a></div>
+               <div className="Footer">Curious Project</div>
+               <div div className="FooterSpace"></div>
+          </div>
             
             <div className="split QuestionAnswer"> 
-              <div className="LabNumber">Final Exam (11/11)</div>
-              <div className="ProgessBar"><progress value="100" max="110"></progress></div>
+              <div className="LabNumber">Final Exam (10/10)</div>
+              <div className="ProgessBar"><progress value="90" max="110"></progress></div>
               <div className="AnswerList">
               <label className="container">50 N
                 <input type="checkbox" id="Answer1" disabled/>
@@ -1243,7 +1160,7 @@ function Page5 (){
                 <button className = "btn btn-primary btn-answerSent " style={{backgroundColor : "rgb(var(--bg-color))"}} >Answer Sent !</button>
               
             </div>
-            <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(10)}>Previous page</button>
+            <div className="ButtonContainer"><button className = "btn btn-glow btn-secondary btn-previousPage" onClick ={() => setPage(11)}>Previous page</button>
           <button className = "btn btn-glow btn-primary btn-nextPage" onClick ={() => allAnswerSummitCheck()}>Next page</button></div>
             </div>
             </div>)
@@ -1331,19 +1248,14 @@ else if (page === 8 && Answer8 === false) {
       else if (page === 9 && Answer9 === true) {
           return(<div><Page9Answered/></div>)
         }
-else if (page === 10 && Answer10 === false) {
+else if (page === 10 && Answer11 === false) {
           return(<div><Page10/></div>)
           }
-     else if (page === 10 && Answer10 === true) {
+     else if (page === 10 && Answer11 === true) {
             return(<div><Page10Answered/></div>)
           }
-else if (page === 11 && Answer11 === false) {
-    return(<div><Page11/></div>)
-    }
-  else if (page === 11 && Answer11 === true) {
-      return(<div><Page11Answered/></div>)
-    }
-else if (page === 12) {return(
+
+else if (page === 11) {return(
     <div><FinishPage/></div>)}
     
 else   {return(<div>

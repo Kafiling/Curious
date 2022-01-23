@@ -44,7 +44,7 @@ function resetAlert(){
 function handleUpvote(){
   if(Upvote === false){
     db.collection('feedback').doc('upvote').update({
-      LCE1 : firebase.firestore.FieldValue.increment(1)
+      LCE2 : firebase.firestore.FieldValue.increment(1)
     })
     setUpvote(true)
     AlertState.current = 3
@@ -57,7 +57,7 @@ function handleReport(){
   if(Report === false){
     ReportText.current = prompt('โปรดระบุข้อผิดพลาด/เฉลยผิด/โจทย์ผิด/ข้อติชม')
     db.collection('report').doc(currentUser.providerData[0]['uid']).set({
-      LCE1: ReportText.current
+      LCE2: ReportText.current
   }, { merge: true });
     setReport(true)
     AlertState.current = 4
@@ -234,7 +234,7 @@ return(
 แรงเสริมหรือแรงต้าน<br/><br/>
 เมื่อวัตถุถูกกระทำด้วยแรง ระหว่างเคลื่อนที่จากจุดหนึ่งไปอีกจุดหนึ่ง เราสามารถคิดเป็นงาน
 <br/>จากแรงเสริม/ต้าน เพิ่มเข้าไปในระบบได้เลย เช่น<br/><br/>รถของเล่นมวล 2 kg เคลื่อนที่ด้วยความเร็ว 10 m/s ถูกผลักด้วยแรง 10N เป็นระยะทาง 10 m จงหาความเร็วของรถหลังถูกแรงกระทำ
-<br/><br/>**********(ภาพ)***<br/><br/>
+<br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P1.png?alt=media&token=f6c07a42-9461-4b16-a297-cd540deb422b" />
 <MathJaxContext>
       <MathJax>\[E1 + W = E2 \]
         \[(\cfrac{1}{2} \cdot m \cdot v^2)..1 + (F \cdot S) = (\cfrac{1}{2} \cdot m \cdot v^2)..2\]
@@ -270,11 +270,7 @@ return(
 <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
 <div div className="LabInfo">สามารถทดสอบความเข้าใจได้จากโจทย์ต่อไปนี้ครับ<br/><br/>
 แอปเปิ้ลมวล 100 g ตกจากต้นที่สูง 5 m ระหว่างตกถูกแรงต้านอากาศขนาด 0.2 N กระทำ <br/>จงหาความเร็วของลูกแอปเปิ้ลก่อนถึงพื้น
-
-
-
-<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*<br/><br/><br/>
-
+<br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P2.png?alt=media&token=083fce3c-34b0-4b0e-a184-d794e115e6b3" />
   </div> 
  <div div className="FooterSpace"></div>
  <div className="Footer">Curious Project</div>
@@ -316,19 +312,15 @@ function Page2Answered (){
     {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
-  <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-  <div className="LabInfo">สามารถทดสอบความเข้าใจได้จากโจทย์ต่อไปนี้ครับ<br/><br/>
+<div className="LabName">กฎการอนุรักษ์พลังงาน</div>
+<div div className="LabInfo">สามารถทดสอบความเข้าใจได้จากโจทย์ต่อไปนี้ครับ<br/><br/>
 แอปเปิ้ลมวล 100 g ตกจากต้นที่สูง 5 m ระหว่างตกถูกแรงต้านอากาศขนาด 0.2 N กระทำ <br/>จงหาความเร็วของลูกแอปเปิ้ลก่อนถึงพื้น
-
-
-
-<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*<br/><br/><br/>
+<br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P2.png?alt=media&token=083fce3c-34b0-4b0e-a184-d794e115e6b3" />
   </div> 
- 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
+ <div div className="FooterSpace"></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
@@ -367,7 +359,7 @@ return(
   <div className="split Index">
 <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
 <div className="LabInfo">ลูกตุ้มมวล 10 kg เหล็กตกจากความสูง 5 m ลงบนพื้นทราย พบว่าลูกตุ้มจมลึก 20 cm <br/>จงหาแรงต้านเฉลี่ยของพื้นทราย
-<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
+<br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P3.png?alt=media&token=548056b8-6be6-41a1-998b-bd3c46373504" />
 
 </div> 
 <div div className="FooterSpace"></div>
@@ -411,17 +403,15 @@ function Page3Answered (){
     {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
     <div className="split Index">
-  <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-  <div className="LabInfo">ลูกตุ้มมวล 10 kg เหล็กตกจากความสูง 5 m ลงบนพื้นทราย พบว่าลูกตุ้มจมลึก 20 cm <br/>จงหาแรงต้านเฉลี่ยของพื้นทราย
+<div className="LabName">กฎการอนุรักษ์พลังงาน</div>
+<div className="LabInfo">ลูกตุ้มมวล 10 kg เหล็กตกจากความสูง 5 m ลงบนพื้นทราย พบว่าลูกตุ้มจมลึก 20 cm <br/>จงหาแรงต้านเฉลี่ยของพื้นทราย
+<br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P3.png?alt=media&token=548056b8-6be6-41a1-998b-bd3c46373504" />
 
-
-<br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
-  </div> 
- 
-   <div div className="FooterSpace"></div>
-   <div className="Footer">Curious Project</div>
-   <div div className="FooterSpace"></div>
-  </div>
+</div> 
+<div div className="FooterSpace"></div>
+ <div className="Footer">Curious Project</div>
+ <div div className="FooterSpace"></div>
+</div>
   
   <div className="split QuestionAnswer"> 
     <div className="LabNumber">Introducing Work</div>
@@ -462,7 +452,7 @@ function Page3Answered (){
     <div className="LabInfo">จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมัสัมประสิทธิ์ความเสียดทาย 0.2 ยาว 4 m ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 m จงหาว่าวัตถุจะขึ้นไปถึง D สูงเท่าไร
 
 
-    <br/><br/><br/>********ใส่รูปจ้า*
+    <br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P4.png?alt=media&token=39df6c01-8285-4631-a72b-af9736fd5873" />
     </div> 
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
@@ -511,7 +501,7 @@ function Page3Answered (){
       <div className="LabInfo">
       จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมัสัมประสิทธิ์ความเสียดทาย 0.2 ยาว 4 m ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 m จงหาว่าวัตถุจะขึ้นไปถึง D สูงเท่าไร
 
-    <br/><br/><br/>********ใส่รูปจ้า*<br/><br/><br/>
+    <br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P4.png?alt=media&token=39df6c01-8285-4631-a72b-af9736fd5873" />
     <mark className="Yellow">เฉลย</mark>
     <MathJaxContext>
       <MathJax>\[(m \cdot g \cdot h)..A - W = (m \cdot g \cdot h)..D \]
@@ -567,7 +557,7 @@ function Page5 (){
         <div className="LabInfo">จากข้อ 4 วัตถุจะไปหยุดห่างจากจุด B กี่เมตร<br/><br/>
 จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมัสัมประสิทธิ์ความเสียดทาย 0.2 ยาว 4 m <br/>ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 m 
 
-        <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*
+        <br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P4.png?alt=media&token=39df6c01-8285-4631-a72b-af9736fd5873" />
         </div> 
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -612,7 +602,7 @@ function Page5 (){
       <div className="LabInfo">จากข้อ 4 วัตถุจะไปหยุดห่างจากจุด B กี่เมตร<br/><br/>
 จากรูปผิวโค้งลื่น แต่ผิวราบขรุขระมัสัมประสิทธิ์ความเสียดทาย 0.2 ยาว 4 m <br/>ถ้าวัตถุถูกปล่อยมาจากจุด A สูง 2 m 
 
-        <br/><br/><br/>********รูปรูปรูปรูปรูปรูป*<br/><br/><br/>
+        <br/><img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P4.png?alt=media&token=39df6c01-8285-4631-a72b-af9736fd5873" />
         <mark className="Yellow">เฉลย</mark>
     <MathJaxContext>
       <MathJax>\[(m \cdot g \cdot h) - W = 0 \]
@@ -666,10 +656,9 @@ function Page5 (){
           <div>
           <div className="split Index">
         <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-        <div className="LabInfo"><br/>********ส่วนเนื้อหา ใส่สรุปเนื้อหา (เดี๋ยวไปทำภาพมาใส่)****************<br/><br/><br/><br/>
-
- ข้อใดถูกต้องเกี่ยวกับงาน กำลัง และ พลังงาน
-
+        <div className="LabInfo">ข้อใดถูกต้องเกี่ยวกับงาน กำลัง และ พลังงาน
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P6-1.png?alt=media&token=6a3f0d95-eb73-443a-97bc-05778a1cf693" />
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P6-2.png?alt=media&token=aae17327-1da5-4072-a4e0-4f7fa7b7cf1d" />
         </div> 
          <div div className="FooterSpace"></div>
          <div className="Footer">Curious Project</div>
@@ -742,17 +731,17 @@ function Page5 (){
         <div>
     {AlertState.current === 1? <CorrectAlert/> : null}
     {AlertState.current === 2? <IncorrectAlert/> : null}
-        <div className="split Index">
-      <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
-      <div className="LabInfo"><br/>********ส่วนเนื้อหา ใส่สรุปเนื้อหา (เดี๋ยวไปทำภาพมาใส่)****************<br/><br/><br/><br/>
-
-ข้อใดถูกต้องเกี่ยวกับงาน กำลัง และ พลังงาน
-      </div> 
-     
-       <div div className="FooterSpace"></div>
-       <div className="Footer">Curious Project</div>
-       <div div className="FooterSpace"></div>
-      </div>
+    <div className="split Index">
+        <div className="LabName">กฎการอนุรักษ์พลังงาน</div>
+        <div className="LabInfo">ข้อใดถูกต้องเกี่ยวกับงาน กำลัง และ พลังงาน
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P6-1.png?alt=media&token=6a3f0d95-eb73-443a-97bc-05778a1cf693" />
+        <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FLOCE2%2FLOCE2P6-2.png?alt=media&token=aae17327-1da5-4072-a4e0-4f7fa7b7cf1d" />
+        </div> 
+         <div div className="FooterSpace"></div>
+         <div className="Footer">Curious Project</div>
+         <div div className="FooterSpace"></div>
+        </div>
+        
       
       <div className="split QuestionAnswer"> 
         <div className="LabNumber">Introducing Work</div>
