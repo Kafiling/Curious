@@ -16,6 +16,11 @@
 .Course{
     color: black;
 }
+.CoursePageName{
+    margin-top: 25px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
 .Fragment-Container{
     position: relative;
     margin-top: 20px;

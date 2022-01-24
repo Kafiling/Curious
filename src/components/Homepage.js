@@ -49,9 +49,9 @@ export default function Homepage() {
     </div>
 
     < div className = 'FinishContainer'>
-      <button className = "LoginButton" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithGoogle()}>Sign in with Google</button>
-      <button className = "LoginButton" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithFacebook()}>Sign in with Facebook</button>
-      <button className = "LoginButton" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithAnonymous()}>Sign in Anonymously</button>
+      <button className = "btn btn-glow btn-secondary" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithGoogle()}>Sign in with Google</button>
+      <button className = "btn btn-glow btn-secondary" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithFacebook()}>Sign in with Facebook</button>
+      <button className = "btn btn-glow btn-secondary" style = {{backgroundColor: "rgb(var(--secondary-color))" }} onClick={() => signInWithAnonymous()}>Sign in Anonymously</button>
     </div>
         </div>
     )
