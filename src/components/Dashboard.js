@@ -50,7 +50,7 @@ export default function Dashboard() {
             <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={4}>
-          <Item><h2>Course</h2><br/>12</Item>
+          <Item><h2>Course</h2><br/>13</Item>
         </Grid>
         <Grid item xs={4}>
           <Item><h2>Page/Lab/Chart/Img</h2><br/>85 / 9 / 16 / 84</Item>
