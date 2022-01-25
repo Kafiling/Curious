@@ -61,8 +61,8 @@ export default function Header(){
       <li className = "Curious">Curious</li>
       <li></li>
       <li><Link to = "/">Home</Link></li>
-      <li><Link to = "/dashboard">Dashboard</Link></li>
       <li><Link to = "/courses">Courses</Link></li>
+      <li><Link to = "/analytics">Analytics</Link></li>
       <li><Link to = "/about_us">About Us</Link></li>
       <li></li>
       <li onClick = {() => signOut()} >Sign Out</li>

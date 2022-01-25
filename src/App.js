@@ -11,6 +11,7 @@ import { AuthProvider, firebaseApp, auth } from 'Firebase';
 
 //Import Component
 import Homepage from './components/Homepage';
+import Analytics from './components/Analytics';
 import Courses from './components/Courses'
 import Dashboard from './components/Dashboard';
 import AboutUs from './components/AboutUs';
@@ -56,6 +57,7 @@ function App() {
           <Route exact path="/"  ><Homepage/></Route>
           <Route exact path="/dashboard"  ><Dashboard/></Route>
           <Route exact path="/courses"  ><Dashboard/></Route>
+          <Route exact path="/analytics"  ><Analytics/></Route>
           <Route exact path="/about_us"  ><AboutUs/></Route>
           
           {/* Courses*/}

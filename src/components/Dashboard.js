@@ -1,4 +1,4 @@
-import React,{useState , useRef, useContext} from 'react'
+import React,{useState , useEffect, useContext} from 'react'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -10,7 +10,8 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
+import { onSnapshot,  collection, query, where }from 'firebase/firestore';
+import { doc, getDoc } from "firebase/firestore";
 
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db, firebaseApp} from 'Firebase';
@@ -28,23 +29,22 @@ export default function Dashboard() {
   
   //Var currentUser (Context from Firebase.js)
   const {currentUser} = useContext(AuthContext)
-  
-  
-function read() {
-    db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-      Work1: 100
-  }, { merge: true });
-  console.log('hi')
 
-  }
-  db.collection('users').doc(currentUser.providerData[0]['uid']).set({
-    Work1: 250
-}, { merge: true });
+  const [Data, setData] = useState([{ name: "Loading...", id: "initial" }]);
+  useEffect(
+    () =>
+      onSnapshot (collection(db, "users"), (snapshot) =>
+        setData(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      ),
+    []
+  );
+  
  
+  console.log(Data)
+
     return (
         <div>
             <div className='CoursePageName'>Work and Energy</div>
-            <button className = "ReportButton" onClick={() => read()}>Report</button>
             <div div className="LabInfo">เราใช้พลังงานรูปต่างๆในชีวิตประจำวัน เช่น พลังงานไฟฟ้าที่ใช้เปิดไฟให้ส่องสว่าง หรือ พลังงานความร้อนที่ให้ความอบอุ่น ในบทเรียนนี้จะได้เรียนรู้เกี่ยวกับ งาน(พลังงานจากแรง) การทำงานในรูปแบบต่างๆ อัตราการทำงานเพื่อบอกประสิทธิภาพ จนถึงพลังงานในรปูต่างๆ เช่น พลังงานจลน์ พลังงานศักย์โน้มถ่วง  พลังงานศักย์ยืดหยุ่น นิยามของพลังงาน การหาพลังงานในวัตถุ การเปลี่ยนแปลงรูปของพลังงาน และ กฎอนุรักษ์พลังงาน
             </div> 
             <Box sx={{ flexGrow: 1 }}>
@@ -59,10 +59,10 @@ function read() {
           <Item><h2>Time estimate</h2><br/>4.5 hr</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item><h2>Completion Score</h2><br/> 100%</Item>
+          <Item><h2>Completion Score</h2><br/> Start learning to see your score!</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item><h2>Bayes's Score</h2><br/>0.89</Item>
+          <Item><h2>Bayes's Score</h2><br/>Start learning to see your score!</Item>
         </Grid>
 
       </Grid>

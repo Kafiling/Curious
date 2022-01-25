@@ -39,6 +39,17 @@ const ScoreQuestion7 = useRef(0)
 const ScoreQuestion8 = useRef(0)
 const ScoreQuestion9 = useRef(0)
 const ScoreQuestion10 = useRef(0)
+
+const BayesQuestion1 = useRef(0)
+const BayesQuestion2 = useRef(0)
+const BayesQuestion3 = useRef(0)
+const BayesQuestion4 = useRef(0)
+const BayesQuestion5 = useRef(0)
+const BayesQuestion6 = useRef(0)
+const BayesQuestion7 = useRef(0)
+const BayesQuestion8 = useRef(0)
+const BayesQuestion9 = useRef(0)
+const BayesQuestion10 = useRef(0)
 //Alert
 const AlertState = useRef(0)
 var [Upvote, setUpvote] = useState(false);
@@ -81,7 +92,7 @@ function sumScore(){
   
   TotalScore.current = ScoreQuestion1.current + ScoreQuestion2.current + ScoreQuestion3.current + ScoreQuestion4.current + ScoreQuestion5.current + ScoreQuestion6.current + ScoreQuestion7.current + ScoreQuestion8.current + ScoreQuestion9.current + ScoreQuestion10.current
   CompletionScore.current = Math.round(TotalScore.current / TotalQuestionNum.current * 100) / 100
-  BayesScore.current = "Not Implemented"
+  BayesScore.current = Math.round((BayesQuestion1.current + BayesQuestion2.current + BayesQuestion3.current + BayesQuestion4.current + BayesQuestion5.current + BayesQuestion6.current +BayesQuestion7.current +BayesQuestion8.current +BayesQuestion9.current +BayesQuestion10.current)/10*100)/100
 
   db.collection('users').doc(currentUser.providerData[0]['uid']).set({
     ExamWork: CompletionScore.current
@@ -98,33 +109,43 @@ function correct(QuestionPage){
   switch(QuestionPage){
     case 1 :setAnswer1(true)
     ScoreQuestion1.current = 1
+    BayesQuestion1.current = 25/30
       break;
     case 2 :setAnswer2(true)
     ScoreQuestion2.current = 1
+    BayesQuestion2.current = 25/30
       break;
     case 3 :setAnswer3(true)
     ScoreQuestion3.current = 1
+    BayesQuestion3.current = 23/23
       break;
     case 4 :setAnswer4(true)
     ScoreQuestion4.current = 1
+    BayesQuestion4.current = 22/23
       break;
     case 5 :setAnswer5(true)
     ScoreQuestion5.current = 1
+    BayesQuestion5.current = 25/28
       break;
     case 6 :setAnswer6(true)
     ScoreQuestion6.current = 1
+    BayesQuestion6.current = 25/29
       break;
     case 7 :setAnswer7(true)
     ScoreQuestion7.current = 1
+    BayesQuestion7.current = 20/20
       break;
     case 8 :setAnswer8(true)
     ScoreQuestion8.current = 1
+    BayesQuestion8.current = 22/24
       break;
     case 9 :setAnswer9(true)
     ScoreQuestion9.current = 1
+    BayesQuestion9.current = 24/24
       break;
     case 10 :setAnswer10(true)
     ScoreQuestion10.current = 1
+    BayesQuestion10.current = 14/14
       break;
     default :
     alert("Scoring Error")
@@ -137,24 +158,34 @@ function incorrect(QuestionPage){
   setTimeout(resetAlert,3000)
   switch(QuestionPage){
     case 1 :setAnswer1(true)
+    BayesQuestion1.current = 0/20
       break;
     case 2 :setAnswer2(true)
+    BayesQuestion2.current = 0/20
       break;
     case 3 :setAnswer3(true)
+    BayesQuestion3.current = 2/27
       break;
     case 4 :setAnswer4(true)
+    BayesQuestion4.current = 3/27
       break;
     case 5 :setAnswer5(true)
+    BayesQuestion5.current = 0/22
       break;
     case 6 :setAnswer6(true)
+    BayesQuestion6.current = 0/21
       break;
     case 7 :setAnswer7(true)
+    BayesQuestion7.current = 5/30
       break;
     case 8 :setAnswer8(true)
+    BayesQuestion8.current = 3/26
       break;
     case 9 :setAnswer9(true)
+    BayesQuestion8.current = 1/26
       break;
     case 10 :setAnswer10(true)
+    BayesQuestion8.current = 11/36
       break;
     default :
     alert("Scoring Error")
