@@ -21,7 +21,7 @@ export default function AboutUs() {
 เสียหายต่างๆ อันเกิดจากการใช้ซอฟต์แวร์นี้ทั้งสิ้น
         </div> 
         <div className="LabInfo">
-            <div className='Fragment-Name'><span className='Fragment-Number' style={{backgroundColor: '#44CF6C'}}>✔</span><h2> &nbsp; &nbsp;Thanks for contribute!</h2></div>
+            <div className='Fragment-Name'><span className='Fragment-Number' style={{backgroundColor: '#44CF6C'}}>✔</span><h2> &nbsp; &nbsp;Thanks for contributing!</h2></div>
             </div>
             <div className="LabInfo"> ขอขอบคุณนักเรียนโรงเรียนหาดใหญ่วิทยาลัยที่ช่วยทำการ Playtest ตลอดจนให้ Feedback เพื่อพัฒนา Webapp ของเรา และร่วมทำแบบทดสอบทดสอบประสิทธิ์ภาพของการสอน ร่วมการทดสอบ Pre-Test และ Post-Test และให้ข้อมูลเพื่อมาใช้ประมวลผล Bayes's Score และขอบคุณ อาจารย์ภิญโญ ยลธรรม์ธรรม ที่ได้ให้คำปรึกษาตลอดการทำโครงงาน
         </div> 
