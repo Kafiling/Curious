@@ -136,7 +136,7 @@ export default function Dashboard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          Utilizing Graph
+          <div className='Fragment-Name'>Utilizing Graph<span className='Fragment-Number' style={{backgroundColor: '#44CF6C'}}>↑</span></div>
           </Typography>
           <Typography variant="body2" color="text.primary">
           กรณีที่แรงกระทำต่อวัตถุไม่คงตัวเช่นแรงที่ใช้ดึงสปริงเราจะคำนวณอย่างไร ลองมองงานจากมุมมองของกราฟ
@@ -286,7 +286,7 @@ export default function Dashboard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          Energy Transformed
+          <div className='Fragment-Name'>Energy Transformed<span className='Fragment-Number' style={{backgroundColor: '#44CF6C'}}>↑</span></div>
           </Typography>
           <Typography variant="body2" color="text.primary">
           จะสังเกตได้ว่าทั้งงาน พลังงานจลน์ พลังงานศักย์ และพลังงานรูปแบบต่างๆ ต่างก็มีหน่วยจูล (J) ทั้งสิ้น เราพบว่าพลังงานในรูปหนึ่งสามารถเปลี่ยนเป็นรูปอื่นๆได้
