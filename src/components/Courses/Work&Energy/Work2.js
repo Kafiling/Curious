@@ -591,7 +591,7 @@ function Page6Answered (){
     <div className = 'FinishContainer'>
       <div className="FinishInfo">จบกิจกรรมแล้ว อยากเรียนรู้เรื่องอะไรต่อดี? <br/><br/>
       Completion Score = {CompletionScore.current*100}% ({TotalScore.current}/{TotalQuestionNum.current}) <br/>
-      Bayes's Score = {BayesScore.current}</div>
+      </div>
     </div>
     < div className = 'FinishContainer'>
       <button className = "UpvoteButton" style = {{right : "0%", backgroundColor: "rgb(var(--secondary-color))" }} ><Link to = "/courses" >Back to Courses</Link></button>
