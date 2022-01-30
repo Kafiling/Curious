@@ -42,7 +42,7 @@ export default function Homepage() {
         <div>
 
             <div className = 'FinishContainer'>
-      <img className='FinishImg' id='img' alt ="Check.png"src="https://firebasestorage.googleapis.com/v0/b/lab-anywhere.appspot.com/o/check.png?alt=media&token=10d8a285-0a16-4009-a4fa-5725aeba2cef" />
+      <img className='FinishImg' id='img' alt ="Welcome.png"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/real_logo.svg?alt=media&token=cb7a42a7-f46f-4dba-82fa-6b128e49388a" />
     </div>
     <div className = 'FinishContainer'>
     <div className="FinishInfo">ยินดีต้อนรับเข้าสู่ Curious!<br/><br/>กรุณา login เพื่อเข้าใช้งาน</div>
