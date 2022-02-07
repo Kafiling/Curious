@@ -38,9 +38,6 @@ export default function Dashboard() {
       ),
     []
   );
-  
- 
-  console.log(Data)
 
     return (
         <div>
