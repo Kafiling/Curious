@@ -28,6 +28,24 @@ const state = {
                 legend:{
                   display:true,
                   position:'right'
+                },
+                scales: {
+                  x: {
+                    display: true,
+                    title: {
+                      display: true,
+                      text: 'Position'
+                    }
+                  },
+                  y: {
+                    display: true,
+                    title: {
+                      display: true,
+                      text: 'Force'
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 100
+                  }
                 }
                 
               }}

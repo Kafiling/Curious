@@ -30,16 +30,28 @@ const state = {
                 position:'right'
               },
               scales: {
+                x: {
+                  display: true,
+                  title: {
+                    display: true,
+                    text: 'Position'
+                  }
+                },
                 y: {
-                  grid: {
+                  display: true,
+                  title: {
+                    display: true,
+                    text: 'Force'
+                  },grid: {
                     color: 'red',
                     borderColor: 'grey',
                     tickColor: 'grey'
                   },
-                    suggestedMin: 0,
-                    suggestedMax: 22.5
-                    
-                }}
+                  suggestedMin: 0,
+                  suggestedMax: 10
+                }
+              }
+             
             }}
           />
         
