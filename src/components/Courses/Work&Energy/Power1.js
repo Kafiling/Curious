@@ -162,7 +162,7 @@ return(
   <div className="split Index">
 <div className="LabName">กำลัง</div>
 <div div className="LabInfo">กำลัง (Power) คือ อัตราการทำงานหรืองานที่เกิดขึ้นในหนึ่งหน่วยเวลา<br/><br/>
-“กำลัง” ใช้บอกความสามารถทำงานได้มาก-น้อยในช่วงเวลาหนึ่ง เช่น ปั้นจั่นดึงวัตถุ มีกำลัง 10000 W หมายความว่า ใน 1 วินาที ปั่นจั่น สามารถออกงานได้ 10000 J
+“กำลัง” ใช้บอกความสามารถทำงานได้มาก-น้อยในช่วงเวลาหนึ่ง เช่น ปั้นจั่นดึงวัตถุ มีกำลัง 10000 W หมายความว่า ใน 1 วินาที ปั่นจั่น สามารถทำงานได้ 10000 J
 </div> 
 <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FPower1%2FPower1P1.png?alt=media&token=ff218331-6949-462a-9dae-5e72c347f0ef" />
  <div div className="FooterSpace"></div>
