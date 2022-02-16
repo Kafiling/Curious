@@ -7,7 +7,9 @@ export class Scene extends React.Component {
     super(props);
     this.state = {
       PosXBoxA : '',
-      PosYBoxA : ''
+      PosYBoxA : '',
+      Ek : '',
+      Ep : ''
     };
   }
   
@@ -83,9 +85,9 @@ Composite.add(engine.world, [boxA, wallL ,wallR ,ceiling]);
 
 setInterval(() => {this.setState(
   { PosXBoxA : boxA.velocity.x.toFixed(2) ,
-  PosYBoxA : boxA.velocity.y.toFixed(2)}
-  )
-
+  PosYBoxA : boxA.velocity.y.toFixed(2),
+  Ep : ((boxA.position.y - 600)*1*9.8*-1).toFixed(2)})
+console.log(boxA.position.y - 600)
 }, 100);
 
 
@@ -116,8 +118,7 @@ Runner.run(runner, engine);
  
     return(<div>
       <div className="MatterUICon">
-      <p className="MatterUIText">ความเร็วแกน X = {this.state.PosXBoxA}</p>
-      <p className="MatterUIText">ความเร็วแกน Y = {this.state.PosYBoxA}</p>
+      <p className="MatterUIText">พลังงานศักย์โน้มถ่วง = {this.state.Ep}</p>
       <p className="MatterUIText">(Timescale = 0.25 เท่า)</p>
       </div>
     

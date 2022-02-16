@@ -17,13 +17,17 @@ firebase.initializeApp({
 export const auth = firebase.auth();
 export const db = firebase.firestore();
 
+
+
 export default function Homepage() {
+  
     function reDirect(){
         if(auth.currentUser){
         window.location.replace("/courses");
         } 
         setTimeout(reDirect, 200)
     }
+
     const  signInWithGoogle = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider);

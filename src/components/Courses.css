@@ -31,8 +31,10 @@ color: rgb(var(--text-color)) ;
 .Index {
     float: left;
     width: 55%;
+    padding-left: 5%;
+    padding-right: 5%;
     height: calc(100%-60px);
-    left: 5%;
+    left: 0%;
     top: 60px;
     overflow-y: scroll;
    }

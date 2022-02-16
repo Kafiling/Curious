@@ -5,6 +5,7 @@ import {CorrectAlert, IncorrectAlert, UpvoteAlert, ReportAlert} from './Alert'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import {Scene as Scene1} from './Material/Ep1Scene1';
+import {Scene as Scene2} from './Material/Ep1Scene2';
 //ประกาศตัวแปรของ Firebase Service
 import {AuthContext, db} from 'Firebase'
 
@@ -307,7 +308,7 @@ return(
 <div className="LabInfo">พลังงานศักย์โน้มถ่วงคือพลังงานที่สะสมอยู่ในวัตถุ เกิดจากแรงโน้มถ่วงและตำแหน่ง<br/>ความสูงของวัตถุ 
 โดยทำเมื่อเราทำการปล่อยมวล m ลงจากความสูง h จะพบว่า<div/>
 <div className='SceneContainer'>
-      <Scene1/>
+      <Scene2/>
     </div>
 <div className="LabInfo">
 <br/>เกิดงานเนื่องจากแรงโน้มถ่วง จาก  
