@@ -3,6 +3,7 @@ import { AuthProvider, firebaseApp } from 'Firebase';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
+import { isMobileOnly } from "react-device-detect";
 //initialize Firebase
 firebase.initializeApp({
   apiKey: "AIzaSyCLzwwu-Ag4jcnkxWNl_kQ41kziCCFRFVs",
@@ -25,8 +26,12 @@ export default function Homepage() {
         if(auth.currentUser){
         window.location.replace("/courses");
         } 
+        if (isMobileOnly){
+          window.location.replace("/moblie_error");
+        }
         setTimeout(reDirect, 200)
     }
+    
 
     const  signInWithGoogle = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
