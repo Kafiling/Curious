@@ -572,7 +572,7 @@ function Page6 (){
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo">ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
     </div> 
-    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P6.png?alt=media&token=cdec28f1-f1a4-49ed-be7a-ed51925e3604" />
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/well.svg?alt=media&token=6d421624-34c3-486c-a161-a7e562df410f" />
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
@@ -619,7 +619,7 @@ function Page6 (){
     <div className="LabName">พลังงานศักย์</div>
     <div className="LabInfo">ปล่อยหินมวล 5 kg จากหอคอยที่สูงจากพื้น 15 m ลงไปในบ่อน้ำลึกจากพื้น 25 m จงหาพลังงานศักย์โน้มถ่วงตอนเริ่มปล่อยก้อนหิน
     </div> 
-    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/Work%26Energy%2FEp1%2FEp1P6.png?alt=media&token=cdec28f1-f1a4-49ed-be7a-ed51925e3604" />
+    <img className='LabImg' id='img' alt ="LabImg"src="https://firebasestorage.googleapis.com/v0/b/keep-curious.appspot.com/o/well.svg?alt=media&token=6d421624-34c3-486c-a161-a7e562df410f" />
      <div div className="FooterSpace"></div>
      <div className="Footer">Curious Project</div>
      <div div className="FooterSpace"></div>
