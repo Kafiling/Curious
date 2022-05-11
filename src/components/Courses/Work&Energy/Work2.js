@@ -594,7 +594,7 @@ function Page6Answered (){
       </div>
     </div>
     < div className = 'FinishContainer'>
-      <button className = "UpvoteButton" style = {{right : "0%", backgroundColor: "rgb(var(--secondary-color))" }} ><Link to = "/courses" >Back to Courses</Link></button>
+      <button className = "UpvoteButton" style = {{right : "0%", backgroundColor: "rgb(var(--secondary-color))" }} ><Link to = "/v1.0/courses" >Back to Courses</Link></button>
     </div>
     < div className = 'FinishContainer'>
     <button className = "UpvoteButton" onClick={() => handleUpvote()}>Upvote!</button>

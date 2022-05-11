@@ -55,33 +55,33 @@ function App() {
         <div className = "Page">
           <Switch>
           {/* Main Page*/}
-          <Route exact path="/"  ><Homepage/></Route>
-          <Route exact path="/dashboard"  ><Dashboard/></Route>
-          <Route exact path="/courses"  ><Dashboard/></Route>
-          <Route exact path="/analytics"  ><Analytics/></Route>
-          <Route exact path="/about_us"  ><AboutUs/></Route>
-          <Route exact path="/moblie_error"  ><MoblieError/></Route>
+          <Route exact path="/v1.0"  ><Homepage/></Route>
+          <Route exact path="/v1.0/dashboard"  ><Dashboard/></Route>
+          <Route exact path="/v1.0/courses"  ><Dashboard/></Route>
+          <Route exact path="/v1.0/analytics"  ><Analytics/></Route>
+          <Route exact path="/v1.0/about_us"  ><AboutUs/></Route>
+          <Route exact path="/v1.0/moblie_error"  ><MoblieError/></Route>
           {/* Courses*/}
-          <Route exact path="/courses/work_energy/work1"  ><Work1/></Route>
-          <Route exact path="/courses/work_energy/work2"  ><Work2/></Route>
-          <Route exact path="/courses/work_energy/work3"  ><Work3/></Route>
-          <Route exact path="/courses/work_energy/work4"  ><Work4/></Route>
-          <Route exact path="/courses/work_energy/power1"  ><Power1/></Route>
-          <Route exact path="/courses/work_energy/power2"  ><Power2/></Route>
-          <Route exact path="/courses/work_energy/kineticenergy"  ><KineticEnergy/></Route>
-          <Route exact path="/courses/work_energy/potentialenergy1"  ><PotentialEnergy1/></Route>
-          <Route exact path="/courses/work_energy/potentialenergy2"  ><PotentialEnergy2/></Route>
-          <Route exact path="/courses/work_energy/lawofconservationofenergy1"  ><Lawofconservationofenergy1/></Route>
-          <Route exact path="/courses/work_energy/lawofconservationofenergy2"  ><Lawofconservationofenergy2/></Route>
-          <Route exact path="/courses/work_energy/exam_work"  ><ExamWork/></Route>
-          <Route exact path="/courses/work_energy/final_exam"  ><FinalExam/></Route>
-          <Route exact path="/courses/work_energy/physic_eng"  ><PhysicEngTest/></Route>
+          <Route exact path="/v1.0/courses/work_energy/work1"  ><Work1/></Route>
+          <Route exact path="/v1.0/courses/work_energy/work2"  ><Work2/></Route>
+          <Route exact path="/v1.0/courses/work_energy/work3"  ><Work3/></Route>
+          <Route exact path="/v1.0/courses/work_energy/work4"  ><Work4/></Route>
+          <Route exact path="/v1.0/courses/work_energy/power1"  ><Power1/></Route>
+          <Route exact path="/v1.0/courses/work_energy/power2"  ><Power2/></Route>
+          <Route exact path="/v1.0/courses/work_energy/kineticenergy"  ><KineticEnergy/></Route>
+          <Route exact path="/v1.0/courses/work_energy/potentialenergy1"  ><PotentialEnergy1/></Route>
+          <Route exact path="/v1.0/courses/work_energy/potentialenergy2"  ><PotentialEnergy2/></Route>
+          <Route exact path="/v1.0/courses/work_energy/lawofconservationofenergy1"  ><Lawofconservationofenergy1/></Route>
+          <Route exact path="/v1.0/courses/work_energy/lawofconservationofenergy2"  ><Lawofconservationofenergy2/></Route>
+          <Route exact path="/v1.0/courses/work_energy/exam_work"  ><ExamWork/></Route>
+          <Route exact path="/v1.0/courses/work_energy/final_exam"  ><FinalExam/></Route>
+          <Route exact path="/v1.0/courses/work_energy/physic_eng"  ><PhysicEngTest/></Route>
 
           {/* Playgrounds*/}
   
           {/* About Us*/}
   
-          <Route path = "/:id"  ><h1>Error 404 Webpage not found</h1></Route>
+          <Route path = "/v1.0/:id"  ><h1>Error 404 Webpage not found</h1></Route>
           </Switch>
         </div>
         

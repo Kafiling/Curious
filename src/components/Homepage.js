@@ -24,10 +24,10 @@ export default function Homepage() {
   
     function reDirect(){
         if(auth.currentUser){
-        window.location.replace("/courses");
+        window.location.replace("/v1.0/courses");
         } 
         if (isMobileOnly){
-          window.location.replace("/moblie_error");
+          window.location.replace("/v1.0/moblie_error");
         }
         setTimeout(reDirect, 200)
     }

@@ -69,7 +69,7 @@ export default function Dashboard() {
                 <div className='Fragment-Sub'>เรียนรู้เกี่ยวกับงานทางฟิสิกส์ การกระทำงาน ทำงานในรูปแบบต่างๆ และ ผลของงาน</div>
             <ul className='Fragment-List'>
             <li id = 'CourseCard'><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/work1'>
+      <CardActionArea href='/v1.0/courses/work_energy/work1'>
         <CardMedia
           component="img"
           height="140"
@@ -88,7 +88,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/work2'>
+      <CardActionArea href='/v1.0/courses/work_energy/work2'>
         <CardMedia
           component="img"
           height="140"
@@ -106,7 +106,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/work3'>
+      <CardActionArea href='/v1.0/courses/work_energy/work3'>
         <CardMedia
           component="img"
           height="140"
@@ -124,7 +124,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/work4'>
+      <CardActionArea href='/v1.0/courses/work_energy/work4'>
         <CardMedia
           component="img"
           height="140"
@@ -150,7 +150,7 @@ export default function Dashboard() {
                 <div className='Fragment-Sub'>กำลัง (Power) คือ อัตราการทำงานหรืองานที่เกิดขึ้นในหนึ่งหน่วยเวลา</div>
             <ul className='Fragment-List'>
             <li id = 'CourseCard'><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/power1'>
+      <CardActionArea href='/v1.0/courses/work_energy/power1'>
         <CardMedia
           component="img"
           height="140"
@@ -169,7 +169,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/power2'>
+      <CardActionArea href='/v1.0/courses/work_energy/power2'>
         <CardMedia
           component="img"
           height="140"
@@ -187,7 +187,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/exam_work'>
+      <CardActionArea href='/v1.0/courses/work_energy/exam_work'>
         <CardMedia
           component="img"
           height="140"
@@ -213,7 +213,7 @@ export default function Dashboard() {
                 <div className='Fragment-Sub'>พลังงานคืออะไร ทำความรู้จักกับชนิดของพลังงาน การคิดพลังงานกล และผลของพลังงานในชีวิตประจำวัน</div>
             <ul className='Fragment-List'>
             <li id = 'CourseCard'><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/kineticenergy'>
+      <CardActionArea href='/v1.0/courses/work_energy/kineticenergy'>
         <CardMedia
           component="img"
           height="140"
@@ -231,7 +231,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/potentialenergy1'>
+      <CardActionArea href='/v1.0/courses/work_energy/potentialenergy1'>
         <CardMedia
           component="img"
           height="140"
@@ -249,7 +249,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/potentialenergy2'>
+      <CardActionArea href='/v1.0/courses/work_energy/potentialenergy2'>
         <CardMedia
           component="img"
           height="140"
@@ -274,7 +274,7 @@ export default function Dashboard() {
                 <div className='Fragment-Sub'>กฏอนุรักษ์พลังงานกล การเปลี่ยนรูปพลังงาน การเพิ่ม/ลดพลังงานในระบบด้วยแรงภายนอก</div>
             <ul className='Fragment-List'>
             <li id = 'CourseCard'><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/lawofconservationofenergy1'>
+      <CardActionArea href='/v1.0/courses/work_energy/lawofconservationofenergy1'>
         <CardMedia
           component="img"
           height="140"
@@ -292,7 +292,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/lawofconservationofenergy2'>
+      <CardActionArea href='/v1.0/courses/work_energy/lawofconservationofenergy2'>
         <CardMedia
           component="img"
           height="140"
@@ -310,7 +310,7 @@ export default function Dashboard() {
       </CardActionArea>
     </Card></li>
     <li><Card sx={{ maxWidth: 345 , height: 275 }}>
-      <CardActionArea href='/courses/work_energy/final_exam'>
+      <CardActionArea href='/v1.0/courses/work_energy/final_exam'>
         <CardMedia
           component="img"
           height="140"
