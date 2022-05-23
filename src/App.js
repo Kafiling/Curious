@@ -55,7 +55,7 @@ function App() {
         <div className = "Page">
           <Switch>
           {/* Main Page*/}
-          <Route exact path="/v1.0"  ><Homepage/></Route>
+          <Route exact path="/"  ><Homepage/></Route>
           <Route exact path="/v1.0/dashboard"  ><Dashboard/></Route>
           <Route exact path="/v1.0/courses"  ><Dashboard/></Route>
           <Route exact path="/v1.0/analytics"  ><Analytics/></Route>
