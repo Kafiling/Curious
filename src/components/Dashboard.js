@@ -356,6 +356,25 @@ export default function Dashboard() {
         </CardContent>
       </CardActionArea>
     </Card></li>
+
+    <li id = 'CourseCard'><Card sx={{ maxWidth: 345 , height: 275 }}>
+      <CardActionArea href='https://keep-curious-v2.web.app/courses'>
+        <CardMedia
+          component="img"
+          height="140"
+          image="https://firebasestorage.googleapis.com/v0/b/keep-curious-v2.appspot.com/o/Content%2F3%2FSling1.png?alt=media&token=f589297d-74e6-4455-b8cd-b63cbb8da8cd"
+          alt="LOCE1"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+          <div className='Fragment-Name'>MiniLab : Slingshot</div>
+          </Typography>
+          <Typography variant="body2" color="text.primary">
+          หนังสติ๊ก(Slingshot) มีหลักการทำงานโดยให้งาน เป็นพลังงานศักย์ยืดหยุ่นเปลี่ยนเป็นพลังงานจลน์
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card></li>
     
     <li id = 'CourseCard'><Card sx={{ maxWidth: 345 , height: 275 }}>
       <CardActionArea href='https://keep-curious-v2.web.app'>
