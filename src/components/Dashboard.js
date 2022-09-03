@@ -332,6 +332,52 @@ export default function Dashboard() {
     
             </ul>
             </div>
+
+
+            <div className='Fragment-Container'>
+            <div className='Fragment-Name'><span className='Fragment-Number' style={{backgroundColor: '#44CF6C'}}>5</span><h1>Extra</h1></div>
+                <div className='Fragment-Sub'>การทดลอง การประยุกต์ และบทเรียนที่เกี่ยวข้อง</div>
+            <ul className='Fragment-List'>
+            <li id = 'CourseCard'><Card sx={{ maxWidth: 345 , height: 275 }}>
+      <CardActionArea href='https://keep-curious-v2.web.app/courses'>
+        <CardMedia
+          component="img"
+          height="140"
+          image="https://firebasestorage.googleapis.com/v0/b/keep-curious-v2.appspot.com/o/Content%2F2%2FNewton.png?alt=media&token=0916182f-672c-4e86-a1e9-ed7fbd40cf4b"
+          alt="LOCE1"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+          <div className='Fragment-Name'>MiniLab : Newton's Cradle</div>
+          </Typography>
+          <Typography variant="body2" color="text.primary">
+          ลูกตุ้มของนิวตัน เป็นอุปกรณ์ที่แสดงให้เห็นถึงการอนุรักษ์โมเมนตัมและการอนุรักษ์พลังงานที่มีทรงกลมแกว่ง
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card></li>
+    
+    <li id = 'CourseCard'><Card sx={{ maxWidth: 345 , height: 275 }}>
+      <CardActionArea href='https://keep-curious-v2.web.app'>
+        <CardMedia
+          component="img"
+          height="140"
+          image="https://firebasestorage.googleapis.com/v0/b/keep-curious-v2.appspot.com/o/Homepage%2Fto_the_moon.svg?alt=media&token=c6294016-27a8-445a-bfd0-2eff414494c9"
+          alt="LOCE1"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+          <div className='Fragment-Name'>Curious 2.0</div>
+          </Typography>
+          <Typography variant="body2" color="text.primary">
+          ไปยัง Curious 2.0 เว็บแอพพลิเคชั่นเรียนรู้ฟิสิกส์สำหรับคนยุคใหม่
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card></li>
+    
+            </ul>
+            </div>
         </div>
     )
 }
